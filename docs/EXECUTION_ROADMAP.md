@@ -93,10 +93,10 @@
 - [x] **34.** Automated Mastery Book Builder (`05_mastery_and_translation/tools/mastery_scaffolder.mjs`)
 
 ### Division 6: On-Camera Performance, Pronunciation & Shoot-Day Studio Kit (`06_camera_and_voice/`)
-- [ ] **35.** Launch Trio Hard-Word Phonetic & Persian Pronunciation Guides (`06_camera_and_voice/pronunciation/ep01..03_pronunciation.md`)
+- [x] **35.** Launch Trio Hard-Word Phonetic & Persian Pronunciation Guides (`06_camera_and_voice/pronunciation/ep01..03_pronunciation.md`)
 - [ ] **36.** Interactive Browser Pronunciation & Teleprompter Rehearsal Studio (`06_camera_and_voice/tools/teleprompter_studio.html`)
-- [ ] **37.** Director-Annotated Teleprompter Scripts (`06_camera_and_voice/teleprompter/ep01..03_teleprompter.md`)
-- [ ] **38.** Pre-Shoot 60-Minute Vocal Warmup, Posture & Camera Presence Protocol (`06_camera_and_voice/38_preshoot_60min_vocal_and_posture_protocol.md`)
+- [x] **37.** Director-Annotated Teleprompter Scripts (`06_camera_and_voice/teleprompter/ep01..03_teleprompter.md`)
+- [x] **38.** Pre-Shoot 60-Minute Vocal Warmup, Posture & Camera Presence Protocol (`06_camera_and_voice/38_preshoot_60min_vocal_and_posture_protocol.md`)
 - [ ] **39.** Shot List, Room Prop & B-Roll Cue Sheets (`06_camera_and_voice/39_shot_list_props_and_broll_cues.md`)
 - [ ] **40.** Raw Transcript Retake & Dead-Air Cutter (`06_camera_and_voice/tools/transcript_edl_cleaner.mjs`)
 
@@ -119,3 +119,25 @@
 - [ ] **54.** Direct `reading-room-cinema` Handoff Exporter (`tools/export_cinema_bundle.mjs`)
 - [ ] **55.** Master Repository Index & Quickstart Guide (`README.md`)
 - [ ] **56.** 56-Gate Master Readiness Exam (`tools/run_editorial_exam.mjs`)
+
+---
+
+## 4. Saved Progress and Instant-Resume Queue (`37 / 56` Complete on `main`)
+
+When resuming agent execution (`"start"` / `"go"`):
+
+1. **Wave 9B Finish (`2` agents, Division 6 `#36`, `#39`, `#40` spec):**
+   - `#36` (`06_camera_and_voice/tools/teleprompter_studio.html`): UI, beamsplitter mirror, `195+`-term IPA/Persian dictionary, and Web Speech engine are already written (`3,084` lines); hydrate line `1409` (`const PRELOADED_SCRIPTS = /*__PRELOADED_SCRIPTS__*/[];`) with the verbatim Ep 01, Ep 02, and Ep 03 spoken scripts from `ep_01..03_script_clean.md` plus `ep_04` hook, then re-verify HTML `<script>` syntax.
+   - `#39` + `#40` spec: `06_camera_and_voice/tools/transcript_edl_cleaner.mjs` (`60,449` bytes) already passes `--self-test` (`EXIT 0`); write `06_camera_and_voice/39_shot_list_props_and_broll_cues.md` and `06_camera_and_voice/40_transcript_edl_cleaner_specification.md` (clear `--mode prose` `score = 0`), mark `[x]` on `#36, #39, #40`, and push Wave 9B to `origin/main`.
+2. **Wave 10 (`4` agents, Division 7 `#41` through `#49` inside `07_omnichannel_and_marketing/`):**
+   - Agent A (`#41`, `#42`): `41_15_native_vertical_scripts.md` (`15` standalone 45–60s vertical scripts passing `anti_ai_script_gate.mjs --mode vertical` at `score = 0`) and `42_short_to_long_bridge_rules.md`.
+   - Agent B (`#43`): `43_52week_community_vault_60_posts.md` + `.json` (`60` ready Community posts aligned to the Jan 2028 calendar).
+   - Agent C (`#44`, `#45`, `#46`): `44_x_and_threads_receipt_kits.md`, `45_reddit_hn_organic_seeding_playbook.md`, and `46_newsletter_and_dossier_lead_magnet.md`.
+   - Agent D (`#47`, `#48`, `#49`): `47_endscreen_and_binge_routing_graph.md`, `48_pinned_comment_and_reply_playbook.md`, and `49_creator_collab_and_podcast_pitch_kit.md`.
+   - Push Wave 10 to `origin/main` after verifying `--mode prose` / `--mode vertical` `score = 0`.
+3. **Wave 11 (`4` agents, Division 8 `#50` through `#56` inside `08_ops_monetization_and_qa/`, `tools/`, and `README.md`):**
+   - Agent A (`#50`, `#51`): `50_upload_metadata_and_chapters_pack.md` + `tools/generate_upload_metadata.mjs` and `51_sponsorship_rate_card_and_integrations.md`.
+   - Agent B (`#52`, `#53`): `tools/retention_autopsy.py` (+ CSV test fixture) and `53_12day_solo_production_sprint_sop.md`.
+   - Agent C (`#54`, `#55`): `tools/export_cinema_bundle.mjs` (plus wrapper under `08_ops_monetization_and_qa/tools/`, supporting `--dry-run` / `--out-dir` and explicit `--export-to-cinema` toward `reading-room-cinema/scripts/`) and root `README.md`.
+   - Agent D (`#56`): `tools/run_editorial_exam.mjs` (end-to-end 56-gate verifier across every schema, CLI, anti-AI gate, staleness check, 90-pair packaging lint, 27 dossiers, 3 bilingual books, 322-term glossary, Studio HTML tools, 60 community posts, and cinema dry-run).
+   - Fix any failing check until `node tools/run_editorial_exam.mjs` reports `56/56 PASS`, mark `[x]` on `#50` through `#56`, and push Final Wave 11 to `origin/main`.
