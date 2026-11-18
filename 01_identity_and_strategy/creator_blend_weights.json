@@ -1,0 +1,1387 @@
+{
+  "schema_version": "1.0.0",
+  "deliverable_id": "02_creator_blend_weighting_matrix",
+  "title": "The Reading Room Editorial OS: Creator Blend Weights, Cadence Targets, STR Preset Mappings, and Forbidden Moves",
+  "channel_metadata": {
+    "channel_name": "The Reading Room",
+    "repository": "Yuzakhodayari/reading-room-editorial-os",
+    "cinema_twin_repository": "Yuzakhodayari/reading-room-cinema",
+    "cinema_preset_source": "studio/src/novelty/strategyPresets.ts",
+    "presenter_posture": {
+      "wardrobe_register": "shirt-and-tie-restraint",
+      "age_anchor_start": 18,
+      "age_anchor_horizon_2036": 28,
+      "spoken_wpm_baseline": 150,
+      "profanity_allowed": false,
+      "street_slang_allowed": false
+    }
+  },
+  "blend_math": {
+    "corpus_transcripts_studied": 117,
+    "corpus_quantitative_train_videos": 76,
+    "corpus_total_weight": 377.5,
+    "active_creators_count": 7,
+    "anchor_creators_count": 5,
+    "supporting_creators_count": 2,
+    "anchor_weight_sum": 26.5,
+    "supporting_weight_sum": 5.0,
+    "total_blend_weight": 31.5,
+    "rational_denominator": 63,
+    "anchor_share_of_total": 0.8413,
+    "supporting_share_of_total": 0.1587,
+    "default_lean": "Gen",
+    "default_strategy_preset": "STR-GEN-EXPLAINER"
+  },
+  "creator_weights_map": {
+    "AIC": 7.0,
+    "Fisher": 6.0,
+    "Gen": 5.0,
+    "Maxinomics": 4.5,
+    "AotP": 4.0,
+    "HMW": 2.5,
+    "Boyle": 2.5
+  },
+  "creators": [
+    {
+      "id": "AIC",
+      "display_name": "AI In Context",
+      "principal_author": "Aric Floyd",
+      "tier": "anchor",
+      "rank": 1,
+      "weight": 7.0,
+      "normalized_share": 0.2222,
+      "rational_share": "14/63",
+      "anchor_core_share": 0.2642,
+      "primary_strategy_presets": [
+        "STR-AIC-CLOCKED",
+        "STR-AIC-SPECULATIVE"
+      ],
+      "corpus_train_metrics": {
+        "mean_sentence_words": 14.96,
+        "short_le_6w_pct": 18.64,
+        "long_ge_30w_pct": 7.66,
+        "questions_pct": 4.18,
+        "and_starter_pct": 6.86,
+        "so_starter_pct": 2.31,
+        "but_starter_pct": 4.34,
+        "contractions_per_1k": 28.77,
+        "you_your_per_1k": 10.26,
+        "i_me_my_per_1k": 6.49,
+        "numerals_per_1k": 9.39,
+        "swear_per_1k": 0.22,
+        "dash_per_1k": 1.43
+      },
+      "retained_editorial_dna": [
+        "Documentary restraint on high-alarm technological and sovereign fault lines",
+        "Verified calendar dates, named actors, and physical scene openings (T02)",
+        "Dry one-line deadpan parenthetical asides right after documented facts (L23)",
+        "Ad-free momentum on clocked and speculative flagship narratives (R08)",
+        "Explicit scenario credibility tags within first 5 percent of runtime (R06)",
+        "Civic or structural close without mid-video subscribe prompts (R25, A37)"
+      ],
+      "house_restraint_overrides": [
+        "Corpus 1.43 per 1k prose dash rate overridden to 0 across all scripts and documents (L33)",
+        "Clocked engine banned whenever verified hour-by-hour timestamps do not exist (R44)"
+      ]
+    },
+    {
+      "id": "Fisher",
+      "display_name": "Max Fisher",
+      "principal_author": "Max Fisher",
+      "tier": "anchor",
+      "rank": 2,
+      "weight": 6.0,
+      "normalized_share": 0.1905,
+      "rational_share": "12/63",
+      "anchor_core_share": 0.2264,
+      "primary_strategy_presets": [
+        "STR-FISHER-ARTIFACT"
+      ],
+      "corpus_train_metrics": {
+        "mean_sentence_words": 16.97,
+        "short_le_6w_pct": 19.49,
+        "long_ge_30w_pct": 12.85,
+        "questions_pct": 7.02,
+        "and_starter_pct": 16.01,
+        "so_starter_pct": 7.17,
+        "but_starter_pct": 5.28,
+        "contractions_per_1k": 27.75,
+        "you_your_per_1k": 13.28,
+        "i_me_my_per_1k": 9.73,
+        "numerals_per_1k": 8.14,
+        "swear_per_1k": 0.02,
+        "dash_per_1k": 0.0
+      },
+      "retained_editorial_dna": [
+        "Showable primary statutory filing, table, docket, or map on platen in minute one (R30, R47)",
+        "Numbered three-to-four bay investigation board organizing macro mechanisms (R12)",
+        "Sympathetic reconstruction of counterparty and state planner incentives in 0.60 to 0.85 (R19, R40)",
+        "With-me-so-far viewer comprehension checkpoints every 1500 words (R16)",
+        "Macro-to-household scale analogies right after large numbers (L29)",
+        "Plain first-person uncertainty hedges where future timing remains open (L36)"
+      ],
+      "house_restraint_overrides": [
+        "Corpus 12.85 percent long-sentence tail (>30 words) compressed below 8.0 percent ceiling"
+      ]
+    },
+    {
+      "id": "Gen",
+      "display_name": "Gen (Shirt-and-Tie Restraint Edition)",
+      "principal_author": "Channel Native Voice",
+      "tier": "anchor",
+      "rank": 3,
+      "weight": 5.0,
+      "normalized_share": 0.1587,
+      "rational_share": "10/63",
+      "anchor_core_share": 0.1887,
+      "primary_strategy_presets": [
+        "STR-GEN-EXPLAINER",
+        "STR-GEN-FIELD"
+      ],
+      "corpus_train_metrics": {
+        "mean_sentence_words": 22.99,
+        "short_le_6w_pct": 11.13,
+        "long_ge_30w_pct": 13.13,
+        "questions_pct": 7.19,
+        "and_starter_pct": 23.65,
+        "so_starter_pct": 12.52,
+        "but_starter_pct": 12.24,
+        "contractions_per_1k": 34.87,
+        "you_your_per_1k": 20.76,
+        "i_me_my_per_1k": 19.69,
+        "numerals_per_1k": 12.18,
+        "swear_per_1k": 0.99,
+        "dash_per_1k": 0.0
+      },
+      "retained_editorial_dna": [
+        "Immediate kitchen-table wallet stakes (paycheck withholding, 30-year fixed mortgage, utility bill) inside 50 words (R01, R03, T35)",
+        "High-density second-person address casting viewer inside every financial mechanism (A01, L10)",
+        "Active pre-emption of viewer and Wall Street counter-arguments before comments form (L17, A24)",
+        "Authentic 18-turning-28 generational stake looking ahead to 2036 (A08, L12)",
+        "Concrete balance-sheet agency lever in final 10 percent of runtime (R26, A37)"
+      ],
+      "house_restraint_overrides": [
+        "Corpus 0.99 per 1k profanity rate locked strictly to 0.00 (L13 overridden)",
+        "Street slang and youth filler locked strictly to 0.00 (L14 overridden)",
+        "Legacy street-interview vox-pop filler banned on studio investigations (R46)",
+        "Corpus 22.99-word spoken run-ons tightened into 15.5 to 17.5 mean band with <8.0 percent >30 words"
+      ]
+    },
+    {
+      "id": "Maxinomics",
+      "display_name": "Maxinomics",
+      "principal_author": "Maxinomics",
+      "tier": "anchor",
+      "rank": 4,
+      "weight": 4.5,
+      "normalized_share": 0.1429,
+      "rational_share": "9/63",
+      "anchor_core_share": 0.1698,
+      "primary_strategy_presets": [
+        "STR-MAX-ESSAY"
+      ],
+      "corpus_train_metrics": {
+        "mean_sentence_words": 12.98,
+        "short_le_6w_pct": 30.53,
+        "long_ge_30w_pct": 7.43,
+        "questions_pct": 5.63,
+        "and_starter_pct": 3.81,
+        "so_starter_pct": 3.01,
+        "but_starter_pct": 3.17,
+        "contractions_per_1k": 23.21,
+        "you_your_per_1k": 13.38,
+        "i_me_my_per_1k": 7.97,
+        "numerals_per_1k": 11.24,
+        "swear_per_1k": 0.06,
+        "dash_per_1k": 0.0
+      },
+      "retained_editorial_dna": [
+        "Two-object physical unit-cost collisions ($20k drone vs $4M interceptor, $120 shoe vs automated plant) (STR-MAX-ESSAY)",
+        "Interactive cost-exchange decision games with viewer (A20)",
+        "Syntactic economy pulling blend mean down toward 16.6 words",
+        "Concrete 4-to-8 item physical action and noun lists (L03)",
+        "Optional footnotes coda on concept essays (R24)"
+      ],
+      "house_restraint_overrides": [
+        "Consecutive short fragment stacks capped at 2 sentences to prevent parataxis",
+        "Early 0.06 to 0.14 sponsor slot disabled on ad-free flagship episodes"
+      ]
+    },
+    {
+      "id": "AotP",
+      "display_name": "Art of the Problem",
+      "principal_author": "Brit Cruise",
+      "tier": "anchor",
+      "rank": 5,
+      "weight": 4.0,
+      "normalized_share": 0.1270,
+      "rational_share": "8/63",
+      "anchor_core_share": 0.1509,
+      "primary_strategy_presets": [
+        "STR-AOTP-LADDER"
+      ],
+      "corpus_train_metrics": {
+        "mean_sentence_words": 16.23,
+        "short_le_6w_pct": 18.52,
+        "long_ge_30w_pct": 7.18,
+        "questions_pct": 2.74,
+        "and_starter_pct": 14.77,
+        "so_starter_pct": 5.42,
+        "but_starter_pct": 4.92,
+        "contractions_per_1k": 21.17,
+        "you_your_per_1k": 10.77,
+        "i_me_my_per_1k": 11.32,
+        "numerals_per_1k": 14.01,
+        "swear_per_1k": 0.0,
+        "dash_per_1k": 0.0
+      },
+      "retained_editorial_dna": [
+        "First-principles toy models built with small numbers before naming technical jargon (T23)",
+        "Multi-rung physical scale ladders (10W charger -> 1kW microwave -> 1GW city -> 5GW campus) (T19)",
+        "Dated historical precedents (1912 coal scrip, 1933 debt deflation, 1941 rationing) echoing into 2036"
+      ],
+      "house_restraint_overrides": [
+        "Pure toy-model cold opens banned on household solvency and wallet titles (R45)"
+      ]
+    },
+    {
+      "id": "HMW",
+      "display_name": "How Money Works",
+      "principal_author": "How Money Works",
+      "tier": "supporting",
+      "rank": 6,
+      "weight": 2.5,
+      "normalized_share": 0.0794,
+      "rational_share": "5/63",
+      "anchor_core_share": null,
+      "primary_strategy_presets": [
+        "STR-HMW-PRIMER"
+      ],
+      "corpus_train_metrics": null,
+      "retained_editorial_dna": [
+        "Clean institutional plumbing primers for repo clearing, withholding, covenants, and grid auctions",
+        "Self-aware apologetic preparation line before dense technical mechanisms (L19)",
+        "Midpoint structural pivot seam (0.46 to 0.54) from normal operation to systemic break"
+      ],
+      "house_restraint_overrides": [
+        "Outside STR-HMW-PRIMER, pure primers capped at 350 to 450 words before returning to human POV",
+        "Mid-video subscribe asks banned, and cynical endings replaced with concrete viewer levers"
+      ]
+    },
+    {
+      "id": "Boyle",
+      "display_name": "Patrick Boyle",
+      "principal_author": "Patrick Boyle",
+      "tier": "supporting",
+      "rank": 7,
+      "weight": 2.5,
+      "normalized_share": 0.0794,
+      "rational_share": "5/63",
+      "anchor_core_share": null,
+      "primary_strategy_presets": [
+        "STR-BOYLE-CHAPTERED"
+      ],
+      "corpus_train_metrics": null,
+      "retained_editorial_dna": [
+        "Forensic accounting distinction between GAAP book optics and negative free cash flow",
+        "10-K footnote, bonus depreciation, SPV, and sovereign yield-spread literacy (R35)",
+        "Bone-dry deadpan understatement delivered flatly on documented conflicts of interest (L26)"
+      ],
+      "house_restraint_overrides": [
+        "Extended comedic detours cut, with deadpan observations capped at 1 to 2 factual lines per act"
+      ]
+    }
+  ],
+  "axis_targets": {
+    "structure": {
+      "cold_open_max_words_house_target": 50,
+      "cold_open_max_words_r01_hard_fail": 60,
+      "cold_open_spoken_seconds_target": 18,
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "thesis_question_default_hard_cap_frac": 0.08,
+      "suspense_preservation_policy": {
+        "rule_cards": [
+          "R02",
+          "A16",
+          "T31",
+          "T45"
+        ],
+        "allow_early_board_preview": true,
+        "forbid_spoiling_escape_hatch_failure_mechanisms_before_act": true,
+        "max_open_loop_duration_frac": 0.4,
+        "close_all_open_loops_before_frac": 0.9
+      },
+      "max_gap_without_structural_turn_frac": 0.18,
+      "adversary_concession_window": {
+        "start": 0.6,
+        "end": 0.85
+      },
+      "early_steelman_before_frac": 0.3,
+      "verdict_window": {
+        "start": 0.9,
+        "end": 1.0
+      },
+      "single_cta_window": {
+        "start": 0.97,
+        "end": 1.0
+      },
+      "forbid_new_facts_after_frac": 0.9,
+      "forbid_mid_video_subscribe_ask": true
+    },
+    "storytelling": {
+      "require_longitudinal_human_vehicle": true,
+      "introduce_human_vehicle_by_frac": 0.2,
+      "require_bookend_callback_in_final_decile": true,
+      "single_pov_spine_required": true,
+      "physical_scale_ladder_min_rungs": 3,
+      "rescale_numbers_above": 1000,
+      "rescale_within_max_sentences": 2,
+      "min_adversary_concessions_default": 2,
+      "min_adversary_concessions_essay_or_ladder": 1
+    },
+    "audience": {
+      "devices_per_1k_words": {
+        "min": 3.0,
+        "target": 5.2,
+        "max": 8.0,
+        "rule_cards": [
+          "A42",
+          "A43"
+        ]
+      },
+      "device_budget_4000w_script": {
+        "direct_questions": {
+          "min": 14,
+          "max": 24
+        },
+        "primary_artifact_show_and_tell": {
+          "min": 3,
+          "max": 6
+        },
+        "viewer_game_or_vignette": {
+          "min": 1,
+          "max": 2
+        },
+        "objection_pre_emption": {
+          "min": 1,
+          "max": 2
+        },
+        "open_loop_tease": {
+          "min": 1,
+          "max": 3
+        },
+        "honesty_or_timing_hedge": {
+          "min": 1,
+          "max": 2
+        },
+        "real_presenter_or_generational_stake": {
+          "min": 0,
+          "max": 1
+        },
+        "agency_lever": {
+          "min": 1,
+          "max": 1
+        },
+        "single_cta": {
+          "min": 1,
+          "max": 1
+        }
+      },
+      "decile_rehook_policy": {
+        "required_deciles": 10,
+        "min_devices_per_decile": 1,
+        "max_gap_without_turn_frac": 0.18,
+        "allowed_devices": [
+          "contradiction-question",
+          "primary-artifact-open",
+          "numeric-shock",
+          "burstiness-slam",
+          "entity-callback",
+          "counterfactual-turn",
+          "scale-ladder-step"
+        ],
+        "rule_cards": [
+          "R13",
+          "A11",
+          "A16"
+        ]
+      }
+    },
+    "language": {
+      "sentence_length_targets": {
+        "mean_words": {
+          "min": 15.5,
+          "target": 16.6,
+          "max": 17.5,
+          "corpus_all_reference": 16.76
+        },
+        "long_sentences_gt_30_words_pct": {
+          "max": 8.0,
+          "corpus_all_reference": 10.77
+        },
+        "short_sentences_le_6_words_pct": {
+          "min": 6.0,
+          "target": 14.0,
+          "max": 22.0,
+          "corpus_all_reference": 19.55
+        },
+        "short_sentences_le_8_words_pct": {
+          "min": 12.0,
+          "target": 18.0,
+          "max": 28.0
+        },
+        "max_consecutive_equal_length_sentences": 2,
+        "forbid_equal_length_run_of": 3,
+        "max_consecutive_short_declarative_parataxis": 2
+      },
+      "sentence_starter_rates_pct": {
+        "questions_pct": {
+          "min": 2.5,
+          "target": 5.44,
+          "max": 9.0
+        },
+        "and_starter_pct": {
+          "min": 2.5,
+          "target": 11.86,
+          "max": 24.0
+        },
+        "so_starter_pct": {
+          "min": 1.5,
+          "target": 5.93,
+          "max": 13.0
+        },
+        "but_starter_pct": {
+          "min": 0.4,
+          "target": 5.92,
+          "max": 13.0
+        },
+        "coordinating_starters_combined_min_pct": 5.0
+      },
+      "lexical_rates_per_1k_words": {
+        "contractions_per_1k": {
+          "min": 18.0,
+          "target": 27.34,
+          "max": 38.0
+        },
+        "second_person_you_your_per_1k": {
+          "min": 10.0,
+          "target": 15.0,
+          "max": 24.0,
+          "aotp_ladder_min": 6.0
+        },
+        "first_person_singular_per_1k": {
+          "min": 4.0,
+          "target": 11.5,
+          "max": 21.0
+        },
+        "numerals_per_1k": {
+          "min": 8.0,
+          "target": 14.0
+        }
+      },
+      "typography_and_detector_hard_locks": {
+        "pipeline_detector_gate_max_score": 2,
+        "house_target_detector_score": 0,
+        "max_detector_repair_loops": 3,
+        "max_em_dashes": 0,
+        "max_en_dashes_in_prose": 0,
+        "max_double_hyphen_dashes": 0,
+        "max_semicolons_in_scripts": 0,
+        "max_exclamation_marks": 0,
+        "max_profanity_tokens": 0,
+        "max_street_slang_tokens": 0,
+        "max_negative_contrast_pivots": 0,
+        "max_abstract_noun_triads": 0,
+        "max_banned_ai_words": 0,
+        "banned_unicode_codepoints_in_scripts": [
+          "U+2014",
+          "U+2013",
+          "U+0021",
+          "U+003B"
+        ]
+      }
+    }
+  },
+  "strategy_preset_mappings": {
+    "STR-GEN-EXPLAINER": {
+      "id": "STR-GEN-EXPLAINER",
+      "name": "Gen Money and Power Explainer Fused With Fisher Board and AIC Restraint",
+      "primary_engine": "explainer",
+      "default_lean": "Gen",
+      "creator_weight": 5.0,
+      "word_count_target": {
+        "min": 3300,
+        "median": 3900,
+        "max": 4500
+      },
+      "spoken_duration_target_min": {
+        "min": 20,
+        "max": 27
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 60,
+      "thesis_question_hard_cap_frac": 0.08,
+      "sponsor_policy": {
+        "allowed": true,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": true,
+        "cliffhanger_entry_required": true,
+        "re_entry_line_required": true,
+        "window": {
+          "start": 0.25,
+          "end": 0.35
+        },
+        "median_frac": 0.31
+      },
+      "adversary_concession_min": 2,
+      "cta_archetype": "agency-lever-plus-next-video",
+      "presenter_aroll_share": {
+        "min": 0.2,
+        "target": 0.28,
+        "max": 0.36
+      },
+      "preferred_registers": [
+        "milk-page-editorial",
+        "smoked-navy-glass",
+        "archival-light-table",
+        "investigation-switchboard"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-01",
+        "ARCH-02",
+        "ARCH-04",
+        "ARCH-06",
+        "ARCH-07",
+        "ARCH-08",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "street",
+        "field",
+        "ladder"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R45",
+        "R46"
+      ]
+    },
+    "STR-AIC-CLOCKED": {
+      "id": "STR-AIC-CLOCKED",
+      "name": "AI In Context True-Event Clocked Reconstruction",
+      "primary_engine": "clocked",
+      "default_lean": "AIC",
+      "creator_weight": 7.0,
+      "word_count_target": {
+        "min": 5200,
+        "median": 6200,
+        "max": 7000
+      },
+      "spoken_duration_target_min": {
+        "min": 32,
+        "max": 43
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 55,
+      "thesis_question_hard_cap_frac": 0.05,
+      "sponsor_policy": {
+        "allowed": false,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": false,
+        "cliffhanger_entry_required": false,
+        "re_entry_line_required": false,
+        "window": null,
+        "median_frac": null
+      },
+      "adversary_concession_min": 2,
+      "cta_archetype": "civic-or-share-ask",
+      "presenter_aroll_share": {
+        "min": 0.18,
+        "target": 0.24,
+        "max": 0.32
+      },
+      "preferred_registers": [
+        "restraint-vellum",
+        "archival-light-table",
+        "smoked-navy-glass",
+        "silver-gelatin-chronicle"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-01",
+        "ARCH-02",
+        "ARCH-09",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "street",
+        "field",
+        "ladder",
+        "primer"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R45",
+        "R46"
+      ]
+    },
+    "STR-AIC-SPECULATIVE": {
+      "id": "STR-AIC-SPECULATIVE",
+      "name": "AI In Context Near-Future Scenario and Empirical Interleave",
+      "primary_engine": "speculative",
+      "default_lean": "AIC",
+      "creator_weight": 7.0,
+      "word_count_target": {
+        "min": 4500,
+        "median": 5500,
+        "max": 6500
+      },
+      "spoken_duration_target_min": {
+        "min": 28,
+        "max": 39
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 58,
+      "thesis_question_hard_cap_frac": 0.08,
+      "sponsor_policy": {
+        "allowed": false,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": false,
+        "cliffhanger_entry_required": false,
+        "re_entry_line_required": false,
+        "window": null,
+        "median_frac": null
+      },
+      "adversary_concession_min": 2,
+      "cta_archetype": "civic-or-share-ask",
+      "presenter_aroll_share": {
+        "min": 0.18,
+        "target": 0.25,
+        "max": 0.32
+      },
+      "preferred_registers": [
+        "restraint-vellum",
+        "geospatial-telemetry",
+        "blueprint-schematic",
+        "archival-light-table"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-01",
+        "ARCH-03",
+        "ARCH-06",
+        "ARCH-11",
+        "ARCH-12",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "street",
+        "field",
+        "ladder"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R45",
+        "R46"
+      ]
+    },
+    "STR-FISHER-ARTIFACT": {
+      "id": "STR-FISHER-ARTIFACT",
+      "name": "Max Fisher Primary-Artifact and Numbered-Board Investigation",
+      "primary_engine": "artifact",
+      "default_lean": "Fisher",
+      "creator_weight": 6.0,
+      "word_count_target": {
+        "min": 4400,
+        "median": 5400,
+        "max": 6200
+      },
+      "spoken_duration_target_min": {
+        "min": 26,
+        "max": 37
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 55,
+      "thesis_question_hard_cap_frac": 0.08,
+      "sponsor_policy": {
+        "allowed": true,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": true,
+        "cliffhanger_entry_required": true,
+        "re_entry_line_required": true,
+        "window": {
+          "start": 0.28,
+          "end": 0.38
+        },
+        "median_frac": 0.32
+      },
+      "adversary_concession_min": 2,
+      "cta_archetype": "restated-claim-uncertainty",
+      "presenter_aroll_share": {
+        "min": 0.18,
+        "target": 0.26,
+        "max": 0.34
+      },
+      "preferred_registers": [
+        "archival-light-table",
+        "investigation-switchboard",
+        "geospatial-telemetry",
+        "milk-page-editorial"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-01",
+        "ARCH-04",
+        "ARCH-07",
+        "ARCH-08",
+        "ARCH-11",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "street",
+        "field",
+        "ladder"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R45",
+        "R46",
+        "R47"
+      ]
+    },
+    "STR-MAX-ESSAY": {
+      "id": "STR-MAX-ESSAY",
+      "name": "Maxinomics Cinematic Object and Game-Theory Concept Essay",
+      "primary_engine": "essay",
+      "default_lean": "Maxinomics",
+      "creator_weight": 4.5,
+      "word_count_target": {
+        "min": 3000,
+        "median": 3650,
+        "max": 4200
+      },
+      "spoken_duration_target_min": {
+        "min": 19,
+        "max": 26
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 56,
+      "thesis_question_hard_cap_frac": 0.09,
+      "sponsor_policy": {
+        "allowed": true,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": true,
+        "cliffhanger_entry_required": true,
+        "re_entry_line_required": true,
+        "window": {
+          "start": 0.06,
+          "end": 0.14
+        },
+        "median_frac": 0.09
+      },
+      "adversary_concession_min": 1,
+      "cta_archetype": "footnotes-coda",
+      "presenter_aroll_share": {
+        "min": 0.16,
+        "target": 0.22,
+        "max": 0.3
+      },
+      "preferred_registers": [
+        "blueprint-schematic",
+        "milk-page-editorial",
+        "silver-gelatin-chronicle",
+        "smoked-navy-glass"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-05",
+        "ARCH-07",
+        "ARCH-09",
+        "ARCH-12",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "street",
+        "field"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R46"
+      ]
+    },
+    "STR-AOTP-LADDER": {
+      "id": "STR-AOTP-LADDER",
+      "name": "Art of the Problem First-Principles Toy-Model Ladder",
+      "primary_engine": "ladder",
+      "default_lean": "AotP",
+      "creator_weight": 4.0,
+      "word_count_target": {
+        "min": 2400,
+        "median": 3000,
+        "max": 3600
+      },
+      "spoken_duration_target_min": {
+        "min": 16,
+        "max": 23
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 50,
+      "thesis_question_hard_cap_frac": 0.06,
+      "sponsor_policy": {
+        "allowed": true,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": true,
+        "cliffhanger_entry_required": true,
+        "re_entry_line_required": true,
+        "window": {
+          "start": 0.15,
+          "end": 0.23
+        },
+        "median_frac": 0.19
+      },
+      "adversary_concession_min": 1,
+      "cta_archetype": "philosophical-echo-list",
+      "presenter_aroll_share": {
+        "min": 0.12,
+        "target": 0.18,
+        "max": 0.25
+      },
+      "preferred_registers": [
+        "blueprint-schematic",
+        "silver-gelatin-chronicle",
+        "restraint-vellum",
+        "milk-page-editorial"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-05",
+        "ARCH-08",
+        "ARCH-09",
+        "ARCH-11",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "street",
+        "field",
+        "explainer"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R46"
+      ]
+    },
+    "STR-BOYLE-CHAPTERED": {
+      "id": "STR-BOYLE-CHAPTERED",
+      "name": "Boyle Dry Forensic Accounting and Historical Chaptered Essay",
+      "primary_engine": "chaptered",
+      "default_lean": "Boyle",
+      "creator_weight": 2.5,
+      "word_count_target": {
+        "min": 3800,
+        "median": 4600,
+        "max": 5800
+      },
+      "spoken_duration_target_min": {
+        "min": 23,
+        "max": 35
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 56,
+      "thesis_question_hard_cap_frac": 0.08,
+      "sponsor_policy": {
+        "allowed": true,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": true,
+        "cliffhanger_entry_required": true,
+        "re_entry_line_required": true,
+        "window": {
+          "start": 0.12,
+          "end": 0.22
+        },
+        "median_frac": 0.16
+      },
+      "adversary_concession_min": 2,
+      "cta_archetype": "dry-verdict-chapter-close",
+      "presenter_aroll_share": {
+        "min": 0.22,
+        "target": 0.3,
+        "max": 0.38
+      },
+      "preferred_registers": [
+        "archival-light-table",
+        "milk-page-editorial",
+        "silver-gelatin-chronicle",
+        "smoked-navy-glass"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-01",
+        "ARCH-02",
+        "ARCH-07",
+        "ARCH-08",
+        "ARCH-09",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "street",
+        "field"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R46",
+        "R47"
+      ]
+    },
+    "STR-HMW-PRIMER": {
+      "id": "STR-HMW-PRIMER",
+      "name": "How Money Works Plumbing Primer Into Structural Break",
+      "primary_engine": "primer",
+      "default_lean": "HMW",
+      "creator_weight": 2.5,
+      "word_count_target": {
+        "min": 3600,
+        "median": 4300,
+        "max": 5100
+      },
+      "spoken_duration_target_min": {
+        "min": 22,
+        "max": 31
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 58,
+      "thesis_question_hard_cap_frac": 0.08,
+      "sponsor_policy": {
+        "allowed": true,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": true,
+        "cliffhanger_entry_required": true,
+        "re_entry_line_required": true,
+        "window": {
+          "start": 0.44,
+          "end": 0.54
+        },
+        "median_frac": 0.49
+      },
+      "adversary_concession_min": 2,
+      "cta_archetype": "dry-verdict-chapter-close",
+      "presenter_aroll_share": {
+        "min": 0.2,
+        "target": 0.27,
+        "max": 0.35
+      },
+      "preferred_registers": [
+        "blueprint-schematic",
+        "archival-light-table",
+        "milk-page-editorial",
+        "smoked-navy-glass"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-01",
+        "ARCH-05",
+        "ARCH-07",
+        "ARCH-08",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "street",
+        "field",
+        "ladder"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R45",
+        "R46"
+      ]
+    },
+    "STR-GEN-FIELD": {
+      "id": "STR-GEN-FIELD",
+      "name": "Gen On-Location Field Investigation and Set-Piece Documentary",
+      "primary_engine": "field",
+      "default_lean": "Gen",
+      "creator_weight": 5.0,
+      "word_count_target": {
+        "min": 3400,
+        "median": 4200,
+        "max": 5000
+      },
+      "spoken_duration_target_min": {
+        "min": 21,
+        "max": 31
+      },
+      "hook_and_stake_window": {
+        "start": 0.0,
+        "end": 0.1
+      },
+      "max_hook_words_house": 50,
+      "max_hook_words_r01_fail": 55,
+      "thesis_question_hard_cap_frac": 0.07,
+      "sponsor_policy": {
+        "allowed": true,
+        "ad_free_on_flagship_launches": true,
+        "bridged_required": true,
+        "cliffhanger_entry_required": true,
+        "re_entry_line_required": true,
+        "window": {
+          "start": 0.18,
+          "end": 0.26
+        },
+        "median_frac": 0.22
+      },
+      "adversary_concession_min": 2,
+      "cta_archetype": "agency-lever-plus-next-video",
+      "presenter_aroll_share": {
+        "min": 0.34,
+        "target": 0.42,
+        "max": 0.52
+      },
+      "preferred_registers": [
+        "smoked-navy-glass",
+        "geospatial-telemetry",
+        "archival-light-table",
+        "milk-page-editorial"
+      ],
+      "preferred_scene_archetypes": [
+        "ARCH-02",
+        "ARCH-01",
+        "ARCH-11",
+        "ARCH-06",
+        "ARCH-13"
+      ],
+      "default_forbidden_engines": [
+        "clocked",
+        "ladder",
+        "street"
+      ],
+      "active_guardrails": [
+        "R43",
+        "R44",
+        "R45"
+      ]
+    }
+  },
+  "conflict_resolution_hierarchy": [
+    {
+      "tier": 1,
+      "name": "House Restraint and Anti-AI Hard Locks",
+      "rule": "Zero profanity, zero street slang, zero em dashes, zero double-hyphen splices, zero semicolons, zero exclamation marks, <50w cold-open stake, 15.5 to 17.5 mean sentence length, and <8.0 percent sentences >30 words override every raw creator transcript habit."
+    },
+    {
+      "tier": 2,
+      "name": "Primary Evidence Guardrail Supremacy (R43 to R48)",
+      "rule": "Available verified primary sources outrank creator weight. AIC (7.0x) cannot force a clocked spine without verified hour-level records (R44), and Fisher (6.0x) cannot force an artifact spine without a showable primary filing or map (R47)."
+    },
+    {
+      "tier": 3,
+      "name": "Locked Strategy Preset Spine Ownership (R42, T43)",
+      "rule": "Once channel-structure locks one STR-* preset, that preset owns the beat map, thesis cap, sponsor window, CTA archetype, and forbidden_engines list unless an explicit BACKTRACK fires."
+    },
+    {
+      "tier": 4,
+      "name": "Creator Multiplier Rank Tie-Breaker",
+      "precedence_order": [
+        "AIC (7.0x)",
+        "Fisher (6.0x)",
+        "Gen (5.0x)",
+        "Maxinomics (4.5x)",
+        "AotP (4.0x)",
+        "HMW (2.5x) / Boyle (2.5x)"
+      ],
+      "specific_rulings": [
+        {
+          "collision": "Fisher (6.0x) counterparty fairness vs Gen (5.0x) moral indictment",
+          "winner": "Fisher",
+          "resolution": "State counterparty balance-sheet incentives fairly first (R19), then land Gen household wallet consequence."
+        },
+        {
+          "collision": "AIC (7.0x) documentary composure vs Gen (5.0x) populist heat",
+          "winner": "AIC",
+          "resolution": "Keep vocal and lexical temperature calm, letting verified numbers against Friday rent supply the urgency."
+        },
+        {
+          "collision": "Gen (5.0x) wallet cold open vs AotP (4.0x) slow historical derivation on solvency titles",
+          "winner": "Gen",
+          "resolution": "Enforce R45: land household stake inside 50 words and nest AotP toy models inside mid-film acts (0.34 to 0.60)."
+        },
+        {
+          "collision": "AIC (7.0x) and Maxinomics (4.5x) compression vs Fisher (6.0x) multi-clause caveats",
+          "winner": "AIC + Maxinomics",
+          "resolution": "Split clauses exceeding 30 words into crisp declaratives and two-object unit ratios."
+        }
+      ]
+    },
+    {
+      "tier": 5,
+      "name": "Supporting Specialist Domain Split (HMW 2.5x vs Boyle 2.5x)",
+      "rule": "Route market clearing, withholding, and covenant plumbing to HMW, and route 10-K footnotes, GAAP-vs-cash discrepancies, and sovereign bond spreads to Boyle."
+    }
+  ],
+  "forbidden_moves": [
+    {
+      "rule_id": "R01",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Late Cold-Open Stake",
+      "validator_condition": "words_to_first_concrete_stake > 50 (house target) or > 60 (corpus hard fail)",
+      "remediation": "Cut abstract throat-clearing and open directly on paycheck, filing, date, or physical object stake."
+    },
+    {
+      "rule_id": "R02",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Late or Agenda-Style Thesis",
+      "validator_condition": "thesis_question_frac > preset.thesis_question_hard_cap_frac or matches agenda formula",
+      "remediation": "State central thesis question before 0.08 and preview bays without spoiling failure mechanics."
+    },
+    {
+      "rule_id": "R08",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Illegal or Unbridged Sponsor Placement",
+      "validator_condition": "sponsor present when allowed == false or outside preset.sponsor_policy.window or missing cliffhanger/re-entry",
+      "remediation": "Remove ad on AIC/flagship runs or move inside preset window with R09 cliffhanger, R10 bridge, and R11 re-entry."
+    },
+    {
+      "rule_id": "R19",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Missing Fair Counterparty Concession",
+      "validator_condition": "concession_count < preset.adversary_concession_min or absent in [0.60, 0.85]",
+      "remediation": "Add steelman of strongest orthodox economic, engineering, or statutory counter-case before proving the break."
+    },
+    {
+      "rule_id": "R22_HOUSE",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Mid-Video Subscribe or Like Nag",
+      "validator_condition": "cta_or_subscribe_ask_frac < 0.90",
+      "remediation": "Delete all mid-roll subscribe or like prompts and restrict single lean-matched CTA to 0.97 to 1.00."
+    },
+    {
+      "rule_id": "R37",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Duplicated Drafting Span",
+      "validator_condition": "repeated_verbatim_span_words >= 15",
+      "remediation": "Deduplicate repeated drafting blocks while preserving intentional 2-to-6 word refrain tags (L08)."
+    },
+    {
+      "rule_id": "R38",
+      "axis": "structure",
+      "severity": "P1",
+      "name": "New Facts After 0.90 Verdict Boundary",
+      "validator_condition": "new_empirical_stat_or_case_frac > 0.90",
+      "remediation": "Move all empirical exhibits before 0.90 and reserve final 10 percent for callback, verdict, lever, and CTA."
+    },
+    {
+      "rule_id": "R43",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Empty Forbidden Engines Array",
+      "validator_condition": "strategy_packet.forbidden_engines.length == 0",
+      "remediation": "Diagnose title constraints and ban at least one incompatible narrative engine."
+    },
+    {
+      "rule_id": "R44",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Fake Crisis Hour-Stamps Without Verified Clock",
+      "validator_condition": "clocked in forbidden_engines and script contains invented HH:MM crisis timestamps or doc-live-countdown-split",
+      "remediation": "Keep dates strictly at verified calendar resolution (month, quarter, or year) and remove synthetic timers."
+    },
+    {
+      "rule_id": "R45",
+      "axis": "structure",
+      "severity": "P1",
+      "name": "Pure Toy-Model Spine on Household Solvency Title",
+      "validator_condition": "stakes == wallet and primary_engine == ladder",
+      "remediation": "Use STR-GEN-EXPLAINER or STR-HMW-PRIMER with <50w wallet stake and nest toy models inside one mid-film act."
+    },
+    {
+      "rule_id": "R46",
+      "axis": "structure",
+      "severity": "P1",
+      "name": "Fake Street or Field Framing in Studio Investigation",
+      "validator_condition": "has_verified_field_shoot == false and primary_engine in [street, field]",
+      "remediation": "Ban street and field engines, grounding evidence in primary filings and archival records."
+    },
+    {
+      "rule_id": "R47",
+      "axis": "structure",
+      "severity": "P0",
+      "name": "Artifact Engine Without Showable Primary Record",
+      "validator_condition": "primary_engine == artifact and has_showable_primary_artifact == false",
+      "remediation": "Acquire verified statutory filing, table, or map, or switch preset to STR-MAX-ESSAY or STR-AOTP-LADDER."
+    },
+    {
+      "rule_id": "T43",
+      "axis": "storytelling",
+      "severity": "P0",
+      "name": "Forbidden Engine Drift During Drafting",
+      "validator_condition": "draft uses signature mechanics of an engine listed in strategy_packet.forbidden_engines",
+      "remediation": "Strip drifted timestamps, vox-pop beats, or ungrounded Cold Open toy models to obey packet."
+    },
+    {
+      "rule_id": "T44",
+      "axis": "storytelling",
+      "severity": "P0",
+      "name": "Rotating Impersonal POV Spine",
+      "validator_condition": "rotates impersonally across one/consumers/stakeholders without anchored human vehicle",
+      "remediation": "Lock one longitudinal human character vehicle plus direct second-person you framing."
+    },
+    {
+      "rule_id": "T46",
+      "axis": "storytelling",
+      "severity": "P1",
+      "name": "Moral-Platitude Ending",
+      "validator_condition": "final_5_pct ends on abstract societal wish without callback, concrete image, or balance-sheet lever",
+      "remediation": "Close on T39 bookend callback, R26 ownership lever, and sharp institutional verdict."
+    },
+    {
+      "rule_id": "A16",
+      "axis": "audience",
+      "severity": "P0",
+      "name": "Unclosed or Prematurely Spoiled Open Loop",
+      "validator_condition": "open_loop_unclosed_by_0_90 or escape_hatch_failure_spoiled_in_intro",
+      "remediation": "Preview candidate hatches in intro, withhold failure mechanism until target bay, and close every loop before 0.90."
+    },
+    {
+      "rule_id": "A23",
+      "axis": "audience",
+      "severity": "P1",
+      "name": "Generic Comment Engagement Bait",
+      "validator_condition": "matches generic thoughts-in-comments filler",
+      "remediation": "Ask one specific, contested institutional or balance-sheet question in final 10 percent."
+    },
+    {
+      "rule_id": "A42_A43",
+      "axis": "audience",
+      "severity": "P0",
+      "name": "Audience Device Density Out of Bounds",
+      "validator_condition": "devices_per_1k < 3.0 or devices_per_1k > 8.0",
+      "remediation": "Inject A01/A03/L05 if below 3.0/1k, or prune P2 humor and stackers first if above 8.0/1k."
+    },
+    {
+      "rule_id": "A44",
+      "axis": "audience",
+      "severity": "P0",
+      "name": "Fabricated Personal Experience or Financial Position",
+      "validator_condition": "claims unverified narrator trade, possession, or lived event",
+      "remediation": "Remove invented experience immediately and restrict narrator stake to verified age/generational facts."
+    },
+    {
+      "rule_id": "L13_L14_HOUSE",
+      "axis": "language",
+      "severity": "P0",
+      "name": "Profanity or Street Slang Violation",
+      "validator_condition": "profanity_count > 0 or street_slang_count > 0",
+      "remediation": "Replace with crisp shirt-and-tie plain English or Boyle-style deadpan understatement."
+    },
+    {
+      "rule_id": "L31",
+      "axis": "language",
+      "severity": "P0",
+      "name": "Ornamental Abstract Noun Triad",
+      "validator_condition": "three_abstract_nouns_conjoined_for_rhythm > 0",
+      "remediation": "Replace abstract triad with concrete named institutions, numbers, or two-part direct claims."
+    },
+    {
+      "rule_id": "L32_L50",
+      "axis": "language",
+      "severity": "P0",
+      "name": "Banned AI Vocabulary or Negative-Contrast Crutch",
+      "validator_condition": "banned_ai_word_hits > 0 or negative_contrast_pivot_hits > 0",
+      "remediation": "Rewrite directly as positive factual statements using plain verbs and verified numbers."
+    },
+    {
+      "rule_id": "L33_HOUSE",
+      "axis": "language",
+      "severity": "P0",
+      "name": "Forbidden Punctuation Token (Em Dash, Double Hyphen, Semicolon, Exclamation)",
+      "validator_condition": "em_dash_count > 0 or double_hyphen_count > 0 or semicolon_count > 0 or exclamation_count > 0",
+      "remediation": "Split at semicolons, replace dashes with commas/colons/periods, and cut all exclamation marks."
+    },
+    {
+      "rule_id": "L46",
+      "axis": "language",
+      "severity": "P0",
+      "name": "Detector Gate Failure or Soft-Pass",
+      "validator_condition": "detector_score > 2 (pipeline ceiling) or > 0 (house target)",
+      "remediation": "Repair flagged spans iteratively (max 3 loops) without regenerating facts or planting fake typos (L48)."
+    },
+    {
+      "rule_id": "L51",
+      "axis": "language",
+      "severity": "P1",
+      "name": "Flat Sentence Rhythm or Equal-Length Run",
+      "validator_condition": "mean_words < 15.5 or mean_words > 17.5 or pct_gt_30w >= 8.0 or consecutive_equal_word_count_run >= 3",
+      "remediation": "Alternate 22-to-29-word analytical builds with 4-to-8-word declarative punches."
+    }
+  ],
+  "grading_rubric": {
+    "starting_axis_score": 10.0,
+    "deductions": {
+      "p0_miss_or_violation": 2.0,
+      "p1_miss_or_violation": 1.0,
+      "p1_max_total_deduction": 4.0,
+      "p2_miss": 0.5,
+      "p2_max_total_deduction": 1.5,
+      "over_applied_card_gt_2x_corpus_rate": 1.0,
+      "banned_move_violation": 1.0
+    },
+    "caps": {
+      "one_or_more_p0_max_axis_score": 6.0,
+      "two_or_more_p1_max_axis_score": 8.0,
+      "p2_caps_score": false
+    },
+    "publish_readiness": {
+      "any_p0_blocks_publish": true,
+      "composite_score_formula": "mean(structure, storytelling, audience, language)",
+      "min_composite_score_to_ship": 8.5,
+      "max_detector_score_pipeline": 2,
+      "target_detector_score_house": 0
+    }
+  }
+}

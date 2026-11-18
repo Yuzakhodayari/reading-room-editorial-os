@@ -1,0 +1,674 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Yuzakhodayari/reading-room-editorial-os/schemas/cinema_schema_contract.json",
+  "schemaVersion": "1.0.0",
+  "contractId": "reading-room-editorial-to-cinema-v1",
+  "title": "The Reading Room Editorial OS to Cinema Studio Schema Contract",
+  "description": "Canonical visual, optical, acoustic, strategy-preset, register, and episodes-vault handoff contract binding reading-room-editorial-os to reading-room-cinema.",
+  "siblingCinemaBindings": {
+    "tokensModule": "studio/src/design/tokens.ts",
+    "strategyPresetsModule": "studio/src/novelty/strategyPresets.ts",
+    "directorSchemaModule": "studio/src/director/schema.ts",
+    "prepArollCli": "studio/scripts/prep-aroll.mjs",
+    "planEditCli": "studio/scripts/plan-edit.mjs",
+    "renderOverlaysCli": "studio/scripts/render-overlays.mjs",
+    "exportFcpxmlCli": "studio/scripts/export-fcpxml.mjs",
+    "masterPipelineCli": "tools/run_pipeline.mjs",
+    "roomObjectSwapCli": "tools/room_object_swap.py",
+    "episodesVaultPath": "studio/episodes-vault.json",
+    "editorialExporterCli": "tools/export_cinema_bundle.mjs"
+  },
+  "physicalProductionLock": {
+    "presenterProfile": {
+      "personaAnchor": "18-turning-28 shirt-and-tie balance-sheet investigator",
+      "postureRule": "Seated upright at walnut desk, forearms grounded near primary filings, zero slouched gaming chair or casual hoodie framing"
+    },
+    "wardrobe": {
+      "shirt": {
+        "allowedFabrics": [
+          "heavy-oxford-cloth-button-down-140-to-170gsm",
+          "matte-brushed-cotton-poplin-140-to-165gsm",
+          "pale-slate-cotton-chambray-matte"
+        ],
+        "allowedToneHexRange": ["#F2ECE1", "#EDE6D8", "#E6DFD1", "#D6E0EA"],
+        "forbiddenColors": ["#FFFFFF"],
+        "antiMoireSpatialPitchFloorMm": 2.0,
+        "forbiddenPatterns": [
+          "optical-brightener-pure-white",
+          "micro-gingham-under-2mm",
+          "tight-herringbone-under-2mm",
+          "fine-houndstooth",
+          "high-frequency-pinstripe"
+        ]
+      },
+      "tie": {
+        "allowedFabrics": [
+          "matte-grenadine-silk-garza-grossa",
+          "brushed-wool-challis",
+          "matte-raw-slub-shantung"
+        ],
+        "bladeWidthCm": { "min": 7.5, "max": 8.0 },
+        "knotStandard": "four-in-hand-with-center-dimple",
+        "semanticColorMap": {
+          "statutory_default": "#1C2B3A",
+          "liability_debt_episodes": "#8C1D18",
+          "brick_risk_episodes": "#A3402E",
+          "solvent_macro_episodes": "#1B4D3E",
+          "blueprint_cyber_episodes": "#234161"
+        },
+        "minLuminanceContrastVsShirt": 3.5,
+        "minLuminanceContrastVsBackdrop": 2.5,
+        "forbiddenFinishes": ["high-gloss-satin", "metallic-jacquard", "novelty-prints"]
+      }
+    },
+    "cameraAndOptics": {
+      "fullFrameEquivalentFocalMm": 35,
+      "apscSuper35EquivalentFocalMm": 23,
+      "apertureRangeFStop": { "min": 2.8, "max": 4.0 },
+      "lensAxisHeightCm": { "min": 118, "max": 122 },
+      "cameraPitchDegrees": 0,
+      "frameRateCfr": 30,
+      "shutterAngleDegrees": 180,
+      "shutterSpeedSec": "1/60",
+      "cleanPlateLeadInSec": 5.0,
+      "masterGrid": {
+        "width": 1920,
+        "height": 1080,
+        "cinemaUpscaleTarget": "3840x2160",
+        "safeMarginPx": 96,
+        "mastheadY": 44,
+        "mastheadRuleY": 76,
+        "citationBaselineY": 1040,
+        "eyeLineRangeY": [350, 375],
+        "centeredPresenterX": 960,
+        "glassAccommodatingPresenterX": [680, 740],
+        "punchInScaleKeyframesPct": [100, 112],
+        "tensionCreepScaleKeyframesPct": [100, 104]
+      }
+    },
+    "lightingRatios": {
+      "keyLight": {
+        "azimuthDegreesCameraLeft": 45,
+        "elevationDegrees": 30,
+        "cctKelvin": 4600,
+        "minCri": 96,
+        "minTlci": 97,
+        "modifier": "90-to-120cm-double-diffused-octabox-with-40deg-eggcrate",
+        "skinExposureIre": [58, 62]
+      },
+      "fillLight": {
+        "keyToFillRatio": "4:1",
+        "stopsBelowKey": -2.0,
+        "cctKelvin": 4600,
+        "shadowCheekIre": [32, 36]
+      },
+      "practicalDeskLamp": {
+        "cctKelvinRange": [2700, 3000],
+        "maxBulbShadeIre": 78,
+        "deskPoolPurpose": "Warm tungsten motivation across cream filings and brass pen"
+      },
+      "rimHairLight": {
+        "stopsBelowKey": -1.5,
+        "cctKelvin": 5000,
+        "backgroundWalnutIre": [18, 24]
+      }
+    },
+    "deskProps": {
+      "mandatoryAnchorProps": [
+        "uncoated-cream-cotton-primary-filings-100-to-120gsm",
+        "chisel-tip-amber-highlighter-and-brick-red-annotations",
+        "uncapped-dark-ebonite-or-brushed-brass-fountain-pen",
+        "matte-dark-leather-or-walnut-desk-surface"
+      ],
+      "rotatingEpisodeArtifactSlot": true
+    },
+    "audioAndColorMaster": {
+      "captureSampleRateHz": 48000,
+      "captureBitDepth": 24,
+      "maxRoomNoiseFloorDbfs": -58.0,
+      "targetRt60Sec": [0.22, 0.32],
+      "ebuR128Standard": "ITU-R BS.1770-4 two-pass linear loudnorm",
+      "integratedLoudnessLufs": -14.0,
+      "loudnessToleranceLu": 0.3,
+      "truePeakCeilingDbtp": -1.0,
+      "arollPrepLraLu": 11.0,
+      "finalMasterLraLu": 7.0,
+      "silenceTrim": {
+        "thresholdDb": -34.0,
+        "minSilenceSec": 0.65,
+        "breathPadMs": 120
+      },
+      "fcpxmlAudioLanes": {
+        "A1_dialogue": { "lane": 0, "targetLufs": -14.0 },
+        "A2_proceduralFoley": { "lane": -1, "targetPeakRangeLufs": [-24.0, -20.0], "sampleRateHz": 48000 },
+        "A3_documentaryScore": { "lane": -2, "duckedUnderVoiceLufs": [-32.0, -28.0], "musicEnergyStates": ["calm", "pulse", "tense", "drop-silence"] }
+      },
+      "colorGrade": {
+        "primaryArollLut": "editorial-warm",
+        "lutFile": "studio/luts/editorial-warm.cube",
+        "lut3dSize": 17,
+        "secondaryVaultLuts": ["documentary-slate", "clean-room-pop"],
+        "lumaSharpenFilter": "unsharp=5:5:0.35:5:5:0.0",
+        "pixelFormat": "yuv420p",
+        "arollPrepCrf": 18,
+        "cutawayMasterCrf": 14,
+        "alphaOverlayCodecs": {
+          "prores4444": "yuva444p10le",
+          "vp9Webm": "yuva420p"
+        }
+      }
+    }
+  },
+  "dualPaletteLock": {
+    "PAGE_PALETTE": {
+      "paletteMode": "page",
+      "allowedFramings": ["fullscreen-cutaway"],
+      "tokens": {
+        "paperLight": "#FAF8F3",
+        "paper": "#F2F0EA",
+        "paperBorder": "#E1DED5",
+        "navy": "#1C2B3A",
+        "navyDeep": "#0F1923",
+        "muted": "#6B7783",
+        "gold": "#3E6A94",
+        "goldWarm": "#A9C4DE",
+        "highlightSweep": "rgba(255, 213, 79, 0.38)",
+        "chartSecondary": "#2F8F8B",
+        "brickRed": "#A3402E",
+        "riskFill": "#F8ECE8",
+        "riskBorder": "#E6C3B9"
+      }
+    },
+    "OVER_FOOTAGE_PALETTE": {
+      "paletteMode": "over-footage",
+      "allowedFramings": ["talking-head-with-glass", "talking-head-punch-in", "split-screen"],
+      "backdropOpticalFilter": "blur(12px) saturate(165%) brightness(0.66)",
+      "forbiddenForegroundTextHex": ["#1C2B3A", "#0F1923", "#000000"],
+      "tokens": {
+        "glassPrimary": "linear-gradient(135deg, rgba(28, 43, 58, 0.64) 0%, rgba(15, 25, 35, 0.60) 55%, rgba(28, 43, 58, 0.66) 100%)",
+        "glassDarkWell": "rgba(15, 25, 35, 0.50)",
+        "glassBorder": "rgba(255, 255, 255, 0.58)",
+        "glassInnerHairline": "rgba(255, 255, 255, 0.16)",
+        "textHeadline": "#FFF6E5",
+        "textBody": "#FAECD4",
+        "textMuted": "#F7E8CE",
+        "accentPrimary": "#BFD6EA",
+        "accentWarm": "#FAECD4",
+        "highlightSweep": "rgba(255, 213, 79, 0.30)",
+        "chartSecondary": "#4FB3AE",
+        "brickRedText": "#E27358",
+        "brickRedFill": "#A3402E",
+        "riskFill": "rgba(163, 64, 46, 0.38)",
+        "riskBorder": "rgba(255, 200, 185, 0.44)",
+        "textShadow": "0 1px 2px rgba(8, 14, 22, 0.85)"
+      },
+      "safeZones1080p": {
+        "rightThird": { "left": 1180, "top": 96, "width": 644, "height": 860 },
+        "bottomDock": { "left": 120, "bottom": 56, "width": 1680, "height": 156 },
+        "topBar": { "left": 96, "top": 44, "width": 1728, "height": 84 }
+      }
+    },
+    "typographyLock": {
+      "serifDisplay": "Newsreader",
+      "sansUiAndBody": "Inter",
+      "monoDataAndTimecodes": "IBM Plex Mono"
+    },
+    "motionPhysicsLock": {
+      "maxEntrySettleFramesAt30Fps": 12,
+      "maxEntrySettleSec": 0.4,
+      "springDampingRange": [20, 30],
+      "springMassRange": [0.8, 1.2],
+      "registerBridgeFramesAt30Fps": 18,
+      "registerBridgeColorSpace": "OKLCH",
+      "minSummaryHoldSec": 1.0,
+      "disableWhiteStrobeFlashes": true
+    },
+    "enterpriseOpticalSubstrates": {
+      "REGISTER_IDS": [
+        "page_editorial",
+        "archival_parchment",
+        "midnight_telemetry",
+        "drafting_blueprint",
+        "vintage_newsreel"
+      ],
+      "semanticRoles": ["liability", "capital", "solvent", "statutory"],
+      "maxSimultaneousSemanticAccents": 2,
+      "wcagContrastFloor": 7.0
+    }
+  },
+  "strategyPresetsContract": {
+    "creatorBlendWeights": {
+      "AIC": 7.0,
+      "Fisher": 6.0,
+      "Gen": 5.0,
+      "Maxinomics": 4.5,
+      "AotP": 4.0,
+      "Boyle": 2.5,
+      "HMW": 2.5
+    },
+    "VISUAL_REGISTER_IDS": [
+      "milk-page-editorial",
+      "smoked-navy-glass",
+      "archival-light-table",
+      "investigation-switchboard",
+      "blueprint-schematic",
+      "silver-gelatin-chronicle",
+      "geospatial-telemetry",
+      "restraint-vellum"
+    ],
+    "visualRegisterMapping": {
+      "milk-page-editorial": {
+        "paletteMode": "page",
+        "substrateId": "page_editorial",
+        "primaryCanvasHex": "#FAF8F3",
+        "styleFamily": "doc-broadcast"
+      },
+      "smoked-navy-glass": {
+        "paletteMode": "over-footage",
+        "substrateId": "page_editorial",
+        "primaryCanvasHex": "rgba(28, 43, 58, 0.64)",
+        "styleFamily": "liquid-glass"
+      },
+      "archival-light-table": {
+        "paletteMode": "page",
+        "substrateId": "archival_parchment",
+        "primaryCanvasHex": "#F4EFE6",
+        "styleFamily": "doc-broadcast"
+      },
+      "investigation-switchboard": {
+        "paletteMode": "page",
+        "substrateId": "page_editorial",
+        "primaryCanvasHex": "#FAF8F3",
+        "styleFamily": "doc-broadcast"
+      },
+      "blueprint-schematic": {
+        "paletteMode": "page",
+        "substrateId": "drafting_blueprint",
+        "primaryCanvasHex": "#0F2236",
+        "styleFamily": "diagram-metaphor"
+      },
+      "silver-gelatin-chronicle": {
+        "paletteMode": "page",
+        "substrateId": "vintage_newsreel",
+        "primaryCanvasHex": "#0D0C0B",
+        "styleFamily": "vintage-editorial"
+      },
+      "geospatial-telemetry": {
+        "paletteMode": "page",
+        "substrateId": "midnight_telemetry",
+        "primaryCanvasHex": "#111315",
+        "styleFamily": "data-maps-3d"
+      },
+      "restraint-vellum": {
+        "paletteMode": "page",
+        "substrateId": "archival_parchment",
+        "primaryCanvasHex": "#FAF7F1",
+        "styleFamily": "doc-broadcast"
+      }
+    },
+    "CTA_ARCHETYPES": [
+      "agency-lever-plus-next-video",
+      "civic-or-share-ask",
+      "restated-claim-uncertainty",
+      "footnotes-coda",
+      "philosophical-echo-list",
+      "dry-verdict-chapter-close"
+    ],
+    "FORBIDDEN_ENGINE_GUARDRAILS": {
+      "R43": {
+        "severity": "P0",
+        "summary": "Every strategy packet must list at least one forbidden narrative engine."
+      },
+      "R44": {
+        "severity": "P0",
+        "bannedEngines": ["clocked"],
+        "bannedStyleRecipeIds": ["doc-live-countdown-split"],
+        "summary": "Bans clocked engine and synthetic hour-clock visuals whenever verified hour timestamps do not exist."
+      },
+      "R45": {
+        "severity": "P1",
+        "bannedEngines": ["ladder"],
+        "summary": "Bans pure toy-model ladder spine on household wallet and solvency titles."
+      },
+      "R46": {
+        "severity": "P1",
+        "bannedEngines": ["street", "field"],
+        "summary": "Bans street and field engines on studio archival productions lacking location footage."
+      },
+      "R47": {
+        "severity": "P0",
+        "bannedEngines": ["artifact"],
+        "bannedStyleRecipeIds": ["doc-archive-light-table"],
+        "summary": "Bans artifact engine and archival light-table cards when no authentic primary filing or map exists."
+      }
+    },
+    "STRATEGY_PRESETS": {
+      "STR-GEN-EXPLAINER": {
+        "primaryEngine": "explainer",
+        "defaultLean": "Gen",
+        "creatorWeight": 5.0,
+        "wordCountTarget": { "min": 3300, "median": 3900, "max": 4500 },
+        "spokenDurationTargetMin": { "min": 20, "max": 27 },
+        "maxHookWordsToFirstStake": 60,
+        "thesisQuestionHardCapFrac": 0.08,
+        "sponsorWindow": { "allowed": true, "start": 0.25, "end": 0.35, "median": 0.31 },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 2 },
+        "ctaArchetype": "agency-lever-plus-next-video",
+        "presenterARollTarget": { "minShare": 0.20, "targetShare": 0.28, "maxShare": 0.36 },
+        "preferredRegisters": ["milk-page-editorial", "smoked-navy-glass", "archival-light-table", "investigation-switchboard"],
+        "preferredStyleFamilies": ["doc-broadcast", "liquid-glass", "diagram-metaphor", "data-maps-3d"],
+        "defaultForbiddenEngines": ["clocked", "street", "field", "ladder"],
+        "activeGuardrails": ["R43", "R44", "R45", "R46"]
+      },
+      "STR-AIC-CLOCKED": {
+        "primaryEngine": "clocked",
+        "defaultLean": "AIC",
+        "creatorWeight": 7.0,
+        "wordCountTarget": { "min": 5200, "median": 6200, "max": 7000 },
+        "spokenDurationTargetMin": { "min": 32, "max": 43 },
+        "maxHookWordsToFirstStake": 55,
+        "thesisQuestionHardCapFrac": 0.05,
+        "sponsorWindow": { "allowed": false, "start": null, "end": null, "median": null },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 2 },
+        "ctaArchetype": "civic-or-share-ask",
+        "presenterARollTarget": { "minShare": 0.18, "targetShare": 0.24, "maxShare": 0.32 },
+        "preferredRegisters": ["restraint-vellum", "archival-light-table", "smoked-navy-glass", "silver-gelatin-chronicle"],
+        "preferredStyleFamilies": ["doc-broadcast", "vintage-editorial", "liquid-glass"],
+        "defaultForbiddenEngines": ["street", "field", "ladder", "primer"],
+        "activeGuardrails": ["R43", "R45", "R46"]
+      },
+      "STR-AIC-SPECULATIVE": {
+        "primaryEngine": "speculative",
+        "defaultLean": "AIC",
+        "creatorWeight": 7.0,
+        "wordCountTarget": { "min": 4500, "median": 5500, "max": 6500 },
+        "spokenDurationTargetMin": { "min": 28, "max": 39 },
+        "maxHookWordsToFirstStake": 58,
+        "thesisQuestionHardCapFrac": 0.08,
+        "sponsorWindow": { "allowed": false, "start": null, "end": null, "median": null },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 2 },
+        "ctaArchetype": "civic-or-share-ask",
+        "presenterARollTarget": { "minShare": 0.18, "targetShare": 0.25, "maxShare": 0.32 },
+        "preferredRegisters": ["restraint-vellum", "geospatial-telemetry", "blueprint-schematic", "archival-light-table"],
+        "preferredStyleFamilies": ["data-maps-3d", "doc-broadcast", "liquid-glass", "diagram-metaphor"],
+        "defaultForbiddenEngines": ["clocked", "street", "field", "ladder"],
+        "activeGuardrails": ["R43", "R44", "R45", "R46"]
+      },
+      "STR-FISHER-ARTIFACT": {
+        "primaryEngine": "artifact",
+        "defaultLean": "Fisher",
+        "creatorWeight": 6.0,
+        "wordCountTarget": { "min": 4400, "median": 5400, "max": 6200 },
+        "spokenDurationTargetMin": { "min": 26, "max": 37 },
+        "maxHookWordsToFirstStake": 55,
+        "thesisQuestionHardCapFrac": 0.08,
+        "sponsorWindow": { "allowed": true, "start": 0.28, "end": 0.38, "median": 0.32 },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 2 },
+        "ctaArchetype": "restated-claim-uncertainty",
+        "presenterARollTarget": { "minShare": 0.18, "targetShare": 0.26, "maxShare": 0.34 },
+        "preferredRegisters": ["archival-light-table", "investigation-switchboard", "geospatial-telemetry", "milk-page-editorial"],
+        "preferredStyleFamilies": ["doc-broadcast", "data-maps-3d", "liquid-glass", "vintage-editorial"],
+        "defaultForbiddenEngines": ["clocked", "street", "field", "ladder"],
+        "activeGuardrails": ["R43", "R44", "R45", "R46", "R47"]
+      },
+      "STR-MAX-ESSAY": {
+        "primaryEngine": "essay",
+        "defaultLean": "Maxinomics",
+        "creatorWeight": 4.5,
+        "wordCountTarget": { "min": 3000, "median": 3650, "max": 4200 },
+        "spokenDurationTargetMin": { "min": 19, "max": 26 },
+        "maxHookWordsToFirstStake": 56,
+        "thesisQuestionHardCapFrac": 0.09,
+        "sponsorWindow": { "allowed": true, "start": 0.06, "end": 0.14, "median": 0.09 },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 1 },
+        "ctaArchetype": "footnotes-coda",
+        "presenterARollTarget": { "minShare": 0.16, "targetShare": 0.22, "maxShare": 0.30 },
+        "preferredRegisters": ["blueprint-schematic", "milk-page-editorial", "silver-gelatin-chronicle", "smoked-navy-glass"],
+        "preferredStyleFamilies": ["diagram-metaphor", "data-maps-3d", "vintage-editorial", "doc-broadcast"],
+        "defaultForbiddenEngines": ["clocked", "street", "field"],
+        "activeGuardrails": ["R43", "R44", "R46"]
+      },
+      "STR-AOTP-LADDER": {
+        "primaryEngine": "ladder",
+        "defaultLean": "AotP",
+        "creatorWeight": 4.0,
+        "wordCountTarget": { "min": 2400, "median": 3000, "max": 3600 },
+        "spokenDurationTargetMin": { "min": 16, "max": 23 },
+        "maxHookWordsToFirstStake": 50,
+        "thesisQuestionHardCapFrac": 0.06,
+        "sponsorWindow": { "allowed": true, "start": 0.15, "end": 0.23, "median": 0.19 },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 1 },
+        "ctaArchetype": "philosophical-echo-list",
+        "presenterARollTarget": { "minShare": 0.12, "targetShare": 0.18, "maxShare": 0.25 },
+        "preferredRegisters": ["blueprint-schematic", "silver-gelatin-chronicle", "restraint-vellum", "milk-page-editorial"],
+        "preferredStyleFamilies": ["diagram-metaphor", "vintage-editorial", "data-maps-3d"],
+        "defaultForbiddenEngines": ["clocked", "street", "field", "explainer"],
+        "activeGuardrails": ["R43", "R44", "R46"]
+      },
+      "STR-BOYLE-CHAPTERED": {
+        "primaryEngine": "chaptered",
+        "defaultLean": "Boyle",
+        "creatorWeight": 2.5,
+        "wordCountTarget": { "min": 3800, "median": 4600, "max": 5800 },
+        "spokenDurationTargetMin": { "min": 23, "max": 35 },
+        "maxHookWordsToFirstStake": 56,
+        "thesisQuestionHardCapFrac": 0.08,
+        "sponsorWindow": { "allowed": true, "start": 0.12, "end": 0.22, "median": 0.16 },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 2 },
+        "ctaArchetype": "dry-verdict-chapter-close",
+        "presenterARollTarget": { "minShare": 0.22, "targetShare": 0.30, "maxShare": 0.38 },
+        "preferredRegisters": ["archival-light-table", "milk-page-editorial", "silver-gelatin-chronicle", "smoked-navy-glass"],
+        "preferredStyleFamilies": ["doc-broadcast", "vintage-editorial", "liquid-glass", "data-maps-3d"],
+        "defaultForbiddenEngines": ["clocked", "street", "field"],
+        "activeGuardrails": ["R43", "R44", "R46", "R47"]
+      },
+      "STR-HMW-PRIMER": {
+        "primaryEngine": "primer",
+        "defaultLean": "HMW",
+        "creatorWeight": 2.5,
+        "wordCountTarget": { "min": 3600, "median": 4300, "max": 5100 },
+        "spokenDurationTargetMin": { "min": 22, "max": 31 },
+        "maxHookWordsToFirstStake": 58,
+        "thesisQuestionHardCapFrac": 0.08,
+        "sponsorWindow": { "allowed": true, "start": 0.44, "end": 0.54, "median": 0.49 },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 2 },
+        "ctaArchetype": "dry-verdict-chapter-close",
+        "presenterARollTarget": { "minShare": 0.20, "targetShare": 0.27, "maxShare": 0.35 },
+        "preferredRegisters": ["blueprint-schematic", "archival-light-table", "milk-page-editorial", "smoked-navy-glass"],
+        "preferredStyleFamilies": ["diagram-metaphor", "doc-broadcast", "liquid-glass", "data-maps-3d"],
+        "defaultForbiddenEngines": ["clocked", "street", "field", "ladder"],
+        "activeGuardrails": ["R43", "R44", "R45", "R46"]
+      },
+      "STR-GEN-FIELD": {
+        "primaryEngine": "field",
+        "defaultLean": "Gen",
+        "creatorWeight": 5.0,
+        "wordCountTarget": { "min": 3400, "median": 4200, "max": 5000 },
+        "spokenDurationTargetMin": { "min": 21, "max": 31 },
+        "maxHookWordsToFirstStake": 55,
+        "thesisQuestionHardCapFrac": 0.07,
+        "sponsorWindow": { "allowed": true, "start": 0.18, "end": 0.26, "median": 0.22 },
+        "adversaryConcessionWindow": { "start": 0.60, "end": 0.85, "minConcessions": 2 },
+        "ctaArchetype": "agency-lever-plus-next-video",
+        "presenterARollTarget": { "minShare": 0.34, "targetShare": 0.42, "maxShare": 0.52 },
+        "preferredRegisters": ["smoked-navy-glass", "geospatial-telemetry", "archival-light-table", "milk-page-editorial"],
+        "preferredStyleFamilies": ["liquid-glass", "data-maps-3d", "doc-broadcast"],
+        "defaultForbiddenEngines": ["clocked", "ladder", "street"],
+        "activeGuardrails": ["R43", "R44", "R45"]
+      }
+    }
+  },
+  "episodesVaultHandoffContract": {
+    "vaultTargetFile": "studio/episodes-vault.json",
+    "noveltyCooldownFormula": "weight_penalty = exp(-delta_episodes / 2.5)",
+    "rollingLookbackEpisodes": 5,
+    "requiredShowstopperSetPiecesPerEpisode": { "min": 3, "max": 5 },
+    "episodeRecordSchema": {
+      "type": "object",
+      "required": [
+        "episodeNumber",
+        "episodeSlug",
+        "title",
+        "publishedIsoDate",
+        "strategyId",
+        "visualSignature",
+        "styleCounts",
+        "motionCombos",
+        "propIds",
+        "glassPresets",
+        "typographyModes",
+        "lutId",
+        "musicStems",
+        "showstopperBlueprints",
+        "continuityEntities",
+        "strategyAudit"
+      ],
+      "properties": {
+        "episodeNumber": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "episodeSlug": { "type": "string", "pattern": "^ep_[0-9]{2}_[a-z0-9_]+$" },
+        "title": { "type": "string", "minLength": 8 },
+        "publishedIsoDate": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+        "strategyId": {
+          "type": "string",
+          "enum": [
+            "STR-GEN-EXPLAINER",
+            "STR-AIC-CLOCKED",
+            "STR-AIC-SPECULATIVE",
+            "STR-FISHER-ARTIFACT",
+            "STR-MAX-ESSAY",
+            "STR-AOTP-LADDER",
+            "STR-BOYLE-CHAPTERED",
+            "STR-HMW-PRIMER",
+            "STR-GEN-FIELD"
+          ]
+        },
+        "visualSignature": {
+          "type": "object",
+          "required": ["primaryRegister", "secondaryRegister", "mechanicalMotif", "scoreSuite"],
+          "properties": {
+            "primaryRegister": {
+              "type": "string",
+              "enum": [
+                "milk-page-editorial",
+                "smoked-navy-glass",
+                "archival-light-table",
+                "investigation-switchboard",
+                "blueprint-schematic",
+                "silver-gelatin-chronicle",
+                "geospatial-telemetry",
+                "restraint-vellum"
+              ]
+            },
+            "secondaryRegister": {
+              "type": "string",
+              "enum": [
+                "milk-page-editorial",
+                "smoked-navy-glass",
+                "archival-light-table",
+                "investigation-switchboard",
+                "blueprint-schematic",
+                "silver-gelatin-chronicle",
+                "geospatial-telemetry",
+                "restraint-vellum"
+              ]
+            },
+            "mechanicalMotif": { "type": "string" },
+            "scoreSuite": {
+              "type": "string",
+              "enum": ["reading-room-chamber", "sovereign-pulse-synth", "forensic-clockwork"]
+            }
+          }
+        },
+        "styleCounts": {
+          "type": "object",
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "motionCombos": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "propIds": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "glassPresets": {
+          "type": "array",
+          "items": { "type": "string", "enum": ["card", "pill", "dock", "toast", "split-modal"] }
+        },
+        "typographyModes": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "lutId": {
+          "type": "string",
+          "enum": ["editorial-warm", "documentary-slate", "clean-room-pop"]
+        },
+        "musicStems": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "showstopperBlueprints": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 5,
+          "items": { "type": "string" }
+        },
+        "continuityEntities": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["entityId", "label", "actStates"],
+            "properties": {
+              "entityId": { "type": "string", "pattern": "^ENT_[A-Z0-9_]+$" },
+              "label": { "type": "string" },
+              "actStates": {
+                "type": "array",
+                "minItems": 2,
+                "items": { "type": "string" }
+              }
+            }
+          }
+        },
+        "strategyAudit": {
+          "type": "object",
+          "required": [
+            "strategyId",
+            "forbiddenEngines",
+            "stakes",
+            "hasDatedHourTimeline",
+            "hasShowablePrimaryArtifact",
+            "hasFieldOrStreetFootage",
+            "hookWordsToFirstStake",
+            "thesisQuestionFrac",
+            "coveredRehookDeciles",
+            "adversaryConcessionFracs",
+            "verdictFrac",
+            "ctaFrac",
+            "ctaCount",
+            "latestNewFactFrac"
+          ],
+          "properties": {
+            "strategyId": { "type": "string" },
+            "forbiddenEngines": { "type": "array", "minItems": 1, "items": { "type": "string" } },
+            "stakes": { "type": "string", "enum": ["wallet", "civic", "wonder", "geopolitical", "valuation"] },
+            "hasDatedHourTimeline": { "type": "boolean" },
+            "hasShowablePrimaryArtifact": { "type": "boolean" },
+            "hasFieldOrStreetFootage": { "type": "boolean" },
+            "hookWordsToFirstStake": { "type": "integer", "minimum": 0 },
+            "thesisQuestionFrac": { "type": "number", "minimum": 0, "maximum": 0.1 },
+            "sponsorFrac": { "type": ["number", "null"] },
+            "sponsorIsBridged": { "type": "boolean" },
+            "coveredRehookDeciles": { "type": "array", "minItems": 10, "maxItems": 10, "items": { "type": "integer" } },
+            "adversaryConcessionFracs": { "type": "array", "minItems": 1, "items": { "type": "number" } },
+            "verdictFrac": { "type": "number", "minimum": 0.9, "maximum": 1.0 },
+            "ctaFrac": { "type": "number", "minimum": 0.9, "maximum": 1.0 },
+            "ctaCount": { "type": "integer", "const": 1 },
+            "midVideoSubscribeAskCount": { "type": "integer", "const": 0 },
+            "latestNewFactFrac": { "type": "number", "minimum": 0, "maximum": 0.9 },
+            "presenterARollShare": { "type": "number", "minimum": 0.12, "maximum": 0.52 }
+          }
+        }
+      }
+    }
+  }
+}
