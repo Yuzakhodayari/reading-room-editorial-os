@@ -1,0 +1,17 @@
+{
+  "name": "reading-room-editorial-os",
+  "version": "1.0.0",
+  "description": "The Reading Room Editorial OS: Research, Quantitative Data Analysis, Viral Packaging, 6-Stage Anti-AI Script Pipeline, Bilingual Persian-English Mastery Books, Studio Rehearsal, Omnichannel Marketing, and Cinema Bridge Engine",
+  "type": "module",
+  "private": false,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "exam": "node tools/run_editorial_exam.mjs",
+    "gate:script": "node 04_scripts_and_dossiers/tools/anti_ai_script_gate.mjs",
+    "gate:retention": "node 04_scripts_and_dossiers/tools/retention_linter.mjs",
+    "radar": "node 02_research_and_data/tools/news_to_thesis_radar.mjs",
+    "export:cinema": "node tools/export_cinema_bundle.mjs"
+  }
+}
