@@ -1,0 +1,3170 @@
+<!DOCTYPE html>
+<html lang="en" data-yt-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Reading Room | Thumbnail Pre-Flight Mockup &amp; Mobile Squint Studio (#18)</title>
+  <style>
+    /* ==========================================================================
+       The Reading Room Editorial OS - Deliverable #18
+       Self-Contained Offline Squint, Feed & Blink Studio (Zero External CDNs)
+       Canonical Tokens: #FAF8F3 (Milk Page), #1C2B3A (Smoked Navy),
+                         #2F8F8B (Solvent Teal), #A3402E (Liability Brick)
+       ========================================================================== */
+    :root {
+      --rr-milk: #FAF8F3;
+      --rr-paper: #F2F0EA;
+      --rr-paper-border: #E1DED5;
+      --rr-navy: #1C2B3A;
+      --rr-navy-deep: #0F1923;
+      --rr-teal: #2F8F8B;
+      --rr-teal-bright: #4FB3AE;
+      --rr-brick: #A3402E;
+      --rr-coral: #E27358;
+      --rr-amber: #D99B26;
+      --rr-pass: #1F8A5B;
+      --rr-pass-bg: rgba(31, 138, 91, 0.16);
+      --rr-warn: #C78519;
+      --rr-warn-bg: rgba(199, 133, 25, 0.18);
+      --rr-fail: #C93B2B;
+      --rr-fail-bg: rgba(201, 59, 43, 0.18);
+
+      --font-yt: "Roboto", "YouTube Sans", "Segoe UI", -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-serif: "Newsreader", "Georgia", "Cambria", "Times New Roman", serif;
+      --font-mono: "IBM Plex Mono", "Cascadia Mono", "Consolas", monospace;
+    }
+
+    html[data-yt-theme="dark"] {
+      --yt-bg: #0F0F0F;
+      --yt-surface: #181818;
+      --yt-elevated: #212121;
+      --yt-chip: #272727;
+      --yt-chip-hover: #3A3A3A;
+      --yt-chip-active-bg: #F1F1F1;
+      --yt-chip-active-fg: #0F0F0F;
+      --yt-border: rgba(255, 255, 255, 0.12);
+      --yt-border-strong: rgba(255, 255, 255, 0.24);
+      --yt-text-primary: #F1F1F1;
+      --yt-text-secondary: #AAAAAA;
+      --yt-text-muted: #717171;
+      --yt-thumb-outline: rgba(255, 255, 255, 0.08);
+      --studio-header-bg: #121820;
+      --studio-panel-bg: #16202B;
+    }
+
+    html[data-yt-theme="light"] {
+      --yt-bg: #FFFFFF;
+      --yt-surface: #F7F7F7;
+      --yt-elevated: #EFEFEF;
+      --yt-chip: #F2F2F2;
+      --yt-chip-hover: #E5E5E5;
+      --yt-chip-active-bg: #0F0F0F;
+      --yt-chip-active-fg: #FFFFFF;
+      --yt-border: rgba(0, 0, 0, 0.11);
+      --yt-border-strong: rgba(0, 0, 0, 0.22);
+      --yt-text-primary: #0F0F0F;
+      --yt-text-secondary: #606060;
+      --yt-text-muted: #888888;
+      --yt-thumb-outline: rgba(0, 0, 0, 0.10);
+      --studio-header-bg: #FAF8F3;
+      --studio-panel-bg: #F2F0EA;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--yt-bg);
+      color: var(--yt-text-primary);
+      font-family: var(--font-yt);
+      line-height: 1.4;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Studio Top Chrome */
+    .studio-topbar {
+      position: sticky;
+      top: 0;
+      z-index: 60;
+      background: var(--studio-header-bg);
+      border-bottom: 1px solid var(--yt-border-strong);
+      padding: 10px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .brand-cluster {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rr-monogram {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--rr-navy);
+      color: var(--rr-milk);
+      border: 1.5px solid var(--rr-teal);
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.5px;
+      flex-shrink: 0;
+    }
+
+    .brand-titles h1 {
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .brand-subtitle {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--yt-text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .source-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      background: rgba(47, 143, 139, 0.16);
+      color: var(--rr-teal-bright);
+      border: 1px solid rgba(47, 143, 139, 0.42);
+    }
+
+    html[data-yt-theme="light"] .source-pill {
+      color: #196865;
+      background: rgba(47, 143, 139, 0.12);
+    }
+
+    .top-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid var(--yt-border-strong);
+      background: var(--yt-chip);
+      color: var(--yt-text-primary);
+      font-family: var(--font-yt);
+      font-size: 12.5px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 7px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.14s ease, border-color 0.14s ease;
+    }
+
+    .btn:hover {
+      background: var(--yt-chip-hover);
+    }
+
+    .btn-primary {
+      background: var(--rr-teal);
+      color: #FAF8F3;
+      border-color: var(--rr-teal);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      background: #257774;
+    }
+
+    .btn-brick {
+      background: var(--rr-brick);
+      color: #FAF8F3;
+      border-color: var(--rr-brick);
+    }
+
+    .btn-active {
+      background: var(--yt-chip-active-bg);
+      color: var(--yt-chip-active-fg);
+      border-color: var(--yt-chip-active-bg);
+    }
+
+    /* Mode Tabs & Filter Strip */
+    .control-bar {
+      background: var(--yt-surface);
+      border-bottom: 1px solid var(--yt-border);
+      padding: 10px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .mode-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .mode-tab-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .mode-tab {
+      border: 1px solid var(--yt-border);
+      background: var(--yt-chip);
+      color: var(--yt-text-primary);
+      padding: 7px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .mode-tab[aria-selected="true"] {
+      background: var(--yt-chip-active-bg);
+      color: var(--yt-chip-active-fg);
+      border-color: var(--yt-chip-active-bg);
+      font-weight: 600;
+    }
+
+    .telemetry-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+    }
+
+    .stat-chip {
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: var(--yt-elevated);
+      border: 1px solid var(--yt-border);
+    }
+
+    .filters-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .filter-field {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      color: var(--yt-text-secondary);
+    }
+
+    select,
+    input[type="text"],
+    input[type="number"] {
+      background: var(--yt-bg);
+      color: var(--yt-text-primary);
+      border: 1px solid var(--yt-border-strong);
+      border-radius: 6px;
+      padding: 5px 8px;
+      font-family: var(--font-yt);
+      font-size: 12.5px;
+    }
+
+    .checkbox-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 9px;
+      border-radius: 6px;
+      border: 1px solid var(--yt-border);
+      background: var(--yt-elevated);
+      font-size: 12px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* Collapsible Ad-Hoc Pair Tester Drawer */
+    .adhoc-drawer {
+      display: none;
+      background: var(--studio-panel-bg);
+      border-bottom: 2px solid var(--rr-teal);
+      padding: 16px 20px;
+    }
+
+    .adhoc-drawer.open {
+      display: block;
+    }
+
+    .adhoc-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr 1.15fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 1120px) {
+      .adhoc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .adhoc-panel {
+      background: var(--yt-surface);
+      border: 1px solid var(--yt-border-strong);
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .adhoc-panel h3 {
+      margin: 0 0 10px 0;
+      font-size: 13.5px;
+      font-family: var(--font-mono);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--yt-text-secondary);
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      margin-bottom: 10px;
+    }
+
+    .form-row label {
+      font-size: 11.5px;
+      font-family: var(--font-mono);
+      color: var(--yt-text-secondary);
+    }
+
+    .form-row-inline {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+
+    .swatch-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 6px;
+    }
+
+    .swatch-btn {
+      font-size: 11px;
+      font-family: var(--font-mono);
+      padding: 4px 8px;
+      border-radius: 5px;
+      border: 1px solid var(--yt-border-strong);
+      cursor: pointer;
+      background: var(--yt-elevated);
+      color: var(--yt-text-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .swatch-dot {
+      width: 11px;
+      height: 11px;
+      border-radius: 3px;
+      border: 1px solid rgba(128, 128, 128, 0.5);
+      display: inline-block;
+    }
+
+    /* Drag & Drop Overlay */
+    .drop-banner {
+      display: none;
+      position: fixed;
+      inset: 14px;
+      z-index: 200;
+      border: 3px dashed var(--rr-teal-bright);
+      border-radius: 16px;
+      background: rgba(15, 25, 35, 0.90);
+      color: #FAF8F3;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .drop-banner.active {
+      display: flex;
+    }
+
+    /* Main Workspace Stage */
+    .stage-wrap {
+      padding: 20px;
+      max-width: 1680px;
+      margin: 0 auto;
+    }
+
+    /* Shared Thumbnail Container */
+    .yt-thumb-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #141C24;
+      border: 1px solid var(--yt-thumb-outline);
+      flex-shrink: 0;
+    }
+
+    .yt-thumb-box svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    .yt-duration-badge {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      background: rgba(0, 0, 0, 0.84);
+      color: #FFFFFF;
+      font-family: var(--font-yt);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1;
+      padding: 3px 5px;
+      border-radius: 4px;
+      letter-spacing: 0.2px;
+      pointer-events: none;
+    }
+
+    .safezone-overlay {
+      display: none;
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    body.show-safezones .safezone-overlay {
+      display: block;
+    }
+
+    .safezone-timestamp-box {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 24%;
+      height: 22%;
+      background: rgba(201, 59, 43, 0.34);
+      border-top: 1.5px dashed #FF8A75;
+      border-left: 1.5px dashed #FF8A75;
+      color: #FFF6E5;
+      font-family: var(--font-mono);
+      font-size: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .safezone-scrub-bar {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 4px;
+      background: #E52D27;
+    }
+
+    /* Mode 1: Desktop Home Grid (340px text container calibration) */
+    .desktop-home-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 388px));
+      gap: 28px 18px;
+      justify-content: center;
+    }
+
+    .yt-grid-card {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      width: 100%;
+    }
+
+    .yt-grid-card.competitor-card {
+      opacity: 0.96;
+    }
+
+    .yt-meta-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .yt-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--rr-navy);
+      color: var(--rr-milk);
+      border: 1.5px solid var(--rr-teal);
+      font-family: var(--font-serif);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .yt-avatar.comp-avatar {
+      background: #333A42;
+      border-color: rgba(255, 255, 255, 0.2);
+      font-family: var(--font-yt);
+    }
+
+    .yt-title-col-desktop {
+      width: 340px;
+      max-width: calc(100% - 48px);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .yt-video-title-desktop {
+      margin: 0;
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 500;
+      color: var(--yt-text-primary);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .yt-channel-line {
+      font-size: 13px;
+      color: var(--yt-text-secondary);
+      line-height: 18px;
+    }
+
+    /* Inline Lint Badges */
+    .lint-badge-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 4px;
+      align-items: center;
+    }
+
+    .lbadge {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 600;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid transparent;
+      line-height: 1.3;
+    }
+
+    .lbadge-pass {
+      background: var(--rr-pass-bg);
+      color: #36C686;
+      border-color: rgba(54, 198, 134, 0.35);
+    }
+
+    html[data-yt-theme="light"] .lbadge-pass {
+      color: #136B44;
+    }
+
+    .lbadge-warn {
+      background: var(--rr-warn-bg);
+      color: #F0AA3C;
+      border-color: rgba(240, 170, 60, 0.38);
+    }
+
+    html[data-yt-theme="light"] .lbadge-warn {
+      color: #8F5A08;
+    }
+
+    .lbadge-fail {
+      background: var(--rr-fail-bg);
+      color: #FF7868;
+      border-color: rgba(255, 120, 104, 0.42);
+    }
+
+    html[data-yt-theme="light"] .lbadge-fail {
+      color: #A12315;
+    }
+
+    .lbadge-neutral {
+      background: var(--yt-elevated);
+      color: var(--yt-text-secondary);
+      border-color: var(--yt-border);
+    }
+
+    .lbadge-comp {
+      background: rgba(130, 140, 155, 0.14);
+      color: var(--yt-text-secondary);
+      border-color: var(--yt-border);
+    }
+
+    .inspect-link {
+      background: transparent;
+      border: 1px solid var(--yt-border-strong);
+      color: var(--yt-text-primary);
+      font-family: var(--font-mono);
+      font-size: 10px;
+      padding: 1px 6px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .inspect-link:hover {
+      border-color: var(--rr-teal);
+      color: var(--rr-teal-bright);
+    }
+
+    /* Mode 2: iOS & Android Mobile Feed Simulator */
+    .mobile-sim-stage {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .phone-frame {
+      background: var(--yt-bg);
+      border: 8px solid #262A30;
+      border-radius: 34px;
+      overflow: hidden;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.38);
+    }
+
+    .phone-frame.ios-phone {
+      width: 406px; /* 390px inner viewport + 16px bezel */
+    }
+
+    .phone-frame.android-phone {
+      width: 396px; /* 380px inner viewport */
+    }
+
+    .phone-statusbar {
+      background: var(--yt-surface);
+      padding: 10px 18px;
+      border-bottom: 1px solid var(--yt-border);
+      font-family: var(--font-mono);
+      font-size: 11px;
+      display: flex;
+      justify-content: space-between;
+      color: var(--yt-text-secondary);
+    }
+
+    .phone-feed-scroll {
+      max-height: 760px;
+      overflow-y: auto;
+      padding-bottom: 18px;
+    }
+
+    .ios-card {
+      border-bottom: 1px solid var(--yt-border);
+      padding-bottom: 14px;
+      margin-bottom: 12px;
+    }
+
+    .ios-card .yt-thumb-box {
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
+    }
+
+    .ios-meta {
+      padding: 10px 12px 0 12px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .ios-title-col {
+      width: 294px;
+      flex-shrink: 0;
+    }
+
+    .ios-title-text {
+      margin: 0 0 3px 0;
+      font-size: 15px;
+      line-height: 20px;
+      font-weight: 500;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Android Suggested 250px layout */
+    .android-card {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--yt-border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .android-row {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .android-mini-thumb {
+      width: 106px;
+      flex-shrink: 0;
+    }
+
+    .android-mini-thumb .yt-thumb-box {
+      border-radius: 8px;
+    }
+
+    .android-mini-thumb .yt-duration-badge {
+      font-size: 9.5px;
+      right: 4px;
+      bottom: 4px;
+      padding: 2px 4px;
+    }
+
+    .android-title-col-250 {
+      width: 250px;
+      flex-shrink: 0;
+    }
+
+    .android-title-text {
+      margin: 0 0 3px 0;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: 500;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Mode 3: Desktop 168px Up-Next Watch Sidebar */
+    .watch-page-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 402px;
+      gap: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 1080px) {
+      .watch-page-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .watch-stage-card {
+      background: var(--yt-surface);
+      border: 1px solid var(--yt-border);
+      border-radius: 14px;
+      padding: 18px;
+      position: sticky;
+      top: 76px;
+    }
+
+    .watch-stage-title {
+      margin: 14px 0 8px 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .upnext-rail {
+      width: 402px;
+      max-width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .upnext-item {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      padding: 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid transparent;
+    }
+
+    .upnext-item:hover,
+    .upnext-item.selected {
+      background: var(--yt-surface);
+      border-color: var(--yt-border-strong);
+    }
+
+    .upnext-thumb-168 {
+      width: 168px;
+      height: 94px;
+      flex-shrink: 0;
+    }
+
+    .upnext-thumb-168 .yt-thumb-box {
+      border-radius: 8px;
+      height: 94px;
+    }
+
+    .upnext-thumb-168 .yt-duration-badge {
+      font-size: 10.5px;
+      right: 5px;
+      bottom: 5px;
+    }
+
+    .upnext-meta-202 {
+      width: 202px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .upnext-title-text {
+      margin: 0;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      color: var(--yt-text-primary);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .upnext-sub {
+      font-size: 12px;
+      color: var(--yt-text-secondary);
+      line-height: 16px;
+    }
+
+    /* Mode 4: Squint (4.5px Blur) + Grayscale Value + 500ms Blink Lab */
+    .squint-lab-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .blink-tester-card {
+      background: var(--yt-surface);
+      border: 1px solid var(--yt-border-strong);
+      border-radius: 14px;
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 520px 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    @media (max-width: 1020px) {
+      .blink-tester-card {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .blink-viewport {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #0B1016;
+      border: 2px solid var(--yt-border-strong);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .blink-shutter {
+      position: absolute;
+      inset: 0;
+      background: #0D131A;
+      color: #FAF8F3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      text-align: center;
+      padding: 20px;
+      z-index: 4;
+    }
+
+    .blink-reticle {
+      font-size: 28px;
+      color: var(--rr-teal-bright);
+      line-height: 1;
+    }
+
+    .squint-toolbar {
+      background: var(--yt-surface);
+      border: 1px solid var(--yt-border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .squint-sheet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 18px;
+    }
+
+    .squint-sheet-grid.stamp-scale {
+      grid-template-columns: repeat(auto-fill, minmax(136px, 150px));
+      gap: 12px;
+    }
+
+    .squint-card {
+      background: var(--yt-surface);
+      border: 1px solid var(--yt-border);
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .squint-filter-target {
+      transition: filter 0.12s ease;
+    }
+
+    /* Diagnostic Modal */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 150;
+      background: rgba(8, 12, 18, 0.76);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-backdrop.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--yt-surface);
+      color: var(--yt-text-primary);
+      border: 1px solid var(--yt-border-strong);
+      border-radius: 14px;
+      max-width: 860px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 20px;
+    }
+
+    .gate-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 10px;
+    }
+
+    .gate-table th,
+    .gate-table td {
+      border-bottom: 1px solid var(--yt-border);
+      padding: 7px 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .gate-table th {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      color: var(--yt-text-secondary);
+    }
+
+    .px-bar-track {
+      width: 100%;
+      height: 7px;
+      background: var(--yt-elevated);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 3px;
+    }
+
+    .px-bar-fill {
+      height: 100%;
+      background: var(--rr-teal);
+      border-radius: 4px;
+    }
+
+    .px-bar-fill.clip {
+      background: var(--rr-fail);
+    }
+  </style>
+</head>
+<body>
+  <!-- Global Drag & Drop Vault Overlay -->
+  <div id="dropBanner" class="drop-banner">
+    <div style="font-size: 20px; font-family: var(--font-serif); font-weight: 700;">
+      Drop 16_90_pair_title_thumbnail_vault.json to Audit &amp; Render All Pairs
+    </div>
+    <div style="font-size: 12px; font-family: var(--font-mono); color: #BFD6EA;">
+      100% client-side offline parsing and 5-gate deterministic linting
+    </div>
+  </div>
+
+  <!-- Top Studio Header -->
+  <header class="studio-topbar">
+    <div class="brand-cluster">
+      <div class="rr-monogram">RR</div>
+      <div class="brand-titles">
+        <h1>The Reading Room: Pre-Flight Packaging &amp; Squint Studio</h1>
+        <div class="brand-subtitle">
+          <span>Deliverable #18</span>
+          <span id="dataSourcePill" class="source-pill">LOADING VAULT...</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="top-actions">
+      <button type="button" id="btnToggleAdhoc" class="btn btn-primary">Ad-Hoc Pair Tester</button>
+      <label class="btn" for="vaultFileInput" style="margin:0;">Load Vault JSON</label>
+      <input type="file" id="vaultFileInput" accept=".json,application/json" style="display:none;" />
+      <button type="button" id="btnRefetchVault" class="btn" title="Attempt HTTP fetch from ../16_90_pair_title_thumbnail_vault.json">Fetch ../16_90 Vault</button>
+      <button type="button" id="btnResetBuiltin" class="btn">Built-In 30-Ep Vault</button>
+      <button type="button" id="btnThemeToggle" class="btn">YouTube UI: Dark</button>
+      <button type="button" id="btnExportReport" class="btn">Export Lint JSON</button>
+    </div>
+  </header>
+
+  <!-- Live Ad-Hoc Pair Tester Workbench -->
+  <section id="adhocDrawer" class="adhoc-drawer" aria-label="Ad-Hoc Pair Tester">
+    <div class="adhoc-grid">
+      <div class="adhoc-panel">
+        <h3>1. Live Ad-Hoc Pair Inputs</h3>
+        <div class="form-row">
+          <label for="ahTitle">Video Title (Target 31..42 chars in --strict; Hard 24..52)</label>
+          <input type="text" id="ahTitle" value="Why AI Erased the First Career Rung" />
+        </div>
+        <div class="form-row-inline">
+          <div class="form-row" style="margin-bottom:0;">
+            <label for="ahThumb">Thumb Text (1..3w)</label>
+            <input type="text" id="ahThumb" value="-19% HIRING" />
+          </div>
+          <div class="form-row" style="margin-bottom:0;">
+            <label for="ahEpisode">Episode ID</label>
+            <input type="text" id="ahEpisode" value="ep_04" />
+          </div>
+          <div class="form-row" style="margin-bottom:0;">
+            <label for="ahElements">Focal Elements</label>
+            <input type="number" id="ahElements" min="1" max="6" value="3" />
+          </div>
+        </div>
+        <div class="form-row">
+          <label for="ahComp">Visual Composition Mode</label>
+          <select id="ahComp">
+            <option value="shirt_and_tie_plus_artifact">shirt_and_tie_plus_artifact</option>
+            <option value="milk_page_data_split" selected>milk_page_data_split</option>
+            <option value="smoked_navy_forensic_closeup">smoked_navy_forensic_closeup</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="ahSubject">Focal Subject / Desk Artifact Label</label>
+          <input type="text" id="ahSubject" value="Stanford ADP Age 22-25 Payroll Ledger" />
+        </div>
+        <div class="form-row-inline">
+          <div class="form-row" style="margin-bottom:0;">
+            <label for="ahBg">background_hex</label>
+            <input type="text" id="ahBg" value="#FAF8F3" />
+          </div>
+          <div class="form-row" style="margin-bottom:0;">
+            <label for="ahTextHex">text_hex</label>
+            <input type="text" id="ahTextHex" value="#1C2B3A" />
+          </div>
+          <div class="form-row" style="margin-bottom:0;">
+            <label for="ahAccent">accent_hex</label>
+            <input type="text" id="ahAccent" value="#A3402E" />
+          </div>
+        </div>
+        <div class="swatch-bar">
+          <button type="button" class="swatch-btn" data-preset="navy-teal">
+            <span class="swatch-dot" style="background:#1C2B3A;"></span>
+            <span class="swatch-dot" style="background:#2F8F8B;"></span> Navy + Teal
+          </button>
+          <button type="button" class="swatch-btn" data-preset="navy-brick">
+            <span class="swatch-dot" style="background:#1C2B3A;"></span>
+            <span class="swatch-dot" style="background:#A3402E;"></span> Navy + Brick
+          </button>
+          <button type="button" class="swatch-btn" data-preset="milk-teal">
+            <span class="swatch-dot" style="background:#FAF8F3;"></span>
+            <span class="swatch-dot" style="background:#2F8F8B;"></span> Milk + Teal
+          </button>
+          <button type="button" class="swatch-btn" data-preset="milk-brick">
+            <span class="swatch-dot" style="background:#FAF8F3;"></span>
+            <span class="swatch-dot" style="background:#A3402E;"></span> Milk + Brick
+          </button>
+        </div>
+        <div style="margin-top:10px; display:flex; gap:8px; align-items:center;">
+          <label class="checkbox-pill">
+            <input type="checkbox" id="ahPinToFeed" checked /> Pin Ad-Hoc Card at Feed #1
+          </label>
+        </div>
+      </div>
+
+      <div class="adhoc-panel">
+        <h3>2. Live 16:9 Procedural SVG Render</h3>
+        <div id="ahPreviewThumb" class="yt-thumb-box"></div>
+        <div id="ahPreviewTitle" style="margin-top:10px; font-size:15.5px; font-weight:500;"></div>
+        <div style="font-size:12px; color:var(--yt-text-secondary); margin-top:2px;">
+          The Reading Room &bull; 148K views &bull; 4 hours ago
+        </div>
+      </div>
+
+      <div class="adhoc-panel">
+        <h3>3. Live 5-Gate Telemetry</h3>
+        <div id="ahLintSummary"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- View Mode Switcher & Filters -->
+  <section class="control-bar">
+    <div class="mode-tabs">
+      <div class="mode-tab-group" role="tablist" aria-label="Studio View Modes">
+        <button type="button" class="mode-tab" data-mode="desktop-grid" aria-selected="true">
+          1. Desktop Home Grid (340px + Competitors)
+        </button>
+        <button type="button" class="mode-tab" data-mode="mobile-feed" aria-selected="false">
+          2. iOS &amp; Android (250px) Mobile Feed
+        </button>
+        <button type="button" class="mode-tab" data-mode="up-next-sidebar" aria-selected="false">
+          3. Desktop 168px Up-Next Sidebar
+        </button>
+        <button type="button" class="mode-tab" data-mode="squint-lab" aria-selected="false">
+          4. Blur 4.5px Squint + Grayscale + 500ms Blink
+        </button>
+      </div>
+
+      <div id="vaultTelemetryStrip" class="telemetry-strip"></div>
+    </div>
+
+    <div class="filters-row">
+      <div class="filter-field">
+        <label for="fEpisode">Episode:</label>
+        <select id="fEpisode"><option value="ALL">All 30 Episodes</option></select>
+      </div>
+      <div class="filter-field">
+        <label for="fVariant">Variant:</label>
+        <select id="fVariant">
+          <option value="PRIMARY">Primary Variant Only (30)</option>
+          <option value="ALL" selected>All A/B/C Variants (90)</option>
+          <option value="A">Variant A Only</option>
+          <option value="B">Variant B Only</option>
+          <option value="C">Variant C Only</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="fSeries">Series:</label>
+        <select id="fSeries">
+          <option value="ALL">All 4 Series</option>
+          <option value="Series 01">Series 01: AI Economy &amp; Debt</option>
+          <option value="Series 02">Series 02: AI Bubble &amp; Wall St</option>
+          <option value="Series 03">Series 03: Grid, Chips &amp; Geopolitics</option>
+          <option value="Series 04">Series 04: Cyber, Scams &amp; Policy</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="fComp">Composition:</label>
+        <select id="fComp">
+          <option value="ALL">All 3 Compositions</option>
+          <option value="shirt_and_tie_plus_artifact">shirt_and_tie_plus_artifact</option>
+          <option value="milk_page_data_split">milk_page_data_split</option>
+          <option value="smoked_navy_forensic_closeup">smoked_navy_forensic_closeup</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <label for="fStatus">Lint:</label>
+        <select id="fStatus">
+          <option value="ALL">All Statuses</option>
+          <option value="PASS">PASS Clean Only</option>
+          <option value="WARN">WARN Only</option>
+          <option value="FAIL">FAIL Only</option>
+        </select>
+      </div>
+      <div class="filter-field">
+        <input type="text" id="fSearch" placeholder="Search title, thumb, codename..." style="width:190px;" />
+      </div>
+      <label class="checkbox-pill">
+        <input type="checkbox" id="fStrict" checked /> --strict (31..42c, Spec &gt;=65)
+      </label>
+      <label class="checkbox-pill">
+        <input type="checkbox" id="fCompetitors" checked /> Mix 8 Competitor Cards
+      </label>
+      <label class="checkbox-pill">
+        <input type="checkbox" id="fSafeZones" /> Timestamp Safe-Zone
+      </label>
+      <button type="button" id="btnShuffleFeed" class="btn">Shuffle Feed</button>
+    </div>
+  </section>
+
+  <!-- Dynamic Main View Container -->
+  <main id="stageContainer" class="stage-wrap"></main>
+
+  <!-- Per-Pair 5-Gate Inspection Modal -->
+  <div id="inspectModal" class="modal-backdrop" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px;">
+        <h2 id="modalTitle" style="margin:0; font-size:17px; font-family:var(--font-serif);">Pair 5-Gate Diagnostic</h2>
+        <div style="display:flex; gap:8px;">
+          <button type="button" id="btnLoadIntoAdhoc" class="btn btn-primary">Edit in Ad-Hoc Tester</button>
+          <button type="button" id="btnCloseModal" class="btn">Close</button>
+        </div>
+      </div>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script>
+    "use strict";
+
+    /* ========================================================================
+       1. DETERMINISTIC 5-GATE JS LINTER (100% Parity with package_lint.py)
+       ======================================================================== */
+
+    const GLYPH_ADVANCE_EM = {
+      " ": 0.27, "!": 0.28, "\"": 0.37, "#": 0.56, "$": 0.56, "%": 0.74, "&": 0.66,
+      "'": 0.22, "\u2019": 0.22, "(": 0.34, ")": 0.34, "*": 0.42, "+": 0.56, ",": 0.26,
+      "-": 0.34, ".": 0.26, "/": 0.41, ":": 0.27, ";": 0.27, "<": 0.52, "=": 0.56,
+      ">": 0.52, "?": 0.49, "@": 0.88, "[": 0.32, "\\": 0.41, "]": 0.32, "_": 0.50,
+      "0": 0.56, "1": 0.52, "2": 0.56, "3": 0.56, "4": 0.56,
+      "5": 0.56, "6": 0.56, "7": 0.56, "8": 0.56, "9": 0.56,
+      "a": 0.54, "b": 0.56, "c": 0.51, "d": 0.56, "e": 0.54, "f": 0.36, "g": 0.56,
+      "h": 0.56, "i": 0.26, "j": 0.27, "k": 0.52, "l": 0.26, "m": 0.86, "n": 0.56,
+      "o": 0.56, "p": 0.56, "q": 0.56, "r": 0.37, "s": 0.50, "t": 0.35, "u": 0.56,
+      "v": 0.50, "w": 0.75, "x": 0.50, "y": 0.50, "z": 0.49,
+      "A": 0.66, "B": 0.64, "C": 0.65, "D": 0.67, "E": 0.58, "F": 0.56, "G": 0.68,
+      "H": 0.70, "I": 0.29, "J": 0.53, "K": 0.64, "L": 0.55, "M": 0.87, "N": 0.70,
+      "O": 0.70, "P": 0.63, "Q": 0.70, "R": 0.64, "S": 0.61, "T": 0.60, "U": 0.67,
+      "V": 0.64, "W": 0.92, "X": 0.63, "Y": 0.61, "Z": 0.60
+    };
+
+    const VIEWPORT_SURFACES = [
+      { surface_id: "ios_home_feed", label: "iOS Home Feed", container_px: 294, font_px: 15, max_lines: 2 },
+      { surface_id: "android_suggested_250px", label: "Android Suggested (250px)", container_px: 250, font_px: 14, max_lines: 2 },
+      { surface_id: "desktop_home_340px", label: "Desktop Home (340px)", container_px: 340, font_px: 16, max_lines: 2 },
+      { surface_id: "desktop_up_next_168px", label: "Desktop 168px Up-Next", container_px: 202, font_px: 14, max_lines: 2 }
+    ];
+
+    const FUNCTION_WORDS = new Set([
+      "the", "a", "an", "and", "of", "in", "to", "on", "by", "for", "at", "is",
+      "if", "or", "vs", "from", "into", "out", "now", "why", "how", "who",
+      "what", "when", "where"
+    ]);
+
+    const IRREGULAR_STEMS = {
+      paid: "pay", pays: "pay", paying: "pay",
+      stolen: "steal", stole: "steal", steals: "steal", stealing: "steal",
+      froze: "freez", frozen: "freez", freezes: "freez", freezing: "freez", freeze: "freez",
+      bought: "buy", buys: "buy", buying: "buy",
+      sold: "sell", sells: "sell", selling: "sell",
+      broke: "break", broken: "break", breaks: "break", breaking: "break",
+      took: "take", taken: "take", takes: "take", taking: "take",
+      lost: "lose", loses: "lose", losing: "lose",
+      losses: "loss", loss: "loss",
+      men: "man", women: "woman", children: "child",
+      taxes: "tax", taxed: "tax", taxing: "tax",
+      dies: "die", died: "die", dying: "die",
+      lies: "lie", lied: "lie", lying: "lie",
+      liars: "liar", liar: "liar",
+      halves: "half", wives: "wife", lives: "life"
+    };
+
+    const WHITELISTED_TITLE_ACRONYMS = new Set([
+      "GENIUS", "CISA", "ERCOT", "FICO", "GAAP", "GPUS", "UBI", "PJM",
+      "FDIC", "SWIFT", "DRAM", "TSMC", "ASML", "SAAS", "401(K)", "401K",
+      "FINCEN", "CALEA", "KOSTAT", "MIDAS", "NERC", "LBNL", "USGS", "OASDI",
+      "OASI", "SIPC", "FICA", "SCADA", "COBOL", "CHIPS", "EIDAS", "CFIUS",
+      "NATO", "OECD", "FIDO", "FIDO2", "C2PA", "NIST", "FIPS", "SLOAS",
+      "REIT", "REITS"
+    ]);
+
+    const SHORT_SAFE_ACRONYMS = new Set([
+      "AI", "US", "UK", "EU", "UN", "IT", "OT", "IP", "ID", "IDS", "HR", "PR",
+      "GDP", "CPI", "PCE", "FED", "BOJ", "ECB", "IMF", "BIS", "SEC", "FTC",
+      "DOJ", "FBI", "NSA", "DOD", "CRS", "CBO", "BLS", "OMB", "FCC", "PUC",
+      "FERC", "NERC", "MIT", "CMU", "UIUC", "ICI", "FSB", "SIA", "BCG", "IEA",
+      "LLM", "LLMS", "GPU", "CPU", "NPU", "RAM", "EUV", "API", "APIS", "VPN",
+      "DNS", "TLS", "RSA", "ECC", "AES", "PQC", "HSM", "ZKP", "SMS", "2FA",
+      "SSN", "SSNS", "CVE", "CVES", "KEV", "KEVS", "SAR", "SARS", "AML", "KYC",
+      "APP", "ACH", "SVB", "FCF", "EPS", "RPO", "RPOS", "SPV", "SPVS", "AUM",
+      "LBO", "BDC", "BDCS", "PIK", "ETF", "ETFS", "NAV", "RMD", "RMDS", "IDR",
+      "TFR", "VAT", "BPO", "BOM", "PPA", "LFP", "LNG", "TWH", "MWH", "KWH",
+      "GW", "MW", "KW", "NM", "CEO", "CFO", "CTO", "IPO", "IRS", "10K", "10Q",
+      "8K", "20F", "Q1", "Q2", "Q3", "Q4", "FY", "YOY", "TTM", "R&D", "S&P"
+    ]);
+
+    const CLICKBAIT_PATTERNS = [
+      ["shocking", /\bshock(?:ing|ed)\b/i],
+      ["insane", /\binsane(?:ly)?\b/i],
+      ["everything changed", /\b(?:everything\s+changed|changes\s+everything)\b/i],
+      ["it's over", /\b(?:it['\u2019]?s\s+over|is\s+over\s+forever)\b/i],
+      ["nobody talks about", /\b(?:nobody|no\s+one)\s+(?:is\s+)?talk(?:s|ing)\s+about\b/i],
+      ["secret", /\bsecrets?\b/i],
+      ["destroyed", /\bdestroy(?:ed|s|ing)\b/i],
+      ["terrifying", /\bterrif(?:ying|ied)\b/i],
+      ["unbelievable", /\bunbelievable\b/i],
+      ["you won't believe", /\byou\s+won['\u2019]?t\s+believe\b/i],
+      ["mind-blowing", /\bmind[- ]?blowing\b|\bjaw[- ]?dropping\b/i],
+      ["gone wrong / must watch", /\bgone\s+wrong\b|\bmust\s+watch\b/i]
+    ];
+
+    const BANNED_AI_WORDS = new Set([
+      "delve", "delves", "delving", "delved", "tapestry", "tapestries", "testament", "testaments",
+      "pivotal", "crucial", "crucially", "leverage", "leverages", "leveraging", "leveraged",
+      "utilize", "utilizes", "utilizing", "utilized", "utilization", "landscape", "landscapes",
+      "realm", "realms", "paradigm", "paradigms", "robust", "robustly", "comprehensive",
+      "comprehensively", "seamless", "seamlessly", "nuanced", "multifaceted", "foster", "fosters",
+      "fostering", "fostered", "bolster", "bolsters", "bolstering", "bolstered", "underscore",
+      "underscores", "underscoring", "underscored", "showcase", "showcases", "showcasing",
+      "showcased", "intricate", "intricately", "intricacies", "vibrant", "vibrantly", "enduring",
+      "unpack", "unpacks", "unpacking", "unpacked", "interplay", "genuinely", "profound",
+      "profoundly", "remarkable", "remarkably", "unprecedented", "transformative",
+      "groundbreaking", "paramount", "revolutionize", "revolutionizes", "revolutionizing",
+      "revolutionized", "spearhead", "spearheads", "spearheading", "synergy", "synergies",
+      "holistic", "overarching", "myriad", "plethora"
+    ]);
+
+    const DOMAIN_TERMS = new Set([
+      "ai", "debt", "treasury", "tbill", "tbills", "bond", "bonds", "yield", "yields",
+      "bank", "banks", "banking", "checking", "deposit", "deposits", "fdic", "swift",
+      "fincen", "sar", "sars", "irs", "fica", "gaap", "sec", "ftc", "doj", "cbo", "fed",
+      "boj", "imf", "nist", "cisa", "calea", "genius", "eidas", "cfius", "ferc", "nerc",
+      "ercot", "pjm", "fico", "sipc", "oasi", "oasdi", "401k", "roth", "pension",
+      "mortgage", "mortgages", "escrow", "insurance", "fair", "student", "tuition",
+      "wage", "wages", "paycheck", "paychecks", "payroll", "career", "rung", "jobs",
+      "hiring", "junior", "saas", "credit", "pik", "shadow", "buyout", "spv", "rpo",
+      "capex", "profit", "profits", "cash", "margin", "margins", "tax", "taxes", "untaxed",
+      "chip", "chips", "wafer", "wafers", "gpu", "gpus", "dram", "euv", "2nm", "tsmc",
+      "asml", "taiwan", "china", "japan", "korea", "gulf", "oil", "petrodollar", "swf",
+      "grid", "power", "transformer", "substation", "nuclear", "tokens", "compute",
+      "water", "cooling", "fertilizer", "phosphate", "cable", "cables", "subsea", "fiber",
+      "drone", "drones", "defense", "pentagon", "missile", "navy", "robot", "robots",
+      "humanoid", "actuator", "factory", "nations", "court", "courtroom", "courtrooms",
+      "subpoena", "privilege", "law", "statute", "cartel", "rent", "price", "dividend",
+      "quantum", "decryption", "encryption", "patch", "patches", "hack", "hacks", "cve",
+      "bot", "bots", "traffic", "wallet", "wallets", "companion", "brain", "deskilling",
+      "satellite", "birth", "fertility", "social", "security", "allowance", "ubi",
+      "america", "american", "us", "wall", "tech", "big", "money", "refund", "gallons",
+      "gallon", "wiretap", "syndicate", "export", "checks", "proof", "weights", "cyber",
+      "server", "servers", "cloud", "silicon", "lithography", "tariff", "tariffs",
+      "cliff", "harvest", "rsa", "ecc", "tls", "fips", "hsm", "cobol", "scada",
+      "adp", "labor", "hire", "hires", "loan", "loans", "seat", "seats", "default",
+      "outflow", "stock", "stocks", "passive", "capacity", "hospital", "hospitals",
+      "bug", "bugs", "underemployment", "grad", "grads", "mit", "eeg", "copilot",
+      "workflow", "workflows", "prompt", "prompts", "qa", "verifier", "premium",
+      "fsb", "algorithmic", "bid", "bids", "dollar", "shortage", "emerging",
+      "roof", "pool", "chatbot", "logs", "defect", "airframe", "airframes",
+      "launch", "cells", "criminal", "gag", "closure", "flag", "flags", "appeal",
+      "federal", "judge", "judges", "metadata", "algorithm", "algorithms", "checkout",
+      "browser", "hacker", "hackers", "carrier", "backdoor", "hardware", "key", "keys",
+      "sunbelt", "drought", "morocco", "battery", "batteries", "phosphate", "cohort",
+      "cohorts", "retiree", "retirees", "seafloor", "data", "tollbooth", "orbit",
+      "laser", "lasers", "europe", "mandate", "password", "passwords", "login", "logins",
+      "aes", "trust", "fund", "funds", "congress", "stablecoin", "stablecoins",
+      "antitrust", "sherman", "lease", "leases", "lockouts", "desks", "crypto",
+      "index", "clones", "clone", "regulation", "wire", "rules", "updates", "firms", "staff"
+    ]);
+
+    const TENSION_TERMS = new Set([
+      "vs", "versus", "behind", "inside", "against", "break", "breaks", "broken",
+      "erased", "erase", "keep", "keeps", "stolen", "steal", "froze", "frozen", "freeze",
+      "sell", "sells", "sold", "buys", "buy", "pays", "pay", "controls", "control",
+      "owns", "own", "costs", "cost", "testifies", "testify", "cliff", "clock", "run",
+      "trick", "lock", "locks", "locked", "shield", "switch", "cartel", "dividend",
+      "shadow", "captive", "untaxed", "mandatory", "missing", "trap", "dead", "cut",
+      "cuts", "drops", "drop", "shares", "starves", "drains", "blocks", "jump", "jumped",
+      "hit", "low", "fewer", "slower", "empty", "shortage", "gone", "faded", "dull",
+      "weaponize", "weaponizes", "firing", "waive", "pulled", "hikes", "warned", "warning",
+      "smaller", "replace", "saves", "leak", "risk", "gap", "shock", "loss", "flight",
+      "no", "zero", "subpoena", "subpoenaed", "discoverable", "ends", "short", "hiding",
+      "spike", "spikes", "underprice", "waiting", "reverse", "fell"
+    ]);
+
+    const INTERROGATIVES = new Set(["who", "why", "how", "what", "when", "where", "can", "if", "will", "does"]);
+
+    function measureTextPx(str, fontPx) {
+      let em = 0;
+      for (let i = 0; i < str.length; i += 1) {
+        const ch = str[i];
+        em += (GLYPH_ADVANCE_EM[ch] !== undefined) ? GLYPH_ADVANCE_EM[ch] : 0.56;
+      }
+      return Math.round(em * fontPx * 100) / 100;
+    }
+
+    function simulateTwoLineWrap(title, containerPx, fontPx, maxLines) {
+      const words = title.trim().split(/\s+/).filter(Boolean);
+      if (words.length === 0) {
+        return { single_line_px: 0, lines_used: 0, line_widths_px: [], utilization_pct: 0, truncated: false };
+      }
+      const spacePx = GLYPH_ADVANCE_EM[" "] * fontPx;
+      const lines = [];
+      let curPx = 0;
+      for (const word of words) {
+        const wPx = measureTextPx(word, fontPx);
+        if (wPx > containerPx) {
+          if (curPx > 0) { lines.push(Math.round(curPx * 100) / 100); curPx = 0; }
+          let rem = wPx;
+          while (rem > containerPx) { lines.push(containerPx); rem -= containerPx; }
+          curPx = rem;
+          continue;
+        }
+        if (curPx === 0) {
+          curPx = wPx;
+        } else if (curPx + spacePx + wPx <= containerPx) {
+          curPx += spacePx + wPx;
+        } else {
+          lines.push(Math.round(curPx * 100) / 100);
+          curPx = wPx;
+        }
+      }
+      if (curPx > 0) lines.push(Math.round(curPx * 100) / 100);
+      const singlePx = measureTextPx(title.trim(), fontPx);
+      const util = Math.round((singlePx / (containerPx * maxLines)) * 1000) / 10;
+      return {
+        single_line_px: singlePx,
+        lines_used: lines.length,
+        line_widths_px: lines,
+        utilization_pct: util,
+        truncated: lines.length > maxLines
+      };
+    }
+
+    function stemContentWord(rawWord) {
+      let w = rawWord.toLowerCase().replace(/^'+|'+$/g, "");
+      if (w.endsWith("'s")) w = w.slice(0, -2);
+      if (w.length < 3) return w;
+      if (IRREGULAR_STEMS[w]) return IRREGULAR_STEMS[w];
+
+      if (w.endsWith("ies") && w.length > 4) {
+        w = w.slice(0, -3) + "y";
+      } else if (w.endsWith("ves") && w.length > 4) {
+        w = w.slice(0, -3) + "f";
+      } else if (w.endsWith("ing") && w.length >= 6) {
+        let base = w.slice(0, -3);
+        if (base.length >= 4 && base[base.length - 1] === base[base.length - 2] && !"aeioulsz".includes(base[base.length - 1])) {
+          base = base.slice(0, -1);
+        }
+        w = base;
+      } else if (w.endsWith("ed") && w.length >= 5) {
+        if (w.endsWith("ied") && w.length > 4) {
+          w = w.slice(0, -3) + "y";
+        } else {
+          let base = w.slice(0, -2);
+          if (base.length >= 4 && base[base.length - 1] === base[base.length - 2] && !"aeioulsz".includes(base[base.length - 1])) {
+            base = base.slice(0, -1);
+          }
+          const keepE = new Set(["rate", "wage", "code", "note", "line", "file", "fine", "rule", "site", "care", "wire", "hire", "fire", "save", "move", "vote", "owe", "use", "age", "ban"]);
+          if (base.length === 3 && keepE.has(w.slice(0, -1))) {
+            w = w.slice(0, -1);
+          } else {
+            w = base;
+          }
+        }
+      } else if ((w.endsWith("ches") || w.endsWith("shes") || w.endsWith("xes") || w.endsWith("zes") || w.endsWith("sses")) && w.length >= 5) {
+        w = w.slice(0, -2);
+      } else if (w.endsWith("s") && !w.endsWith("ss") && !w.endsWith("us") && !w.endsWith("is") && w.length >= 4) {
+        w = w.slice(0, -1);
+      }
+
+      if (w.endsWith("ly") && w.length >= 6) w = w.slice(0, -2);
+      if (w.length >= 5 && w.endsWith("e") && !w.endsWith("ee") && !w.endsWith("oe") && !w.endsWith("ye")) {
+        w = w.slice(0, -1);
+      }
+      return IRREGULAR_STEMS[w] || w;
+    }
+
+    function extractContentStems(text) {
+      const norm = text.replace(/\u2019/g, "'").replace(/\b401\(k\)s?\b/gi, " 401k ");
+      const map = new Map();
+      const matches = norm.match(/[A-Za-z]+(?:'[A-Za-z]+)?/g) || [];
+      for (const raw of matches) {
+        let clean = raw.toLowerCase();
+        if (clean.endsWith("'s")) clean = clean.slice(0, -2);
+        clean = clean.replace(/^'+|'+$/g, "");
+        if (clean.length < 3 || FUNCTION_WORDS.has(clean)) continue;
+        const st = stemContentWord(clean);
+        if (st.length >= 3 && !FUNCTION_WORDS.has(st) && !map.has(st)) {
+          map.set(st, raw);
+        }
+      }
+      return map;
+    }
+
+    function extractNumericStems(text) {
+      const out = [];
+      if (/\b401\(?k\)?s?\b/i.test(text)) {
+        out.push({ raw: "401(k)", stem: "401k", value: 401, unit: "401k" });
+      }
+      const scrubbed = text.replace(/\b401\(?k\)?s?\b/gi, " ");
+      const unitMap = {
+        "%": "%", percent: "%", pct: "%",
+        t: "t", trillion: "t", b: "b", billion: "b",
+        m: "m", million: "m", k: "k", thousand: "k",
+        x: "x", nm: "nm", gw: "gw", mw: "mw", twh: "twh", yr: "yr", hr: "hr"
+      };
+      const re = /(?<![A-Za-z0-9])(\$?\d+(?:,\d{3})*(?:\.\d+)?)\s*(%|percent|pct|trillion|billion|million|thousand|[kmbtKMBT]|x|nm|gw|mw|twh|yr|hr)?(?![A-Za-z0-9])/gi;
+      let m;
+      while ((m = re.exec(scrubbed)) !== null) {
+        const rawFull = m[0].trim();
+        const numPart = m[1];
+        const unitRaw = (m[2] || "").toLowerCase();
+        let val = parseFloat(numPart.replace(/^\$/, "").replace(/,/g, ""));
+        if (Number.isNaN(val)) continue;
+        let unit = unitMap[unitRaw] || "";
+        if (unit === "" && val >= 1000 && val % 1000 === 0) {
+          if (val >= 1e12) { val /= 1e12; unit = "t"; }
+          else if (val >= 1e9) { val /= 1e9; unit = "b"; }
+          else if (val >= 1e6) { val /= 1e6; unit = "m"; }
+          else { val /= 1e3; unit = "k"; }
+        }
+        const valStr = Number.isInteger(val) ? String(val) : String(val);
+        out.push({ raw: rawFull, stem: valStr + unit, value: val, unit });
+      }
+      return out;
+    }
+
+    function parseHexRgb(hexStr) {
+      const s = String(hexStr || "").trim();
+      if (!/^#(?:[0-9A-Fa-f]{6}|[0-9A-Fa-f]{3})$/.test(s)) return null;
+      let body = s.slice(1);
+      if (body.length === 3) body = body[0] + body[0] + body[1] + body[1] + body[2] + body[2];
+      return [parseInt(body.slice(0, 2), 16), parseInt(body.slice(2, 4), 16), parseInt(body.slice(4, 6), 16)];
+    }
+
+    function computeWcagContrast(hexA, hexB) {
+      const a = parseHexRgb(hexA);
+      const b = parseHexRgb(hexB);
+      if (!a || !b) return null;
+      const lum = (rgb) => {
+        const lin = rgb.map((c) => {
+          const s = c / 255;
+          return s <= 0.04045 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+        });
+        return 0.2126 * lin[0] + 0.7152 * lin[1] + 0.0722 * lin[2];
+      };
+      const la = lum(a);
+      const lb = lum(b);
+      return Math.round(((Math.max(la, lb) + 0.05) / (Math.min(la, lb) + 0.05)) * 100) / 100;
+    }
+
+    function isWhitelistedCapsToken(tok) {
+      let cleaned = tok.replace(/^[.,:;?()[\]"'\u2019$]+|[.,:;?()[\]"'\u2019$]+$/g, "");
+      if (cleaned.endsWith("'s") || cleaned.endsWith("\u2019s")) cleaned = cleaned.slice(0, -2);
+      const up = cleaned.toUpperCase();
+      if (WHITELISTED_TITLE_ACRONYMS.has(up) || SHORT_SAFE_ACRONYMS.has(up)) return true;
+      if (cleaned.length >= 3 && cleaned.endsWith("s") && !cleaned.endsWith("SS")) {
+        const sing = cleaned.slice(0, -1).toUpperCase();
+        if (WHITELISTED_TITLE_ACRONYMS.has(sing) || SHORT_SAFE_ACRONYMS.has(sing)) return true;
+      }
+      const letters = cleaned.match(/[A-Za-z]/g) || [];
+      if (letters.some((c) => c === c.toLowerCase())) return true;
+      return false;
+    }
+
+    function lintPairJS(pair, strictMode) {
+      const title = String(pair.title || "").trim();
+      const thumb = String(pair.thumbnail_text || "").trim();
+      const bgHex = String(pair.background_hex || "#1C2B3A").trim();
+      const fgHex = String(pair.text_hex || "#FAF8F3").trim();
+      const accentHex = String(pair.accent_hex || "#2F8F8B").trim();
+      const elemCount = Number(pair.element_count !== undefined ? pair.element_count : 3);
+      const epId = String(pair.episode_id || "ep_04");
+
+      const violations = [];
+      const warnings = [];
+
+      // Gate 1: Char & Pixel Width Truncation
+      const charCount = title.length;
+      if (charCount < 24) {
+        violations.push({ gate: "G1", code: "G1_CHAR_UNDER_HARD_MIN", msg: `Title is ${charCount} chars (<24 hard minimum).` });
+      } else if (charCount > 52) {
+        violations.push({ gate: "G1", code: "G1_CHAR_OVER_HARD_MAX", msg: `Title is ${charCount} chars (>52 hard maximum).` });
+      } else if (charCount < 31 || charCount > 42) {
+        const item = { gate: "G1", code: "G1_CHAR_OUTSIDE_TARGET_BAND", msg: `Title is ${charCount} chars (target band 31..42).` };
+        if (strictMode) violations.push(item); else warnings.push(item);
+      }
+
+      const surfaces = VIEWPORT_SURFACES.map((s) => {
+        const sim = simulateTwoLineWrap(title, s.container_px, s.font_px, s.max_lines);
+        if (sim.truncated) {
+          violations.push({
+            gate: "G1",
+            code: `G1_PIXEL_TRUNCATION_${s.surface_id.toUpperCase()}`,
+            msg: `${s.label} (${s.container_px}px) wraps to ${sim.lines_used} lines (${sim.single_line_px}px) and clips.`
+          });
+        }
+        return Object.assign({}, s, sim);
+      });
+
+      // Gate 2: Zero Duplication
+      const tWords = extractContentStems(title);
+      const thWords = extractContentStems(thumb);
+      const sharedWords = [];
+      for (const [st, orig] of tWords.entries()) {
+        if (thWords.has(st)) {
+          sharedWords.push(st);
+          violations.push({
+            gate: "G2",
+            code: "G2_DUPLICATE_CONTENT_STEM",
+            msg: `Shared stem '${st}' repeats across title ('${orig}') and thumb ('${thWords.get(st)}').`
+          });
+        }
+      }
+
+      const tNums = extractNumericStems(title);
+      const thNums = extractNumericStems(thumb);
+      const seenNum = new Set();
+      for (const tn of tNums) {
+        for (const thn of thNums) {
+          const exact = tn.stem === thn.stem;
+          const rounded = tn.unit !== "" && tn.unit === thn.unit && Math.min(tn.value, thn.value) >= 10 &&
+            (Math.trunc(tn.value) === Math.trunc(thn.value) || Math.round(tn.value) === Math.round(thn.value));
+          if (exact || rounded) {
+            const k = `${tn.raw}|${thn.raw}`;
+            if (!seenNum.has(k)) {
+              seenNum.add(k);
+              violations.push({
+                gate: "G2",
+                code: "G2_DUPLICATE_NUMERIC_STEM",
+                msg: `Shared numeric stem across title ('${tn.raw}') and thumb ('${thn.raw}').`
+              });
+            }
+          }
+        }
+      }
+
+      // Gate 3: Thumb Budget & WCAG 2.1
+      const thumbWords = thumb.split(/\s+/).filter(Boolean);
+      if (thumbWords.length < 1) {
+        violations.push({ gate: "G3", code: "G3_THUMB_EMPTY", msg: "Thumbnail text has 0 words (budget 1..3)." });
+      } else if (thumbWords.length > 3) {
+        violations.push({ gate: "G3", code: "G3_THUMB_OVER_3_WORDS", msg: `Thumbnail has ${thumbWords.length} words (max 3).` });
+      }
+      if (thumb.length > 20) {
+        violations.push({ gate: "G3", code: "G3_THUMB_OVER_20_CHARS", msg: `Thumbnail text is ${thumb.length} chars (max 20).` });
+      }
+      if (elemCount < 1 || elemCount > 3) {
+        violations.push({ gate: "G3", code: "G3_ELEMENT_COUNT_OVER_BUDGET", msg: `element_count is ${elemCount} (ceiling 3).` });
+      }
+
+      const contrast = computeWcagContrast(bgHex, fgHex);
+      let wcagTier = "INVALID";
+      if (contrast === null) {
+        violations.push({ gate: "G3", code: "G3_INVALID_HEX", msg: `Invalid hex color (${bgHex} / ${fgHex}).` });
+      } else if (contrast < 4.5) {
+        wcagTier = "FAIL";
+        violations.push({ gate: "G3", code: "G3_WCAG_CONTRAST_FAIL", msg: `WCAG contrast ${contrast}:1 (< 4.5:1 AA minimum).` });
+      } else if (contrast < 7.0) {
+        wcagTier = "AA";
+        warnings.push({ gate: "G3", code: "G3_WCAG_BELOW_AAA_TARGET", msg: `WCAG contrast ${contrast}:1 (clears AA, below 7.0 AAA target).` });
+      } else {
+        wcagTier = "AAA";
+      }
+
+      // Gate 4: Punctuation, Shouting Caps, Staleness, Clickbait, Banned AI Words
+      const checkSurfaces = [["title", title], ["thumbnail_text", thumb]];
+      const punctRules = [
+        ["G4_EXCLAMATION_MARK", "!"],
+        ["G4_EM_DASH", "\u2014"],
+        ["G4_EN_DASH", "\u2013"],
+        ["G4_DOUBLE_HYPHEN", "--"],
+        ["G4_ASCII_ELLIPSIS", "..."],
+        ["G4_UNICODE_ELLIPSIS", "\u2026"]
+      ];
+      for (const [sName, txt] of checkSurfaces) {
+        for (const [code, needle] of punctRules) {
+          if (txt.includes(needle)) {
+            violations.push({ gate: "G4", code, msg: `Forbidden punctuation '${needle}' in ${sName}.` });
+          }
+        }
+      }
+
+      const rawTitleTokens = title.match(/[A-Za-z0-9()&'\u2019-]+/g) || [];
+      const shortCaps = [];
+      for (const rt of rawTitleTokens) {
+        const subs = /^401\(k\)s?$/i.test(rt) ? [rt] : rt.split("-");
+        for (const sub of subs) {
+          if (!sub || isWhitelistedCapsToken(sub)) continue;
+          const letters = sub.match(/[A-Za-z]/g) || [];
+          if (letters.length > 0 && letters.every((c) => c === c.toUpperCase())) {
+            if (letters.length >= 5) {
+              violations.push({ gate: "G4", code: "G4_SHOUTING_ALL_CAPS", msg: `Shouting ALL-CAPS word '${sub}' in title.` });
+            } else if (letters.length >= 3) {
+              shortCaps.push(sub);
+            }
+          }
+        }
+      }
+      if (shortCaps.length >= 3) {
+        violations.push({ gate: "G4", code: "G4_SHOUTING_TITLE_RUN", msg: `Shouting uppercase run (${shortCaps.join(", ")}) in title.` });
+      }
+
+      const epMatch = epId.match(/ep_?0*(\d+)/i);
+      const epNum = epMatch ? parseInt(epMatch[1], 10) : 4;
+      for (const [sName, txt] of checkSurfaces) {
+        const ym = txt.match(/\b(202[1-6])\b/);
+        if (ym) {
+          if (epNum >= 4) {
+            violations.push({ gate: "G4", code: "G4_STALE_YEAR_STAMP", msg: `Stale year '${ym[1]}' in ${sName} on ${epId} (banned on ep_04..ep_30).` });
+          } else {
+            warnings.push({ gate: "G4", code: "G4_LAUNCH_TRIO_PAST_YEAR", msg: `Past year '${ym[1]}' in ${sName} on launch episode.` });
+          }
+        }
+        for (const [label, pat] of CLICKBAIT_PATTERNS) {
+          if (pat.test(txt)) {
+            violations.push({ gate: "G4", code: "G4_CLICKBAIT_SLOP", msg: `Clickbait '${label}' in ${sName}.` });
+          }
+        }
+        const wordsScan = txt.match(/\b[A-Za-z]+(?:-[A-Za-z]+)*\b/g) || [];
+        for (const w of wordsScan) {
+          if (BANNED_AI_WORDS.has(w.toLowerCase())) {
+            violations.push({ gate: "G4", code: "G4_BANNED_AI_WORD", msg: `Banned AI word '${w}' in ${sName}.` });
+          }
+        }
+        if (/\brather\s+than\b|\bdeep\s+dives?\b|\bat\s+its\s+core\b|\bnot\s+[A-Za-z0-9'-]+,\s*but\b/i.test(txt)) {
+          violations.push({ gate: "G4", code: "G4_BANNED_AI_PATTERN", msg: `Banned AI phrase or negative contrast in ${sName}.` });
+        }
+      }
+
+      // Gate 5: Specificity Score (0..100)
+      const combined = `${title} ${thumb}`;
+      let pA = 0;
+      if (/\$\d/.test(combined)) pA += 24;
+      if (/\d+(?:\.\d+)?%|\b\d+(?:\.\d+)?x\b|\b1:1\b/i.test(combined)) pA += 22;
+      if (/\b\d+(?:[.,]\d+)?\s*(?:-[A-Za-z]+|nm|gw|mw|twh|kw|yr|hr|min|mins|minute|minutes|sec|secs|second|seconds|day|days|week|weeks|month|months|year|years|k|m|b|t)\b|\b401\(k\)|\b20[23]\d\b/i.test(combined)) pA += 22;
+      if (pA === 0 && (tNums.length > 0 || thNums.length > 0)) pA += 24;
+      if (pA === 0 && /\b(?:zero|one|first|two|three|billion|trillion|million)\b/i.test(combined)) pA += 20;
+      if ((tNums.length + thNums.length) >= 2) pA += 16;
+
+      const stemmedDomainPool = new Set(DOMAIN_TERMS);
+      for (const d of DOMAIN_TERMS) stemmedDomainPool.add(stemContentWord(d));
+
+      const cleanedComb = combined.replace(/\u2019/g, "'").replace(/401\(k\)s?/gi, "401k");
+      const rawToks = (cleanedComb.match(/[A-Za-z0-9']+/g) || []).map((t) => {
+        const low = t.toLowerCase();
+        return low.endsWith("'s") ? low.slice(0, -2) : low.replace(/^'+|'+$/g, "");
+      });
+      const domHits = Array.from(new Set(rawToks.filter((t) => t && (
+        stemmedDomainPool.has(t) ||
+        stemmedDomainPool.has(stemContentWord(t)) ||
+        WHITELISTED_TITLE_ACRONYMS.has(t.toUpperCase()) ||
+        (t.length >= 3 && SHORT_SAFE_ACRONYMS.has(t.toUpperCase()))
+      ))));
+      if (pA === 0 && domHits.length >= 3) pA = 20;
+      pA = Math.min(40, pA);
+
+      const pB = domHits.length >= 3 ? 35 : (domHits.length === 2 ? 26 : (domHits.length === 1 ? 16 : 0));
+      let pC = 0;
+      const titleWordsLow = title.trim().split(/\s+/).slice(0, 4).map((w) => w.toLowerCase().replace(/[^a-z]/g, ""));
+      if (title.includes("?") || title.includes(":") || titleWordsLow.some((w) => INTERROGATIVES.has(w))) pC += 15;
+      if (rawToks.some((t) => TENSION_TERMS.has(t))) pC += 15;
+      pC = Math.min(25, pC);
+
+      let pen = 0;
+      if (/\b(?:things?|stuff|something)\b/i.test(combined)) pen += 15;
+      if (/\b(?:the\s+)?(?:future|impact|role|power|world|state)\s+of\b/i.test(combined)) pen += 15;
+      if (/\b(?:modern|various|interesting|important)\b/i.test(combined)) pen += 15;
+
+      const specScore = Math.max(0, Math.min(100, pA + pB + pC - pen));
+      if (specScore < 50) {
+        violations.push({ gate: "G5", code: "G5_LOW_SPECIFICITY", msg: `Specificity is ${specScore}/100 (<50 floor).` });
+      } else if (specScore < 65) {
+        const item = { gate: "G5", code: "G5_MODERATE_SPECIFICITY", msg: `Specificity is ${specScore}/100 (<65 --strict target).` };
+        if (strictMode) violations.push(item); else warnings.push(item);
+      }
+
+      const passed = violations.length === 0;
+      const status = passed ? (warnings.length === 0 ? "PASS" : "WARN") : "FAIL";
+      const fitCount = surfaces.filter((s) => !s.truncated).length;
+
+      return {
+        passed,
+        status,
+        charCount,
+        thumbWordCount: thumbWords.length,
+        thumbCharCount: thumb.length,
+        elemCount,
+        contrast,
+        wcagTier,
+        specScore,
+        specBreakdown: { pA, pB, pC, pen },
+        surfaces,
+        fitCount,
+        sharedWords,
+        violations,
+        warnings
+      };
+    }
+
+    /* ========================================================================
+       2. PROCEDURAL 16:9 SVG THUMBNAIL ENGINE (3 Reading Room Modes + 8 Rivals)
+       ======================================================================== */
+
+    function escXml(str) {
+      return String(str || "")
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&apos;");
+    }
+
+    function splitThumbLines(text) {
+      const words = String(text || "").trim().split(/\s+/).filter(Boolean);
+      if (words.length <= 1) return [words[0] || ""];
+      if (words.length === 2) {
+        if ((words[0].length + words[1].length) <= 8) return [words.join(" ")];
+        return [words[0], words[1]];
+      }
+      // 3 words: group shorter adjacent pair together so it stacks cleanly in 2 lines
+      if (words[0].length + words[1].length <= words[1].length + words[2].length) {
+        return [`${words[0]} ${words[1]}`, words[2]];
+      }
+      return [words[0], `${words[1]} ${words[2]}`];
+    }
+
+    function renderReadingRoomSvg(pair) {
+      const mode = pair.visual_composition_mode || "shirt_and_tie_plus_artifact";
+      const bg = pair.background_hex || "#1C2B3A";
+      const fg = pair.text_hex || "#FAF8F3";
+      const acc = pair.accent_hex || "#2F8F8B";
+      const epNum = String(pair.episode_number || 1).padStart(2, "0");
+      const subject = escXml(String(pair.focal_subject || "Primary Treasury & SEC Filing").slice(0, 44));
+      const lines = splitThumbLines(pair.thumbnail_text || "86% WAGES");
+      const isLightBg = (computeWcagContrast(bg, "#000000") || 10) > 8;
+      const subtleGrid = isLightBg ? "rgba(28,43,58,0.08)" : "rgba(250,248,243,0.08)";
+      const cardStroke = isLightBg ? "rgba(28,43,58,0.22)" : "rgba(250,248,243,0.26)";
+
+      if (mode === "milk_page_data_split") {
+        const line1 = escXml(lines[0] || "");
+        const line2 = escXml(lines[1] || "");
+        const fSize = Math.max(lines[0]?.length || 1, lines[1]?.length || 1) > 9 ? 114 : 136;
+        return `
+        <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escXml(pair.thumbnail_text)}">
+          <rect width="1280" height="720" fill="${escXml(bg)}"/>
+          <g stroke="${subtleGrid}" stroke-width="2">
+            <line x1="64" y1="74" x2="1216" y2="74"/>
+            <line x1="700" y1="74" x2="700" y2="646"/>
+            <line x1="64" y1="646" x2="1216" y2="646"/>
+          </g>
+          <rect x="64" y="42" width="176" height="22" rx="3" fill="${escXml(acc)}"/>
+          <text x="74" y="58" fill="#FAF8F3" font-family="monospace" font-size="14" font-weight="700">EXHIBIT EP.${epNum}</text>
+
+          ${line2 ? `
+            <text x="68" y="295" fill="${escXml(fg)}" font-family="Georgia, serif" font-size="${fSize}" font-weight="800" letter-spacing="-2">${line1}</text>
+            <text x="68" y="${295 + fSize + 8}" fill="${escXml(fg)}" font-family="Georgia, serif" font-size="${fSize}" font-weight="800" letter-spacing="-2">${line2}</text>
+            <rect x="68" y="${325 + fSize}" width="540" height="14" rx="3" fill="${escXml(acc)}"/>
+          ` : `
+            <text x="68" y="365" fill="${escXml(fg)}" font-family="Georgia, serif" font-size="${fSize + 14}" font-weight="800" letter-spacing="-2">${line1}</text>
+            <rect x="68" y="398" width="540" height="14" rx="3" fill="${escXml(acc)}"/>
+          `}
+
+          <text x="68" y="598" fill="${escXml(fg)}" opacity="0.78" font-family="monospace" font-size="22" font-weight="600">${subject}</text>
+
+          <!-- Right-Half Balance Sheet Divergence Bars -->
+          <g transform="translate(748, 128)">
+            <rect x="0" y="0" width="460" height="468" rx="12" fill="${isLightBg ? "#F2F0EA" : "#13202D"}" stroke="${cardStroke}" stroke-width="2.5"/>
+            <line x1="36" y1="386" x2="424" y2="386" stroke="${escXml(fg)}" stroke-width="3" opacity="0.55"/>
+            <rect x="54" y="256" width="68" height="130" rx="4" fill="${escXml(fg)}" opacity="0.32"/>
+            <rect x="148" y="212" width="68" height="174" rx="4" fill="${escXml(fg)}" opacity="0.52"/>
+            <rect x="242" y="168" width="68" height="218" rx="4" fill="${escXml(fg)}" opacity="0.72"/>
+            <rect x="336" y="64" width="74" height="322" rx="5" fill="${escXml(acc)}"/>
+            <polyline points="88,242 182,198 276,154 373,48" fill="none" stroke="${escXml(acc)}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="373" cy="48" r="11" fill="${escXml(acc)}"/>
+            <text x="36" y="432" fill="${escXml(fg)}" opacity="0.82" font-family="monospace" font-size="20" font-weight="700">PRIMARY LEDGER DELTA</text>
+          </g>
+        </svg>`;
+      }
+
+      if (mode === "smoked_navy_forensic_closeup") {
+        const line1 = escXml(lines[0] || "");
+        const line2 = escXml(lines[1] || "");
+        const fSize = Math.max(lines[0]?.length || 1, lines[1]?.length || 1) > 9 ? 116 : 138;
+        return `
+        <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escXml(pair.thumbnail_text)}">
+          <defs>
+            <radialGradient id="rg_${epNum}_${escXml(pair.variant_id || "A")}" cx="65%" cy="42%" r="72%">
+              <stop offset="0%" stop-color="${escXml(bg)}"/>
+              <stop offset="100%" stop-color="${isLightBg ? "#E5E0D5" : "#0A121A"}"/>
+            </radialGradient>
+          </defs>
+          <rect width="1280" height="720" fill="url(#rg_${epNum}_${escXml(pair.variant_id || "A")})"/>
+
+          <!-- Tilted Forensic Document / Silicon Exhibit Card -->
+          <g transform="translate(665, 92) rotate(-3.5)">
+            <rect x="0" y="0" width="535" height="515" rx="14" fill="#FAF8F3" stroke="${escXml(acc)}" stroke-width="4"/>
+            <rect x="34" y="38" width="220" height="18" rx="3" fill="#1C2B3A" opacity="0.85"/>
+            <rect x="34" y="78" width="460" height="12" rx="2" fill="#1C2B3A" opacity="0.22"/>
+            <rect x="34" y="106" width="430" height="12" rx="2" fill="#1C2B3A" opacity="0.22"/>
+            <rect x="28" y="148" width="474" height="66" rx="6" fill="${escXml(acc)}" opacity="0.24"/>
+            <rect x="28" y="148" width="10" height="66" rx="2" fill="${escXml(acc)}"/>
+            <rect x="52" y="170" width="390" height="22" rx="3" fill="#1C2B3A"/>
+            <rect x="34" y="244" width="450" height="12" rx="2" fill="#1C2B3A" opacity="0.22"/>
+            <rect x="34" y="274" width="410" height="12" rx="2" fill="#1C2B3A" opacity="0.22"/>
+            <rect x="34" y="324" width="462" height="126" rx="8" fill="#F2F0EA" stroke="#1C2B3A" stroke-width="2" opacity="0.85"/>
+            <line x1="58" y1="418" x2="466" y2="348" stroke="${escXml(acc)}" stroke-width="8" stroke-linecap="round"/>
+            <text x="36" y="486" fill="#1C2B3A" font-family="monospace" font-size="18" font-weight="700">${subject}</text>
+          </g>
+
+          <!-- Left Focal Headline Lockup -->
+          <rect x="58" y="88" width="12" height="490" rx="3" fill="${escXml(acc)}"/>
+          ${line2 ? `
+            <text x="92" y="298" fill="${escXml(fg)}" font-family="Impact, 'Arial Black', sans-serif" font-size="${fSize}" font-weight="900" letter-spacing="1">${line1}</text>
+            <text x="92" y="${298 + fSize + 10}" fill="${escXml(fg)}" font-family="Impact, 'Arial Black', sans-serif" font-size="${fSize}" font-weight="900" letter-spacing="1">${line2}</text>
+          ` : `
+            <text x="92" y="370" fill="${escXml(fg)}" font-family="Impact, 'Arial Black', sans-serif" font-size="${fSize + 14}" font-weight="900" letter-spacing="1">${line1}</text>
+          `}
+          <text x="92" y="564" fill="${escXml(fg)}" opacity="0.82" font-family="monospace" font-size="22" font-weight="700">SEC / TREASURY AUDIT #${epNum}</text>
+        </svg>`;
+      }
+
+      // Default Mode: shirt_and_tie_plus_artifact
+      const line1 = escXml(lines[0] || "");
+      const line2 = escXml(lines[1] || "");
+      const fSize = Math.max(lines[0]?.length || 1, lines[1]?.length || 1) > 9 ? 112 : 132;
+      const tieColor = (computeWcagContrast("#F2ECE1", acc) || 4) >= 3.0 ? acc : "#1C2B3A";
+
+      return `
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escXml(pair.thumbnail_text)}">
+        <rect width="1280" height="720" fill="${escXml(bg)}"/>
+        <!-- Walnut Desk Surface -->
+        <rect x="0" y="618" width="1280" height="102" fill="#241914"/>
+        <line x1="0" y1="618" x2="1280" y2="618" stroke="${escXml(acc)}" stroke-width="4"/>
+
+        <!-- Element 1: Upright Shirt-and-Tie Investigator Silhouette (Left Third) -->
+        <g transform="translate(54, 108)">
+          <circle cx="205" cy="128" r="82" fill="#D8C3AE"/>
+          <path d="M132,102 Q205,34 278,102 Q272,62 205,56 Q140,62 132,102 Z" fill="#2A2421"/>
+          <!-- Tailored Jacket + Matte Oxford Shirt (#F2ECE1) + Four-in-Hand Tie -->
+          <path d="M22,510 L58,256 Q112,218 205,218 Q298,218 352,256 L388,510 Z" fill="${isLightBg ? "#1C2B3A" : "#26384B"}" stroke="${cardStroke}" stroke-width="2"/>
+          <polygon points="146,222 264,222 232,462 178,462" fill="#F2ECE1"/>
+          <polygon points="146,222 205,264 176,286 136,244" fill="#E6DFD1"/>
+          <polygon points="264,222 205,264 234,286 274,244" fill="#E6DFD1"/>
+          <polygon points="191,258 219,258 228,448 205,478 182,448" fill="${escXml(tieColor)}"/>
+        </g>
+
+        <!-- Element 2: Primary Cotton Filing Artifact -->
+        <g transform="translate(835, 198) rotate(2.5)">
+          <rect x="0" y="0" width="376" height="404" rx="10" fill="#FAF8F3" stroke="#1C2B3A" stroke-width="3"/>
+          <rect x="26" y="28" width="164" height="16" rx="2" fill="#1C2B3A"/>
+          <rect x="26" y="64" width="320" height="44" rx="4" fill="${escXml(acc)}" opacity="0.26"/>
+          <rect x="26" y="64" width="8" height="44" fill="${escXml(acc)}"/>
+          <rect x="44" y="78" width="248" height="16" rx="2" fill="#1C2B3A"/>
+          <line x1="26" y1="142" x2="346" y2="142" stroke="#1C2B3A" stroke-width="2" opacity="0.25"/>
+          <line x1="26" y1="174" x2="326" y2="174" stroke="#1C2B3A" stroke-width="2" opacity="0.25"/>
+          <rect x="26" y="206" width="320" height="128" rx="6" fill="#F2F0EA" stroke="${escXml(acc)}" stroke-width="2.5"/>
+          <polyline points="48,308 134,288 224,254 318,224" fill="none" stroke="${escXml(acc)}" stroke-width="7" stroke-linecap="round"/>
+          <text x="26" y="372" fill="#1C2B3A" font-family="monospace" font-size="15" font-weight="700">${subject.slice(0, 32)}</text>
+        </g>
+
+        <!-- Element 3: Bold 1..3 Word Typographic Lockup -->
+        <g>
+          ${line2 ? `
+            <text x="458" y="218" fill="${escXml(fg)}" font-family="Georgia, serif" font-size="${fSize}" font-weight="900" letter-spacing="-1">${line1}</text>
+            <text x="458" y="${218 + fSize + 6}" fill="${escXml(fg)}" font-family="Georgia, serif" font-size="${fSize}" font-weight="900" letter-spacing="-1">${line2}</text>
+            <rect x="458" y="${244 + fSize}" width="340" height="12" rx="3" fill="${escXml(acc)}"/>
+          ` : `
+            <text x="458" y="274" fill="${escXml(fg)}" font-family="Georgia, serif" font-size="${fSize + 10}" font-weight="900" letter-spacing="-1">${line1}</text>
+            <rect x="458" y="302" width="340" height="12" rx="3" fill="${escXml(acc)}"/>
+          `}
+        </g>
+      </svg>`;
+    }
+
+    function renderCompetitorSvg(comp) {
+      return `
+      <svg viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${escXml(comp.thumbText)}">
+        <rect width="1280" height="720" fill="${comp.bg}"/>
+        <circle cx="960" cy="360" r="270" fill="${comp.accent}" opacity="0.22"/>
+        <rect x="740" y="130" width="440" height="460" rx="18" fill="rgba(0,0,0,0.28)" stroke="${comp.accent}" stroke-width="4"/>
+        <polyline points="780,500 880,420 970,450 1130,210" fill="none" stroke="${comp.accent}" stroke-width="14" stroke-linecap="round"/>
+        <rect x="64" y="180" width="610" height="168" rx="10" fill="${comp.plate}"/>
+        <text x="92" y="294" fill="${comp.fg}" font-family="'Arial Black', Impact, sans-serif" font-size="96" font-weight="900">${escXml(comp.thumbText)}</text>
+        <text x="72" y="440" fill="${comp.subFg}" font-family="sans-serif" font-size="34" font-weight="700">${escXml(comp.subTag)}</text>
+      </svg>`;
+    }
+
+    /* ========================================================================
+       3. BUILT-IN 30-EPISODE PREVIEW VAULT (90 Complete Strict-Passing Pairs)
+          + 8 Realistic Competitor Benchmark Cards
+       ======================================================================== */
+
+    const COMPETITOR_BENCHMARKS = [
+      {
+        id: "COMP_01", isCompetitor: true, channel: "Plain Bagel Finance", initials: "PB",
+        title: "Why Bond Yields Keep Defying Rate Cuts Right Now",
+        thumbText: "YIELD TRAP", subTag: "10-YEAR TREASURY", duration: "18:42",
+        views: "612K views \u2022 2 days ago", bg: "#141923", plate: "#EAB308", fg: "#111111", accent: "#EAB308", subFg: "#E5E7EB"
+      },
+      {
+        id: "COMP_02", isCompetitor: true, channel: "Asianometry", initials: "AS",
+        title: "The Extreme Physics Inside High-NA EUV Lithography",
+        thumbText: "0.55 NA", subTag: "OPTICS BOTTLENECK", duration: "29:15",
+        views: "428K views \u2022 5 days ago", bg: "#102027", plate: "#1E3A5F", fg: "#FFFFFF", accent: "#38BDF8", subFg: "#BAE6FD"
+      },
+      {
+        id: "COMP_03", isCompetitor: true, channel: "Patrick Boyle", initials: "BO",
+        title: "Private Equity Marks Its Own Homework Again",
+        thumbText: "FAKE ALPHA?", subTag: "ILLIQUIDITY PREMIUM", duration: "22:08",
+        views: "519K views \u2022 1 day ago", bg: "#1F1B24", plate: "#991B1B", fg: "#FFFFFF", accent: "#F87171", subFg: "#E5E7EB"
+      },
+      {
+        id: "COMP_04", isCompetitor: true, channel: "How Money Works", initials: "HM",
+        title: "Why Middle Class Salaries Stopped Buying Houses",
+        thumbText: "PRICED OUT", subTag: "MEDIAN INCOME MATH", duration: "16:54",
+        views: "940K views \u2022 4 days ago", bg: "#0B291E", plate: "#10B981", fg: "#062016", accent: "#34D399", subFg: "#D1FAE5"
+      },
+      {
+        id: "COMP_05", isCompetitor: true, channel: "CaspianReport", initials: "CR",
+        title: "Geography of the Red Sea Fiber Chokepoint",
+        thumbText: "CHOKEPOINT", subTag: "BAB EL-MANDEB", duration: "21:33",
+        views: "780K views \u2022 6 days ago", bg: "#1E1612", plate: "#EA580C", fg: "#FFFFFF", accent: "#FB923C", subFg: "#FED7AA"
+      },
+      {
+        id: "COMP_06", isCompetitor: true, channel: "AI Explained", initials: "AE",
+        title: "Frontier Agent Benchmarks Just Hit a Strange Wall",
+        thumbText: "92% SCORE", subTag: "REASONING SCALING", duration: "24:47",
+        views: "685K views \u2022 3 days ago", bg: "#131629", plate: "#4F46E5", fg: "#FFFFFF", accent: "#818CF8", subFg: "#E0E7FF"
+      },
+      {
+        id: "COMP_07", isCompetitor: true, channel: "Practical Engineering", initials: "PE",
+        title: "What Happens When a High-Voltage Substation Fails",
+        thumbText: "500kV TRIP", subTag: "GRID PROTECTION", duration: "19:20",
+        views: "1.1M views \u2022 2 weeks ago", bg: "#212529", plate: "#F59E0B", fg: "#111111", accent: "#FBBF24", subFg: "#F3F4F6"
+      },
+      {
+        id: "COMP_08", isCompetitor: true, channel: "ColdFusion", initials: "CF",
+        title: "Inside the Quiet Buyout of Global Cloud Infrastructure",
+        thumbText: "$800B BET", subTag: "HYPERSCALE RACE", duration: "26:11",
+        views: "890K views \u2022 1 week ago", bg: "#090D16", plate: "#06B6D4", fg: "#06121A", accent: "#22D3EE", subFg: "#CFFAFE"
+      }
+    ];
+
+    const BUILTIN_30_SPECS = [
+      [1, "The Allowance", "2027-02-02", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-GEN-EXPLAINER", "milk-page-editorial", "MTS Table 9 & Alaska PFD Veto",
+        ["If AI Takes Jobs, Who Pays $40.5T Debt?", "86% WAGES"],
+        ["86% of US Taxes Come From Human Paychecks", "$40.5T TAB"],
+        ["Can UBI Survive $2.14T in Bond Interest?", "NO PAYCHECK"]],
+      [2, "The Captive Buyer", "2027-02-14", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-FISHER-ARTIFACT", "archival-light-table", "GENIUS Act Sec 4 & TIC Table 5",
+        ["Who Buys America's $40T Debt Now?", "93-DAY TRAP"],
+        ["Why Congress Locked Stablecoins in T-Bills", "$200B BUYER"],
+        ["Japan Sold Long Bonds, Stablecoins Step In", "0% YIELD LAW"]],
+      [3, "The Six-Year Footnote", "2027-02-26", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-BOYLE-CHAPTERED", "smoked-navy-glass", "SEC Form 10-K Note 1 Useful Lives",
+        ["Big Tech's $176B AI Profit Trick?", "6-YR FOOTNOTE"],
+        ["How 6-Year GPU Math Inflates GAAP Profit", "$176B GAP"],
+        ["Why Amazon Cash Flow Turned -$42.4B on AI", "PAPER EARNINGS"]],
+      [4, "The Missing Rung", "2027-03-10", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-HMW-PRIMER", "milk-page-editorial", "Stanford ADP Age 22-25 Payroll Panel",
+        ["Why AI Erased the First Career Rung", "-19% HIRING"],
+        ["Junior Hiring Fell 19% in AI-Exposed Jobs", "NO ENTRY RUNG"],
+        ["What Happens When Firms Cut Junior Staff?", "2032 GAP"]],
+      [5, "The PIK Toggle", "2027-03-22", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-GEN-EXPLAINER", "investigation-switchboard", "IMF Private Credit & BDC 10-Q PIK",
+        ["The $2.5T Shadow Debt Behind AI SaaS", "88% PIK IOUS"],
+        ["Why $500B in SaaS Buyouts Pay With IOUs", "6.3% DEFAULT"],
+        ["If AI Cuts SaaS Seats, Who Eats Debt?", "BDC TRAP"]],
+      [6, "The Five-Dollar Exit", "2027-04-03", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-MAX-ESSAY", "blueprint-schematic", "Gabaix-Koijen 5x Multiplier & ICI",
+        ["What Happens When 401(k)s Sell AI?", "5X REVERSE"],
+        ["How $1 of 401(k) Outflow Cuts $5 of Stock", "$10.8T EXIT"],
+        ["Why Passive Index Stocks Run in Reverse", "92.5% TOP 10%"]],
+      [7, "Authorized Loss", "2027-04-15", "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy", "STR-AIC-SPECULATIVE", "restraint-vellum", "12 CFR Sec 1005.6 Regulation E",
+        ["Why Banks Keep Money Stolen by AI", "$0 REFUND"],
+        ["The 1978 Bank Loophole AI Clones Use", "100% YOUR LOSS"],
+        ["Voice Clones vs Regulation E Wire Rules", "$12.5B GONE"]],
+      [8, "Bits vs Watts", "2027-04-27", "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics", "STR-MAX-ESSAY", "silver-gelatin-chronicle", "NERC 94GW Map & PJM Auction Table",
+        ["Free AI Tokens vs 128-Week Grid Locks", "+833% POWER"],
+        ["Why Cheap AI Compute Spikes Power Bills", "94GW SHORT"],
+        ["5GW AI Campuses vs US Transformer Waits", "128 WEEKS"]],
+      [9, "Patch Tuesday Dead", "2027-05-09", "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy", "STR-FISHER-ARTIFACT", "investigation-switchboard", "UIUC CVE Benchmark & Verizon DBIR",
+        ["15-Minute AI Hacks vs 43-Day Patches", "87% EXPLOITED"],
+        ["How AI Weaponizes Security Updates Fast", "1,500X LAG"],
+        ["Why Corporate Patch Queues Lose to Bots", "CISA KEV GAP"]],
+      [10, "Zero-Inertia Banking", "2027-05-21", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-BOYLE-CHAPTERED", "milk-page-editorial", "FDIC Table III-A $4.04T 0% Deposits",
+        ["The 60-Second Autonomous Bank Run", "$4.04T FLIGHT"],
+        ["What AI Cash Agents Do to Regional Banks", "0% CHECKING"],
+        ["Why Banks Need $4.04T in Sleepy Deposits", "FEDNOW SWEEP"]],
+      [11, "Non-Dischargeable", "2027-06-02", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-GEN-EXPLAINER", "smoked-navy-glass", "Fed G.19 $1.81T & 11 USC 523(a)(8)",
+        ["AI Wages vs $1.8T in Student Debt", "42.5% STUCK"],
+        ["Why 11 USC 523 Locks Student Loans In", "NO DISCHARGE"],
+        ["42.5% Underemployed Grads vs Tuition", "-19% JUNIORS"]],
+      [12, "Cognitive Debt", "2027-06-14", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-HMW-PRIMER", "archival-light-table", "MIT 32-Channel EEG & CMU 936-Study",
+        ["What AI Deskilling Costs Your Brain", "-55% SIGNAL"],
+        ["MIT EEG Study: 55% Drop in AI Writers", "936 WORKFLOWS"],
+        ["Why Prompt-Pasters Cut Their Own Wages", "936 AUDITS"]],
+      [13, "Actuator Lock", "2027-06-26", "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics", "STR-AOTP-LADDER", "blueprint-schematic", "Morgan Stanley Humanoid 100 BOM",
+        ["Who Controls the $30K Humanoid Chain?", "72% REFINED"],
+        ["Why US Robot Brains Need Asian Magnets", "63% SUPPLY"],
+        ["Inside the $16K-to-$30K Robot Supply Lock", "RARE EARTHS"]],
+      [14, "Shared Weights", "2027-07-08", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-FISHER-ARTIFACT", "geospatial-telemetry", "FSB AI Concentration & SEC MIDAS",
+        ["When Every Wall St Bot Shares One Brain", "80% VOLUME"],
+        ["Why FSB Warned on Algorithmic Stocks", "NO BIDS LEFT"],
+        ["Why 80% Algorithmic Stocks Herd as One", "5X AIR POCKET"]],
+      [15, "The Lithography Switch", "2027-07-20", "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics", "STR-AIC-CLOCKED", "restraint-vellum", "SIA-BCG Sub-5nm & ASML 20-F EUV",
+        ["Taiwan's 2nm Shield and ASML's Switch", "$10T SHOCK"],
+        ["Why 85% of Sub-5nm Chips Sit in Taiwan", "REMOTE KILL"],
+        ["Can US Fabs Replace Taiwan Before 2030?", "$14T AT RISK"]],
+      [16, "The Broken Factory Ladder", "2027-08-01", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-BOYLE-CHAPTERED", "silver-gelatin-chronicle", "Rodrik NBER 20935 & IMF SDN/2024",
+        ["How $3/Hr Robots Break Poor Nations", "LADDER CUT"],
+        ["Bots Underprice Factories & Call Desks", "40% EXPOSED"],
+        ["Why Emerging Factory Jobs Peak 60% Sooner", "DOLLAR SHORTAGE"]],
+      [17, "The Escrow Trap", "2027-08-13", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-GEN-EXPLAINER", "milk-page-editorial", "CA FAIR Plan +29.1% & NY Fed $13.4T",
+        ["AI Satellite Drops vs 30-Year Mortgages", "+29% ESCROW"],
+        ["1-Year Home Insurance vs 30-Year Loans", "$600B FAIR"],
+        ["How AI Roof Scans Spike Home Payments", "+$950/MONTH"]],
+      [18, "Zero Privilege", "2027-08-25", "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy", "STR-MAX-ESSAY", "smoked-navy-glass", "FRE Rule 501 & M.D. Fla. Docket",
+        ["Your AI Companion Testifies in Court", "ZERO PRIVILEGE"],
+        ["Why Cloud Chatbot Logs Waive Legal Rights", "120 MIN/DAY"],
+        ["Rule 501 vs Consumer AI Therapy Chatbots", "SUBPOENA READY"]],
+      [19, "The Attrition Ledger", "2027-09-06", "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics", "STR-AIC-SPECULATIVE", "geospatial-telemetry", "DoD Missile Books & MTS Function 900",
+        ["$20K Drones vs America's $1T Defense", "$2.1M SHOT"],
+        ["Firing $4M Missiles at $20K Airframes", "200X RATIO"],
+        ["When Bond Interest Outspends the Navy", "$1.05T COUPON"]],
+      [20, "The Silent Freeze", "2027-09-18", "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy", "STR-HMW-PRIMER", "blueprint-schematic", "31 USC 5318(g)(2) & FinCEN SAR Stats",
+        ["Why AI Froze 4.6M US Bank Accounts", "GAG STATUTE"],
+        ["The Federal Law Hiding Bank Lockouts", "12,877/DAY"],
+        ["Why Banks Pay $0 Penalty for False Locks", "45-DAY FREEZE"]],
+      [21, "The Liar's Dividend", "2027-09-30", "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy", "STR-FISHER-ARTIFACT", "archival-light-table", "Sz Huang v. Tesla & FRE Rule 707",
+        ["The Liar's Dividend in AI Courtrooms", "$100K PROOF"],
+        ["Why Federal Judges Pulled Back Rule 707", "SIGNED METADATA"],
+        ["Why Proving Real Footage Now Costs $100K", "53% BOT WEB"]],
+      [22, "Tacit Collusion", "2027-10-12", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-GEN-EXPLAINER", "investigation-switchboard", "DOJ RealPage Complaint & FTC 6(b)",
+        ["Can an AI Price Cartel Break the Law?", "SHARED WEIGHTS"],
+        ["How Shared Rent Algorithms Hike Leases", "SHERMAN SEC 1"],
+        ["Why Antitrust Struggles With Rent Bots", "FTC 6(B) ORDER"]],
+      [23, "Petrodollar Compute", "2027-10-24", "Series 02: AI Bubble, Corporate Accounting & Wall Street Math", "STR-BOYLE-CHAPTERED", "milk-page-editorial", "Global SWF $6.1T & $100B AIP Filing",
+        ["Why $6T Oil Funds Own US AI Compute", "$100B DEAL"],
+        ["Big Tech Cash Ran Short, Gulf Stepped In", "$70B DEBT JV"],
+        ["How Sovereign Oil Funds Buy GPU Campuses", "CFIUS TERMS"]],
+      [24, "Living Off the Land", "2027-11-05", "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics", "STR-AOTP-LADDER", "silver-gelatin-chronicle", "CISA AA24-038A & 47 USC 1002 CALEA",
+        ["5 Years Inside America's Power Grid", "WIRETAP KEY"],
+        ["How 1994 Wiretap Law Let Hackers In", "CARRIER BACKDOOR"],
+        ["Why CISA Warned Against SMS 2FA Logins", "HARDWARE KEYS"]],
+      [25, "Water and Rock", "2027-11-17", "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics", "STR-AIC-SPECULATIVE", "geospatial-telemetry", "LBNL-2001637 Water & USGS Phosphate",
+        ["AI Cooling Water vs Global Fertilizer", "33B GALLONS"],
+        ["Why LFP Grid Batteries Rival Farm Crops", "70% MOROCCO"],
+        ["Why Server Thirst Hits Sunbelt Water Bills", "+94% DRAW"]],
+      [26, "The Inverted Pyramid", "2027-11-29", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-GEN-EXPLAINER", "smoked-navy-glass", "KOSTAT 0.72 TFR & 26 USC 3101 FICA",
+        ["0.72 Birth Rates vs Untaxed Robots", "0% FICA"],
+        ["Robots Build Cars Yet Pay $0 Wage Tax", "2.10 FLOOR"],
+        ["65% Smaller Cohorts: Who Funds Retirees?", "LATER EXIT AGE"]],
+      [27, "Subsea Sovereignty", "2027-12-11", "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics", "STR-FISHER-ARTIFACT", "investigation-switchboard", "TeleGeography 550+ Subsea Cable Map",
+        ["Big Tech Owns 75% of Subsea Cables", "550 FIBERS"],
+        ["Why Orbit Lasers Replace <1% of Fiber", "99% SEABED"],
+        ["How 550 Seafloor Cables Split Into 2 Blocs", "REPAIR QUEUE"]],
+      [28, "Proof of Personhood", "2027-12-23", "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy", "STR-HMW-PRIMER", "blueprint-schematic", "EU Reg 2024/1183 eIDAS 2.0 & Imperva",
+        ["53% Bot Traffic and Mandatory Web IDs", "DEC 2027 LAW"],
+        ["Inside Europe's 27-Nation Wallet Mandate", "REVOCABLE LOGIN"],
+        ["When 37% Bad Bots Break Password Logins", "EIDAS WALLET"]],
+      [29, "Harvest Now", "2028-01-04", "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy", "STR-BOYLE-CHAPTERED", "archival-light-table", "NIST FIPS 203 ML-KEM & OMB M-26-15",
+        ["The 2030 Quantum Decryption Cliff", "HARVEST NOW"],
+        ["Why NIST Ends RSA-2048 Crypto by 2030", "FIPS 203 LAW"],
+        ["Harvest Now: Why AES-256 Saves Your Data", "COBOL BANKING"]],
+      [30, "The 2032 Cut Clock", "2028-01-16", "Series 01: AI Economy, National Debt & Your Money (2027-2036)", "STR-AIC-CLOCKED", "restraint-vellum", "SSA Trustees Table II.D1 & 26 USC 3101",
+        ["The 2032 Social Security Cut Clock", "-24% CHECKS"],
+        ["What Happens When OASI Reserves Hit Zero?", "Q4 2032 CLIFF"],
+        ["12.4% Wage FICA vs 0% GPU Tax in 2032", "$40.5T CIRCLE"]]
+    ];
+
+    function buildBuiltinVault() {
+      const modes = [
+        "shirt_and_tie_plus_artifact",
+        "milk_page_data_split",
+        "smoked_navy_forensic_closeup"
+      ];
+      const archetypes = [
+        "balance_sheet_paradox",
+        "primary_filing_evidence",
+        "institutional_asymmetry"
+      ];
+      const palettes = [
+        { mode: "over-footage", bg: "#1C2B3A", fg: "#FAF8F3", acc: "#2F8F8B" },
+        { mode: "page", bg: "#FAF8F3", fg: "#1C2B3A", acc: "#A3402E" },
+        { mode: "over-footage", bg: "#1C2B3A", fg: "#FAF8F3", acc: "#A3402E" }
+      ];
+
+      const episodes = BUILTIN_30_SPECS.map((row) => {
+        const [num, codename, pubDate, series, preset, reg, artifact, vA, vB, vC] = row;
+        const epId = `ep_${String(num).padStart(2, "0")}`;
+        const rawVars = [vA, vB, vC];
+        const variants = rawVars.map((pairArr, idx) => {
+          const varLetter = ["A", "B", "C"][idx];
+          const pal = palettes[(num + idx) % palettes.length];
+          const comp = modes[(num + idx) % modes.length];
+          const title = pairArr[0];
+          const thumb = pairArr[1];
+          return {
+            pair_id: `${epId}_${varLetter}`,
+            variant_id: varLetter,
+            package_archetype: archetypes[idx],
+            title,
+            title_char_count: title.length,
+            thumbnail_text: thumb,
+            thumbnail_word_count: thumb.trim().split(/\s+/).length,
+            visual_composition_mode: comp,
+            focal_subject: artifact,
+            element_count: idx === 1 ? 2 : 3,
+            palette_mode: pal.mode,
+            background_hex: pal.bg,
+            accent_hex: pal.acc,
+            text_hex: pal.fg,
+            contrast_ratio: computeWcagContrast(pal.bg, pal.fg),
+            curiosity_gap_mechanism: `Pairs ${title.length}c institutional claim against '${thumb}' primary ledger proof.`
+          };
+        });
+
+        return {
+          episode_id: epId,
+          episode_number: num,
+          episode_codename: codename,
+          target_publish_date: pubDate,
+          series_playlist: series,
+          strategy_preset_id: preset,
+          visual_register_id: reg,
+          primary_variant: "A",
+          test_and_compare_hypothesis: `Tests A (${modes[(num) % 3]}) vs B (${modes[(num + 1) % 3]}) vs C (${modes[(num + 2) % 3]}) at constant 13.59:1 AAA contrast.`,
+          variants
+        };
+      });
+
+      return { schema_version: "1.0.0", episodes };
+    }
+
+    /* ========================================================================
+       4. APPLICATION STATE, NORMALIZATION, FILTERING & VIEW RENDERERS
+       ======================================================================== */
+
+    const state = {
+      vault: buildBuiltinVault(),
+      sourceLabel: "BUILT-IN 30-EPISODE PREVIEW (90 PAIRS)",
+      activeMode: "desktop-grid",
+      theme: "dark",
+      strict: true,
+      includeCompetitors: true,
+      shuffleSeed: 104729,
+      selectedWatchPairId: "ep_01_A",
+      inspectedPair: null,
+      squintBlurPx: 4.5,
+      squintGrayscale: false,
+      squintStampScale: false,
+      blinkDurationMs: 500,
+      blinkActivePair: null,
+      blinkPhase: "ready", // ready | flashing | masked | revealed
+      blinkStats: { tested: 0, recalled: 0 }
+    };
+
+    function deterministicShuffle(arr, seed) {
+      const copy = arr.slice();
+      let s = seed >>> 0;
+      for (let i = copy.length - 1; i > 0; i -= 1) {
+        s = (Math.imul(1664525, s) + 1013904223) >>> 0;
+        const j = s % (i + 1);
+        const tmp = copy[i];
+        copy[i] = copy[j];
+        copy[j] = tmp;
+      }
+      return copy;
+    }
+
+    function normalizeVaultPayload(raw) {
+      const epList = Array.isArray(raw) ? raw : (raw && Array.isArray(raw.episodes) ? raw.episodes : null);
+      if (!epList || epList.length === 0) {
+        throw new Error("JSON must contain a non-empty top-level 'episodes' array.");
+      }
+      const normalized = epList.map((ep, idx) => {
+        const num = ep.episode_number || (idx + 1);
+        const epId = ep.episode_id || `ep_${String(num).padStart(2, "0")}`;
+        const primaryRaw = String(ep.primary_variant || "A");
+        const variants = (ep.variants || []).map((v, vIdx) => {
+          const vId = String(v.variant_id || ["A", "B", "C"][vIdx] || "A");
+          const pId = String(v.pair_id || `${epId}_${vId}`);
+          return Object.assign({}, v, {
+            pair_id: pId,
+            variant_id: vId,
+            episode_id: epId,
+            episode_number: num,
+            episode_codename: ep.episode_codename || "",
+            series_playlist: ep.series_playlist || "",
+            target_publish_date: ep.target_publish_date || "",
+            is_primary: (primaryRaw === vId || primaryRaw === pId || (vIdx === 0 && !ep.primary_variant)),
+            duration_label: `${21 + ((num * 3 + vIdx * 2) % 16)}:${String(12 + ((num * 7 + vIdx * 11) % 46)).padStart(2, "0")}`
+          });
+        });
+        return Object.assign({}, ep, { episode_id: epId, episode_number: num, variants });
+      });
+      return { episodes: normalized };
+    }
+
+    function getAdHocPair() {
+      const title = document.getElementById("ahTitle").value;
+      const thumb = document.getElementById("ahThumb").value;
+      const epId = document.getElementById("ahEpisode").value || "ep_04";
+      const elem = parseInt(document.getElementById("ahElements").value || "3", 10);
+      const comp = document.getElementById("ahComp").value;
+      const subj = document.getElementById("ahSubject").value;
+      const bg = document.getElementById("ahBg").value;
+      const fg = document.getElementById("ahTextHex").value;
+      const acc = document.getElementById("ahAccent").value;
+      const epNumMatch = epId.match(/\d+/);
+
+      const pair = {
+        pair_id: "AD_HOC_LIVE",
+        variant_id: "LIVE",
+        episode_id: epId,
+        episode_number: epNumMatch ? parseInt(epNumMatch[0], 10) : 4,
+        episode_codename: "Ad-Hoc Live Test",
+        series_playlist: "Live Workbench",
+        title,
+        thumbnail_text: thumb,
+        visual_composition_mode: comp,
+        focal_subject: subj,
+        element_count: elem,
+        background_hex: bg,
+        text_hex: fg,
+        accent_hex: acc,
+        is_primary: true,
+        is_adhoc: true,
+        duration_label: "25:14"
+      };
+      pair.lint = lintPairJS(pair, state.strict);
+      return pair;
+    }
+
+    function collectAllEvaluatedPairs() {
+      const out = [];
+      for (const ep of state.vault.episodes) {
+        for (const v of ep.variants) {
+          const item = Object.assign({}, v);
+          item.lint = lintPairJS(item, state.strict);
+          out.push(item);
+        }
+      }
+      return out;
+    }
+
+    function getFilteredPairs(allPairs) {
+      const fEp = document.getElementById("fEpisode").value;
+      const fVar = document.getElementById("fVariant").value;
+      const fSer = document.getElementById("fSeries").value;
+      const fComp = document.getElementById("fComp").value;
+      const fStatus = document.getElementById("fStatus").value;
+      const q = document.getElementById("fSearch").value.trim().toLowerCase();
+
+      let list = allPairs.filter((p) => {
+        if (fEp !== "ALL" && p.episode_id !== fEp) return false;
+        if (fVar === "PRIMARY" && !p.is_primary) return false;
+        if ((fVar === "A" || fVar === "B" || fVar === "C") && p.variant_id !== fVar) return false;
+        if (fSer !== "ALL" && !String(p.series_playlist || "").startsWith(fSer)) return false;
+        if (fComp !== "ALL" && p.visual_composition_mode !== fComp) return false;
+        if (fStatus !== "ALL" && p.lint.status !== fStatus) return false;
+        if (q) {
+          const hay = `${p.pair_id} ${p.episode_id} ${p.episode_codename} ${p.title} ${p.thumbnail_text} ${p.focal_subject}`.toLowerCase();
+          if (!hay.includes(q)) return false;
+        }
+        return true;
+      });
+
+      const pinAdhoc = document.getElementById("ahPinToFeed").checked && document.getElementById("adhocDrawer").classList.contains("open");
+      if (pinAdhoc) {
+        list = [getAdHocPair(), ...list];
+      }
+      return list;
+    }
+
+    function renderBadgeStripHtml(pair) {
+      const L = pair.lint;
+      const statusCls = L.status === "PASS" ? "lbadge-pass" : (L.status === "WARN" ? "lbadge-warn" : "lbadge-fail");
+      const wcagCls = L.wcagTier === "AAA" ? "lbadge-pass" : (L.wcagTier === "AA" ? "lbadge-warn" : "lbadge-fail");
+      const fitCls = L.fitCount === 4 ? "lbadge-neutral" : "lbadge-fail";
+      return `
+        <div class="lint-badge-strip">
+          <span class="lbadge ${statusCls}">${L.status}</span>
+          <span class="lbadge lbadge-neutral">${escXml(pair.pair_id)}</span>
+          <span class="lbadge lbadge-neutral">${L.charCount}c / ${L.thumbWordCount}w</span>
+          <span class="lbadge ${wcagCls}">WCAG ${L.contrast !== null ? L.contrast : "ERR"}:1 ${L.wcagTier}</span>
+          <span class="lbadge lbadge-neutral">SPEC ${L.specScore}</span>
+          <span class="lbadge ${fitCls}">${L.fitCount}/4 PX FIT</span>
+          <button type="button" class="inspect-link" data-inspect-id="${escXml(pair.pair_id)}">5-Gate Audit</button>
+        </div>
+      `;
+    }
+
+    function renderThumbBoxHtml(item, extraClass = "") {
+      if (item.isCompetitor) {
+        return `
+          <div class="yt-thumb-box ${extraClass}">
+            ${renderCompetitorSvg(item)}
+            <span class="yt-duration-badge">${escXml(item.duration)}</span>
+            <div class="safezone-overlay">
+              <div class="safezone-timestamp-box">TIMESTAMP<br/>OCCLUSION</div>
+              <div class="safezone-scrub-bar"></div>
+            </div>
+          </div>
+        `;
+      }
+      return `
+        <div class="yt-thumb-box ${extraClass}">
+          ${renderReadingRoomSvg(item)}
+          <span class="yt-duration-badge">${escXml(item.duration_label || "24:18")}</span>
+          <div class="safezone-overlay">
+            <div class="safezone-timestamp-box">TIMESTAMP<br/>OCCLUSION</div>
+            <div class="safezone-scrub-bar"></div>
+          </div>
+        </div>
+      `;
+    }
+
+    function buildFeedStream(filteredPairs) {
+      if (!state.includeCompetitors) return filteredPairs;
+      const mixed = [...filteredPairs, ...COMPETITOR_BENCHMARKS];
+      const adhocPinned = mixed.length > 0 && mixed[0].is_adhoc ? mixed[0] : null;
+      const rest = adhocPinned ? mixed.slice(1) : mixed;
+      const shuffled = deterministicShuffle(rest, state.shuffleSeed);
+      return adhocPinned ? [adhocPinned, ...shuffled] : shuffled;
+    }
+
+    /* ---------------- Mode 1: Desktop Home Grid ---------------- */
+    function renderDesktopGrid(filteredPairs) {
+      const stream = buildFeedStream(filteredPairs);
+      if (stream.length === 0) {
+        return `<div style="padding:40px; text-align:center; color:var(--yt-text-secondary);">No packaging pairs match current filters.</div>`;
+      }
+      const cardsHtml = stream.map((item) => {
+        if (item.isCompetitor) {
+          return `
+            <article class="yt-grid-card competitor-card">
+              ${renderThumbBoxHtml(item)}
+              <div class="yt-meta-row">
+                <div class="yt-avatar comp-avatar">${escXml(item.initials)}</div>
+                <div class="yt-title-col-desktop">
+                  <h3 class="yt-video-title-desktop">${escXml(item.title)}</h3>
+                  <div class="yt-channel-line">${escXml(item.channel)} &bull; ${escXml(item.views)}</div>
+                  <div class="lint-badge-strip">
+                    <span class="lbadge lbadge-comp">COMPETITOR BENCHMARK</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          `;
+        }
+        return `
+          <article class="yt-grid-card">
+            ${renderThumbBoxHtml(item)}
+            <div class="yt-meta-row">
+              <div class="yt-avatar">RR</div>
+              <div class="yt-title-col-desktop">
+                <h3 class="yt-video-title-desktop">${escXml(item.title)}</h3>
+                <div class="yt-channel-line">
+                  The Reading Room &bull; ${escXml(item.episode_codename)} &bull; ${escXml(item.visual_composition_mode)}
+                </div>
+                ${renderBadgeStripHtml(item)}
+              </div>
+            </div>
+          </article>
+        `;
+      }).join("");
+
+      return `<div class="desktop-home-grid">${cardsHtml}</div>`;
+    }
+
+    /* ---------------- Mode 2: iOS & Android Mobile Feed ---------------- */
+    function renderMobileFeed(filteredPairs) {
+      const stream = buildFeedStream(filteredPairs).slice(0, 36);
+      const iosCards = stream.map((item) => {
+        if (item.isCompetitor) {
+          return `
+            <div class="ios-card">
+              ${renderThumbBoxHtml(item)}
+              <div class="ios-meta">
+                <div class="yt-avatar comp-avatar">${escXml(item.initials)}</div>
+                <div class="ios-title-col">
+                  <h4 class="ios-title-text">${escXml(item.title)}</h4>
+                  <div class="yt-channel-line">${escXml(item.channel)} &bull; ${escXml(item.views)}</div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+        const iosSurf = item.lint.surfaces[0];
+        return `
+          <div class="ios-card">
+            ${renderThumbBoxHtml(item)}
+            <div class="ios-meta">
+              <div class="yt-avatar">RR</div>
+              <div class="ios-title-col">
+                <h4 class="ios-title-text">${escXml(item.title)}</h4>
+                <div class="yt-channel-line">The Reading Room &bull; ${iosSurf.single_line_px}px (${iosSurf.lines_used}L)</div>
+                ${renderBadgeStripHtml(item)}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      const androidCards = stream.map((item) => {
+        if (item.isCompetitor) {
+          return `
+            <div class="android-card">
+              <div class="android-row">
+                <div class="android-mini-thumb">${renderThumbBoxHtml(item)}</div>
+                <div class="android-title-col-250">
+                  <h4 class="android-title-text">${escXml(item.title)}</h4>
+                  <div class="yt-channel-line">${escXml(item.channel)}</div>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+        const andSurf = item.lint.surfaces[1];
+        return `
+          <div class="android-card">
+            <div class="android-row">
+              <div class="android-mini-thumb">${renderThumbBoxHtml(item)}</div>
+              <div class="android-title-col-250">
+                <h4 class="android-title-text">${escXml(item.title)}</h4>
+                <div class="yt-channel-line">The Reading Room &bull; 250px: ${andSurf.single_line_px}px / ${andSurf.lines_used}L</div>
+              </div>
+            </div>
+            ${renderBadgeStripHtml(item)}
+          </div>
+        `;
+      }).join("");
+
+      return `
+        <div class="mobile-sim-stage">
+          <div class="phone-frame ios-phone">
+            <div class="phone-statusbar">
+              <span>9:41 &bull; iOS Home Feed</span>
+              <span>294px @ 15px Roboto</span>
+            </div>
+            <div class="phone-feed-scroll">${iosCards}</div>
+          </div>
+
+          <div class="phone-frame android-phone">
+            <div class="phone-statusbar">
+              <span>Android Suggested</span>
+              <span>250px @ 14px Roboto</span>
+            </div>
+            <div class="phone-feed-scroll">${androidCards}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    /* ---------------- Mode 3: Desktop 168px Up-Next Sidebar ---------------- */
+    function renderUpNextSidebar(filteredPairs) {
+      const stream = buildFeedStream(filteredPairs).slice(0, 40);
+      const selected = filteredPairs.find((p) => p.pair_id === state.selectedWatchPairId) || filteredPairs[0] || getAdHocPair();
+
+      const railHtml = stream.map((item) => {
+        if (item.isCompetitor) {
+          return `
+            <div class="upnext-item">
+              <div class="upnext-thumb-168">${renderThumbBoxHtml(item)}</div>
+              <div class="upnext-meta-202">
+                <h4 class="upnext-title-text">${escXml(item.title)}</h4>
+                <div class="upnext-sub">${escXml(item.channel)}</div>
+                <div class="upnext-sub">${escXml(item.views)}</div>
+              </div>
+            </div>
+          `;
+        }
+        const upSurf = item.lint.surfaces[3];
+        const isSel = item.pair_id === selected.pair_id;
+        return `
+          <div class="upnext-item ${isSel ? "selected" : ""}" data-select-watch="${escXml(item.pair_id)}">
+            <div class="upnext-thumb-168">${renderThumbBoxHtml(item)}</div>
+            <div class="upnext-meta-202">
+              <h4 class="upnext-title-text">${escXml(item.title)}</h4>
+              <div class="upnext-sub">The Reading Room</div>
+              <div class="upnext-sub">${upSurf.single_line_px}px / ${upSurf.lines_used}L ${upSurf.truncated ? "CLIP" : "FIT"} &bull; ${item.lint.status}</div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      return `
+        <div class="watch-page-layout">
+          <div class="watch-stage-card">
+            ${renderThumbBoxHtml(selected)}
+            <h2 class="watch-stage-title">${escXml(selected.title)}</h2>
+            <div class="yt-channel-line" style="margin-bottom:10px;">
+              The Reading Room &bull; ${escXml(selected.episode_id)} (${escXml(selected.episode_codename || "Preview")})
+              &bull; Composition: ${escXml(selected.visual_composition_mode)}
+              &bull; Artifact: ${escXml(selected.focal_subject)}
+            </div>
+            ${renderBadgeStripHtml(selected)}
+            <div style="margin-top:14px;">
+              ${renderDetailedGateTableHtml(selected)}
+            </div>
+          </div>
+
+          <aside class="upnext-rail" aria-label="Desktop 168px Up-Next Rail">
+            <div style="font-family:var(--font-mono); font-size:11.5px; color:var(--yt-text-secondary); padding:0 4px;">
+              Desktop Watch Sidebar: 168x94px Thumb + 202px @ 14px Title Box (Click any row to inspect)
+            </div>
+            ${railHtml}
+          </aside>
+        </div>
+      `;
+    }
+
+    /* ---------------- Mode 4: Blur 4.5px Squint + Grayscale + 500ms Blink ---------------- */
+    function renderSquintLab(filteredPairs) {
+      const targetPool = filteredPairs.length > 0 ? filteredPairs : [getAdHocPair()];
+      if (!state.blinkActivePair) {
+        state.blinkActivePair = targetPool[0];
+      }
+      const bp = state.blinkActivePair;
+      const filterCss = `${state.squintBlurPx > 0 ? `blur(${state.squintBlurPx}px)` : ""} ${state.squintGrayscale ? "grayscale(100%)" : ""}`.trim() || "none";
+
+      let shutterHtml = "";
+      if (state.blinkPhase === "ready") {
+        shutterHtml = `
+          <div class="blink-shutter">
+            <div class="blink-reticle">+</div>
+            <div style="font-size:14px; font-weight:700;">FIXATE CENTER CROSSHAIR</div>
+            <div style="font-size:11.5px; color:#BFD6EA;">Click 'Fire ${state.blinkDurationMs}ms Glance' to flash thumbnail for half a second</div>
+          </div>
+        `;
+      } else if (state.blinkPhase === "masked") {
+        shutterHtml = `
+          <div class="blink-shutter">
+            <div style="font-size:15px; font-weight:700; color:var(--rr-teal-bright);">${state.blinkDurationMs}ms SHUTTER CLOSED</div>
+            <div style="font-size:12px;">Type the 1..3 overlay words you perceived before revealing:</div>
+          </div>
+        `;
+      }
+
+      const sheetCards = targetPool.slice(0, 60).map((item) => `
+        <div class="squint-card">
+          <div class="squint-filter-target" style="filter:${filterCss};">
+            ${renderThumbBoxHtml(item)}
+          </div>
+          <div style="font-size:12.5px; font-weight:500; line-height:1.3;">${escXml(item.title)}</div>
+          ${renderBadgeStripHtml(item)}
+        </div>
+      `).join("");
+
+      return `
+        <div class="squint-lab-wrap">
+          <!-- Interactive 500ms Blink Glance Test -->
+          <div class="blink-tester-card">
+            <div class="blink-viewport">
+              ${renderThumbBoxHtml(bp)}
+              ${shutterHtml}
+            </div>
+
+            <div>
+              <h2 style="margin:0 0 6px 0; font-family:var(--font-serif); font-size:19px;">
+                500ms Sub-Second Blink Glance Tester
+              </h2>
+              <p style="margin:0 0 12px 0; font-size:13px; color:var(--yt-text-secondary);">
+                Feed viewers decide inside half a second. Flash a candidate frame for 500ms, verify instant recall of the 1..3 overlay words and focal silhouette, then reveal the full card.
+              </p>
+              <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:12px; align-items:center;">
+                <button type="button" id="btnFireBlink" class="btn btn-primary">Fire ${state.blinkDurationMs}ms Glance</button>
+                <button type="button" id="btnRandomBlink" class="btn">Next Random Pair</button>
+                <button type="button" id="btnRevealBlink" class="btn">Reveal Frame</button>
+                <select id="selBlinkMs">
+                  <option value="250" ${state.blinkDurationMs === 250 ? "selected" : ""}>250ms Hard</option>
+                  <option value="500" ${state.blinkDurationMs === 500 ? "selected" : ""}>500ms Canonical</option>
+                  <option value="750" ${state.blinkDurationMs === 750 ? "selected" : ""}>750ms Relaxed</option>
+                </select>
+              </div>
+              <div style="display:flex; gap:8px; align-items:center; margin-bottom:10px;">
+                <input type="text" id="blinkGuessInput" placeholder="Type recalled 1..3 thumb words..." style="width:240px;" />
+                <button type="button" id="btnCheckBlinkGuess" class="btn">Check Recall</button>
+                <span style="font-family:var(--font-mono); font-size:11.5px; color:var(--yt-text-secondary);">
+                  Session Recall: ${state.blinkStats.recalled}/${state.blinkStats.tested}
+                </span>
+              </div>
+              <div id="blinkFeedback" style="font-family:var(--font-mono); font-size:12px; min-height:22px;">
+                ${state.blinkPhase === "revealed"
+                  ? `REVEALED [${escXml(bp.pair_id)}]: Thumb = "${escXml(bp.thumbnail_text)}" | Title = "${escXml(bp.title)}" | WCAG ${bp.lint.contrast}:1`
+                  : `Active Candidate: ${escXml(bp.pair_id)} (hidden until flash)`}
+              </div>
+            </div>
+          </div>
+
+          <!-- Blur 4.5px Squint + Grayscale Luminance Sheet -->
+          <div class="squint-toolbar">
+            <div style="font-family:var(--font-mono); font-size:12px; font-weight:700;">
+              OPTICAL SQUINT &amp; VALUE CONTROLS:
+            </div>
+            <label class="filter-field">
+              Gaussian Blur: <strong id="lblBlurVal">${state.squintBlurPx}px</strong>
+              <input type="range" id="rngSquintBlur" min="0" max="8" step="0.5" value="${state.squintBlurPx}" />
+            </label>
+            <button type="button" id="btnResetBlur45" class="btn">Reset 4.5px Squint</button>
+            <label class="checkbox-pill">
+              <input type="checkbox" id="chkGrayscale" ${state.squintGrayscale ? "checked" : ""} />
+              Grayscale Luminance Value Check
+            </label>
+            <label class="checkbox-pill">
+              <input type="checkbox" id="chkStampScale" ${state.squintStampScale ? "checked" : ""} />
+              140px Micro-Stamp Scale
+            </label>
+          </div>
+
+          <div class="squint-sheet-grid ${state.squintStampScale ? "stamp-scale" : ""}">
+            ${sheetCards}
+          </div>
+        </div>
+      `;
+    }
+
+    function renderDetailedGateTableHtml(pair) {
+      const L = pair.lint;
+      const surfRows = L.surfaces.map((s) => `
+        <div style="margin-bottom:5px;">
+          <div style="display:flex; justify-content:space-between; font-family:var(--font-mono); font-size:11px;">
+            <span>${escXml(s.label)} (${s.container_px}px @ ${s.font_px}px)</span>
+            <span>${s.single_line_px}px / ${s.lines_used}L (${s.utilization_pct}%) [${s.truncated ? "CLIP" : "FIT"}]</span>
+          </div>
+          <div class="px-bar-track">
+            <div class="px-bar-fill ${s.truncated ? "clip" : ""}" style="width:${Math.min(100, s.utilization_pct)}%;"></div>
+          </div>
+        </div>
+      `).join("");
+
+      const issuesHtml = [...L.violations, ...L.warnings].map((it) => `
+        <div style="font-family:var(--font-mono); font-size:11.5px; margin-bottom:3px; color:${L.violations.includes(it) ? "#FF7868" : "#F0AA3C"};">
+          [${escXml(it.code)}] ${escXml(it.msg)}
+        </div>
+      `).join("") || `<span style="color:#36C686; font-family:var(--font-mono); font-size:11.5px;">0 violations, 0 warnings across all 5 deterministic gates.</span>`;
+
+      return `
+        <table class="gate-table">
+          <thead>
+            <tr><th>Gate</th><th>Metric / Telemetry</th><th>Result</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Gate 1</strong><br/>Truncation</td>
+              <td>Title length: <strong>${L.charCount} chars</strong> (Target 31..42, Hard 24..52)<div style="margin-top:6px;">${surfRows}</div></td>
+              <td>${L.surfaces.every((s) => !s.truncated) && (L.charCount >= (state.strict ? 31 : 24)) && (L.charCount <= (state.strict ? 42 : 52)) ? "PASS" : "CHECK"}</td>
+            </tr>
+            <tr>
+              <td><strong>Gate 2</strong><br/>Duplication</td>
+              <td>Shared content/numeric stems: <strong>${L.sharedWords.length === 0 && !L.violations.some((v) => v.gate === "G2") ? "None (100% Complementary)" : "Collision Detected"}</strong></td>
+              <td>${L.violations.some((v) => v.gate === "G2") ? "FAIL" : "PASS"}</td>
+            </tr>
+            <tr>
+              <td><strong>Gate 3</strong><br/>Thumb &amp; WCAG</td>
+              <td>Overlay: <strong>${L.thumbWordCount}w / ${L.thumbCharCount}c</strong> | Elements: <strong>${L.elemCount}/3</strong> | WCAG 2.1: <strong>${L.contrast}:1 (${L.wcagTier})</strong> [${escXml(pair.background_hex)} vs ${escXml(pair.text_hex)}]</td>
+              <td>${L.violations.some((v) => v.gate === "G3") ? "FAIL" : "PASS"}</td>
+            </tr>
+            <tr>
+              <td><strong>Gate 4</strong><br/>Hygiene</td>
+              <td>Punctuation, Domain Acronym Whitelist, 2021..2026 Staleness (${escXml(pair.episode_id)}), Clickbait &amp; Anti-AI Lexicon</td>
+              <td>${L.violations.some((v) => v.gate === "G4") ? "FAIL" : "PASS"}</td>
+            </tr>
+            <tr>
+              <td><strong>Gate 5</strong><br/>Specificity</td>
+              <td>Score: <strong>${L.specScore}/100</strong> (Quant ${L.specBreakdown.pA}/40 + Nouns ${L.specBreakdown.pB}/35 + Tension ${L.specBreakdown.pC}/25 - Penalty ${L.specBreakdown.pen})</td>
+              <td>${L.violations.some((v) => v.gate === "G5") ? "FAIL" : "PASS"}</td>
+            </tr>
+            <tr>
+              <td><strong>Diagnostics</strong></td>
+              <td colspan="2">${issuesHtml}</td>
+            </tr>
+          </tbody>
+        </table>
+      `;
+    }
+
+    /* ========================================================================
+       5. MASTER RENDER CYCLE, AD-HOC UPDATER & EVENT WIRING
+       ======================================================================== */
+
+    let latestEvaluatedMap = new Map();
+    let activeBlinkTimer = null;
+
+    function populateEpisodeDropdown() {
+      const sel = document.getElementById("fEpisode");
+      const prev = sel.value || "ALL";
+      const opts = [`<option value="ALL">All ${state.vault.episodes.length} Episodes</option>`];
+      for (const ep of state.vault.episodes) {
+        opts.push(`<option value="${escXml(ep.episode_id)}">${escXml(ep.episode_id)} - ${escXml(ep.episode_codename || ep.variants[0]?.title || "")}</option>`);
+      }
+      sel.innerHTML = opts.join("");
+      if ([...sel.options].some((o) => o.value === prev)) sel.value = prev;
+    }
+
+    function updateAdHocPreview() {
+      const pair = getAdHocPair();
+      latestEvaluatedMap.set(pair.pair_id, pair);
+      document.getElementById("ahPreviewThumb").innerHTML = `
+        ${renderReadingRoomSvg(pair)}
+        <span class="yt-duration-badge">25:14</span>
+      `;
+      document.getElementById("ahPreviewTitle").textContent = pair.title;
+      document.getElementById("ahLintSummary").innerHTML = renderBadgeStripHtml(pair) + renderDetailedGateTableHtml(pair);
+    }
+
+    function renderAll() {
+      state.strict = document.getElementById("fStrict").checked;
+      state.includeCompetitors = document.getElementById("fCompetitors").checked;
+      document.body.classList.toggle("show-safezones", document.getElementById("fSafeZones").checked);
+      document.getElementById("dataSourcePill").textContent = state.sourceLabel;
+
+      const allPairs = collectAllEvaluatedPairs();
+      latestEvaluatedMap = new Map(allPairs.map((p) => [p.pair_id, p]));
+      updateAdHocPreview();
+
+      const passClean = allPairs.filter((p) => p.lint.status === "PASS").length;
+      const warnOnly = allPairs.filter((p) => p.lint.status === "WARN").length;
+      const failCount = allPairs.filter((p) => p.lint.status === "FAIL").length;
+      const meanSpec = allPairs.length ? (allPairs.reduce((acc, p) => acc + p.lint.specScore, 0) / allPairs.length).toFixed(1) : "0.0";
+      const meanWcag = allPairs.length ? (allPairs.reduce((acc, p) => acc + (p.lint.contrast || 0), 0) / allPairs.length).toFixed(2) : "0.00";
+
+      const filtered = getFilteredPairs(allPairs);
+      document.getElementById("vaultTelemetryStrip").innerHTML = `
+        <span class="stat-chip">Showing <strong>${filtered.length}</strong> / ${allPairs.length} pairs</span>
+        <span class="stat-chip" style="color:#36C686;">PASS: ${passClean}</span>
+        <span class="stat-chip" style="color:#F0AA3C;">WARN: ${warnOnly}</span>
+        <span class="stat-chip" style="color:${failCount > 0 ? "#FF7868" : "var(--yt-text-secondary)"};">FAIL: ${failCount}</span>
+        <span class="stat-chip">Mean Spec: ${meanSpec}/100</span>
+        <span class="stat-chip">Mean WCAG: ${meanWcag}:1</span>
+      `;
+
+      const stage = document.getElementById("stageContainer");
+      if (state.activeMode === "desktop-grid") {
+        stage.innerHTML = renderDesktopGrid(filtered);
+      } else if (state.activeMode === "mobile-feed") {
+        stage.innerHTML = renderMobileFeed(filtered);
+      } else if (state.activeMode === "up-next-sidebar") {
+        stage.innerHTML = renderUpNextSidebar(filtered);
+      } else {
+        stage.innerHTML = renderSquintLab(filtered);
+        bindSquintControls(filtered);
+      }
+    }
+
+    function bindSquintControls(filtered) {
+      const rng = document.getElementById("rngSquintBlur");
+      if (rng) {
+        rng.addEventListener("input", () => {
+          state.squintBlurPx = parseFloat(rng.value);
+          document.getElementById("lblBlurVal").textContent = `${state.squintBlurPx}px`;
+          const css = `${state.squintBlurPx > 0 ? `blur(${state.squintBlurPx}px)` : ""} ${state.squintGrayscale ? "grayscale(100%)" : ""}`.trim() || "none";
+          document.querySelectorAll(".squint-filter-target").forEach((el) => { el.style.filter = css; });
+        });
+      }
+      const btn45 = document.getElementById("btnResetBlur45");
+      if (btn45) {
+        btn45.addEventListener("click", () => {
+          state.squintBlurPx = 4.5;
+          renderAll();
+        });
+      }
+      const chkGray = document.getElementById("chkGrayscale");
+      if (chkGray) {
+        chkGray.addEventListener("change", () => {
+          state.squintGrayscale = chkGray.checked;
+          renderAll();
+        });
+      }
+      const chkStamp = document.getElementById("chkStampScale");
+      if (chkStamp) {
+        chkStamp.addEventListener("change", () => {
+          state.squintStampScale = chkStamp.checked;
+          renderAll();
+        });
+      }
+      const selMs = document.getElementById("selBlinkMs");
+      if (selMs) {
+        selMs.addEventListener("change", () => {
+          state.blinkDurationMs = parseInt(selMs.value, 10);
+          renderAll();
+        });
+      }
+      const btnFire = document.getElementById("btnFireBlink");
+      if (btnFire) {
+        btnFire.addEventListener("click", () => {
+          if (activeBlinkTimer) clearTimeout(activeBlinkTimer);
+          state.blinkPhase = "flashing";
+          renderAll();
+          activeBlinkTimer = setTimeout(() => {
+            state.blinkPhase = "masked";
+            renderAll();
+            const inp = document.getElementById("blinkGuessInput");
+            if (inp) inp.focus();
+          }, state.blinkDurationMs);
+        });
+      }
+      const btnRand = document.getElementById("btnRandomBlink");
+      if (btnRand) {
+        btnRand.addEventListener("click", () => {
+          const pool = filtered.length > 0 ? filtered : [getAdHocPair()];
+          state.blinkActivePair = pool[Math.floor(Math.random() * pool.length)];
+          state.blinkPhase = "ready";
+          renderAll();
+        });
+      }
+      const btnRev = document.getElementById("btnRevealBlink");
+      if (btnRev) {
+        btnRev.addEventListener("click", () => {
+          state.blinkPhase = "revealed";
+          renderAll();
+        });
+      }
+      const btnGuess = document.getElementById("btnCheckBlinkGuess");
+      if (btnGuess) {
+        btnGuess.addEventListener("click", () => {
+          const guess = (document.getElementById("blinkGuessInput")?.value || "").trim().toLowerCase();
+          const actual = String(state.blinkActivePair?.thumbnail_text || "").trim().toLowerCase();
+          state.blinkStats.tested += 1;
+          if (guess && (guess === actual || actual.includes(guess))) {
+            state.blinkStats.recalled += 1;
+          }
+          state.blinkPhase = "revealed";
+          renderAll();
+        });
+      }
+    }
+
+    async function tryFetchExternalVault(showAlertOnFail = false) {
+      try {
+        const resp = await fetch("../16_90_pair_title_thumbnail_vault.json", { cache: "no-store" });
+        if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+        const data = await resp.json();
+        state.vault = normalizeVaultPayload(data);
+        const totalPairs = state.vault.episodes.reduce((n, e) => n + e.variants.length, 0);
+        state.sourceLabel = `LIVE VAULT: ../16_90_pair_title_thumbnail_vault.json (${totalPairs} PAIRS)`;
+        populateEpisodeDropdown();
+        renderAll();
+      } catch (err) {
+        if (showAlertOnFail) {
+          alert(`Could not fetch ../16_90_pair_title_thumbnail_vault.json over current protocol (${window.location.protocol}). Use 'Load Vault JSON' or drag-and-drop when running on file://.`);
+        }
+      }
+    }
+
+    function loadJsonText(jsonText, filenameLabel) {
+      try {
+        const parsed = JSON.parse(jsonText);
+        state.vault = normalizeVaultPayload(parsed);
+        const totalPairs = state.vault.episodes.reduce((n, e) => n + e.variants.length, 0);
+        state.sourceLabel = `LOADED FILE: ${filenameLabel} (${state.vault.episodes.length} EPS / ${totalPairs} PAIRS)`;
+        populateEpisodeDropdown();
+        renderAll();
+      } catch (err) {
+        alert(`Vault JSON parse error: ${err.message}`);
+      }
+    }
+
+    function initEvents() {
+      // View Mode Tabs
+      document.querySelectorAll(".mode-tab").forEach((tab) => {
+        tab.addEventListener("click", () => {
+          document.querySelectorAll(".mode-tab").forEach((t) => t.setAttribute("aria-selected", "false"));
+          tab.setAttribute("aria-selected", "true");
+          state.activeMode = tab.dataset.mode;
+          renderAll();
+        });
+      });
+
+      // Theme Toggle
+      document.getElementById("btnThemeToggle").addEventListener("click", (e) => {
+        state.theme = state.theme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-yt-theme", state.theme);
+        e.currentTarget.textContent = `YouTube UI: ${state.theme === "dark" ? "Dark" : "Light"}`;
+      });
+
+      // Ad-Hoc Drawer Toggle & Inputs
+      document.getElementById("btnToggleAdhoc").addEventListener("click", () => {
+        document.getElementById("adhocDrawer").classList.toggle("open");
+        renderAll();
+      });
+
+      ["ahTitle", "ahThumb", "ahEpisode", "ahElements", "ahComp", "ahSubject", "ahBg", "ahTextHex", "ahAccent", "ahPinToFeed"].forEach((id) => {
+        const el = document.getElementById(id);
+        el.addEventListener("input", () => renderAll());
+        el.addEventListener("change", () => renderAll());
+      });
+
+      // Palette Preset Swatches
+      const presets = {
+        "navy-teal": ["#1C2B3A", "#FAF8F3", "#2F8F8B"],
+        "navy-brick": ["#1C2B3A", "#FAF8F3", "#A3402E"],
+        "milk-teal": ["#FAF8F3", "#1C2B3A", "#2F8F8B"],
+        "milk-brick": ["#FAF8F3", "#1C2B3A", "#A3402E"]
+      };
+      document.querySelectorAll(".swatch-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const p = presets[btn.dataset.preset];
+          if (p) {
+            document.getElementById("ahBg").value = p[0];
+            document.getElementById("ahTextHex").value = p[1];
+            document.getElementById("ahAccent").value = p[2];
+            renderAll();
+          }
+        });
+      });
+
+      // Filters
+      ["fEpisode", "fVariant", "fSeries", "fComp", "fStatus", "fStrict", "fCompetitors", "fSafeZones"].forEach((id) => {
+        document.getElementById(id).addEventListener("change", () => renderAll());
+      });
+      document.getElementById("fSearch").addEventListener("input", () => renderAll());
+
+      document.getElementById("btnShuffleFeed").addEventListener("click", () => {
+        state.shuffleSeed = (state.shuffleSeed * 1664525 + 1013904223) >>> 0;
+        renderAll();
+      });
+
+      // File Picker & Drag-and-Drop
+      document.getElementById("vaultFileInput").addEventListener("change", (e) => {
+        const file = e.target.files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => loadJsonText(String(reader.result || ""), file.name);
+        reader.readAsText(file, "UTF-8");
+      });
+
+      window.addEventListener("dragover", (e) => {
+        e.preventDefault();
+        document.getElementById("dropBanner").classList.add("active");
+      });
+      window.addEventListener("dragleave", (e) => {
+        if (e.relatedTarget === null) {
+          document.getElementById("dropBanner").classList.remove("active");
+        }
+      });
+      window.addEventListener("drop", (e) => {
+        e.preventDefault();
+        document.getElementById("dropBanner").classList.remove("active");
+        const file = e.dataTransfer?.files?.[0];
+        if (!file) return;
+        const reader = new FileReader();
+        reader.onload = () => loadJsonText(String(reader.result || ""), file.name);
+        reader.readAsText(file, "UTF-8");
+      });
+
+      document.getElementById("btnRefetchVault").addEventListener("click", () => tryFetchExternalVault(true));
+      document.getElementById("btnResetBuiltin").addEventListener("click", () => {
+        state.vault = normalizeVaultPayload(buildBuiltinVault());
+        state.sourceLabel = "BUILT-IN 30-EPISODE PREVIEW (90 PAIRS)";
+        populateEpisodeDropdown();
+        renderAll();
+      });
+
+      // Export Lint Report JSON
+      document.getElementById("btnExportReport").addEventListener("click", () => {
+        const pairs = collectAllEvaluatedPairs();
+        const blob = new Blob([JSON.stringify({
+          exported_at: new Date().toISOString(),
+          source: state.sourceLabel,
+          strict: state.strict,
+          total_pairs: pairs.length,
+          failed_count: pairs.filter((p) => !p.lint.passed).length,
+          results: pairs
+        }, null, 2)], { type: "application/json" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "reading_room_thumb_preflight_audit.json";
+        a.click();
+        URL.revokeObjectURL(a.href);
+      });
+
+      // Delegated Clicks (5-Gate Inspect Modal + Up-Next Watch Selection)
+      document.body.addEventListener("click", (e) => {
+        const inspectBtn = e.target.closest("[data-inspect-id]");
+        if (inspectBtn) {
+          const pId = inspectBtn.getAttribute("data-inspect-id");
+          const pair = latestEvaluatedMap.get(pId);
+          if (pair) {
+            state.inspectedPair = pair;
+            document.getElementById("modalTitle").textContent = `${pair.pair_id} (${pair.episode_id}): "${pair.title}"`;
+            document.getElementById("modalBody").innerHTML = `
+              <div style="max-width:460px; margin-bottom:14px;">${renderThumbBoxHtml(pair)}</div>
+              ${renderDetailedGateTableHtml(pair)}
+            `;
+            document.getElementById("inspectModal").classList.add("open");
+          }
+          return;
+        }
+        const watchItem = e.target.closest("[data-select-watch]");
+        if (watchItem) {
+          state.selectedWatchPairId = watchItem.getAttribute("data-select-watch");
+          renderAll();
+        }
+      });
+
+      document.getElementById("btnCloseModal").addEventListener("click", () => {
+        document.getElementById("inspectModal").classList.remove("open");
+      });
+      document.getElementById("inspectModal").addEventListener("click", (e) => {
+        if (e.target.id === "inspectModal") {
+          document.getElementById("inspectModal").classList.remove("open");
+        }
+      });
+      document.getElementById("btnLoadIntoAdhoc").addEventListener("click", () => {
+        const p = state.inspectedPair;
+        if (!p) return;
+        document.getElementById("ahTitle").value = p.title || "";
+        document.getElementById("ahThumb").value = p.thumbnail_text || "";
+        document.getElementById("ahEpisode").value = p.episode_id || "ep_04";
+        document.getElementById("ahElements").value = p.element_count || 3;
+        document.getElementById("ahComp").value = p.visual_composition_mode || "shirt_and_tie_plus_artifact";
+        document.getElementById("ahSubject").value = p.focal_subject || "";
+        document.getElementById("ahBg").value = p.background_hex || "#1C2B3A";
+        document.getElementById("ahTextHex").value = p.text_hex || "#FAF8F3";
+        document.getElementById("ahAccent").value = p.accent_hex || "#2F8F8B";
+        document.getElementById("inspectModal").classList.remove("open");
+        document.getElementById("adhocDrawer").classList.add("open");
+        renderAll();
+      });
+    }
+
+    // Boot Studio
+    state.vault = normalizeVaultPayload(buildBuiltinVault());
+    populateEpisodeDropdown();
+    initEvents();
+    renderAll();
+    if (window.location.protocol === "http:" || window.location.protocol === "https:") {
+      tryFetchExternalVault(false);
+    }
+  </script>
+</body>
+</html>

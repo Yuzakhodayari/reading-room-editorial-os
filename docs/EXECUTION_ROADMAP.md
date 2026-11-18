@@ -67,12 +67,12 @@
 - [x] **14.** Automated Staleness & Decay Scorer (`02_research_and_data/tools/staleness_audit.py`)
 
 ### Division 3: Viral Outlier Engineering, Titles & Thumbnails (`03_viral_and_packaging/`)
-- [ ] **15.** Viral Outlier Swipe Database (`03_viral_and_packaging/viral_outliers_db.json`)
-- [ ] **16.** 90-Pair Title & Thumbnail Vault (`03_viral_and_packaging/16_90_pair_title_thumbnail_vault.json` + `.md`)
-- [ ] **17.** Title & Thumbnail Automated Linter (`03_viral_and_packaging/tools/package_lint.py`)
-- [ ] **18.** Thumbnail Pre-Flight Mockup & Mobile Squint Tester (`03_viral_and_packaging/tools/thumb_test_sheet.html`)
-- [ ] **19.** First-15-Second Packaging-to-Hook Alignment Matrix (`03_viral_and_packaging/19_first_15s_hook_alignment_matrix.md` + `.json`)
-- [ ] **20.** 24-Hour Post-Publish CTR & Title/Thumb Rescue Playbook (`03_viral_and_packaging/20_24hr_ctr_rescue_playbook.md`)
+- [x] **15.** Viral Outlier Swipe Database (`03_viral_and_packaging/viral_outliers_db.json`)
+- [x] **16.** 90-Pair Title & Thumbnail Vault (`03_viral_and_packaging/16_90_pair_title_thumbnail_vault.json` + `.md`)
+- [x] **17.** Title & Thumbnail Automated Linter (`03_viral_and_packaging/tools/package_lint.py`)
+- [x] **18.** Thumbnail Pre-Flight Mockup & Mobile Squint Tester (`03_viral_and_packaging/tools/thumb_test_sheet.html`)
+- [x] **19.** First-15-Second Packaging-to-Hook Alignment Matrix (`03_viral_and_packaging/19_first_15s_hook_alignment_matrix.md` + `.json`)
+- [x] **20.** 24-Hour Post-Publish CTR & Title/Thumb Rescue Playbook (`03_viral_and_packaging/20_24hr_ctr_rescue_playbook.md`)
 
 ### Division 4: Full Script Pipeline, Anti-AI Enforcement & Dossiers (`04_scripts_and_dossiers/`)
 - [ ] **21.** Episode 01 Canonical Master Package (`04_scripts_and_dossiers/ep_01_the_allowance/`)

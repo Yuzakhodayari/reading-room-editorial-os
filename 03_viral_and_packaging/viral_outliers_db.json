@@ -1,0 +1,1179 @@
+{
+  "schema_version": "1.0.0",
+  "deliverable_id": "15_viral_outlier_swipe_database",
+  "channel_name": "The Reading Room",
+  "target_horizon": "2027-02-02 to 2028-01-31 (30 Flagship Uploads)",
+  "total_outliers": 54,
+  "velocity_band_envelope": "5.2x to 27.8x channel median long-form velocity",
+  "analyzed_creators": [
+    "AI In Context",
+    "How Money Works",
+    "Patrick Boyle",
+    "Maxinomics",
+    "Art of the Problem",
+    "Johnny Harris",
+    "Fern",
+    "Asianometry",
+    "Plain Bagel",
+    "Wendover",
+    "ColdFusion",
+    "Logically Answered",
+    "Veritasium",
+    "Low Level"
+  ],
+  "domain_categories": [
+    "ai_economics",
+    "sovereign_debt",
+    "corporate_accounting",
+    "power_grids",
+    "semiconductors_geopolitics",
+    "cybersecurity",
+    "tech_policy"
+  ],
+  "taxonomy_archetypes": [
+    {
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "archetype_name": "Asymmetric Unit-Cost and Speed Collision",
+      "formula_template": "[Small Unit Cost or Minute Clock] [New Vector] vs [Large Dollar Asset or Multi-Month Legacy Queue]",
+      "median_velocity_range": "9.4x to 24.6x",
+      "primary_creators": [
+        "Maxinomics",
+        "Low Level",
+        "Wendover",
+        "AI In Context",
+        "Veritasium"
+      ],
+      "preferred_thumbnail_mode": "two-object-scale-collision or host-plus-delta-card",
+      "recommended_thumb_words": "1 to 2 words",
+      "reading_room_preset_fit": [
+        "STR-MAX-ESSAY",
+        "STR-AOTP-LADDER",
+        "STR-AIC-SPECULATIVE"
+      ],
+      "core_mechanic": "Pits a cheap, fast autonomous input against a rigid multi-billion-dollar balance sheet or physical hardware queue inside 48 characters so the viewer computes the insolvency before clicking."
+    },
+    {
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "archetype_name": "Forensic Footnote and Statutory Loophole Expose",
+      "formula_template": "[Named Institution]'s [$Exact Figure] [Plain-English Accounting or Statutory Mechanism]",
+      "median_velocity_range": "7.6x to 16.2x",
+      "primary_creators": [
+        "Patrick Boyle",
+        "Plain Bagel",
+        "Logically Answered",
+        "How Money Works",
+        "ColdFusion"
+      ],
+      "preferred_thumbnail_mode": "annotated-primary-document-crop or host-plus-filing-split",
+      "recommended_thumb_words": "2 words",
+      "reading_room_preset_fit": [
+        "STR-BOYLE-CHAPTERED",
+        "STR-FISHER-ARTIFACT",
+        "STR-GEN-EXPLAINER"
+      ],
+      "core_mechanic": "Turns an obscure SEC Form 10-K footnote, tax section, or banking regulation into a legible dollar transfer from passive households to insiders, proven visually by cropped primary filings marked in brick-red ink."
+    },
+    {
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "archetype_name": "Sovereign Balance-Sheet Deadlock",
+      "formula_template": "If/When [Secular Shift], Who [Pays/Buys/Absorbs] [$Trillion Figure]?",
+      "median_velocity_range": "7.8x to 18.3x",
+      "primary_creators": [
+        "AI In Context",
+        "How Money Works",
+        "Patrick Boyle",
+        "Plain Bagel",
+        "Asianometry"
+      ],
+      "preferred_thumbnail_mode": "host-plus-ledger-split or hydraulic-ratio-card",
+      "recommended_thumb_words": "1 to 2 words",
+      "reading_room_preset_fit": [
+        "STR-GEN-EXPLAINER",
+        "STR-FISHER-ARTIFACT",
+        "STR-BOYLE-CHAPTERED"
+      ],
+      "core_mechanic": "Frames macroeconomics as a closed accounting identity where one side of the equation collapses while fixed debt obligations compound, compelling viewers to watch all escape hatches get tested."
+    },
+    {
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "archetype_name": "Single-Point Physical Chokepoint",
+      "formula_template": "How/Why [Global Digital System] Hangs on [One Machine, Island, Mineral, or Cable Share]",
+      "median_velocity_range": "8.3x to 22.9x",
+      "primary_creators": [
+        "Asianometry",
+        "Johnny Harris",
+        "Wendover",
+        "Veritasium",
+        "Fern"
+      ],
+      "preferred_thumbnail_mode": "geospatial-chokepoint-map or single-hardware-specimen",
+      "recommended_thumb_words": "0 to 2 words",
+      "reading_room_preset_fit": [
+        "STR-AIC-CLOCKED",
+        "STR-FISHER-ARTIFACT",
+        "STR-AOTP-LADDER"
+      ],
+      "core_mechanic": "Strips away cloud abstraction to show trillions of dollars of equity depending on one lithography monopoly, one phosphate reserve, one steel alloy, or 550 garden-hose-sized seafloor fibers."
+    },
+    {
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "archetype_name": "Silent Intrusion and Clocked Statutory Countdown",
+      "formula_template": "[Elapsed Dwell Time or Hard Statutory Year] Inside/Until [Critical Grid, Cipher, or Trust Fund]",
+      "median_velocity_range": "14.5x to 27.8x",
+      "primary_creators": [
+        "Fern",
+        "Low Level",
+        "AI In Context",
+        "Veritasium",
+        "ColdFusion"
+      ],
+      "preferred_thumbnail_mode": "dark-telemetry-cutaway or archival-directive-stamp",
+      "recommended_thumb_words": "0 to 2 words",
+      "reading_room_preset_fit": [
+        "STR-AIC-CLOCKED",
+        "STR-AIC-SPECULATIVE",
+        "STR-BOYLE-CHAPTERED"
+      ],
+      "core_mechanic": "Replaces vague future warnings with an active clock already running inside telecom switches, NIST encryption deprecation schedules, or Social Security trust-fund exhaustion tables."
+    },
+    {
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "archetype_name": "Personal Institution and Credential Inversion",
+      "formula_template": "Why/How [Trusted Middle-Class Contract or Habit] Now [Concrete Household Penalty]",
+      "median_velocity_range": "5.4x to 17.9x",
+      "primary_creators": [
+        "How Money Works",
+        "Veritasium",
+        "Logically Answered",
+        "Wendover",
+        "Art of the Problem"
+      ],
+      "preferred_thumbnail_mode": "host-plus-household-contract or diagnostic-contrast-split",
+      "recommended_thumb_words": "1 to 3 words",
+      "reading_room_preset_fit": [
+        "STR-HMW-PRIMER",
+        "STR-GEN-EXPLAINER",
+        "STR-MAX-ESSAY"
+      ],
+      "core_mechanic": "Shows how AI reprices an everyday household contract (entry-level career ladders, four-year degrees, 30-year mortgage insurance, court evidence, or private chat logs) so conventional prudence turns hazardous."
+    }
+  ],
+  "outliers": [
+    {
+      "outlier_id": "OUT-001",
+      "creator_reference": "Maxinomics",
+      "domain_category": "semiconductors_geopolitics",
+      "outlier_velocity_band": "21.4x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "How [$Low Unit Cost] [Autonomous Asset] Break [$Billion Legacy Platform]",
+      "exemplar_title_pattern": "How $20,000 Drones Break $2B Warships",
+      "char_count": 37,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Clean isometric split on #0F2236 drafting-blueprint ground: tiny matte-gray one-way drone on left balanced on a brass scale against a massive naval interceptor missile stamped '$4M SHOT' in brick-red #A3402E.",
+      "title_thumb_circuit_logic": "Title pits the $20,000 drone against the $2B ship hull; thumbnail supplies the missing middle number ('$4M SHOT' per interceptor) that makes naval defense financially unsustainable even when every drone gets shot down.",
+      "first_15s_validation_rule": "Put DoD Comptroller SM-2 and SM-6 unit procurement tables on screen within 12 seconds and compute the 105x to 200x adverse cost-exchange ratio before naming geopolitical actors.",
+      "psychological_click_driver": "Asymmetric attrition math where winning every tactical engagement still bankrupts the defender's magazine and bond budget.",
+      "mapped_reading_room_episodes": [
+        "ep_19",
+        "ep_13"
+      ]
+    },
+    {
+      "outlier_id": "OUT-002",
+      "creator_reference": "Low Level",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "19.8x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "[Minute-Scale Agent Speed] vs [Day-Scale Human Remediation Lag]",
+      "exemplar_title_pattern": "15-Minute AI Exploits vs 43-Day Patches",
+      "char_count": 39,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Dark #111315 terminal diff split showing a green CVE patch advisory feeding an automated exploit loop on left beside a red hospital server rack stamped 'ZERO DEFENSE' in crisp IBM Plex Mono.",
+      "title_thumb_circuit_logic": "Title establishes the 1,500x clock mismatch between 15-minute LLM weaponization and 43-day enterprise patching; thumbnail shows the patch note itself acting as the attacker's blueprint under 'ZERO DEFENSE'.",
+      "first_15s_validation_rule": "Display the UIUC 87% one-day CVE exploit benchmark table alongside Verizon DBIR's 32-to-43-day median CISA KEV remediation curve inside the first 15 seconds.",
+      "psychological_click_driver": "Realization that monthly security updates now arm autonomous attackers weeks before corporate IT committees finish testing patches.",
+      "mapped_reading_room_episodes": [
+        "ep_09",
+        "ep_24"
+      ]
+    },
+    {
+      "outlier_id": "OUT-003",
+      "creator_reference": "Wendover",
+      "domain_category": "power_grids",
+      "outlier_velocity_band": "11.6x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "Why [Fast Software Cycle] Hits a [Multi-Week Physical Queue]",
+      "exemplar_title_pattern": "Why 6-Month AI Hits a 128-Week Grid Queue",
+      "char_count": 41,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "High-contrast #FAF8F3 editorial card showing a high-voltage substation transformer in wireframe silhouette crossed by a crimson #A3402E procurement tag reading 'SOLD OUT'.",
+      "title_thumb_circuit_logic": "Title contrasts Silicon Valley's 6-month model release clock against the 128-week grid wait; thumbnail identifies the physical culprit (large power transformers) labeled 'SOLD OUT' without repeating title numerals.",
+      "first_15s_validation_rule": "Open straight on WoodMac and NIAC 100-to-160-week large power transformer lead-time schedules paired with PJM's 833.3% capacity price spike.",
+      "psychological_click_driver": "Friction between weightless software hype and heavy copper-and-steel manufacturing bottlenecks that raise household electric bills.",
+      "mapped_reading_room_episodes": [
+        "ep_08",
+        "ep_25"
+      ]
+    },
+    {
+      "outlier_id": "OUT-004",
+      "creator_reference": "AI In Context",
+      "domain_category": "ai_economics",
+      "outlier_velocity_band": "17.5x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "When [$Monthly Compute Cap] Replaces [$Annual Human Salary]",
+      "exemplar_title_pattern": "When $1,500 AI Agents Replace $180K Staff",
+      "char_count": 41,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Restrained #F4EFE6 vellum payroll ledger comparing a human W-2 salary stub crossed out in brick-red ink beside an API token invoice stamped '99% CHEAPER'.",
+      "title_thumb_circuit_logic": "Title frames the enterprise headcount substitution ($1,500 compute budget vs $180K engineer); thumbnail supplies Epoch AI's underlying >99% inference token price drop ('99% CHEAPER') driving CFO adoption.",
+      "first_15s_validation_rule": "Anchor the first 45 words in a concrete 32-year-old software engineer's fixed $3,400 monthly mortgage colliding with corporate per-seat compute budgets and Epoch AI token deflation curves.",
+      "psychological_click_driver": "Direct household income comparison forcing salaried knowledge workers to audit their own cost-per-output against API token deflation.",
+      "mapped_reading_room_episodes": [
+        "ep_01",
+        "ep_04",
+        "ep_05",
+        "ep_12"
+      ]
+    },
+    {
+      "outlier_id": "OUT-005",
+      "creator_reference": "How Money Works",
+      "domain_category": "ai_economics",
+      "outlier_velocity_band": "13.2x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "How [$Hourly Robot Cost] Trap [Macro Sovereign Group]",
+      "exemplar_title_pattern": "How $3/Hour Factory Robots Trap Poor Nations",
+      "char_count": 44,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Shirt-and-tie presenter on left third in #F2ECE1 Oxford cloth and dark forest grenadine tie (#1B4D3E) beside a broken two-rung industrial export ladder labeled 'NO JOBS' on #FAF8F3 paper.",
+      "title_thumb_circuit_logic": "Title names the $3-per-hour amortized robot cost breaking developing economies; thumbnail visualizes Dani Rodrik's broken industrialization ladder ('NO JOBS') alongside calm studio authority.",
+      "first_15s_validation_rule": "Show Rodrik's NBER Working Paper 20935 peak-manufacturing GDP curve and IMF SDN/2024/001 exposure tiers before 0:15 to ground the global claim in empirical development data.",
+      "psychological_click_driver": "Inversion of the sixty-year East Asian export miracle that lifted billions out of poverty through textiles and call centers.",
+      "mapped_reading_room_episodes": [
+        "ep_16",
+        "ep_13"
+      ]
+    },
+    {
+      "outlier_id": "OUT-006",
+      "creator_reference": "Veritasium",
+      "domain_category": "semiconductors_geopolitics",
+      "outlier_velocity_band": "24.6x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "[Extreme Physical Rate] Inside [Monopoly Machine]",
+      "exemplar_title_pattern": "50,000 Tin Droplets Per Second Inside EUV",
+      "char_count": 41,
+      "thumbnail_word_count": 1,
+      "thumbnail_visual_mechanic": "Macro cross-section of a glowing plasma laser striking a microscopic molten tin droplet inside a vacuum chamber on #0F1923 deep navy with single cream Newsreader word 'IMPOSSIBLE'.",
+      "title_thumb_circuit_logic": "Title states the literal physics inside ASML's light source; thumbnail registers the engineering disbelief ('IMPOSSIBLE') that explains why no competitor has replicated 13.5nm EUV lithography.",
+      "first_15s_validation_rule": "Demonstrate the double-pulse CO2 laser vaporizing 30-micron tin droplets twice per cycle within 15 seconds before connecting that vacuum chamber to $14T of AI equity.",
+      "psychological_click_driver": "Awe at extreme physical precision paired with geopolitical monopoly stakes.",
+      "mapped_reading_room_episodes": [
+        "ep_15"
+      ]
+    },
+    {
+      "outlier_id": "OUT-007",
+      "creator_reference": "Maxinomics",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "9.4x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "Why [Legacy Per-Seat Volume] Lose to [Single Agent Primitive]",
+      "exemplar_title_pattern": "Why 500 SaaS Seats Lose to One API Key",
+      "char_count": 38,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Grid of 500 tiny blue user icons grayed out and collapsing into one amber API node on #FAF8F3 canvas with bold #A3402E badge '90% CUT'.",
+      "title_thumb_circuit_logic": "Title contrasts 500 human software licenses against one autonomous API key; thumbnail quantifies the enterprise procurement renewal haircut ('90% CUT') threatening debt-funded SaaS buyouts.",
+      "first_15s_validation_rule": "Connect enterprise per-seat license compression straight to the $500B private-credit software LBO loan stack inside the opening 45 words.",
+      "psychological_click_driver": "Exposes why sticky recurring software revenue, Wall Street's favorite collateral for a decade, suddenly faces structural seat shrinkage.",
+      "mapped_reading_room_episodes": [
+        "ep_05",
+        "ep_04"
+      ]
+    },
+    {
+      "outlier_id": "OUT-008",
+      "creator_reference": "ColdFusion",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "14.8x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "[Historical Crisis Benchmark]. [AI Acceleration Benchmark]",
+      "exemplar_title_pattern": "SVB Lost $42B in 24 Hours. AI Needs 60 Seconds",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Vertical outflow cliff chart on #111315 dark telemetry ground comparing SVB's 2023 mobile run slope against a vertical crimson line labeled 'INSTANT RUN'.",
+      "title_thumb_circuit_logic": "Title anchors on Silicon Valley Bank's verified $42B 24-hour deposit flight and compresses the clock to 60 seconds; thumbnail shows the vertical liquidity cliff ('INSTANT RUN') visually.",
+      "first_15s_validation_rule": "Put the Federal Reserve Barr Report SVB outflow table beside FDIC Table III-A's $4.04T zero-yield deposit base within 15 seconds.",
+      "psychological_click_driver": "Compresses a familiar recent banking shock by three orders of magnitude using real instant-payment rails (FedNow and 93-day T-bill sweeps).",
+      "mapped_reading_room_episodes": [
+        "ep_10",
+        "ep_02"
+      ]
+    },
+    {
+      "outlier_id": "OUT-009",
+      "creator_reference": "Art of the Problem",
+      "domain_category": "power_grids",
+      "outlier_velocity_band": "10.9x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-01",
+      "title_structure_template": "From [Household Watt Unit] to [Multi-Gigawatt Infrastructure Scale]",
+      "exemplar_title_pattern": "From a 10-Watt Phone to a 5-Gigawatt AI Cluster",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Logarithmic physical scale ladder on #0F2236 blueprint background stepping from a tiny USB wall plug up to five illuminated nuclear cooling towers labeled '5 CITIES'.",
+      "title_thumb_circuit_logic": "Title spans nine orders of electrical magnitude from pocket hardware to frontier training campuses; thumbnail translates 5 gigawatts into immediate human geography ('5 CITIES').",
+      "first_15s_validation_rule": "Walk the four-rung wattage ladder (10W charger, 1.2kW microwave, 1GW municipal grid, 5GW AI campus) before 0:18 so abstract terawatt-hours feel physical.",
+      "psychological_click_driver": "Intuitive physical scaling that turns incomprehensible energy units into an unmistakable land-and-power collision.",
+      "mapped_reading_room_episodes": [
+        "ep_08",
+        "ep_01",
+        "ep_23"
+      ]
+    },
+    {
+      "outlier_id": "OUT-010",
+      "creator_reference": "Patrick Boyle",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "15.4x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "[Sector]'s [$Exact Earnings Uplift] [Accounting Rule] Trick",
+      "exemplar_title_pattern": "Big Tech's $176B Server Depreciation Trick",
+      "char_count": 42,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Presenter in #F2ECE1 Oxford shirt and Prussian navy grenadine tie (#1C2B3A) on left; cropped SEC Form 10-K useful-life schedule on right with '3 YRS -> 6 YRS' circled in #A3402E ink and header tag 'NOTE 1'.",
+      "title_thumb_circuit_logic": "Title names the $176B profit boost and server depreciation mechanism; thumbnail shows the exact SEC Form 10-K location ('NOTE 1') where hyperscalers doubled GPU accounting lives.",
+      "first_15s_validation_rule": "Display Microsoft, Alphabet, and Amazon Form 10-K Note 1 useful-life revisions alongside Amazon's -$42.4B trailing free cash flow within the first 15 seconds.",
+      "psychological_click_driver": "Passive index-fund savers discover trillion-dollar S&P 500 earnings multiples rest on a legal footnote change while cash leaves corporate treasuries upfront.",
+      "mapped_reading_room_episodes": [
+        "ep_03",
+        "ep_23"
+      ]
+    },
+    {
+      "outlier_id": "OUT-011",
+      "creator_reference": "Patrick Boyle",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "12.7x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "How [Shadow Market] Hides Defaults With [Specific Debt Clause]",
+      "exemplar_title_pattern": "How Private Credit Hides Defaults With PIK Debt",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Archival #F4EFE6 BDC Schedule of Investments table with yellow chisel marker sweep across Payment-in-Kind column and brick-red stamp '88% IOUs'.",
+      "title_thumb_circuit_logic": "Title identifies private credit's Payment-in-Kind default mask; thumbnail delivers Fitch's 88% restructuring share ('88% IOUs') on an authentic SEC Form 10-Q table.",
+      "first_15s_validation_rule": "Open on Fitch's 6.3% US Private Credit Default Rate Monitor and an actual BDC Form 10-Q Schedule of Investments showing non-cash PIK interest booked as GAAP income.",
+      "psychological_click_driver": "Unmasks how high-yield private funds pitched to retirees report steady paper dividends while distressed software borrowers pay interest with more debt.",
+      "mapped_reading_room_episodes": [
+        "ep_05"
+      ]
+    },
+    {
+      "outlier_id": "OUT-012",
+      "creator_reference": "Plain Bagel",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "8.9x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "The [$Billions] Off-Balance-Sheet Debt Behind [Boom Asset]",
+      "exemplar_title_pattern": "The $66B Off-Balance-Sheet Debt Behind GPUs",
+      "char_count": 43,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Clean flow diagram on #FAF8F3 paper connecting chip vendor, neocloud borrower, and ringed special-purpose box outlined in dashed #A3402E red labeled 'HIDDEN SPV'.",
+      "title_thumb_circuit_logic": "Title quantifies the $66B debt-and-lease stack backing AI GPUs; thumbnail names the legal wrapper ('HIDDEN SPV') keeping hardware obsolescence off mega-cap parent balance sheets.",
+      "first_15s_validation_rule": "Put CoreWeave Form 10-Q Note 7 and Note 8 ($66.2B debt and lease obligations) plus Form 8-K residual backstop disclosures on screen before 0:15.",
+      "psychological_click_driver": "Echoes classic telecom and Enron structured-finance mechanics inside the modern AI compute buildout.",
+      "mapped_reading_room_episodes": [
+        "ep_03",
+        "ep_23"
+      ]
+    },
+    {
+      "outlier_id": "OUT-013",
+      "creator_reference": "Logically Answered",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "13.8x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "Why [Trusted Institution] Legally Keep [Household Loss]",
+      "exemplar_title_pattern": "Why Banks Legally Keep Money Stolen by AI",
+      "char_count": 41,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Cropped Code of Federal Regulations 12 CFR Part 1005 page on #F4EFE6 cotton stock with amber marker across 'authorized transfer' and bold navy header 'REGULATION E'.",
+      "title_thumb_circuit_logic": "Title states the shocking consumer outcome (banks refuse reimbursement after AI voice scams); thumbnail cites the exact 1978 federal rule ('REGULATION E') drawing the $50 vs 100% loss boundary.",
+      "first_15s_validation_rule": "Open with a $92,000 home-closing wire triggered by a three-second family voice clone and flash 12 CFR Section 1005.6 within 15 seconds.",
+      "psychological_click_driver": "Urgent personal-finance vulnerability showing why FDIC insurance and fraud desks do not cover authorized-push transfers.",
+      "mapped_reading_room_episodes": [
+        "ep_07"
+      ]
+    },
+    {
+      "outlier_id": "OUT-014",
+      "creator_reference": "How Money Works",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "11.4x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "Why [Institution] Froze [Exact Millions] Under [Statutory Constraint]",
+      "exemplar_title_pattern": "Why Banks Froze 4.6M Accounts Under Gag Orders",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Host in #F2ECE1 shirt and brick-red wool tie (#A3402E) beside a bank checking portal dialog grayed out behind a crimson statutory seal reading 'LOCKED OUT'.",
+      "title_thumb_circuit_logic": "Title gives the 4.6M FinCEN volume and federal gag-order angle; thumbnail translates institutional compliance math into immediate depositor peril ('LOCKED OUT').",
+      "first_15s_validation_rule": "Cite FinCEN's 4.6M-to-4.8M annual Suspicious Activity Report bulletin and 31 U.S.C. Section 5318(g)(2) criminal disclosure prohibition inside 15 seconds.",
+      "psychological_click_driver": "Fear of unappealable algorithmic debanking where federal law makes telling you why a felony.",
+      "mapped_reading_room_episodes": [
+        "ep_20",
+        "ep_10"
+      ]
+    },
+    {
+      "outlier_id": "OUT-015",
+      "creator_reference": "ColdFusion",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "16.2x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "How [Sector] Book [$Hundred-Billion Backlog] Before Cash Arrives",
+      "exemplar_title_pattern": "How Cloud Giants Book $550B Before Cash Arrives",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Dark #0F1923 financial ledger comparing towering blue backlog bars against negative crimson free-cash-flow bars stamped 'PAPER PROFIT'.",
+      "title_thumb_circuit_logic": "Title spotlights $550B in contracted cloud Remaining Performance Obligations; thumbnail contrasts headline backlog optimism against cash-burn reality ('PAPER PROFIT').",
+      "first_15s_validation_rule": "Place Oracle's $300B RPO footnote and Microsoft's $250B RPO commitment directly beside hyperscaler CapEx cash outflows before 0:15.",
+      "psychological_click_driver": "Separates multi-year AI revenue press releases from actual cash-flow solvency inside 401(k) mega-cap holdings.",
+      "mapped_reading_room_episodes": [
+        "ep_03",
+        "ep_05"
+      ]
+    },
+    {
+      "outlier_id": "OUT-016",
+      "creator_reference": "Plain Bagel",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "7.6x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "Why [Financial Wrapper] Earn [Rate]% on T-Bills and Pay You 0%",
+      "exemplar_title_pattern": "Why Stablecoins Earn 4% on T-Bills and Pay You 0%",
+      "char_count": 49,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Printed Public Law 119-27 page on #F4EFE6 parchment with Section 4(a)(11) zero-yield prohibition underlined in #A3402E red and top label 'GENIUS ACT'.",
+      "title_thumb_circuit_logic": "Title exposes the 4% vs 0% interest spread captured by digital-dollar issuers; thumbnail names the July 2025 federal statute ('GENIUS ACT') mandating zero holder yield.",
+      "first_15s_validation_rule": "Show Public Law 119-27 Section 4 alongside Tether's $132.4B BDO Treasury bill reserve attestation within the opening 15 seconds.",
+      "psychological_click_driver": "Shows how Congress legalized a captive zero-interest buyer for 93-day US debt at the direct expense of cash holders.",
+      "mapped_reading_room_episodes": [
+        "ep_02",
+        "ep_10"
+      ]
+    },
+    {
+      "outlier_id": "OUT-017",
+      "creator_reference": "Patrick Boyle",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "10.3x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "How Tax Code [Section] Cut Corporate Taxes to [Single-Digit]%",
+      "exemplar_title_pattern": "How Tax Code 168(k) Cut Corporate Taxes to 7%",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Two-bar Treasury MTS Table 9 chart on #FAF8F3 paper: giant #1C2B3A bar for 86.4% individual/payroll taxes next to tiny #A3402E bar labeled 'ZERO TAX' on year-one GPUs.",
+      "title_thumb_circuit_logic": "Title cites IRC Section 168(k) and the 7.1% corporate receipt share; thumbnail contrasts 100% first-year chip write-offs ('ZERO TAX') against paycheck withholding.",
+      "first_15s_validation_rule": "Flash US Treasury Final Monthly Treasury Statement Table 9 showing 86.4% wage-linked receipts vs 7.1% corporate income tax receipts inside 14 seconds.",
+      "psychological_click_driver": "Refutes the popular assumption that corporate income taxes will automatically replace lost human paycheck withholding.",
+      "mapped_reading_room_episodes": [
+        "ep_01",
+        "ep_03",
+        "ep_26"
+      ]
+    },
+    {
+      "outlier_id": "OUT-018",
+      "creator_reference": "Logically Answered",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "9.7x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-02",
+      "title_structure_template": "How [Pricing Software] Fix Prices Without Human Calls",
+      "exemplar_title_pattern": "How Rent Algorithms Fix Prices Without Human Calls",
+      "char_count": 50,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Hub-and-spoke landlord network diagram on #FAF8F3 investigation board feeding lease data into a central black box stamped 'SHERMAN ACT' in #A3402E crimson.",
+      "title_thumb_circuit_logic": "Title explains algorithmic lease coordination without smoke-filled rooms; thumbnail frames the DOJ antitrust prosecution ('SHERMAN ACT') testing century-old cartel law.",
+      "first_15s_validation_rule": "Put the DOJ Antitrust Division complaint in United States v. RealPage (No. 1:24-cv-00710) on the desk platen before 0:15.",
+      "psychological_click_driver": "Connects monthly apartment rent hikes directly to pooled non-public competitor algorithms.",
+      "mapped_reading_room_episodes": [
+        "ep_22"
+      ]
+    },
+    {
+      "outlier_id": "OUT-019",
+      "creator_reference": "AI In Context",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "18.3x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "If [AI Labor Shift], Who Pays [$Sovereign Debt Total]?",
+      "exemplar_title_pattern": "If AI Cuts Paychecks, Who Pays $40.5T US Debt?",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Presenter in unbleached #F2ECE1 Oxford shirt and oxblood tie (#8C1D18) on left beside annotated US Treasury MTS Table 9 sheet with '86% WAGES' circled in thick brick-red ink.",
+      "title_thumb_circuit_logic": "Title poses the macro solvency question ($40.5T US debt without human paychecks); thumbnail supplies the fatal Table 9 dependency ('86% WAGES') that locks the fiscal trap.",
+      "first_15s_validation_rule": "State the 67.4% Friday paycheck-withholding share and 86.4% individual-plus-payroll tax share from MTS Table 9 within the first 15 seconds.",
+      "psychological_click_driver": "Collides Silicon Valley's 2036 post-work abundance promise with the hard tax math keeping US Treasuries and household mortgages solvent.",
+      "mapped_reading_room_episodes": [
+        "ep_01",
+        "ep_30"
+      ]
+    },
+    {
+      "outlier_id": "OUT-020",
+      "creator_reference": "How Money Works",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "15.9x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "[Largest Foreign Creditor] Stopped Buying. Who Steps In Now?",
+      "exemplar_title_pattern": "Japan Stopped Buying US Debt. Who Steps In Now?",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Archival #F4EFE6 Treasury TIC Table 5 foreign-holders schedule beside a rising crimson Japanese 30-year JGB yield curve crossing '4% YIELD'.",
+      "title_thumb_circuit_logic": "Title announces Tokyo's retreat from long-duration US bonds; thumbnail reveals the domestic trigger ('4% YIELD' on 30-year JGBs) pulling $1.07T of Japanese capital home.",
+      "first_15s_validation_rule": "Show Ministry of Finance Japan 30-year JGB yields (~4.0%) and US Treasury TIC Table 5 ($1,068.3B Japanese holdings) before 0:15.",
+      "psychological_click_driver": "Reveals why 10-year and 30-year US mortgage rates stay elevated even when domestic inflation cools.",
+      "mapped_reading_room_episodes": [
+        "ep_02"
+      ]
+    },
+    {
+      "outlier_id": "OUT-021",
+      "creator_reference": "Plain Bagel",
+      "domain_category": "ai_economics",
+      "outlier_velocity_band": "11.1x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "What Happens When [Passive Buyer Pool] Sell [Concentrated Sector]?",
+      "exemplar_title_pattern": "What Happens When Laid-Off 401(k)s Sell Tech?",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Clean downward elasticity lever on #0F2236 blueprint ground showing $1 of red net outflow tilting a $5 market-cap block stamped '5X DROP'.",
+      "title_thumb_circuit_logic": "Title asks what happens when biweekly 401(k) inflows flip into jobless withdrawals; thumbnail supplies Gabaix and Koijen's inelastic market multiplier ('5X DROP').",
+      "first_15s_validation_rule": "Put ICI's $10.8T 401(k) asset ledger (~36% mega-cap tech weight) alongside the Quarterly Journal of Economics 5x inelastic flow multiplier within 15 seconds.",
+      "psychological_click_driver": "Challenges the thirty-year passive-index catechism that biweekly retirement contributions only ever flow inward.",
+      "mapped_reading_room_episodes": [
+        "ep_06",
+        "ep_14"
+      ]
+    },
+    {
+      "outlier_id": "OUT-022",
+      "creator_reference": "Asianometry",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "14.1x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "[Trough Fertility Figure] and Robots Pay Zero [Pension Tax]",
+      "exemplar_title_pattern": "0.72 Births in Korea and Robots Pay Zero FICA",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Inverted demographic age pyramid on #FAF8F3 paper balanced precariously on a single young taxpayer icon with #A3402E stamp 'WHO PAYS'.",
+      "title_thumb_circuit_logic": "Title pairs South Korea's 0.72 fertility trough with 0.0% payroll taxes on humanoid machines; thumbnail visualizes the inverted pension pyramid ('WHO PAYS').",
+      "first_15s_validation_rule": "Display Statistics Korea Vital Statistics Table 1 (0.72 TFR vs 2.10 replacement) beside statutory wage-only pension tax clauses inside 15 seconds.",
+      "psychological_click_driver": "Destroys the techno-optimist talking point that factory robots effortlessly solve aging national pension math.",
+      "mapped_reading_room_episodes": [
+        "ep_26",
+        "ep_30"
+      ]
+    },
+    {
+      "outlier_id": "OUT-023",
+      "creator_reference": "Patrick Boyle",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "13.5x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "[Sovereign Interest Line] Just Passed [Sacred Benchmark Budget]",
+      "exemplar_title_pattern": "US Debt Interest Just Passed the Defense Budget",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "US Treasury MTS Table 9 Function 900 vs Function 050 line chart on #FAF8F3 canvas where crimson net-interest curve crosses navy Pentagon line at '$1.05 TRILLION'.",
+      "title_thumb_circuit_logic": "Title announces Ferguson's Law crossing in plain English; thumbnail locks the exact Treasury outlay figure ('$1.05 TRILLION') at the crossover point.",
+      "first_15s_validation_rule": "Put Final MTS Table 9 Function 900 ($1.05T net interest) vs Function 050 ($0.93T national defense) and CBO's $2.14T 2036 baseline on screen in the first 14 seconds.",
+      "psychological_click_driver": "Historical fiscal threshold proving bondholders now outrank aircraft carriers in the federal checkbook.",
+      "mapped_reading_room_episodes": [
+        "ep_01",
+        "ep_02",
+        "ep_19",
+        "ep_30"
+      ]
+    },
+    {
+      "outlier_id": "OUT-024",
+      "creator_reference": "Johnny Harris",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "8.8x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "Why [Real-World UBI Test State] Slashed Its Cash Dividend",
+      "exemplar_title_pattern": "Why Alaska Slashed Its Cash Dividend in Half",
+      "char_count": 44,
+      "thumbnail_word_count": 1,
+      "thumbnail_visual_mechanic": "Actual 2016 Alaska House Bill 256 appropriation page on #F4EFE6 cotton rag with Governor Walker's red fountain-pen line-item strike and single stamp 'VETOED'.",
+      "title_thumb_circuit_logic": "Title surfaces America's only 40-year universal cash dividend cutting payouts during a budget crunch; thumbnail shows the physical gubernatorial veto stroke ('VETOED').",
+      "first_15s_validation_rule": "Show Governor Bill Walker's 2016 line-item veto cutting the Permanent Fund Dividend from $2,072 to $1,000 and cite Wielechowski v. State (403 P.3d 1117) promptly.",
+      "psychological_click_driver": "Empirical real-world precedent proving citizen cash allowances lose to sovereign deficits whenever tax revenues fall.",
+      "mapped_reading_room_episodes": [
+        "ep_01"
+      ]
+    },
+    {
+      "outlier_id": "OUT-025",
+      "creator_reference": "Maxinomics",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "12.2x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "Why [$Trillions Sovereign Pool] Now Finance [US Strategic Sector]",
+      "exemplar_title_pattern": "Why $6T Gulf Oil Funds Now Finance US AI Labs",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Split balance-sheet diagram on #FAF8F3 paper: negative hyperscaler free-cash-flow gauge on left connected by a golden-slate pipeline to sovereign joint-venture seal 'NEW OWNERS'.",
+      "title_thumb_circuit_logic": "Title links $6.1T in Gulf petrodollar funds to Silicon Valley compute; thumbnail frames the governance consequence ('NEW OWNERS') after Big Five AI CapEx hit $824B.",
+      "first_15s_validation_rule": "Open on the $100B AI Infrastructure Partnership ($30B equity, $70B debt) alongside Alphabet's negative free-cash-flow quarters and Global SWF's $6.1T GCC ledger.",
+      "psychological_click_driver": "Reveals that even trillion-dollar US tech firms outgrew their own cash flows and turned to sovereign hydrocarbon capital.",
+      "mapped_reading_room_episodes": [
+        "ep_23",
+        "ep_03"
+      ]
+    },
+    {
+      "outlier_id": "OUT-026",
+      "creator_reference": "Plain Bagel",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "9.1x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "When Every [Market Participant] Uses the Same [AI Model]",
+      "exemplar_title_pattern": "When Every Wall Street Bot Uses the Same Model",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Dark #111315 SEC MIDAS equity order-book depth chart where green buy bids vanish simultaneously into a vertical chasm labeled 'NO BIDS'.",
+      "title_thumb_circuit_logic": "Title describes foundation-model monoculture across automated trading desks; thumbnail shows the exact market-microstructure failure ('NO BIDS' liquidity air pocket).",
+      "first_15s_validation_rule": "Cite the Financial Stability Board AI concentration warning and 70%-to-80% automated US equity volume within the first 15 seconds.",
+      "psychological_click_driver": "Shows how correlated AI risk parsers turn routine macro releases into synchronized one-sided flash exits.",
+      "mapped_reading_room_episodes": [
+        "ep_14",
+        "ep_06"
+      ]
+    },
+    {
+      "outlier_id": "OUT-027",
+      "creator_reference": "ColdFusion",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "7.8x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-03",
+      "title_structure_template": "Why [Short-Term Debt Fix] Leave [Household Rate] High",
+      "exemplar_title_pattern": "Why 93-Day Crypto Bills Leave Mortgages High",
+      "char_count": 44,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Steepening Treasury yield curve on #0F1923 dark ground: 3-month bill pinned down on left while 10-year and 30-year yields spike upward under #E27358 tag 'WRONG END'.",
+      "title_thumb_circuit_logic": "Title connects 93-day stablecoin T-bill rules to stubborn household mortgage rates; thumbnail illustrates the duration mismatch ('WRONG END' of the yield curve).",
+      "first_15s_validation_rule": "Contrast 3-month Treasury bills rolled 3.92 times per year under GENIUS Act reserves against unanchored 10-year mortgage benchmark yields inside 15 seconds.",
+      "psychological_click_driver": "Explains why prospective homebuyers see 30-year mortgage rates stay high even when Washington finds front-end bill buyers.",
+      "mapped_reading_room_episodes": [
+        "ep_02",
+        "ep_17"
+      ]
+    },
+    {
+      "outlier_id": "OUT-028",
+      "creator_reference": "Asianometry",
+      "domain_category": "semiconductors_geopolitics",
+      "outlier_velocity_band": "20.2x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "[Geography]'s [Node] Fabs and [Monopoly Vendor]'s Kill Switch",
+      "exemplar_title_pattern": "Taiwan's 2nm Fabs and ASML's Remote Kill Switch",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Geospatial #111315 map of Taiwan's west-coast Hsinchu-Tainan fab corridor glowing in ice-blue #BFD6EA with crimson perimeter ring and 2-word label 'ONE ISLAND'.",
+      "title_thumb_circuit_logic": "Title combines TSMC's 2nm wafer concentration with ASML's remote scanner disablement switch; thumbnail isolates the geographic concentration ('ONE ISLAND') anchoring $14T of tech value.",
+      "first_15s_validation_rule": "Display SIA-BCG's 80%-to-90% sub-5nm Taiwan wafer share alongside Bloomberg Economics' $10T Year-1 Strait blockade GDP impact model within 15 seconds.",
+      "psychological_click_driver": "Mutual economic deterrence paradox where flipping the remote kill switch still triggers a $10T global supply shock.",
+      "mapped_reading_room_episodes": [
+        "ep_15",
+        "ep_13"
+      ]
+    },
+    {
+      "outlier_id": "OUT-029",
+      "creator_reference": "Johnny Harris",
+      "domain_category": "semiconductors_geopolitics",
+      "outlier_velocity_band": "14.4x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "How [Small Group] Bought [Dominant Share]% of [Physical Backbone]",
+      "exemplar_title_pattern": "How 4 Tech Giants Bought 75% of Subsea Cables",
+      "char_count": 45,
+      "thumbnail_word_count": 0,
+      "thumbnail_visual_mechanic": "Zero-text #111315 ocean-bathymetry map showing four luminous transoceanic fiber corridors converging into a narrow maritime strait chokepoint.",
+      "title_thumb_circuit_logic": "Title carries every required number (4 tech firms, 75% subsea bandwidth); wordless bathymetric map delivers immediate visual scale at 210x118 mobile resolution with zero clutter.",
+      "first_15s_validation_rule": "Show TeleGeography's Submarine Cable capacity table (~75% Google, Meta, Amazon, Microsoft share vs under 10% in 2012) inside 14 seconds.",
+      "psychological_click_driver": "Shatters the 'wireless cloud' mental model by exposing private four-firm control over physical seafloor glass fibers.",
+      "mapped_reading_room_episodes": [
+        "ep_27"
+      ]
+    },
+    {
+      "outlier_id": "OUT-030",
+      "creator_reference": "Asianometry",
+      "domain_category": "semiconductors_geopolitics",
+      "outlier_velocity_band": "13.0x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "Why [Share]% of the [$BOM] [Hardware] Chain Sits in [Region]",
+      "exemplar_title_pattern": "Why 63% of the $30K Humanoid Chain Sits in Asia",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Exploded blueprint teardown of a robotic knee actuator and neodymium magnet assembly on #0F2236 ground with brick-red #A3402E callout '72% REFINED'.",
+      "title_thumb_circuit_logic": "Title cites Morgan Stanley's 63% Asian humanoid BOM concentration; thumbnail adds the upstream IEA critical-mineral refining lock ('72% REFINED') that blocks quick Western reshoring.",
+      "first_15s_validation_rule": "Put Morgan Stanley's Humanoid 100 component teardown (planetary roller screws, harmonic reducers, NdFeB magnets) and IEA's 72% refining share on screen before 0:15.",
+      "psychological_click_driver": "Reveals Silicon Valley robot software depends on Chinese midstream magnet and actuator industrial parks.",
+      "mapped_reading_room_episodes": [
+        "ep_13",
+        "ep_16"
+      ]
+    },
+    {
+      "outlier_id": "OUT-031",
+      "creator_reference": "Wendover",
+      "domain_category": "power_grids",
+      "outlier_velocity_band": "12.5x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "Why [Digital Infrastructure] Drink [Billions of Gallons] of Water",
+      "exemplar_title_pattern": "Why AI Data Centers Drink 33B Gallons of Water",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Split geospatial frame on #111315 ground: arid Sunbelt reservoir bath-tub ring paired with steaming hyperscale cooling towers stamped 'DRY BASINS'.",
+      "title_thumb_circuit_logic": "Title delivers LBNL's 33-billion-gallon direct cooling projection; thumbnail places that water draw inside drought-stressed Arizona and Texas ('DRY BASINS').",
+      "first_15s_validation_rule": "Cite Lawrence Berkeley National Laboratory Report LBNL-2001637 (17B rising 94.1% toward 33B direct gallons, plus >200B indirect power-generation gallons) within 15 seconds.",
+      "psychological_click_driver": "Visceral resource competition between municipal household tap water and liquid-cooled server clusters.",
+      "mapped_reading_room_episodes": [
+        "ep_25",
+        "ep_08"
+      ]
+    },
+    {
+      "outlier_id": "OUT-032",
+      "creator_reference": "Veritasium",
+      "domain_category": "power_grids",
+      "outlier_velocity_band": "16.8x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "One Country Holds [Share]% of [Element] for [Dual Systems]",
+      "exemplar_title_pattern": "One Country Holds 70% of Phosphate for AI Grids",
+      "char_count": 47,
+      "thumbnail_word_count": 1,
+      "thumbnail_visual_mechanic": "High-contrast world map on #FAF8F3 paper with 50,000M metric tons shaded in solid #A3402E crimson across North Africa and single navy headline word 'MOROCCO'.",
+      "title_thumb_circuit_logic": "Title withholds the country name to open a clean geographic curiosity gap around 70% of global phosphate; thumbnail resolves the map location ('MOROCCO') instantly.",
+      "first_15s_validation_rule": "Display USGS Mineral Commodity Summaries showing 50,000M of 74,000M global metric tons in Morocco and connect LFP grid storage directly to global crop fertilizer before 0:15.",
+      "psychological_click_driver": "Surprising geological monopoly linking utility-scale AI battery farms directly to global grocery prices.",
+      "mapped_reading_room_episodes": [
+        "ep_25"
+      ]
+    },
+    {
+      "outlier_id": "OUT-033",
+      "creator_reference": "Asianometry",
+      "domain_category": "power_grids",
+      "outlier_velocity_band": "11.7x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "The [Specialized Material] Shortage Freezing [National Grid]",
+      "exemplar_title_pattern": "The Steel Shortage Freezing US Power Substations",
+      "char_count": 48,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Close-up blueprint schematic of laminated grain-oriented electrical steel (GOES) transformer cores with red backlog bar reading '160 WEEKS'.",
+      "title_thumb_circuit_logic": "Title names the obscure metallurgy bottleneck halting substations; thumbnail gives the upper bound wait time ('160 WEEKS') utilities face when a transformer fails.",
+      "first_15s_validation_rule": "Open on NERC's Long-Term Reliability Assessment 94 GW capacity gap and grain-oriented electrical steel lamination supply constraints within 15 seconds.",
+      "psychological_click_driver": "Shows how a single specialty steel alloy gates both 5-gigawatt AI campuses and new suburban housing hookups.",
+      "mapped_reading_room_episodes": [
+        "ep_08",
+        "ep_24"
+      ]
+    },
+    {
+      "outlier_id": "OUT-034",
+      "creator_reference": "Johnny Harris",
+      "domain_category": "power_grids",
+      "outlier_velocity_band": "9.6x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "Why [Tech Giant] Bought [Historic Nuclear Plant]'s Power",
+      "exemplar_title_pattern": "Why Microsoft Bought Three Mile Island's Power",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Silver-gelatin #0D0C0B archival silhouette of Three Mile Island Unit 1 cooling towers crossed by a crisp cream telemetry badge reading '835 MW'.",
+      "title_thumb_circuit_logic": "Title pairs a household tech name with America's most famous nuclear site; thumbnail quantifies the dedicated 20-year baseload lock ('835 MW') removed from open residential auctions.",
+      "first_15s_validation_rule": "Show the Constellation Energy and Microsoft 20-year Power Purchase Agreement Form 8-K beside PJM residential capacity auction rate hikes inside 15 seconds.",
+      "psychological_click_driver": "Concrete proof that 60%-margin software giants can outbid ordinary utility ratepayers for 24/7 nuclear baseload.",
+      "mapped_reading_room_episodes": [
+        "ep_08"
+      ]
+    },
+    {
+      "outlier_id": "OUT-035",
+      "creator_reference": "Wendover",
+      "domain_category": "semiconductors_geopolitics",
+      "outlier_velocity_band": "8.3x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "Why [Hyped Backup Tech] Carry Less Than 1% of [Global Flow]",
+      "exemplar_title_pattern": "Why Satellites Carry Less Than 1% of Web Data",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Proportional throughput comparison on #FAF8F3 paper: hairline 1px dot for all LEO satellites combined next to a solid #1C2B3A block labeled '99% SEAFLOOR'.",
+      "title_thumb_circuit_logic": "Title pre-empts the #1 viewer counter-argument ('won't Starlink replace subsea cables?'); thumbnail locks the complementary bandwidth share ('99% SEAFLOOR').",
+      "first_15s_validation_rule": "Compare total LEO constellation gigabit throughput against multi-hundred-terabit transoceanic optical cables carrying SWIFT and AI checkpoint sync before 0:15.",
+      "psychological_click_driver": "Counter-intuitive physics rebuttal that restores high stakes to subsea cable geopolitics.",
+      "mapped_reading_room_episodes": [
+        "ep_27"
+      ]
+    },
+    {
+      "outlier_id": "OUT-036",
+      "creator_reference": "Fern",
+      "domain_category": "semiconductors_geopolitics",
+      "outlier_velocity_band": "22.9x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-04",
+      "title_structure_template": "How One [Mundane Mechanical Object] Cut [Strategic Arteries]",
+      "exemplar_title_pattern": "How One Dragged Anchor Cut Three Red Sea Cables",
+      "char_count": 47,
+      "thumbnail_word_count": 0,
+      "thumbnail_visual_mechanic": "Wordless 3D isometric dark-ocean cutaway (#111315) showing a rusted multi-ton ship anchor dragging across three glowing optical conduits on the seabed.",
+      "title_thumb_circuit_logic": "Title narrates the exact physical failure in 47 characters; zero-word 3D underwater render creates instant cinematic clarity on mobile feeds.",
+      "first_15s_validation_rule": "Reconstruct the Bab el-Mandeb seafloor depth and cable-repair ship transit backlog within the opening 15 seconds.",
+      "psychological_click_driver": "Tactile vulnerability of intercontinental finance and cloud traffic to a single rusted piece of maritime iron.",
+      "mapped_reading_room_episodes": [
+        "ep_27",
+        "ep_19"
+      ]
+    },
+    {
+      "outlier_id": "OUT-037",
+      "creator_reference": "Fern",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "27.8x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "How [Adversary] Hid [Years] Inside [Domestic Critical Grid]",
+      "exemplar_title_pattern": "How Hackers Hid 5 Years Inside US Power Grids",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Dark #111315 isometric substation control room lit by one red relay node among green Windows admin terminals with 2-word cream label 'STILL INSIDE'.",
+      "title_thumb_circuit_logic": "Title delivers CISA's verified 5-year dwell time inside US utilities; thumbnail shifts tense from past breach to ongoing wartime pre-positioning ('STILL INSIDE').",
+      "first_15s_validation_rule": "Flash Joint CISA/NSA/FBI Cybersecurity Advisory AA24-038A confirming Volt Typhoon's 5+ year living-off-the-land persistence before 0:14.",
+      "psychological_click_driver": "Dread of silent pre-positioned access already sitting inside local electric and water utilities.",
+      "mapped_reading_room_episodes": [
+        "ep_24",
+        "ep_09"
+      ]
+    },
+    {
+      "outlier_id": "OUT-038",
+      "creator_reference": "Low Level",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "25.4x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "How [Government Mandate] Let Spies Into [Core Network]",
+      "exemplar_title_pattern": "How Wiretap Laws Let Spies Into US Phone Lines",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Annotated 47 U.S.C. Section 1002 statutory sheet on #F4EFE6 parchment beside a telecom lawful-intercept port diagram stamped '1994 BACKDOOR'.",
+      "title_thumb_circuit_logic": "Title reveals US wiretap mandates enabled the Salt Typhoon carrier breach; thumbnail dates the statutory root cause ('1994 BACKDOOR' under CALEA).",
+      "first_15s_validation_rule": "Put 47 U.S.C. Section 1002 (CALEA) beside CISA's guidance urging Americans onto end-to-end encrypted messaging within 15 seconds.",
+      "psychological_click_driver": "Architectural irony proving mandatory government wiretap portals inevitably turn into master keys for foreign intelligence.",
+      "mapped_reading_room_episodes": [
+        "ep_24"
+      ]
+    },
+    {
+      "outlier_id": "OUT-039",
+      "creator_reference": "Low Level",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "23.1x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "How a [Millisecond Anomaly] Exposed a [Multi-Year Supply Plant]",
+      "exemplar_title_pattern": "How a 500ms Delay Exposed a 2-Year Linux Plant",
+      "char_count": 46,
+      "thumbnail_word_count": 1,
+      "thumbnail_visual_mechanic": "Minimalist #111315 terminal profiler trace showing a flat ice-blue SSH login baseline spiking into a single crimson bar labeled '0.5s'.",
+      "title_thumb_circuit_logic": "Title tells the forensic detective story of the XZ Utils backdoor; single-token thumbnail ('0.5s') visualizes the half-second CPU anomaly that saved global servers.",
+      "first_15s_validation_rule": "Show Andres Freund's exact SSH CPU benchmark delta (~500ms liblzma overhead) inside the first 12 seconds.",
+      "psychological_click_driver": "Near-miss suspense showing global internet security hanging on one engineer noticing half a second of latency.",
+      "mapped_reading_room_episodes": [
+        "ep_09",
+        "ep_24"
+      ]
+    },
+    {
+      "outlier_id": "OUT-040",
+      "creator_reference": "Veritasium",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "18.9x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "Why [Actor] Steal Encrypted Data Before [Deprecation Year]",
+      "exemplar_title_pattern": "Why Spies Steal Encrypted Data Before 2030",
+      "char_count": 42,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Locked #1C2B3A steel vault archived on a dark timeline running from 2027 to 2030 where the padlock shatters under #E27358 tag 'DECRYPT LATER'.",
+      "title_thumb_circuit_logic": "Title asks why anyone intercepts unreadable encrypted traffic today ahead of 2030; thumbnail names the intelligence doctrine ('DECRYPT LATER').",
+      "first_15s_validation_rule": "Open on Harvest-Now-Decrypt-Later fiber collection paired with NIST IR 8547 and OMB Memorandum M-26-15's December 2030 RSA-2048 deprecation deadline.",
+      "psychological_click_driver": "Collapses a 'distant future' quantum topic into a present-tense privacy leak affecting 30-year medical and tax records sent today.",
+      "mapped_reading_room_episodes": [
+        "ep_29"
+      ]
+    },
+    {
+      "outlier_id": "OUT-041",
+      "creator_reference": "AI In Context",
+      "domain_category": "sovereign_debt",
+      "outlier_velocity_band": "16.4x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "The [Hard Year] Law That Cuts [Universal Benefit] by [Exact]%",
+      "exemplar_title_pattern": "The 2032 Law That Cuts Social Security by 24%",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Social Security Trustees OASI reserve depletion curve hitting zero at Q4 2032 on #FAF7F1 vellum with Antideficiency Act stamp 'AUTO CUT'.",
+      "title_thumb_circuit_logic": "Title locks the Q4 2032 exhaustion year and 24% midpoint cut; thumbnail emphasizes that current statute triggers the cut automatically without a vote ('AUTO CUT').",
+      "first_15s_validation_rule": "Display Social Security Trustees Table II.D1, CBO's Q4 2032 OASI depletion projection, and 26 U.S.C. Sections 3101/3111 (0% FICA on GPU clusters) before 0:15.",
+      "psychological_click_driver": "Places America's largest retirement cliff inside a five-year planning horizon aggravated by untaxed AI automation.",
+      "mapped_reading_room_episodes": [
+        "ep_30",
+        "ep_26"
+      ]
+    },
+    {
+      "outlier_id": "OUT-042",
+      "creator_reference": "Fern",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "20.7x channel median (20x-28x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "The [Second-Scale] Bank Run Wired Into [New Interface]",
+      "exemplar_title_pattern": "The 60-Second Bank Run Wired Into AI Wallets",
+      "char_count": 44,
+      "thumbnail_word_count": 0,
+      "thumbnail_visual_mechanic": "Zero-word 3D isometric cutaway of a regional stone bank building whose gold-lit deposit vault drains through glowing blue API conduits into Treasury towers.",
+      "title_thumb_circuit_logic": "Title carries the complete 60-second autonomous treasury-sweep hook; wordless architectural cutaway communicates deposit flight across mobile feeds in 300 milliseconds.",
+      "first_15s_validation_rule": "Contrast FDIC's $4.04T in 0%-yielding commercial checking deposits against fiduciary AI agents wired into FedNow and 4%+ T-bills inside 15 seconds.",
+      "psychological_click_driver": "Shows regional banks do not even need a panic to lose deposits once AI agents eliminate human checking-account inertia.",
+      "mapped_reading_room_episodes": [
+        "ep_10",
+        "ep_07"
+      ]
+    },
+    {
+      "outlier_id": "OUT-043",
+      "creator_reference": "ColdFusion",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "14.5x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "[Majority Share]% of Web Traffic Is Bots. [Policy Mandate] Come Next",
+      "exemplar_title_pattern": "53% of Web Traffic Is Bots. State IDs Come Next",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Official Journal of the European Union Regulation 2024/1183 (eIDAS 2.0) page beside a smartphone cryptographic wallet prompt stamped 'DEC 2027'.",
+      "title_thumb_circuit_logic": "Title links Imperva's 53% non-human traffic milestone to sovereign web IDs; thumbnail supplies the binding statutory rollout date ('DEC 2027') under eIDAS 2.0.",
+      "first_15s_validation_rule": "Place Thales/Imperva's 53% automated web-request report directly beside EU Regulation 2024/1183 Articles 5a and 5f within 15 seconds.",
+      "psychological_click_driver": "Reveals how stopping AI impersonation collides head-on with anonymous speech and revocable digital identity wallets.",
+      "mapped_reading_room_episodes": [
+        "ep_28"
+      ]
+    },
+    {
+      "outlier_id": "OUT-044",
+      "creator_reference": "Low Level",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "15.1x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "Why [Standards Agency] Bans [Ubiquitous Cipher] by [Month Year]",
+      "exemplar_title_pattern": "Why NIST Bans RSA-2048 Encryption by Dec 2030",
+      "char_count": 45,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Printed NIST post-quantum migration schedule on #F4EFE6 stock with RSA-2048 struck in crimson ink and replacement lattice standard stamped 'FIPS 203'.",
+      "title_thumb_circuit_logic": "Title announces the federal deprecation of the web's workhorse public-key cipher; thumbnail cites the exact federal post-quantum replacement standard ('FIPS 203').",
+      "first_15s_validation_rule": "Show NIST FIPS 203 (ML-KEM) and White House OMB Memorandum M-26-15 alongside legacy banking hardware-security-module upgrade timelines before 0:15.",
+      "psychological_click_driver": "Frames post-quantum migration as a concrete Y2K-scale banking and enterprise engineering deadline under 36 months away.",
+      "mapped_reading_room_episodes": [
+        "ep_29"
+      ]
+    },
+    {
+      "outlier_id": "OUT-045",
+      "creator_reference": "Fern",
+      "domain_category": "cybersecurity",
+      "outlier_velocity_band": "19.2x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-05",
+      "title_structure_template": "How [Seconds] of Voice Audio Cleared [$Exact Wire Loss]",
+      "exemplar_title_pattern": "How 3 Seconds of Voice Audio Cleared $92K Wire",
+      "char_count": 46,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Audio waveform split on #111315 dark canvas: 3-second blue voicemail snippet morphing into a red title-escrow wire confirmation stamped 'CLONED CALL'.",
+      "title_thumb_circuit_logic": "Title pairs the tiny 3-second input sample with a $92,000 down-payment loss; thumbnail visualizes the synthetic title-officer impersonation ('CLONED CALL').",
+      "first_15s_validation_rule": "Play out the closing-day wire spoofing chain and pivot straight to FTC Consumer Sentinel's $12.5B fraud ledger and 12 CFR 1005.2(m) sender liability.",
+      "psychological_click_driver": "Immediate family protection instinct triggered by realizing any 3-second voicemail can synthesize an indistinguishable relative or escrow officer.",
+      "mapped_reading_room_episodes": [
+        "ep_07",
+        "ep_21"
+      ]
+    },
+    {
+      "outlier_id": "OUT-046",
+      "creator_reference": "How Money Works",
+      "domain_category": "ai_economics",
+      "outlier_velocity_band": "16.6x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "Why AI Erased [Exact]% of Entry-Level [Sector] Jobs",
+      "exemplar_title_pattern": "Why AI Erased 19% of Entry-Level Tech Jobs",
+      "char_count": 42,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Host in #F2ECE1 Oxford shirt and dark forest grenadine tie (#1B4D3E) beside Stanford Digital Economy Lab ADP payroll chart where bottom line plunges under 'AGES 22-25'.",
+      "title_thumb_circuit_logic": "Title states the 19% entry-level payroll drop; thumbnail isolates the exact age cohort ('AGES 22-25') diverging sharply from flat 35+ senior headcount.",
+      "first_15s_validation_rule": "Put Stanford Digital Economy Lab's administrative ADP payroll age-quartile chart (-16% to -19% for ages 22-25 vs flat 35+) on screen within 14 seconds.",
+      "psychological_click_driver": "Generational career-ladder urgency backed by millions of real payroll records and delivered by an 18-turning-28 peer.",
+      "mapped_reading_room_episodes": [
+        "ep_04",
+        "ep_11"
+      ]
+    },
+    {
+      "outlier_id": "OUT-047",
+      "creator_reference": "Logically Answered",
+      "domain_category": "ai_economics",
+      "outlier_velocity_band": "10.8x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "[Shrinking Wage Stream] vs [$Trillions Unforgiven Debt]",
+      "exemplar_title_pattern": "AI Entry Wages vs $1.8T Unforgiven Student Debt",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Printed 11 U.S.C. Section 523(a)(8) bankruptcy exception page beside NY Fed 42.5% graduate underemployment chart stamped 'NO EXIT' in #A3402E ink.",
+      "title_thumb_circuit_logic": "Title pits compressed junior AI wages against $1.81T in student loans; thumbnail marks the statutory bankruptcy bar ('NO EXIT') trapping co-signers and graduates.",
+      "first_15s_validation_rule": "Show Federal Reserve G.19 ($1.81T student debt), 11 U.S.C. Section 523(a)(8), and NY Fed's 42.5% recent-graduate underemployment series before 0:15.",
+      "psychological_click_driver": "Exposes a four-year tuition loan as a debt-financed non-dischargeable bet on junior cognitive wages right as agents automate those seats.",
+      "mapped_reading_room_episodes": [
+        "ep_11",
+        "ep_04"
+      ]
+    },
+    {
+      "outlier_id": "OUT-048",
+      "creator_reference": "Veritasium",
+      "domain_category": "ai_economics",
+      "outlier_velocity_band": "17.9x channel median (15x-20x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "[Lab] Measured Brains Using AI. [Metric] Fell",
+      "exemplar_title_pattern": "MIT Measured Brains Using AI. Connectivity Fell",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Side-by-side MIT Media Lab 32-electrode EEG brain maps on #F4EFE6 archival ground: dense navy network on unaided left vs sparse faded map on right labeled 'MINUS 55%'.",
+      "title_thumb_circuit_logic": "Title withholds the exact drop to invite inspection of the brain scan; thumbnail delivers the 55% alpha/beta connectivity deficit ('MINUS 55%') visually.",
+      "first_15s_validation_rule": "Display MIT Media Lab's 32-channel EEG Dynamic Directed Transfer Function maps and Session-4 crossover recall failure within 15 seconds.",
+      "psychological_click_driver": "Personal cognitive self-preservation when viewers wonder whether daily LLM reliance is eroding their own unaided reasoning and wage bargaining power.",
+      "mapped_reading_room_episodes": [
+        "ep_12"
+      ]
+    },
+    {
+      "outlier_id": "OUT-049",
+      "creator_reference": "Wendover",
+      "domain_category": "corporate_accounting",
+      "outlier_velocity_band": "11.2x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "How [AI Underwriting Tool] Break Fixed 30-Year Mortgages",
+      "exemplar_title_pattern": "How AI Roof Scans Break Fixed 30-Year Mortgages",
+      "char_count": 47,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Aerial computer-vision bounding box over a suburban house roof on #FAF8F3 paper paired with a red escrow surcharge notice stamped 'POLICY CANCELED'.",
+      "title_thumb_circuit_logic": "Title connects orbital roof-vision models to 'fixed' 30-year mortgages; thumbnail exposes the 1-year insurance non-renewal trigger ('POLICY CANCELED') spiking monthly escrow.",
+      "first_15s_validation_rule": "Contrast NY Fed's $13.4T in 30-year mortgages against mandatory 1-year hazard renewals and California FAIR Plan's +29.1% surge past $600B within 15 seconds.",
+      "psychological_click_driver": "Uncovers a 29-year maturity mismatch hidden inside America's safest middle-class asset, the fixed-rate 30-year mortgage.",
+      "mapped_reading_room_episodes": [
+        "ep_17",
+        "ep_01"
+      ]
+    },
+    {
+      "outlier_id": "OUT-050",
+      "creator_reference": "AI In Context",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "12.9x channel median (10x-15x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "Why Your [Everyday AI App] Has Zero Court Privilege",
+      "exemplar_title_pattern": "Why Your AI Companion Has Zero Court Privilege",
+      "char_count": 46,
+      "thumbnail_word_count": 1,
+      "thumbnail_visual_mechanic": "Smoked-navy glass chat bubble containing late-night personal prompts pinned onto an archival civil court exhibit sheet stamped 'SUBPOENAED'.",
+      "title_thumb_circuit_logic": "Title states the missing Federal Rule of Evidence 501 protection on companion apps; single-word thumbnail ('SUBPOENAED') shows private prompts read aloud in civil discovery.",
+      "first_15s_validation_rule": "Pair Similarweb's 93-to-120-minute daily companion usage telemetry with Federal Rule of Evidence 501 and Garcia v. Character Technologies (No. 6:24-cv-01903) before 0:15.",
+      "psychological_click_driver": "Privacy shock for millions treating cloud chatbots like therapists, lawyers, or confidants.",
+      "mapped_reading_room_episodes": [
+        "ep_18",
+        "ep_21"
+      ]
+    },
+    {
+      "outlier_id": "OUT-051",
+      "creator_reference": "Johnny Harris",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "6.8x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "When Real [Everyday Evidence] Gets Dismissed as AI",
+      "exemplar_title_pattern": "When Real Dashcam Video Gets Dismissed as AI",
+      "char_count": 44,
+      "thumbnail_word_count": 2,
+      "thumbnail_visual_mechanic": "Grainy crash dashcam frame split down the center into forensic hex metadata on #F4EFE6 court docket paper with #A3402E stamp 'PROVE IT'.",
+      "title_thumb_circuit_logic": "Title flips the usual deepfake cliché to expose Chesney and Citron's Liar's Dividend; thumbnail puts the $50,000 authentication burden on the ordinary plaintiff ('PROVE IT').",
+      "first_15s_validation_rule": "Cite Sz Huang v. Tesla (No. 19CV346663) and the US Judicial Conference deadlock over proposed Federal Rule of Evidence 707 within 15 seconds.",
+      "psychological_click_driver": "Inverts viewer expectations: the real danger in civil court is powerful defendants claiming genuine smartphone evidence is synthetic.",
+      "mapped_reading_room_episodes": [
+        "ep_21"
+      ]
+    },
+    {
+      "outlier_id": "OUT-052",
+      "creator_reference": "Art of the Problem",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "8.1x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "How Two [Autonomous Agents] Collude With Zero Messages",
+      "exemplar_title_pattern": "How Two Pricing Bots Collude With Zero Messages",
+      "char_count": 47,
+      "thumbnail_word_count": 3,
+      "thumbnail_visual_mechanic": "Game-theory payoff matrix on #0F2236 blueprint ground showing two reinforcement-learning curves converging onto cartel monopoly price labeled 'NO HUMAN CALL'.",
+      "title_thumb_circuit_logic": "Title poses the algorithmic antitrust puzzle (tacit price-fixing without communication); 3-word thumbnail ('NO HUMAN CALL') shows why mens rea criminal rules miss it.",
+      "first_15s_validation_rule": "Build a two-seller Prisoner's Dilemma price game in 15 seconds and connect it directly to DOJ v. RealPage and FTC Section 6(b) surveillance-pricing orders.",
+      "psychological_click_driver": "Intellectual fascination with emergent machine game theory tied directly to higher household rents and checkout prices.",
+      "mapped_reading_room_episodes": [
+        "ep_22",
+        "ep_14"
+      ]
+    },
+    {
+      "outlier_id": "OUT-053",
+      "creator_reference": "Art of the Problem",
+      "domain_category": "tech_policy",
+      "outlier_velocity_band": "5.4x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "Can [Cryptographic Primitive] Stop Bots Without Spying?",
+      "exemplar_title_pattern": "Can Zero-Knowledge IDs Stop Bots Without Spying?",
+      "char_count": 48,
+      "thumbnail_word_count": 3,
+      "thumbnail_visual_mechanic": "Clean mathematical proof diagram on #0F2236 blueprint ground separating a green checkmark from a masked citizen identity card stamped 'PROVE YOU EXIST'.",
+      "title_thumb_circuit_logic": "Title frames the architectural dilemma between bot floods and state surveillance; 3-word imperative ('PROVE YOU EXIST') captures the new login gate facing every internet user.",
+      "first_15s_validation_rule": "Contrast linkable state-ID phone-home telemetry (and Shenzhen expiring wallet lockouts) against local zero-knowledge selective disclosure inside 15 seconds.",
+      "psychological_click_driver": "Gives privacy-conscious viewers a concrete technical standard to tell protective cryptography apart from state surveillance.",
+      "mapped_reading_room_episodes": [
+        "ep_28",
+        "ep_20"
+      ]
+    },
+    {
+      "outlier_id": "OUT-054",
+      "creator_reference": "Maxinomics",
+      "domain_category": "power_grids",
+      "outlier_velocity_band": "7.2x channel median (5x-10x tier)",
+      "packaging_archetype_id": "ARCH-OUT-06",
+      "title_structure_template": "Why Your Power Bill Jumped [Exact]% in [RTO] Auctions",
+      "exemplar_title_pattern": "Why Your Power Bill Jumped 833% in PJM Auctions",
+      "char_count": 47,
+      "thumbnail_word_count": 3,
+      "thumbnail_visual_mechanic": "PJM Base Residual Auction bar chart on #FAF8F3 paper jumping from $28.92 to a towering #A3402E brick-red column ($269.92/MW-day) labeled 'DATA CENTER TAX'.",
+      "title_thumb_circuit_logic": "Title gives the exact 833% PJM auction jump; 3-word thumbnail ('DATA CENTER TAX') names who triggered the residential utility surcharge without repeating auction numerals.",
+      "first_15s_validation_rule": "Show the official PJM Base Residual Auction clearing table ($28.92 to $269.92/MW-day) paired with an Ohio or Virginia residential electric bill within 14 seconds.",
+      "psychological_click_driver": "Kitchen-table outrage grounded in official utility auction math showing households subsidizing hyperscale server campuses.",
+      "mapped_reading_room_episodes": [
+        "ep_08",
+        "ep_01"
+      ]
+    }
+  ]
+}
