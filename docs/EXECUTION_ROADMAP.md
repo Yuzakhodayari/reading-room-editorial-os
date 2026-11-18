@@ -78,7 +78,7 @@
 - [x] **21.** Episode 01 Canonical Master Package (`04_scripts_and_dossiers/ep_01_the_allowance/`)
 - [x] **22.** Episode 02 Complete Word-for-Word Script (`04_scripts_and_dossiers/ep_02_who_buys_the_debt/`)
 - [x] **23.** Episode 03 Complete Word-for-Word Script (`04_scripts_and_dossiers/ep_03_the_depreciation_trick/`)
-- [ ] **24.** 27 Individual Deep Episode Dossiers (`04_scripts_and_dossiers/dossiers/ep_04.md` .. `ep_30.md`)
+- [x] **24.** 27 Individual Deep Episode Dossiers (`04_scripts_and_dossiers/dossiers/ep_04.md` .. `ep_30.md`)
 - [x] **25.** Local Anti-AI & Spoken-Cadence Gate (`04_scripts_and_dossiers/tools/anti_ai_script_gate.mjs`)
 - [x] **26.** Pacing, Re-Hook & Retention Drop-Off Auditor (`04_scripts_and_dossiers/tools/retention_linter.mjs`)
 - [x] **27.** Longitudinal Callback & Universe Continuity Bible (`04_scripts_and_dossiers/27_universe_continuity_and_callbacks_bible.md`)
