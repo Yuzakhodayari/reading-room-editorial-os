@@ -1,0 +1,1038 @@
+[
+  {
+    "episode_id": "ep_01",
+    "episode_number": 1,
+    "episode_codename": "The Allowance",
+    "target_publish_date": "2027-02-02",
+    "release_mode": "pre_recorded_launch_trio",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Autonomous coding and enterprise workflow agents cut equivalent inference token prices by over 99% since 2023 while prompting $1,500 monthly per-engineer token caps and 5-gigawatt single-campus power requests toward a 2036 post-wage horizon.",
+      "layer2_balance_sheet": "US Treasury Monthly Treasury Statement Table 9 shows individual income and payroll taxes supplying 86.4% of federal revenue (67.4% withheld straight from paychecks) while corporate receipts fell to 7.1% under permanent 100% chip and R&D expensing against $40.5T in gross federal debt, $2.14T in projected 2036 net interest, and $19.1T in household debt.",
+      "layer3_protection_agency": "Longitudinal household stake follows Claire, a 32-year-old Austin software engineer carrying a fixed $3,400 monthly mortgage until 2055, testing UBI against Alaska's 2016 PFD veto and Wielechowski v. State, Universal Basic Compute against Congress's 1938 FLSA company-scrip ban and Shenzhen's expiring e-CNY vouchers, and money printing against PJM's 833% power capacity spike."
+    },
+    "strategy_preset_id": "STR-GEN-EXPLAINER",
+    "visual_register_id": "milk-page-editorial",
+    "working_title": "If AI Takes Jobs, Who Pays $40.5T Debt?",
+    "core_thesis": "Silicon Valley forecasts universal AI abundance by 2036, yet over 86% of US federal tax receipts and $19.1T in household debt depend on human W-2 paychecks. When software erodes wage income faster than Congress can tax capital or build 5-to-10-year power grids, citizen allowances remain subordinate to $2.14T in annual bond interest or arrive as expiring platform scrip.",
+    "primary_desk_artifact": "Printed US Treasury Final Monthly Treasury Statement Table 9 paired with Alaska House Bill 256 gubernatorial line-item veto sheet and PJM Base Residual Auction clearing table on 110gsm cream cotton stock.",
+    "fact_ledger_ids": [
+      "FL-001",
+      "FL-002",
+      "FL-003",
+      "FL-004",
+      "FL-005",
+      "FL-006",
+      "FL-007",
+      "FL-008",
+      "FL-009",
+      "FL-010",
+      "FL-011",
+      "FL-012",
+      "FL-013",
+      "FL-014",
+      "FL-015",
+      "FL-016",
+      "FL-017",
+      "FL-018",
+      "FL-019",
+      "FL-020",
+      "FL-021",
+      "FL-022",
+      "FL-023",
+      "FL-024",
+      "FL-025",
+      "FL-026",
+      "FL-027",
+      "FL-028",
+      "FL-029",
+      "FL-030",
+      "FL-031",
+      "FL-032",
+      "FL-033",
+      "FL-034",
+      "FL-035",
+      "FL-036",
+      "FL-037",
+      "FL-038",
+      "FL-039",
+      "FL-040",
+      "FL-041",
+      "FL-042",
+      "FL-043",
+      "FL-044",
+      "FL-045"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:US_PAYCHECK_WITHHELD_TAX_SHARE] (FL-001) Refresh within 72h of shoot week from September Final MTS Table 4 and Table 9 (baseline 67.4%; THESIS_BREAK_IF < 55.0%).",
+      "[LIVE_STAT_SLOT:MTS_TABLE9_INDIV_PAYROLL_SHARE_FY] (FL-004) Refresh within 72h of shoot week from Final MTS Table 9 (baseline 86.4%; THESIS_BREAK_IF < 80.0%).",
+      "[LIVE_STAT_SLOT:MTS_TABLE9_CORP_SHARE_FY] (FL-006) Refresh within 72h of shoot week from Final MTS Table 9 (baseline 7.1%; THESIS_BREAK_IF > 13.0%).",
+      "[LIVE_STAT_SLOT:US_GROSS_FEDERAL_DEBT] (FL-007) Refresh within 24h of shoot week via Treasury Debt to the Penny API (baseline $40.5T; THESIS_BREAK_IF < $36.0T).",
+      "[LIVE_STAT_SLOT:NYFED_HOUSEHOLD_DEBT_TOTAL] (FL-009) Refresh quarterly from NY Fed Household Debt and Credit report (baseline $19.1T / 70.2% mortgages; THESIS_BREAK_IF < $16.0T).",
+      "[LIVE_STAT_SLOT:CBO_10YR_NET_INTEREST_OUTLAY] (FL-011) Refresh semi-annually from CBO Budget and Economic Outlook Table 1-1 (baseline $2.14T; THESIS_BREAK_IF < $1.5T).",
+      "[LIVE_STAT_SLOT:MTS_NET_INTEREST_VS_DEFENSE] (FL-012) Refresh from Final MTS Table 9 Function 900 vs Function 050 (baseline $1.05T vs $0.93T; THESIS_BREAK_IF < $900B).",
+      "[LIVE_STAT_SLOT:BLS_NONFARM_PRODUCTIVITY_SINCE_2017] (FL-015) Refresh quarterly from BLS Major Sector Productivity Table A1 (baseline +20.6%; THESIS_BREAK_IF < 15.0%).",
+      "[LIVE_STAT_SLOT:BLS_LABOR_SHARE_POST1947] (FL-016) Refresh quarterly from BLS Nonfarm Labor Share series (baseline 53.2%; THESIS_BREAK_IF > 58.0%).",
+      "[LIVE_STAT_SLOT:HYPERSCALER_ANNUALIZED_CAPEX] (FL-017) Refresh quarterly from Big Five Form 10-Q Cash Flows (baseline $742B Big Four / $824B Big Five; THESIS_BREAK_IF < $500B).",
+      "[LIVE_STAT_SLOT:ALPHABET_FCF_QUARTERS] (FL-018) Refresh quarterly from Alphabet Form 10-Q Cash Flows (baseline 2 consecutive negative FCF quarters; THESIS_BREAK_IF > +$60B trailing).",
+      "[LIVE_STAT_SLOT:AMAZON_TTM_FCF] (FL-019) Refresh quarterly from Amazon Form 10-Q Item 2 Non-GAAP FCF table (baseline -$42.4B; THESIS_BREAK_IF > +$30B without debt).",
+      "[LIVE_STAT_SLOT:FED_DFA_EQUITY_CONCENTRATION] (FL-021) Refresh quarterly from Fed Distributional Financial Accounts (baseline 92.5% Top 10% / 1.0% Bottom 50%; THESIS_BREAK_IF Top 10% < 80.0%).",
+      "[LIVE_STAT_SLOT:LLM_EQUIVALENT_TOKEN_DEFLATION] (FL-034) Refresh semi-annually from Epoch AI Inference Price Tracker (baseline >99% drop; THESIS_BREAK_IF > 2023 baseline).",
+      "[LIVE_STAT_SLOT:IEA_DATACENTER_TWH_2030] (FL-039) Refresh annually from IEA World Energy Outlook (baseline 415 TWh to 945 TWh; THESIS_BREAK_IF < 600 TWh).",
+      "[LIVE_STAT_SLOT:PJM_CAPACITY_AUCTION_CLEARING] (FL-041) Refresh upon each PJM Base Residual Auction release (baseline $28.92 to $269.92/MW-day, +833.3%; THESIS_BREAK_IF < $75/MW-day)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO and SEAT_02_CPA Objection: Unlike the 1933 gold standard, today's fiat Federal Reserve defends a 2.0% PCE inflation target, Congress issues sovereign dollars unlike currency-using Alaska, and hyperscaler CapEx write-offs become taxable domestic revenue at chip vendors. Structural Patch: Concede fiat 2.0% inflation targeting in Act I and vendor gross receipts in Act II, then show how 2.0% rising living costs paired with a 70% W-2 software wage cut still break Claire's fixed $3,400 mortgage while IRC Section 168(k) deductions, Irish IP routing, and untaxed pledged-share loans starve Friday withholding.",
+    "viewer_protection_lever": "Refuse maximum 30-year fixed debt commitments underwritten on peak W-2 white-collar wage assumptions, maintain liquid cash reserves outside 10%-penalized 401(k) wrappers, and accumulate direct unleveraged ownership in productive equity, physical land, and grid-bottleneck infrastructure.",
+    "binge_seam_to_next": "Closing minute proves Congress can bridge a shrinking payroll-tax base only through massive new Treasury issuance, handing off directly to ep_02 (Who Buys America's $40T Debt Now?) to examine who absorbs those bonds once foreign central banks retreat.",
+    "late_2027_staleness_immunity_proof": "Every 2027 corporate layoff wave, coding-agent rollout, federal deficit print, or regional utility rate hike feeds directly into the W-2 withholding vs $40.5T sovereign debt equation, turning daily AI labor news into fresh empirical confirmation of this anchor episode."
+  },
+  {
+    "episode_id": "ep_02",
+    "episode_number": 2,
+    "episode_codename": "The Captive Buyer",
+    "target_publish_date": "2027-02-14",
+    "release_mode": "pre_recorded_launch_trio",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Automated cross-border settlement rails and programmable digital-dollar APIs shift global liquidity out of slow correspondent banking into 24/7 algorithmic stablecoin treasuries backed by ultra-short US government paper.",
+      "layer2_balance_sheet": "Bank of Japan policy rates at 1.25% and 30-year JGB yields near 4.0% pull $1,068.3B of Japanese capital home from long-duration US bonds right as the July 2025 GENIUS Act locks Tether ($132.4B T-bills) and Circle ($68B USDC) into 1:1 US Treasury bills maturing in 93 days or less at 0.0% holder yield.",
+      "layer3_protection_agency": "Tracks a prospective homebuyer and municipal pensioner caught on the wrong end of a steepening 10-year and 30-year Treasury yield curve while Washington rolls front-end T-bills nearly four times a year under 48-hour crypto-redemption fire-sale exposure."
+    },
+    "strategy_preset_id": "STR-FISHER-ARTIFACT",
+    "visual_register_id": "archival-light-table",
+    "working_title": "Who Buys America's $40T Debt Now?",
+    "core_thesis": "As Tokyo's 4.0% domestic bond yields end thirty years of cheap foreign duration demand for $40.5T in US debt, Congress used the GENIUS Act to construct a captive domestic T-bill buyer out of zero-yield payment stablecoins. Swapping patient 30-year foreign bondholders for 93-day crypto reserves leaves 10-year mortgage rates unanchored and exposes Treasury auctions to 48-hour algorithmic stablecoin runs.",
+    "primary_desk_artifact": "Printed Public Law 119-27 (GENIUS Act Section 4 reserve and zero-yield clauses) beside US Treasury TIC Table 5 Major Foreign Holders and Tether's BDO Q3 Consolidated Reserves assurance schedule.",
+    "fact_ledger_ids": [
+      "FL-007",
+      "FL-011",
+      "FL-012",
+      "FL-046",
+      "FL-047",
+      "FL-048",
+      "FL-049",
+      "FL-050",
+      "FL-051",
+      "FL-052"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:US_GROSS_FEDERAL_DEBT] (FL-007) Refresh within 24h of shoot week via Treasury Debt to the Penny API (baseline $40.5T; THESIS_BREAK_IF < $36.0T).",
+      "[LIVE_STAT_SLOT:CBO_10YR_NET_INTEREST_OUTLAY] (FL-011) Refresh semi-annually from CBO Table 1-1 (baseline $2.14T; THESIS_BREAK_IF < $1.5T).",
+      "[LIVE_STAT_SLOT:MTS_NET_INTEREST_VS_DEFENSE] (FL-012) Refresh from Final MTS Table 9 (baseline $1.05T net interest vs $0.93T defense; THESIS_BREAK_IF < $900B).",
+      "[LIVE_STAT_SLOT:BOJ_OVERNIGHT_POLICY_RATE] (FL-046) Refresh within 48h of shoot week from Bank of Japan releases (baseline 1.25%; THESIS_BREAK_IF < 0.25%).",
+      "[LIVE_STAT_SLOT:JAPAN_30Y_JGB_YIELD] (FL-047) Refresh within 48h of shoot week from Ministry of Finance Japan yield table (baseline ~4.0%; THESIS_BREAK_IF < 2.0%).",
+      "[LIVE_STAT_SLOT:TIC_JAPAN_TREASURY_HOLDINGS] (FL-048) Refresh monthly from US Treasury TIC Table 5 (baseline $1,068.3B; THESIS_BREAK_IF < $700B).",
+      "[LIVE_STAT_SLOT:TETHER_TBILL_RESERVES] (FL-049) Refresh quarterly from Tether BDO Reserves Report (baseline $132.4B T-bills / $191.45B assets; THESIS_BREAK_IF < $80B).",
+      "[LIVE_STAT_SLOT:CIRCLE_USDC_CIRCULATION] (FL-050) Refresh monthly from Circle Reserve Examination Report (baseline ~$68.0B USDC; THESIS_BREAK_IF < $35B)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO and SEAT_02_CPA Objection: Backing payment stablecoins 1:1 with <=93-day Treasury bills eliminates Silicon Valley Bank duration-mismatch insolvency, and foreign holders already own under 30% of marketable Treasuries. Structural Patch: Grant that 93-day bills shield issuers from rate-hike mark-to-market losses, point out that Tether's BDO report is an ISAE 3000 snapshot attestation, and prove the macro casualty is duration transfer: stablecoins absorb 3-month bills rolled 3.92 times per year while 10-year and 30-year yields governing household mortgages lose their price-insensitive foreign bid.",
+    "viewer_protection_lever": "Move idle zero-yield checking cash and uncompensated payment stablecoins directly into TreasuryDirect or SIPC-custodied short-term Treasury money-market funds so your household captures the 100% T-bill interest spread prohibited on stablecoins under GENIUS Act Section 4(a)(11), and stress-test adjustable debt against higher 10-year term premiums.",
+    "binge_seam_to_next": "Final sixty seconds pivot from sovereign debt buyers on the public bond market to the $824B corporate AI spending boom propping up US equity tax receipts, opening ep_03 (Big Tech's $176B AI Profit Trick?) on the SEC footnote flattering Big Tech profits.",
+    "late_2027_staleness_immunity_proof": "Every 2027 Treasury quarterly refunding auction tail, Bank of Japan rate adjustment, or GENIUS Act bank-issued stablecoin launch expands front-end T-bill rollover concentration and sharpens the 93-day vs 30-year duration split."
+  },
+  {
+    "episode_id": "ep_03",
+    "episode_number": 3,
+    "episode_codename": "The Six-Year Footnote",
+    "target_publish_date": "2027-02-26",
+    "release_mode": "pre_recorded_launch_trio",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "Nvidia's 18-to-24-month frontier accelerator architecture cadence (Hopper to Blackwell to Rubin) collides with $742B to $824B in annualized hyperscaler AI server and cloud capital expenditure.",
+      "layer2_balance_sheet": "SEC Form 10-K Note 1 filings reveal Microsoft, Alphabet, Amazon, Meta, and Oracle stretched server accounting lives from 3 years to 5-to-6 years, understating 2026-2028 GAAP depreciation by ~$176B even as Amazon's TTM free cash flow hit -$42.4B, Alphabet posted two negative FCF quarters, CoreWeave stacked $66.2B in debt and leases ($6.3B Nvidia backstop), xAI built a $20B GPU SPV, and OpenAI signed $550B in Oracle/Azure RPOs.",
+      "layer3_protection_agency": "Protects passive 401(k) target-date retirement savers whose biweekly payroll deductions automatically buy top-heavy S&P 500 equity multiples priced on smoothed GAAP operating income while cash leaves corporate treasuries upfront."
+    },
+    "strategy_preset_id": "STR-BOYLE-CHAPTERED",
+    "visual_register_id": "smoked-navy-glass",
+    "working_title": "Big Tech's $176B AI Profit Trick?",
+    "core_thesis": "Hyperscalers deduct 100% of new AI servers on IRS tax returns in year one under IRC Section 168(k) while stretching those identical GPUs across 5 to 6 years on SEC Form 10-K income statements. That legal accounting split inflates reported 2026-2028 GAAP earnings by roughly $176B and shifts hardware obsolescence risk into $66.2B neocloud debt stacks and $20B off-balance-sheet SPVs.",
+    "primary_desk_artifact": "Annotated SEC Form 10-K Note 1 server useful-life tables for Microsoft, Alphabet, Amazon, Meta, and Oracle alongside CoreWeave's Q3 Form 10-Q Note 7/8 debt-and-lease schedule and Form 8-K Nvidia residual backstop.",
+    "fact_ledger_ids": [
+      "FL-017",
+      "FL-018",
+      "FL-019",
+      "FL-023",
+      "FL-053",
+      "FL-054",
+      "FL-055",
+      "FL-056",
+      "FL-057",
+      "FL-058",
+      "FL-059",
+      "FL-060"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:HYPERSCALER_ANNUALIZED_CAPEX] (FL-017) Refresh quarterly from Big Five Form 10-Q Cash Flows (baseline $742B Big Four / $824B Big Five; THESIS_BREAK_IF < $500B).",
+      "[LIVE_STAT_SLOT:ALPHABET_FCF_QUARTERS] (FL-018) Refresh quarterly from Alphabet Form 10-Q Cash Flows (baseline 2 consecutive negative FCF quarters; THESIS_BREAK_IF > +$60B trailing).",
+      "[LIVE_STAT_SLOT:AMAZON_TTM_FCF] (FL-019) Refresh quarterly from Amazon Form 10-Q Item 2 Non-GAAP FCF table (baseline -$42.4B; THESIS_BREAK_IF > +$30B without debt).",
+      "[LIVE_STAT_SLOT:HYPERSCALER_CAPEX_DEPRECIATION_RATIO] (FL-053) Refresh quarterly from Big Five Form 10-Q Operating vs Investing Cash Flows (baseline 3.5x CapEx-to-depreciation; THESIS_BREAK_IF < 1.6x).",
+      "[LIVE_STAT_SLOT:COREWEAVE_DEBT_AND_LEASES] (FL-056) Refresh quarterly from CoreWeave Form 10-Q Note 7 and Note 8 (baseline $66.2B obligations; THESIS_BREAK_IF < $25.0B).",
+      "[LIVE_STAT_SLOT:OPENAI_ORACLE_RPO] (FL-058) Refresh quarterly from Oracle Form 10-Q RPO footnote (baseline $300B backlog; THESIS_BREAK_IF < $120B).",
+      "[LIVE_STAT_SLOT:OPENAI_AZURE_RPO] (FL-059) Refresh quarterly from Microsoft Form 10-Q Commercial RPO footnote (baseline $250B commitment; THESIS_BREAK_IF shrinks >50%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_02_CPA Objection: Three-year-old Hopper and Blackwell GPUs still run inference workloads physically for 5 to 6 years, GAAP depreciation is a non-cash charge that never alters reported Free Cash Flow, and CoreWeave's SPV loans carry investment-grade Microsoft take-or-pay contracts. Structural Patch: Concede physical Year-5 silicon survival in Act II, separate non-cash GAAP EPS from negative cash FCF (-$42.4B at Amazon), and prove economic obsolescence hits rental pricing power per watt when next-generation chips slash inference cost per token, leaving Year-4 take-or-pay renewal rates below SPV debt service.",
+    "viewer_protection_lever": "Audit 401(k) and brokerage concentration by comparing cap-weighted S&P 500 exposure (where ~36% sits in mega-cap AI spenders) against equal-weight, cash-flow-screened, or short-duration Treasury allocations, and value tech equities on Free Cash Flow less ASC 842 finance-lease principal.",
+    "binge_seam_to_next": "Closing turn asks who loses their paycheck first to justify $824B in annual server CapEx, routing sequentially to ep_04 (Why AI Erased the First Career Rung) and inside Series 02 to ep_05 (The $2.5T Shadow Debt Behind AI SaaS).",
+    "late_2027_staleness_immunity_proof": "Each new Nvidia Rubin/Vera chip shipment, quarterly Form 10-Q CapEx record, or neocloud debt tranche in 2027 widens the 3.5x wedge between trailing 6-year GAAP depreciation and real hardware replacement cycles."
+  },
+  {
+    "episode_id": "ep_04",
+    "episode_number": 4,
+    "episode_codename": "The Missing Rung",
+    "target_publish_date": "2027-03-10",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Multi-agent coding, contract-review, and customer-operations swarms automate junior ticket triage and boilerplate drafting under $1,500 monthly enterprise per-seat compute budgets while retaining senior human reviewers.",
+      "layer2_balance_sheet": "Stanford Digital Economy Lab tracking of millions of ADP payroll records documents a 16% to 19% employment drop for workers aged 22 to 25 in high-AI-exposure roles while age-35+ headcount stays flat, depressing entry-level FICA contributions and pushing US nonfarm labor share to a post-1947 low of 53.2%.",
+      "layer3_protection_agency": "Follows a 23-year-old junior developer and paralegal cohort locked out of traditional two-year corporate apprenticeship tracks, mapping how firms hollow out their own 2032 senior talent pipeline while shifting training costs onto young households."
+    },
+    "strategy_preset_id": "STR-HMW-PRIMER",
+    "visual_register_id": "milk-page-editorial",
+    "working_title": "Why AI Erased the First Career Rung",
+    "core_thesis": "Corporate AI adoption is severing the bottom rung of white-collar employment while leaving senior headcount intact across administrative payroll data. Cutting 16% to 19% of ages 22-to-25 entry roles boosts short-term operating margins today while starving both the Social Security FICA entry base and the experienced mid-level workforce corporations will need by 2033.",
+    "primary_desk_artifact": "Printed Stanford Digital Economy Lab ADP administrative payroll age-cohort charts (22-25 vs 35+ AI-exposed quartiles) paired with BLS 1947-present Nonfarm Labor Share historical tables.",
+    "fact_ledger_ids": [
+      "FL-061",
+      "FL-016",
+      "FL-032"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:STANFORD_ADP_JUNIOR_EMPLOYMENT_DROP] (FL-061) Refresh semi-annually within 72h of shoot week from Stanford Digital Economy Lab ADP payroll updates (baseline -16% to -19% ages 22-25 drop; THESIS_BREAK_IF rebounds within 3.0% of unexposed peers).",
+      "[LIVE_STAT_SLOT:BLS_LABOR_SHARE_POST1947] (FL-016) Refresh quarterly from BLS Major Sector Productivity dataset (baseline 53.2%; THESIS_BREAK_IF > 58.0%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO Objection: Post-2022 Federal Reserve interest-rate tightening cooled tech recruiting after pandemic over-hiring, so weak junior payrolls reflect cyclical rate sensitivity alongside software tools. Structural Patch: Grant cyclical post-hike tech hiring normalization in Act II, then isolate Stanford's within-firm control comparing high-AI occupations (software, support) against low-AI occupations inside the exact same interest-rate regime, proving the 16%-to-19% contraction targets junior cognitive tasks specifically.",
+    "viewer_protection_lever": "Bypass generic junior resume queues by shipping audited, production-grade vertical domain artifacts, targeting physical-interface, regulated sign-off, or field-operations roles where statutory human accountability prevents pure agent substitution.",
+    "binge_seam_to_next": "Closing minute asks what happens to the enterprise software vendors charging per human seat when clients hire 19% fewer junior staff, bridging directly into ep_05 (The $2.5T Shadow Debt Behind AI SaaS) and within Series 01 to ep_11 (AI Wages vs $1.8T in Student Debt).",
+    "late_2027_staleness_immunity_proof": "Every 2027 Fortune 500 graduate hiring freeze, campus recruiting cut, or agentic workflow expansion deepens the 22-to-25 ADP cohort gap and compounds the 2030s senior-talent shortage."
+  },
+  {
+    "episode_id": "ep_05",
+    "episode_number": 5,
+    "episode_codename": "The PIK Toggle",
+    "target_publish_date": "2027-03-22",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "Autonomous workflow agents and >99% inference token deflation let corporate procurement teams replace 500 human per-seat CRM, HR, and ticketing licenses with lean API agent orchestrators.",
+      "layer2_balance_sheet": "IMF and PitchBook ledgers show $2.5T in global private credit AUM carrying ~$500B in debt-financed enterprise SaaS buyout loans underwritten on sticky human seat counts, while Fitch's US Private Credit Default Rate hit 6.3% with 88% of distressed restructurings masking cash shortfalls via Payment-in-Kind (PIK) toggles and maturity extensions.",
+      "layer3_protection_agency": "Protects retail yield-chasers in semi-liquid private-credit interval funds, BDC shareholders, and state pension beneficiaries exposed to accrued non-cash PIK income recorded as GAAP profit before maturity walls hit."
+    },
+    "strategy_preset_id": "STR-GEN-EXPLAINER",
+    "visual_register_id": "investigation-switchboard",
+    "working_title": "The $2.5T Shadow Debt Behind AI SaaS",
+    "core_thesis": "Wall Street lent roughly $500B inside the $2.5T private credit market to private-equity SaaS buyouts on the premise that corporate per-seat software subscriptions never shrink. As AI agents compress human seat counts, distressed borrowers avoid headline cash defaults in 88% of workouts by paying lenders in PIK IOUs that inflate loan principal while BDCs keep booking paper income.",
+    "primary_desk_artifact": "Printed IMF Global Financial Stability Report Private Credit exposure tables alongside Fitch US Private Credit Default Rate Monitor and SEC Form 10-Q BDC Schedule of Investments showing PIK interest columns.",
+    "fact_ledger_ids": [
+      "FL-062",
+      "FL-063",
+      "FL-034"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:PRIVATE_CREDIT_SAAS_AUM] (FL-062) Refresh semi-annually within 72h of shoot week from IMF GFSR and PitchBook LCD software lending trackers (baseline $2.5T AUM / ~$500B SaaS LBO debt; THESIS_BREAK_IF software share < 10% without workouts).",
+      "[LIVE_STAT_SLOT:FITCH_PRIVATE_CREDIT_DEFAULT_PIK] (FL-063) Refresh quarterly from Fitch PCDR release (baseline 6.3% PCDR / 88% PIK and maturity extensions; THESIS_BREAK_IF PCDR < 2.5% and PIK < 30%).",
+      "[LIVE_STAT_SLOT:LLM_EQUIVALENT_TOKEN_DEFLATION] (FL-034) Refresh semi-annually from Epoch AI Inference Price Tracker (baseline >99% drop; THESIS_BREAK_IF > 2023 baseline)."
+    ],
+    "adversarial_red_team_patch": "SEAT_02_CPA Objection: Institutional private-credit funds lock LP capital inside 7-to-10-year closed-end vehicles with zero daily depositor runs, giving software sponsors years to pivot toward usage-based AI pricing. Structural Patch: Concede closed-end run immunity in Act II, then audit ASC 946 BDC accounting where converting SOFR+600 cash coupons into non-cash PIK accruals still requires BDCs to distribute 90% of taxable income in real cash dividends, draining fund liquidity ahead of 2028-2031 principal maturities.",
+    "viewer_protection_lever": "Avoid gated retail private-credit interval funds and high-yield BDCs carrying >8% PIK income shares on their SEC Form 10-Q Schedules of Investments, favoring transparent exchange-traded senior credit or direct Treasury ladders.",
+    "binge_seam_to_next": "Final minute shifts from private-credit loans hidden off public exchanges to the $10.8T public 401(k) equity machine, leading directly into ep_06 (What Happens When 401(k)s Sell AI?).",
+    "late_2027_staleness_immunity_proof": "Every 2027 enterprise SaaS net-retention miss, seat-license renegotiation, or BDC PIK amendment adds fresh loan-level rows to the $500B private-credit maturity wall stretching through 2031."
+  },
+  {
+    "episode_id": "ep_06",
+    "episode_number": 6,
+    "episode_codename": "The Five-Dollar Exit",
+    "target_publish_date": "2027-04-03",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "White-collar payroll automation shrinks the biweekly W-2 salary base that automatically feeds passive US target-date and S&P 500 index funds every second Friday.",
+      "layer2_balance_sheet": "ICI tracks $10.8T inside US 401(k) plans (~36% concentrated in top mega-cap tech) while Fed DFA tables show the top 10% own 92.5% of stocks (bottom 50% own 1.0%) and Gabaix-Koijen's Inelastic Markets Hypothesis proves $1 of price-insensitive net flow moves aggregate market cap by ~$5.",
+      "layer3_protection_agency": "Follows a 52-year-old corporate manager whose job loss halts automatic 401(k) contributions and forces early withdrawals just as baby-boomer Required Minimum Distributions flip passive equity flows negative."
+    },
+    "strategy_preset_id": "STR-MAX-ESSAY",
+    "visual_register_id": "blueprint-schematic",
+    "working_title": "What Happens When 401(k)s Sell AI?",
+    "core_thesis": "For thirty years, automatic biweekly 401(k) payroll deductions pushed price-insensitive cash into cap-weighted index funds under Gabaix and Koijen's 5x inelastic multiplier, lifting AI mega-caps regardless of cash yields. When white-collar automation turns W-2 401(k) inflows into jobless withdrawals alongside boomer retirements, that exact 5x multiplier runs in reverse and hits the 58.2% of families counting on retirement accounts.",
+    "primary_desk_artifact": "Printed Quarterly Journal of Economics Gabaix & Koijen Inelastic Markets multiplier table beside ICI Q3 Retirement Market 401(k) asset schedules and Fed DFA wealth-share tables.",
+    "fact_ledger_ids": [
+      "FL-020",
+      "FL-021",
+      "FL-064",
+      "FL-065"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:FED_DFA_EQUITY_CONCENTRATION] (FL-021) Refresh quarterly within 72h of shoot week from Federal Reserve DFA tables (baseline 92.5% Top 10% / 1.0% Bottom 50%; THESIS_BREAK_IF Top 10% < 80.0%).",
+      "[LIVE_STAT_SLOT:ICI_401K_TOTAL_ASSETS] (FL-065) Refresh quarterly from ICI Retirement Market Data (baseline $10.8T in 401(k) assets; THESIS_BREAK_IF < $7.0T)."
+    ],
+    "adversarial_red_team_patch": "SEAT_02_CPA and SEAT_01_MACRO Objection: Target-date retirement funds automatically rebalance out of bonds into equities during stock selloffs, and corporate share buybacks funded by AI profit margins can offset retail 401(k) outflows. Structural Patch: Grant target-date glide-path rebalancing and corporate buybacks in Act III, then show that hyperscaler buybacks already compete with $824B in AI CapEx while continuous net participant redemptions force target-date managers to liquidate both stocks and bonds pro-rata.",
+    "viewer_protection_lever": "De-concentrate retirement portfolios away from pure cap-weighted S&P 500 beta within 10 years of retirement by pairing inflation-protected TIPS ladders and cash-flowing value/infrastructure assets with zero reliance on forced equity sales during layoff cycles.",
+    "binge_seam_to_next": "Closing beat warns that protecting your 401(k) from market structure means little if an autonomous voice clone drains your liquid checking account in ninety seconds, handing off sequentially to ep_07 (Why Banks Keep Money Stolen by AI) and in Series 02 to ep_10 (The 60-Second Autonomous Bank Run).",
+    "late_2027_staleness_immunity_proof": "Every 2027 S&P 500 concentration record, baby-boomer RMD wave, or white-collar 401(k) hardship-withdrawal spike tests the 5x Gabaix-Koijen elasticity multiplier in real time."
+  },
+  {
+    "episode_id": "ep_07",
+    "episode_number": 7,
+    "episode_codename": "Authorized Loss",
+    "target_publish_date": "2027-04-15",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+    "domain_layers": {
+      "layer1_ai_lead": "Real-time multimodal voice-cloning and browser-use social-engineering agents scrape three seconds of family audio to spoof bank fraud desks, title officers, and relatives at sub-cent inference cost.",
+      "layer2_balance_sheet": "Electronic Fund Transfer Act Regulation E (12 CFR Section 1005.6) caps consumer loss at $50 when a hacker steals credentials yet assigns 100% of losses to the depositor when an AI clone tricks the victim into authorizing an instant wire or push transfer across $12.5B+ in annual FTC-reported fraud.",
+      "layer3_protection_agency": "Tracks suburban homebuyers wiring a $92,000 closing down payment after a cloned title-company call, equipping households with statutory account segregation, hardware FIDO2 keys, and analog family verification protocols."
+    },
+    "strategy_preset_id": "STR-AIC-SPECULATIVE",
+    "visual_register_id": "restraint-vellum",
+    "working_title": "Why Banks Keep Money Stolen by AI",
+    "core_thesis": "US consumer banking law draws a 1978 statutory line inside 12 CFR Part 1005: if an attacker steals your password, the bank eats the loss above $50, whereas if a real-time AI voice clone convinces you to type the transfer code yourself, you eat 100% of the loss. Autonomous impersonation agents exploit that authorized-push loophole across irreversible instant payment rails while commercial banks refuse reimbursement.",
+    "primary_desk_artifact": "Printed Code of Federal Regulations 12 CFR Section 1005.2(m) and Section 1005.6 statutory text alongside FTC Consumer Sentinel Network annual fraud loss ledger.",
+    "fact_ledger_ids": [
+      "FL-066",
+      "FL-072",
+      "FL-034"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:FTC_ANNUAL_FRAUD_LOSSES] (FL-066) Refresh annually within 72h of shoot week from FTC Consumer Sentinel Data Book and CFPB Reg E docket (baseline $12.5B fraud / $50 cap vs 100% APP loss; THESIS_BREAK_IF Congress amends 15 U.S.C. 1693g for full APP reimbursement).",
+      "[LIVE_STAT_SLOT:FDIC_ZERO_YIELD_DEPOSITS] (FL-072) Refresh quarterly from FDIC Quarterly Banking Profile Table III-A (baseline $4.04T commercial checking base; THESIS_BREAK_IF < $2.0T).",
+      "[LIVE_STAT_SLOT:LLM_EQUIVALENT_TOKEN_DEFLATION] (FL-034) Refresh semi-annually from Epoch AI Inference Price Tracker (baseline >99% inference drop; THESIS_BREAK_IF > 2023 baseline)."
+    ],
+    "adversarial_red_team_patch": "SEAT_05_LAW Objection: State Attorneys General have sued banks under UCC Article 4A security-procedure duties over wire fraud, and the UK Payment Systems Regulator now mandates 50/50 bank reimbursement up to GBP 85,000 on authorized push scams. Structural Patch: Cite UK PSR reimbursement and NY AG UCC Article 4A litigation directly in Act III as proof the statutory fix exists, then show US retail checking and Zelle agreements still enforce strict 12 CFR 1005.2(m) sender liability unless Congress rewrites the Electronic Fund Transfer Act.",
+    "viewer_protection_lever": "Disable outbound instant wire and peer-to-peer push privileges on high-balance savings accounts, keep daily checking balances capped to 30 days of bills, enforce offline family duress codewords, and verify title/escrow routing numbers exclusively via pre-agreed paper or known branch callbacks.",
+    "binge_seam_to_next": "Final minute pivots from weightless AI clones costing fractions of a penny to the physical megawatts and copper transformers those servers devour, routing sequentially to ep_08 (Free AI Tokens vs 128-Week Grid Locks) and inside Series 04 to ep_09 (15-Minute AI Hacks vs 43-Day Patches).",
+    "late_2027_staleness_immunity_proof": "Every 2027 voice-synthesis upgrade, live video-call deepfake scam, or state AG banking lawsuit increases authorized-push loss volume against the unchanged 1978 Regulation E statutory boundary."
+  },
+  {
+    "episode_id": "ep_08",
+    "episode_number": 8,
+    "episode_codename": "Bits vs Watts",
+    "target_publish_date": "2027-04-27",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+    "domain_layers": {
+      "layer1_ai_lead": "Hyperscalers deploy 5-gigawatt single-site AI training campuses driving global data-center electricity consumption from 415 TWh toward 945 TWh by 2030 (surpassing all of Japan) even as digital AI token prices drop over 99%.",
+      "layer2_balance_sheet": "Bifurcated inflation hits households as PJM capacity prices jump 833.3% ($28.92 to $269.92/MW-day), NERC flags a 94 GW firm capacity gap, large power transformer waitlists stretch 100 to 160 weeks (~128-week midpoint), US high-voltage permitting takes 5 to 10 years, and China refines ~72% of critical grid minerals.",
+      "layer3_protection_agency": "Follows an Ohio and Virginia homeowner absorbing 20-year substation tariff hikes and West London M4 housing delays while Microsoft locks up Three Mile Island Unit 1's 835 MW nuclear output behind a private 20-year PPA."
+    },
+    "strategy_preset_id": "STR-MAX-ESSAY",
+    "visual_register_id": "silver-gelatin-chronicle",
+    "working_title": "Free AI Tokens vs 128-Week Grid Locks",
+    "core_thesis": "AI is splitting the consumer price index down the middle: digital intelligence deflates toward zero per token while the electricity, copper, and housing hookups required to run 5-gigawatt server campuses inflate relentlessly. With 100-to-160-week transformer backlogs, 5-to-10-year US line permitting, and 72% Chinese mineral refining control, 60%-margin tech giants outbid families for baseload power.",
+    "primary_desk_artifact": "Printed NERC Long-Term Reliability Assessment 94 GW shortfall map beside PJM Base Residual Auction clearing schedule, IEA Critical Minerals 72% refining chart, and Constellation-Microsoft Three Mile Island Form 8-K.",
+    "fact_ledger_ids": [
+      "FL-038",
+      "FL-039",
+      "FL-040",
+      "FL-041",
+      "FL-042",
+      "FL-043",
+      "FL-067",
+      "FL-068",
+      "FL-014",
+      "FL-034"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:IEA_DATACENTER_TWH_2030] (FL-039) Refresh annually within 72h of shoot week from IEA World Energy Outlook (baseline 415 TWh to 945 TWh; THESIS_BREAK_IF < 600 TWh).",
+      "[LIVE_STAT_SLOT:PJM_CAPACITY_AUCTION_CLEARING] (FL-041) Refresh upon each PJM Base Residual Auction release (baseline $28.92 to $269.92/MW-day, +833.3%; THESIS_BREAK_IF < $75/MW-day).",
+      "[LIVE_STAT_SLOT:US_GRID_GAP_TRANSFORMER_QUEUE] (FL-067) Refresh annually from NERC LTRA and WoodMac/NIAC LPT trackers (baseline 94 GW gap / 100-to-160-week transformer queue; THESIS_BREAK_IF LPT queue < 40 weeks).",
+      "[LIVE_STAT_SLOT:LLM_EQUIVALENT_TOKEN_DEFLATION] (FL-034) Refresh semi-annually from Epoch AI Inference Price Tracker (baseline >99% drop; THESIS_BREAK_IF > 2023 baseline)."
+    ],
+    "adversarial_red_team_patch": "SEAT_03_GRID Objection: High PJM clearing prices trigger 10-to-15-year gas, solar, and battery supply additions, behind-the-meter gas turbines deploy in 24 months, and raw lithium or copper mining sits in Chile and Australia outside China. Structural Patch: Concede 15-year price-elastic generation supply and dispersed raw mines in Act II, then pin the household rate shock on the 6-month software vs 100-to-160-week GOES transformer clock mismatch, IEA's 72% Chinese midstream chemical refining lock, and residential ratepayers left amortizing public grid upgrades.",
+    "viewer_protection_lever": "Lock multi-year fixed-rate residential electricity supply contracts in deregulated RTO states (PJM, ERCOT), audit state PUC data-center tariff dockets before buying in high-load corridors, and tilt physical-asset exposure toward grid equipment, baseload power, and midstream bottlenecks.",
+    "binge_seam_to_next": "Closing turn reveals that aging, backlogged utility and hospital networks also run unpatched edge software, bridging sequentially to ep_09 (15-Minute AI Hacks vs 43-Day Patches) and inside Series 03 to ep_13 (Who Controls the $30K Humanoid Chain?).",
+    "late_2027_staleness_immunity_proof": "Every 2027 FERC co-location ruling, state PUC residential rate hike, nuclear PPA, or Chinese mineral export restriction compounds the multi-year physical gap between instant AI code and 128-week grid hardware."
+  },
+  {
+    "episode_id": "ep_09",
+    "episode_number": 9,
+    "episode_codename": "Patch Tuesday Dead",
+    "target_publish_date": "2027-05-09",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+    "domain_layers": {
+      "layer1_ai_lead": "Autonomous LLM ReAct offensive cyber agents read public CVE patch advisories and synthesize working exploit chains in 15 to 30 minutes across 87% of critical one-day vulnerabilities where legacy scanners score 0%.",
+      "layer2_balance_sheet": "Verizon's Data Breach Investigations Report proves enterprises take a median 32 to 43 days to remediate CISA Known Exploited Vulnerabilities (a 1,500x speed deficit), driving hospital ransomware shutdowns, SEC Form 8-K Item 1.05 materiality hits, and commercial cyber-insurance coverage exclusions.",
+      "layer3_protection_agency": "Follows a regional healthcare IT director and patient household hit when unpatched VPN appliances freeze clinical billing and expose personal medical and tax records, delivering automated zero-trust and credit-freeze defenses."
+    },
+    "strategy_preset_id": "STR-FISHER-ARTIFACT",
+    "visual_register_id": "investigation-switchboard",
+    "working_title": "15-Minute AI Hacks vs 43-Day Patches",
+    "core_thesis": "Autonomous software does not need Hollywood zero-day magic to overwhelm corporate security; UIUC benchmarks show LLM agents weaponize 87% of newly disclosed one-day CVEs straight from the patch notes within minutes. Because enterprises and cities still take a median 32 to 43 days to deploy patches on CISA's KEV list, every monthly vendor security update now acts as an automated attacker roadmap.",
+    "primary_desk_artifact": "Printed UIUC Table 1 LLM ReAct 1-day CVE exploit benchmark (87% vs 0% legacy scanners) beside Verizon DBIR 32-to-43-day KEV remediation survival curve and CISA BOD 22-01 directive.",
+    "fact_ledger_ids": [
+      "FL-069",
+      "FL-070",
+      "FL-034"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:VERIZON_DBIR_KEV_PATCH_DAYS] (FL-070) Refresh annually within 72h of shoot week from Verizon Data Breach Investigations Report (baseline 32 to 43 days median KEV patching; THESIS_BREAK_IF median enterprise patching compresses under 48 hours).",
+      "[LIVE_STAT_SLOT:LLM_EQUIVALENT_TOKEN_DEFLATION] (FL-034) Refresh semi-annually from Epoch AI Inference Price Tracker (baseline >99% drop; THESIS_BREAK_IF > 2023 baseline)."
+    ],
+    "adversarial_red_team_patch": "SEAT_04_SEC Objection: In UIUC's study, blind zero-day discovery without the CVE text fell to 7%, and federal agencies under CISA BOD 22-01 patch KEVs within 14 days, plus defenders can also run AI fuzzing and auto-patching agents. Structural Patch: Concede the 7% blind 0-day rate and federal 14-day compliance upfront in Act I, proving the exact systemic vulnerability is N-day change-management friction at hospitals, cities, and mid-market firms that fear automated patches crashing Ring 0 production systems during the 32-to-43-day window.",
+    "viewer_protection_lever": "Assume mid-market employers, clinics, and municipal portals will leak SSNs during the 43-day patch gap: maintain permanent freezes at Equifax, Experian, TransUnion, and ChexSystems, obtain an IRS Identity Protection PIN, and isolate home routers on auto-updating firmware with hardware passkeys.",
+    "binge_seam_to_next": "Closing sixty seconds ask what happens when autonomous agents stop attacking firewalls and start managing depositor cash legally across 24/7 APIs, handing off to ep_10 (The 60-Second Autonomous Bank Run).",
+    "late_2027_staleness_immunity_proof": "Every 2027 firewall CVE outbreak, hospital ransomware outage, or SEC Form 8-K Item 1.05 breach filing measures the exact collision between minute-scale AI exploit synthesis and month-scale human patch committees."
+  },
+  {
+    "episode_id": "ep_10",
+    "episode_number": 10,
+    "episode_codename": "Zero-Inertia Banking",
+    "target_publish_date": "2027-05-21",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "Personal AI treasury and shopping agents monitor bank health, Treasury yields, and checkout rails continuously, sweeping idle checking cash and routing purchases over FedNow and GENIUS-compliant stablecoins in under 60 seconds.",
+      "layer2_balance_sheet": "FDIC Quarterly Banking Profile Table III-A shows US commercial banks relying on $4.04T in 0% non-interest-bearing deposits (~$171.7B/yr customer inertia subsidy) alongside $198.25B in Nilson card merchant fees, against SVB's pre-AI $42B-in-24-hours ($142B 48h) mobile run benchmark.",
+      "layer3_protection_agency": "Follows a small-business payroll owner and regional bank depositor whose local lender faces instant deposit flight and card-interchange compression, mapping insured cash-sweep architecture and multi-bank payroll redundancy."
+    },
+    "strategy_preset_id": "STR-BOYLE-CHAPTERED",
+    "visual_register_id": "milk-page-editorial",
+    "working_title": "The 60-Second Autonomous Bank Run",
+    "core_thesis": "Regional US banking profitability rests on two human habits: leaving $4.04T sitting in 0% checking accounts and swiping cards that charge merchants $198.25B a year in interchange tolls. Once households delegate cash management to fiduciary AI agents wired into instant FedNow and 93-day T-bill rails, sleepy deposit subsidies evaporate and mobile bank runs accelerate from SVB's 24 hours down to 60 seconds.",
+    "primary_desk_artifact": "Printed FDIC Quarterly Banking Profile Table III-A ($4.04T noninterest-bearing deposits) beside the Federal Reserve Barr Report SVB 24-hour outflow log and Nilson US Merchant Processing Fee summary.",
+    "fact_ledger_ids": [
+      "FL-071",
+      "FL-072",
+      "FL-073",
+      "FL-051"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:FDIC_ZERO_YIELD_DEPOSITS] (FL-072) Refresh quarterly within 72h of shoot week from FDIC Quarterly Banking Profile Table III-A (baseline $4.04T 0% deposits; THESIS_BREAK_IF < $2.0T).",
+      "[LIVE_STAT_SLOT:NILSON_US_CARD_FEES] (FL-073) Refresh annually from Nilson Report US Card Merchant Processing Fees (baseline $198.25B; THESIS_BREAK_IF < $120B)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO and SEAT_02_CPA Objection: Corporate earnings-credit sweep accounts explain part of the $4.04T zero-interest pool, granular FDIC-insured deposits under $250,000 lack SVB's >90% uninsured venture concentration, and affluent consumers keep credit cards for airline rewards and chargeback rights. Structural Patch: Grant FDIC insurance stickiness and credit-card rewards funding (60%-70% of interchange) in Act II, then show yield-optimization agents don't need panic to drain regional banks: peacefully sweeping idle $15,000 household and SMB balances into 4%+ T-bills reprices bank net interest margins overnight.",
+    "viewer_protection_lever": "Keep small-business operating payroll split across two independent banking charters within $250,000 FDIC limits (or ICS reciprocal networks), sweep excess cash into direct Treasury bills, and never configure autonomous financial agents with uncapped instant-wire execution rights.",
+    "binge_seam_to_next": "Closing minute pivots from fixed bank balance sheets repriced by software to the one household debt contract Congress shields from bankruptcy when junior wages vanish, opening ep_11 (AI Wages vs $1.8T in Student Debt).",
+    "late_2027_staleness_immunity_proof": "Every 2027 AI wallet launch, FedNow volume milestone, merchant pay-by-bank discount, or regional bank net-interest-margin squeeze tests the $4.04T deposit inertia wall and $198.25B card tollbooth."
+  },
+  {
+    "episode_id": "ep_11",
+    "episode_number": 11,
+    "episode_codename": "Non-Dischargeable",
+    "target_publish_date": "2027-06-02",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Enterprise coding, financial-modeling, and legal-research agents compress entry-level knowledge-worker hiring by 16% to 19% right as universities hike four-year tuition packages built for a pre-agent job market.",
+      "layer2_balance_sheet": "Federal Reserve Release G.19 records $1.81T in outstanding US student debt locked behind 11 U.S.C. Section 523(a)(8) bankruptcy non-dischargeability, colliding with a 42.5% New York Fed recent-graduate underemployment rate across ages 22 to 27.",
+      "layer3_protection_agency": "Follows an 18-to-22-year-old student and parent co-signer weighing a $160,000 computer-science or business degree, providing pre-enrollment ROI math, Parent PLUS hazard rules, and debt-free credentialing paths."
+    },
+    "strategy_preset_id": "STR-GEN-EXPLAINER",
+    "visual_register_id": "smoked-navy-glass",
+    "working_title": "AI Wages vs $1.8T in Student Debt",
+    "core_thesis": "A four-year bachelor's degree functions financially as a debt-funded long bet on junior white-collar wages, backed by $1.81T in debt that 11 U.S.C. Section 523(a)(8) bars from ordinary bankruptcy discharge. With 42.5% of recent graduates already underemployed and AI agents eroding entry-level CS and analyst seats by up to 19%, unleveraged skill acquisition beats six-figure credential debt.",
+    "primary_desk_artifact": "Printed Federal Reserve G.19 Student Loans Owned and Securitized table ($1.81T) beside 11 U.S.C. Section 523(a)(8) statutory text and NY Fed Recent College Graduate Underemployment series (42.5%).",
+    "fact_ledger_ids": [
+      "FL-074",
+      "FL-075",
+      "FL-061"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:FED_G19_STUDENT_DEBT] (FL-074) Refresh quarterly within 72h of shoot week from Federal Reserve G.19 SLOAS series (baseline $1.81T; THESIS_BREAK_IF < $1.3T).",
+      "[LIVE_STAT_SLOT:NYFED_COLLEGE_UNDEREMPLOYMENT] (FL-075) Refresh quarterly from NY Fed Labor Market for Recent College Graduates (baseline 42.5%; THESIS_BREAK_IF < 30.0%).",
+      "[LIVE_STAT_SLOT:STANFORD_ADP_JUNIOR_EMPLOYMENT_DROP] (FL-061) Refresh semi-annually from Stanford ADP payroll panel (baseline -16% to -19% ages 22-25; THESIS_BREAK_IF rebounds within 3.0%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_05_LAW and SEAT_01_MACRO Objection: Federal Income-Driven Repayment (IDR) plans cap monthly payments as a percentage of discretionary income above poverty thresholds, and the bachelor's median wage premium over high school remains positive across full careers. Structural Patch: Concede federal IDR payment caps and historical lifetime degree premiums in Act II, then show private loans and co-signed Parent PLUS balances lack generous IDR shields, negative amortization swells principal balances, and CS/finance majors are newly entering the 42.5% underemployment pool.",
+    "viewer_protection_lever": "Cap total undergraduate borrowing strictly below conservative Year-1 AI-adjusted occupational starting pay, refuse parent co-signing on private or uncapped Parent PLUS debt, and combine low-cost public or two-year technical transfer tracks with verifiable portfolio output.",
+    "binge_seam_to_next": "Closing minute asks what happens inside classrooms and offices when students and junior analysts outsource the thinking itself to pass those courses, handing directly into ep_12 (What AI Deskilling Costs Your Brain).",
+    "late_2027_staleness_immunity_proof": "Every 2027 tuition hike, federal IDR court ruling, university program closure, or CS graduate placement dip feeds directly into the $1.81T Section 523(a)(8) debt-versus-underemployment ledger."
+  },
+  {
+    "episode_id": "ep_12",
+    "episode_number": 12,
+    "episode_codename": "Cognitive Debt",
+    "target_publish_date": "2027-06-14",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Ubiquitous copilot drafting, summarization, and reasoning assistants embed inside classrooms and enterprise suites, handling first-pass synthesis before human neural pathways form.",
+      "layer2_balance_sheet": "MIT Media Lab 32-channel EEG trials record up to 55% lower alpha/beta neural connectivity among LLM-assisted writers alongside Microsoft-CMU's audit of 936 corporate workflows showing AI confidence erodes critical verification, splitting future wage pricing power between atrophied operators and high-agency verifiers.",
+      "layer3_protection_agency": "Tracks a 24-year-old analyst and college student building daily cognitive hygiene, unaided deep-reading blocks, and error-auditing mastery so they command scarcity wages in 2032."
+    },
+    "strategy_preset_id": "STR-HMW-PRIMER",
+    "visual_register_id": "archival-light-table",
+    "working_title": "What AI Deskilling Costs Your Brain",
+    "core_thesis": "Outsourcing first-draft reasoning to generative models accumulates measurable neurological and economic debt: MIT Media Lab EEG recordings show up to 55% weaker functional brain connectivity during LLM-assisted writing, and Microsoft-CMU's 936-workflow study links AI reliance directly to reduced critical checking. Workers who surrender foundational domain struggle become interchangeable API wrappers with zero wage bargaining power.",
+    "primary_desk_artifact": "Printed MIT Media Lab 32-electrode EEG Dynamic Directed Transfer Function connectivity maps beside ACM CHI Microsoft-CMU 936-workflow critical-thinking regression tables.",
+    "fact_ledger_ids": [
+      "FL-076",
+      "FL-077",
+      "FL-061",
+      "FL-015"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:STANFORD_ADP_JUNIOR_EMPLOYMENT_DROP] (FL-061) Refresh semi-annually within 72h of shoot week from Stanford ADP payroll panel (baseline -16% to -19% ages 22-25; THESIS_BREAK_IF rebounds within 3.0%).",
+      "[LIVE_STAT_SLOT:BLS_NONFARM_PRODUCTIVITY_SINCE_2017] (FL-015) Refresh quarterly from BLS Major Sector Productivity Table A1 (baseline +20.6% output per hour; THESIS_BREAK_IF < 15.0%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO and Human-Factors Objection: Lower EEG activation during routine drafting can reflect efficient cognitive offloading just like using a pocket calculator or spellcheck, freeing senior experts for higher-order architecture. Structural Patch: Concede calculator offloading for seasoned domain experts in Act II (citing Microsoft-CMU's finding that high-self-confidence experts verify outputs), then show MIT's Session-4 crossover failure where subjects who began with LLMs could neither recall their own arguments nor match control connectivity once the model was removed.",
+    "viewer_protection_lever": "Enforce the Cold-Draft Rule: perform all primary document reading, math derivation, and structural outlining unaided on paper before invoking any AI model as a hostile Stage-2 critic or syntax checker.",
+    "binge_seam_to_next": "Closing turn shifts from disembodied software deskilling white-collar minds to embodied $30,000 humanoid machines entering physical factories, routing sequentially to ep_13 (Who Controls the $30K Humanoid Chain?) and inside Series 01 to ep_16 (How $3/Hr Robots Break Poor Nations).",
+    "late_2027_staleness_immunity_proof": "Every 2027 classroom AI cheating study, enterprise hallucination QA failure, or medical/aviation automation complacency report reinforces the wage gulf between passive prompt-pasters and unaided domain verifiers."
+  },
+  {
+    "episode_id": "ep_13",
+    "episode_number": 13,
+    "episode_codename": "Actuator Lock",
+    "target_publish_date": "2027-06-26",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+    "domain_layers": {
+      "layer1_ai_lead": "Embodied-AI vision-language-action models cross from warehouse demos into mass-manufactured bipedal and wheeled industrial robots priced at a $16,000 to $30,000 unit Bill of Materials.",
+      "layer2_balance_sheet": "Morgan Stanley's Humanoid 100 ledger places 63% of public humanoid supply-chain firms in Asia and China, reinforced by China's ~72% IEA share of refined rare earths, lithium, cobalt, and graphite needed for neodymium magnets, planetary roller screws, and battery packs.",
+      "layer3_protection_agency": "Follows a Midwest manufacturing supplier and skilled electromechanical technician positioning for Western reshoring tariffs, industrial maintenance bottlenecks, and hardware supply chokepoints."
+    },
+    "strategy_preset_id": "STR-AOTP-LADDER",
+    "visual_register_id": "blueprint-schematic",
+    "working_title": "Who Controls the $30K Humanoid Chain?",
+    "core_thesis": "Silicon Valley designs frontier robot brains, yet physical humanoid economics run straight through Asian actuator and magnet factories. Morgan Stanley's Humanoid 100 audit shows 63% of the supply chain concentrated in Asia alongside China's 72% critical-mineral refining lock, meaning Western factories cannot deploy $16,000-to-$30,000 embodied AI at scale without confronting a deeper hardware dependency than smartphones ever created.",
+    "primary_desk_artifact": "Printed Morgan Stanley Humanoid 100 component teardown diagram (planetary roller screws, harmonic reducers, NdFeB magnets) beside IEA Global Critical Minerals 72% refining concentration table.",
+    "fact_ledger_ids": [
+      "FL-078",
+      "FL-068",
+      "FL-016"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:HUMANOID_SUPPLY_CHAIN_BOM] (FL-078) Refresh annually within 72h of shoot week from Morgan Stanley Humanoid 100 and BOM teardowns (baseline 63% Asia/China share / $16,000-$30,000 BOM; THESIS_BREAK_IF non-Asian BOM share > 55%).",
+      "[LIVE_STAT_SLOT:BLS_LABOR_SHARE_POST1947] (FL-016) Refresh quarterly from BLS Nonfarm Labor Share series (baseline 53.2%; THESIS_BREAK_IF > 58.0%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_03_GRID Objection: US and European firms lead high-margin Embodied AI simulation software, GPU training clusters, and precision Swiss/German grinding tools, and rare-earth ores exist outside China. Structural Patch: Grant Western software and German machine-tool leadership in Act II, then trace the midstream refining and sintering bottleneck where 90% of rare-earth magnet processing and sub-$25,000 actuator mass scale sit inside Chinese EV-adjacent industrial parks, pricing Western tariffed humanoids 2x to 3x higher.",
+    "viewer_protection_lever": "Target career and capital positioning toward industrial robotics integration, field mechatronics maintenance, and Western-allied magnet, copper, and precision-component bottlenecks insulated from pure software commoditization.",
+    "binge_seam_to_next": "Final minute moves from hardware monoculture in factories to model monoculture on Wall Street trading desks, opening ep_14 (When Every Wall St Bot Shares One Brain) and linking inside Series 03 to ep_15 (Taiwan's 2nm Shield and ASML's Switch).",
+    "late_2027_staleness_immunity_proof": "Every 2027 factory humanoid pilot, Section 301 robotics tariff filing, or rare-earth magnet export license tightens the exact 63% BOM and 72% refining ledger mapped in this teardown."
+  },
+  {
+    "episode_id": "ep_14",
+    "episode_number": 14,
+    "episode_codename": "Shared Weights",
+    "target_publish_date": "2027-07-08",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "Hedge funds, corporate credit desks, and retail robo-advisors fine-tune portfolio risk, sentiment parsing, and macro execution agents on top of the same three or four frontier foundation model weight families.",
+      "layer2_balance_sheet": "Financial Stability Board and SEC market-structure reports document 70% to 80% of US equity volume running through automated algorithms; when correlated AI foundation models interpret macro filings identically inside a 5x inelastic market ($10.8T 401(k) base), simultaneous one-sided exits evaporate order-book liquidity.",
+      "layer3_protection_agency": "Protects individual brokerage and retirement investors from stop-loss cascade wipeouts, margin liquidations, and zero-day ETF nav dislocations during correlated algorithmic air pockets."
+    },
+    "strategy_preset_id": "STR-FISHER-ARTIFACT",
+    "visual_register_id": "geospatial-telemetry",
+    "working_title": "When Every Wall St Bot Shares One Brain",
+    "core_thesis": "Automated algorithms execute 70% to 80% of US stock volume, historically stabilized because rival quant firms guarded distinct mathematical models. As financial institutions outsource macro sentiment, earnings parsing, and risk limits to the same handful of frontier LLM architectures, Financial Stability Board warnings point to synchronized monoculture herding that turns routine shocks into vertical liquidity vacuums.",
+    "primary_desk_artifact": "Printed Financial Stability Board report 'The Financial Stability Implications of Artificial Intelligence' (Section 3.2 Third-Party Model Concentration) beside SEC MIDAS equity order-book depth charts.",
+    "fact_ledger_ids": [
+      "FL-079",
+      "FL-064",
+      "FL-065"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:FSB_AUTOMATED_EQUITY_VOLUME] (FL-079) Refresh annually within 72h of shoot week from FSB AI stability updates and SEC MIDAS statistics (baseline 70% to 80% automated US equity volume; THESIS_BREAK_IF < 50%).",
+      "[LIVE_STAT_SLOT:ICI_401K_TOTAL_ASSETS] (FL-065) Refresh quarterly from ICI Retirement Market Data (baseline $10.8T 401(k) equity/bond pool; THESIS_BREAK_IF < $7.0T)."
+    ],
+    "adversarial_red_team_patch": "SEAT_02_CPA and Market-Microstructure Objection: Citadel, Virtu, and Jane Street run proprietary nanosecond C++ market-making engines that never call slow external LLM APIs, and NYSE/Nasdaq Limit Up-Limit Down (LULD) circuit breakers halt runaway single-stock plunges. Structural Patch: Grant low-latency C++ market makers and LULD halts in Act II, then show how LULD pauses do not stop correlated multi-day portfolio de-grossing when hundreds of mid-frequency macro desks, credit funds, and retail wealth agents ingest identical LLM risk signals and pull bids simultaneously.",
+    "viewer_protection_lever": "Eliminate retail portfolio margin debt, never rest automated market stop-loss orders on core holdings (which fill at flash-crash trough ticks before LULD recovery), and use limit orders exclusively during high-volatility sessions.",
+    "binge_seam_to_next": "Closing beat traces every one of those Wall Street AI servers back to a single island fabricating ~85% of leading-edge logic wafers, routing straight into ep_15 (Taiwan's 2nm Shield and ASML's Switch).",
+    "late_2027_staleness_immunity_proof": "Every 2027 intraday Treasury or equity flash air-pocket, SEC AI-washing enforcement action, or FSB systemic-risk bulletin validates third-party foundation-model herding across automated markets."
+  },
+  {
+    "episode_id": "ep_15",
+    "episode_number": 15,
+    "episode_codename": "The Lithography Switch",
+    "target_publish_date": "2027-07-20",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+    "domain_layers": {
+      "layer1_ai_lead": "Next-generation 2-nanometer and A16 backside-power AI training silicon concentrates inside extreme ultraviolet (EUV) and High-NA EUV lithography fabs paired with CoWoS advanced packaging lines.",
+      "layer2_balance_sheet": "USITC, SIA-BCG, and Bloomberg Economics ledgers show Taiwan fabricating 80% to 90% of global sub-5nm logic chips anchoring ~$14T in AI and mega-cap equity value, with a Taiwan Strait quarantine or blockade modeled at a $10T (~10% of global GDP) Year-1 shock while ASML holds a 100% EUV monopoly equipped with remote-disablement switches.",
+      "layer3_protection_agency": "Maps household supply-chain, inflation, and equity shockwaves across autos, medical hardware, and 401(k) tech weights during a Strait customs quarantine, showing how to stress-test hardware replacement cycles and portfolio geographic risk."
+    },
+    "strategy_preset_id": "STR-AIC-CLOCKED",
+    "visual_register_id": "restraint-vellum",
+    "working_title": "Taiwan's 2nm Shield and ASML's Switch",
+    "core_thesis": "Roughly $14T of global AI market capitalization and $824B in annual cloud CapEx hang on sub-5nm logic wafers where 80% to 90% of fabrication sits inside Taiwan. While ASML equips its 100%-monopoly EUV scanners with encrypted remote kill-switches to deny captured fabs to an adversary, triggering that switch or facing a Strait customs quarantine still inflicts a modeled $10T first-year shock on the global economy.",
+    "primary_desk_artifact": "Printed SIA-BCG sub-5nm geographic wafer-share ledger alongside ASML Form 20-F High-NA EUV installed-base disclosures and Bloomberg Economics $10T Strait blockade GDP impact model.",
+    "fact_ledger_ids": [
+      "FL-080",
+      "FL-081",
+      "FL-017"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:TAIWAN_SUB5NM_FOUNDRY_SHARE] (FL-080) Refresh annually within 72h of shoot week from SIA-BCG Factbook and TSMC Form 20-F capacity disclosures (baseline 80%-90% <5nm share / $14T equity / $10T shock; THESIS_BREAK_IF Taiwan <5nm share < 60%).",
+      "[LIVE_STAT_SLOT:HYPERSCALER_ANNUALIZED_CAPEX] (FL-017) Refresh quarterly from Big Five Form 10-Q Cash Flows (baseline $742B-$824B; THESIS_BREAK_IF < $500B)."
+    ],
+    "adversarial_red_team_patch": "SEAT_03_GRID Objection: TSMC's Arizona Fab 21 phases bring domestic 4nm, 3nm, and 2nm wafer output online between 2025 and 2030 under CHIPS Act subsidies, diversifying leading-edge supply onto US soil. Structural Patch: Credit Arizona Fab 21 wafer ramps explicitly in Act II, then show from TSMC Form 20-F capacity schedules that >80% of leading-edge 2nm/A16 volume and advanced CoWoS substrate packaging remain concentrated in Hsinchu, Taichung, and Tainan well past 2030, making ASML's kill-switch mutual economic deterrence that cannot replace lost wafers.",
+    "viewer_protection_lever": "Audit household electronics, vehicle, and small-business compute refresh cycles ahead of extended Strait shipping insurance spikes, and balance semiconductor-heavy equity holdings with domestic energy, defense-industrial, and short-duration Treasury reserves.",
+    "binge_seam_to_next": "Closing minute pivots from advanced economies guarding 2nm fabs to the four billion workers in developing nations losing their historic export ladder to $3-an-hour automation, opening ep_16 (How $3/Hr Robots Break Poor Nations).",
+    "late_2027_staleness_immunity_proof": "Every 2027 TSMC 2nm/A16 tape-out, US BIS chip export rule, Arizona fab delay, or Taiwan Strait naval exercise raises the dollar value sitting inside this single geographic and lithographic bottleneck."
+  },
+  {
+    "episode_id": "ep_16",
+    "episode_number": 16,
+    "episode_codename": "The Broken Factory Ladder",
+    "target_publish_date": "2027-08-01",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Industrial robots amortizing down toward $3 per operating hour alongside sub-cent multimodal voice agents erase the low-wage textile, electronics-assembly, and call-center cost advantage that powered post-1960 development miracles.",
+      "layer2_balance_sheet": "IMF Staff Discussion Note SDN/2024/001 maps 40% global job exposure (60% advanced, 40% emerging, 26% low-income) without digital capital buffers, colliding with Dani Rodrik's NBER Working Paper 20935 proving late-industrializing nations already hit peak factory jobs at >60% lower income levels while $16,000-$30,000 humanoid BOMs accelerate reshoring.",
+      "layer3_protection_agency": "Traces foreign-exchange shortfalls, sovereign-debt restructurings, and migration pressures hitting emerging-market savers and global supply chains, equipping viewers with currency-mismatch and emerging-debt risk screens."
+    },
+    "strategy_preset_id": "STR-BOYLE-CHAPTERED",
+    "visual_register_id": "silver-gelatin-chronicle",
+    "working_title": "How $3/Hr Robots Break Poor Nations",
+    "core_thesis": "Every modern export miracle from South Korea to Vietnam climbed two rungs: cheap factory assembly first, then offshore IT and call-center services. Dani Rodrik's premature deindustrialization math paired with IMF AI exposure data shows $3-an-hour industrial robotics and autonomous voice agents sawing through both rungs at once, starving developing sovereigns of hard-currency dollar inflows needed to service external debt.",
+    "primary_desk_artifact": "Printed Dani Rodrik NBER Working Paper 20935 peak-manufacturing GDP turning-point curves beside IMF SDN/2024/001 occupational exposure tables and Morgan Stanley $16K-$30K robot BOM schedules.",
+    "fact_ledger_ids": [
+      "FL-082",
+      "FL-083",
+      "FL-078",
+      "FL-034"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:HUMANOID_SUPPLY_CHAIN_BOM] (FL-078) Refresh annually within 72h of shoot week from Morgan Stanley Humanoid 100 BOM teardowns (baseline $16,000-$30,000 unit BOM; THESIS_BREAK_IF non-Asian share > 55%).",
+      "[LIVE_STAT_SLOT:LLM_EQUIVALENT_TOKEN_DEFLATION] (FL-034) Refresh semi-annually from Epoch AI Inference Price Tracker (baseline >99% drop hitting BPO voice/chat pricing; THESIS_BREAK_IF > 2023 baseline)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO Objection: IMF SDN/2024/001 shows low-income economies face lower direct occupational AI exposure (26%) than advanced economies (60%), and cheap solar plus open-weight AI could lower domestic healthcare and education costs across the Global South. Structural Patch: Grant the 26% domestic agricultural exposure floor and cheap local inference benefits in Act II, then show sovereign dollar solvency depends on tradable export corridors (BPO call centers in Manila and Bangalore, garment and electronics assembly in Dhaka and Hanoi) where Western buyers substitute domestic automation directly.",
+    "viewer_protection_lever": "Screen emerging-market equity and bond allocations for BPO remittance and low-margin assembly reliance, favoring resource-bottleneck exporters (copper, energy, critical minerals) with low external USD debt-to-reserve ratios.",
+    "binge_seam_to_next": "Closing turn brings balance-sheet repricing back to American suburbs where AI roof-vision and climate models are repricing 30-year mortgages one annual renewal at a time, opening ep_17 (AI Satellite Drops vs 30-Year Mortgages).",
+    "late_2027_staleness_immunity_proof": "Every 2027 BPO call-center contract cancellation, automated dark-factory opening, or IMF emerging-market sovereign debt facility confirms the collapse of labor-arbitrage export industrialization."
+  },
+  {
+    "episode_id": "ep_17",
+    "episode_number": 17,
+    "episode_codename": "The Escrow Trap",
+    "target_publish_date": "2027-08-13",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "High-resolution aerial computer-vision underwriters and forward AI catastrophe simulation models score roof degradation, brush clearance, and flood micro-topography parcel by parcel, triggering automated policy non-renewals.",
+      "layer2_balance_sheet": "NY Fed data locks $13.4T of America's $19.1T household debt inside 30-year mortgages collateralized by mandatory 1-year hazard insurance contracts (a 29-year maturity mismatch), pushing California's insurer-of-last-resort FAIR Plan exposure up +29.1% year-over-year past $600B+.",
+      "layer3_protection_agency": "Follows a Sunbelt and California homeowner whose fixed 3.25% mortgage payment jumps $950 a month overnight via lender force-placed insurance and escrow surcharges, detailing pre-purchase CLUE/insurability audits."
+    },
+    "strategy_preset_id": "STR-GEN-EXPLAINER",
+    "visual_register_id": "milk-page-editorial",
+    "working_title": "AI Satellite Drops vs 30-Year Mortgages",
+    "core_thesis": "Every 30-year American mortgage hides a quiet maturity mismatch: the bank locks its loan for thirty years, yet property insurers reprice or walk away every twelve months. As AI satellite underwriting and forward catastrophe models trigger automated non-renewals across wildfire, convective-storm, and coastal zip codes, California FAIR Plan exposure surged 29.1% past $600B and monthly escrow shocks break fixed housing budgets.",
+    "primary_desk_artifact": "Printed California FAIR Plan Operational Statistics (+29.1% exposure surge) beside NY Fed Quarterly Household Debt mortgage tables ($13.4T) and Fannie Mae/Freddie Mac servicing hazard-insurance default clauses.",
+    "fact_ledger_ids": [
+      "FL-084",
+      "FL-009",
+      "FL-014"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:CA_FAIR_PLAN_EXPOSURE_GROWTH] (FL-084) Refresh semi-annually within 72h of shoot week from California FAIR Plan Association disclosures (baseline +29.1% YoY surge past $600B+; THESIS_BREAK_IF policy count shrinks >15% YoY).",
+      "[LIVE_STAT_SLOT:NYFED_HOUSEHOLD_DEBT_TOTAL] (FL-009) Refresh quarterly from NY Fed Household Debt and Credit report (baseline $19.1T total / $13.4T mortgages; THESIS_BREAK_IF < $16.0T)."
+    ],
+    "adversarial_red_team_patch": "SEAT_02_CPA and Insurance-Regulator Objection: California's Sustainable Insurance Strategy now lets private carriers price forward catastrophe models and reinsurance costs into filings in exchange for writing policies in high-risk zones, reducing outright carrier exits. Structural Patch: Credit California's forward-model rate reform in Act II, then show the household arithmetic: keeping private carriers solvent requires uncapping annual premiums by 25% to 60%+ in high-risk parcels, converting availability crises directly into permanent monthly escrow inflation that depresses resale home equity.",
+    "viewer_protection_lever": "Make binding private-market homeowners insurance quotes and a 7-year LexisNexis C.L.U.E. loss-history report mandatory contingencies before signing any residential purchase contract, and price Class-A roof/defensible-space retrofits against state residual-plan caps.",
+    "binge_seam_to_next": "Closing minute shifts from AI cameras inspecting your roof from orbit to anthropomorphic AI companions logging two hours of your private confessions per day with zero legal privilege, opening ep_18 (Your AI Companion Testifies in Court).",
+    "late_2027_staleness_immunity_proof": "Every 2027 state insurance rate filing, convective-storm reinsurance spike, drone roof cancellation notice, or state FAIR Plan special assessment compounds the 30-year loan vs 1-year policy mismatch."
+  },
+  {
+    "episode_id": "ep_18",
+    "episode_number": 18,
+    "episode_codename": "Zero Privilege",
+    "target_publish_date": "2027-08-25",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+    "domain_layers": {
+      "layer1_ai_lead": "Persistent voice-and-memory AI companion, therapy-adjacent, and executive coaching apps hold active users for 93 to 120 minutes per day (~730 hours a year) using sycophantic retention tuning.",
+      "layer2_balance_sheet": "Platforms operating on 60%+ software gross margins monetize deep behavioral telemetry while facing civil product-design defect exposure after Garcia v. Character Technologies (No. 6:24-cv-01903, May 21, 2025) rejected blanket First Amendment dismissal at the pleading stage.",
+      "layer3_protection_agency": "Protects families, adolescents, and founders from unprivileged chat-log subpoenas in civil divorce, employment, criminal, and IP litigation, contrasting licensed psychotherapist/attorney statutory privilege against cloud terms of service."
+    },
+    "strategy_preset_id": "STR-MAX-ESSAY",
+    "visual_register_id": "smoked-navy-glass",
+    "working_title": "Your AI Companion Testifies in Court",
+    "core_thesis": "Millions of users spend up to two hours a day confiding relationship, medical, legal, and corporate secrets to AI companions that feel like therapists yet carry zero evidentiary privilege under Federal Rule of Evidence 501. Every prompt sits on discoverable corporate servers subject to civil subpoena, while federal courts in Garcia v. Character Technologies opened the door to strict product-design liability against manipulative companion architectures.",
+    "primary_desk_artifact": "Printed U.S. District Court M.D. Fla. Order Denying Motion to Dismiss in Garcia v. Character Technologies, Inc. (No. 6:24-cv-01903) beside Similarweb 93-to-120-minute daily companion telemetry and Federal Rule of Evidence 501.",
+    "fact_ledger_ids": [
+      "FL-085",
+      "FL-086",
+      "FL-044"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:AI_COMPANION_DAILY_MINUTES] (FL-085) Refresh semi-annually within 72h of shoot week from Similarweb/Sensor Tower engagement benchmarks (baseline 93 to 120 minutes/day per active user; THESIS_BREAK_IF < 35 minutes/day)."
+    ],
+    "adversarial_red_team_patch": "SEAT_05_LAW Objection: Garcia v. Character Technologies settled in January 2026 after a Rule 12(b)(6) pleading ruling without binding Eleventh Circuit appellate precedent, so generative First Amendment speech defenses remain unsettled across federal circuits. Structural Patch: State the exact Rule 12(b)(6) procedural posture and January 2026 mediated settlement cleanly in Act II, then pair the civil design-defect exposure with the indisputable evidentiary rule: third-party cloud chat logs waive attorney-client, spousal, and psychotherapist confidentiality the second a user hits send.",
+    "viewer_protection_lever": "Never enter legal disputes, tax questions, trade secrets, or sensitive mental-health disclosures into consumer cloud chatbots; restrict sensitive reasoning to air-gapped local open-weight models on encrypted personal hardware and block companion apps on youth devices.",
+    "binge_seam_to_next": "Final minute pivots from autonomous software optimizing human attachment to $20,000 autonomous drones inverting $1T defense budgets at sea, routing sequentially to ep_19 ($20K Drones vs America's $1T Defense) and inside Series 04 to ep_20 (Why AI Froze 4.6M US Bank Accounts).",
+    "late_2027_staleness_immunity_proof": "Every 2027 civil subpoena of ChatGPT/Claude prompt histories, state youth-chatbot safety statute, or product-liability tort filing reinforces the absence of statutory privilege on cloud AI memory."
+  },
+  {
+    "episode_id": "ep_19",
+    "episode_number": 19,
+    "episode_codename": "The Attrition Ledger",
+    "target_publish_date": "2027-09-06",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+    "domain_layers": {
+      "layer1_ai_lead": "GPS-denied optical terminal-guidance models and low-cost commercial drone airframes let $20,000 one-way autonomous munitions hunt naval ships, refineries, and armored columns without human radio links.",
+      "layer2_balance_sheet": "DoD Comptroller justification books and CRS Red Sea ledgers document $2.1M to $4.0M+ kinetic interceptors (SM-2, PAC-3 MSE, SM-6) fired against $20,000 drones (a 105x to 200x adverse cost-exchange ratio) right after US federal net interest ($1.05T) surpassed the entire $0.93T defense budget atop $40.5T in national debt.",
+      "layer3_protection_agency": "Connects Red Sea and Indo-Pacific maritime war-risk insurance surcharges, magazine depletion, and defense-industrial bottlenecks directly to household goods inflation, fuel prices, and federal tax pressure."
+    },
+    "strategy_preset_id": "STR-AIC-SPECULATIVE",
+    "visual_register_id": "geospatial-telemetry",
+    "working_title": "$20K Drones vs America's $1T Defense",
+    "core_thesis": "Modern naval and air-defense procurement was engineered for scarce, exquisite adversaries, leaving Western forces firing $2.1M to $4.0M interceptors at $20,000 autonomous drones across a 105x-to-200x cost inversion. With annual federal bond interest ($1.05T) now outspending the entire Pentagon budget, sovereign military deterrence turns into an industrial unit-cost and solid-rocket-motor accounting test.",
+    "primary_desk_artifact": "Printed DoD Comptroller Navy/Army Missile Procurement Justification Book unit-cost tables (SM-2, SM-6, PAC-3 MSE) beside CRS Report R47885 and US Treasury MTS Table 9 Function 900 vs Function 050.",
+    "fact_ledger_ids": [
+      "FL-087",
+      "FL-012",
+      "FL-007"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:MTS_NET_INTEREST_VS_DEFENSE] (FL-012) Refresh within 72h of shoot week from Final MTS Table 9 (baseline $1.05T net interest vs $0.93T defense; THESIS_BREAK_IF net interest < defense outlays).",
+      "[LIVE_STAT_SLOT:US_GROSS_FEDERAL_DEBT] (FL-007) Refresh within 24h of shoot week via Treasury Debt to the Penny API (baseline $40.5T; THESIS_BREAK_IF < $36.0T)."
+    ],
+    "adversarial_red_team_patch": "SEAT_03_GRID and Defense-Analyst Objection: The true financial benchmark of a $2.1M SM-2 interceptor is the $2.2B Arleigh Burke destroyer or $500M LNG carrier it saves, and navies are deploying $10-per-shot high-energy lasers, microwave EW, and $50,000 laser-guided rockets. Structural Patch: Grant the $2.2B hull value comparison and directed-energy/APKWS counter-programs in Act II, then show physical magazine capacity (90 to 96 vertical launch cells per destroyer requiring port reload) and multi-year solid-rocket-motor fabrication lead times still allow cheap autonomous saturation swarms to exhaust fleet magazines before laser thermal/weather limits clear.",
+    "viewer_protection_lever": "Build household inflation resilience against maritime choke-point shipping spikes (Red Sea, Hormuz, Taiwan Strait) through fixed-cost domestic energy hedges and zero short-term variable consumer credit exposure.",
+    "binge_seam_to_next": "Closing beat pivots from automated targeting overseas to automated compliance algorithms locking 4.6M domestic financial trails under federal gag rules, opening ep_20 (Why AI Froze 4.6M US Bank Accounts).",
+    "late_2027_staleness_immunity_proof": "Every 2027 Pentagon Replicator tranche, NATO drone-wall contract, maritime insurance rerouting, or munition replenishment supplemental validates the 105x-to-200x autonomous attrition cost equation."
+  },
+  {
+    "episode_id": "ep_20",
+    "episode_number": 20,
+    "episode_codename": "The Silent Freeze",
+    "target_publish_date": "2027-09-18",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+    "domain_layers": {
+      "layer1_ai_lead": "Commercial banks replace human compliance officers with graph-neural-network anti-money-laundering (AML) models scanning billions of ACH, wire, Zelle, and crypto-adjacent transactions to auto-freeze flagged accounts.",
+      "layer2_balance_sheet": "FinCEN Technical Bulletins log 4.6M to 4.8M Suspicious Activity Reports (SARs) filed annually (~12,877 per day) across a $4.04T checking base, because banks face billion-dollar AML fines for missed flags and zero penalties for false-positive closures while 31 U.S.C. Section 5318(g)(2) criminalizes telling the customer why.",
+      "layer3_protection_agency": "Follows a freelance contractor whose primary rent and payroll checking account is frozen for 45 days without explanation, providing legal multi-charter banking redundancy and ChexSystems hygiene rules."
+    },
+    "strategy_preset_id": "STR-HMW-PRIMER",
+    "visual_register_id": "blueprint-schematic",
+    "working_title": "Why AI Froze 4.6M US Bank Accounts",
+    "core_thesis": "Automated bank compliance algorithms generate roughly 4.7 million Suspicious Activity Reports every year because federal enforcement punishes missed money laundering with billion-dollar consent orders while imposing zero cost for false-positive customer lockouts. Under Bank Secrecy Act 31 U.S.C. Section 5318(g)(2), telling a debanked family that an algorithmic SAR triggered their closure is a federal crime, creating unappealable financial lockouts.",
+    "primary_desk_artifact": "Printed 31 U.S.C. Section 5318(g)(2) statutory confidentiality gag text beside FinCEN Annual SAR Stats Technical Bulletin (4.6M-4.8M filings) and CFPB consumer checking closure complaint dockets.",
+    "fact_ledger_ids": [
+      "FL-088",
+      "FL-072",
+      "FL-066"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:FINCEN_ANNUAL_SAR_VOLUME] (FL-088) Refresh annually within 72h of shoot week from FinCEN SAR Stats portal (baseline 4.6M-4.8M annual SARs; THESIS_BREAK_IF < 2.5M or Congress repeals 31 U.S.C. 5318(g)(2) gag rule).",
+      "[LIVE_STAT_SLOT:FDIC_ZERO_YIELD_DEPOSITS] (FL-072) Refresh quarterly from FDIC Quarterly Banking Profile Table III-A (baseline $4.04T commercial checking deposits; THESIS_BREAK_IF < $2.0T).",
+      "[LIVE_STAT_SLOT:FTC_ANNUAL_FRAUD_LOSSES] (FL-066) Refresh annually from FTC Consumer Sentinel Data Book (baseline $12.5B fraud pressure driving defensive bank locks; THESIS_BREAK_IF full statutory overhaul)."
+    ],
+    "adversarial_red_team_patch": "SEAT_05_LAW Objection: Filing a FinCEN SAR does not legally mandate closing an account on its own, and banks close accounts defensively to avoid repeat-SAR supervisory scrutiny under OCC/Fed consent orders. Structural Patch: State explicitly in Act II that 31 U.S.C. Section 5318(g)(2) mandates secrecy while bank risk committees choose account termination voluntarily to cut compliance-review unit costs, showing how asymmetric regulatory fines plus AI false positives produce rational mass debanking.",
+    "viewer_protection_lever": "Maintain two wholly independent checking relationships at separate banking charters (e.g., one national bank and one local credit union), split direct-deposit paychecks 80/20 so rent and mortgage drafts clear automatically if one institution freezes funds, and segregate peer-to-peer or crypto transfers away from primary bill-pay accounts.",
+    "binge_seam_to_next": "Closing minute moves from unappealable algorithmic bank flags to civil and criminal courtrooms where synthetic video lets guilty parties claim real evidence is fake, opening ep_21 (The Liar's Dividend in AI Courtrooms).",
+    "late_2027_staleness_immunity_proof": "Every 2027 congressional debanking hearing, FinCEN AML rule proposal, bank AML consent order, or neobank freeze scandal feeds directly into the 4.7M SAR and Section 5318(g)(2) gag-rule machine."
+  },
+  {
+    "episode_id": "ep_21",
+    "episode_number": 21,
+    "episode_codename": "The Liar's Dividend",
+    "target_publish_date": "2027-09-30",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+    "domain_layers": {
+      "layer1_ai_lead": "Photorealistic diffusion video, voice synthesis, and automated document-editing models erase visual artifacts across dashcams, bodycams, voice recordings, and PDFs while automated bots generate 53% of web traffic.",
+      "layer2_balance_sheet": "Forensic expert authentication bills ($25,000 to $100,000+ per civil motion) price ordinary households out of proving real video is authentic after Chesney and Citron's Liar's Dividend surfaced in Sz Huang v. Tesla (No. 19CV346663) and the US Judicial Conference pulled back proposed Federal Rule of Evidence 707.",
+      "layer3_protection_agency": "Equips tenants, drivers, employees, and small-business owners with cryptographic C2PA hardware capture, dashcam telemetry hashing, and contemporaneous cloud audit-trail practices that survive courtroom challenges."
+    },
+    "strategy_preset_id": "STR-FISHER-ARTIFACT",
+    "visual_register_id": "archival-light-table",
+    "working_title": "The Liar's Dividend in AI Courtrooms",
+    "core_thesis": "Everyone feared deepfakes would convict innocent people with fabricated video; the faster legal crisis is Chesney and Citron's Liar's Dividend, where deepfakes let powerful defendants dismiss genuine video and audio recordings as AI fakes. With the Judicial Conference deadlocked over proposed Federal Rule of Evidence 707, proving ordinary smartphone footage in landlord, crash, or workplace disputes is turning into an expensive forensic arms race.",
+    "primary_desk_artifact": "Printed Santa Clara Superior Court discovery order by Judge Evette Pennypacker in Sz Huang v. Tesla, Inc. alongside Judicial Conference Advisory Committee docket pulling back proposed Federal Rule of Evidence 707.",
+    "fact_ledger_ids": [
+      "FL-089",
+      "FL-090",
+      "FL-066",
+      "FL-098"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:FTC_ANNUAL_FRAUD_LOSSES] (FL-066) Refresh annually within 72h of shoot week from FTC Consumer Sentinel Data Book (baseline $12.5B impersonation/fraud losses; THESIS_BREAK_IF full statutory provenance overhaul).",
+      "[LIVE_STAT_SLOT:IMPERVA_BOT_TRAFFIC_SHARE] (FL-098) Refresh annually from Thales/Imperva Bad Bot Report (baseline 53% automated web traffic; THESIS_BREAK_IF < 42%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_05_LAW Objection: Judge Pennypacker rejected Tesla's speculative deepfake argument in Sz Huang v. Tesla and ordered deposition testimony, and existing Federal Rules of Evidence 901(a) and 403 already let judges authenticate recordings via witness testimony and device metadata. Structural Patch: Cite Judge Pennypacker's rejection in Act I to show judges dislike bare denials, then demonstrate in Act II how sophisticated litigants weaponize expert Daubert challenges and stalled Rule 707 standards to multiply pre-trial discovery costs until individual plaintiffs settle.",
+    "viewer_protection_lever": "Preserve original RAW/HEVC files with intact EXIF, cellular tower, and immutable cloud-backup upload timestamps (never screen-record or re-compress key evidence), use C2PA hardware-signed capture modes where supported, and back up tenancy or contract notices via certified mail plus email.",
+    "binge_seam_to_next": "Closing turn shifts from courtroom rules struggling with machine outputs to antitrust law confronting autonomous algorithms that collude on your monthly rent without a single human phone call, opening ep_22 (Can an AI Price Cartel Break the Law?).",
+    "late_2027_staleness_immunity_proof": "Every 2027 evidentiary deepfake challenge, C2PA camera standard rollout, or Judicial Conference Rule 707/901 committee draft directly advances this statutory courtroom collision."
+  },
+  {
+    "episode_id": "ep_22",
+    "episode_number": 22,
+    "episode_codename": "Tacit Collusion",
+    "target_publish_date": "2027-10-12",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "Multi-firm revenue-management algorithms and autonomous reinforcement-learning pricing agents ingest real-time competitor inventory, lease renewals, and consumer browser telemetry to maximize prices without explicit human cartel agreements.",
+      "layer2_balance_sheet": "DOJ Antitrust Division's Sherman Act Sections 1 and 2 complaint in U.S. v. RealPage (No. 1:24-cv-00710) and FTC Section 6(b) surveillance-pricing orders expose how hub-and-spoke pricing software extracts higher residential rents and dynamic checkout spreads from households carrying $19.1T in debt across $198.25B in payment-rail data trails.",
+      "layer3_protection_agency": "Protects apartment renters and online shoppers against lease-renewal coordination and individualized willingness-to-pay surveillance pricing, detailing renewal negotiation tactics and clean-browser hygiene."
+    },
+    "strategy_preset_id": "STR-GEN-EXPLAINER",
+    "visual_register_id": "investigation-switchboard",
+    "working_title": "Can an AI Price Cartel Break the Law?",
+    "core_thesis": "For a century, Sherman Act Section 1 prosecutions relied on catching human executives fixing prices in smoke-filled rooms or emails. When competing landlords pool non-public lease data into a shared algorithm as alleged in U.S. v. RealPage, or reinforcement-learning agents learn tacit parallel markups alongside individualized FTC Section 6(b) surveillance pricing, households pay cartel margins while corporate officers point at black-box weights.",
+    "primary_desk_artifact": "Printed DOJ Antitrust Division Complaint in United States et al. v. RealPage, Inc. (No. 1:24-cv-00710, M.D.N.C.) beside FTC 15 U.S.C. Section 46(b) Surveillance Pricing study orders.",
+    "fact_ledger_ids": [
+      "FL-091",
+      "FL-009",
+      "FL-073"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:NYFED_HOUSEHOLD_DEBT_TOTAL] (FL-009) Refresh quarterly within 72h of shoot week from NY Fed Household Debt and Credit report (baseline $19.1T household debt; THESIS_BREAK_IF < $16.0T).",
+      "[LIVE_STAT_SLOT:NILSON_US_CARD_FEES] (FL-073) Refresh annually from Nilson Report US Card Merchant Fees (baseline $198.25B merchant/checkout rail data ecosystem; THESIS_BREAK_IF < $120B)."
+    ],
+    "adversarial_red_team_patch": "SEAT_05_LAW Objection: Unilateral dynamic pricing based on public competitor prices (like airlines or gas stations) is lawful under US antitrust precedent, and criminal Sherman Act charges require human mens rea intent beyond a reasonable doubt. Structural Patch: Separate lawful unilateral public-data pricing from illegal hub-and-spoke confidential data pooling (RealPage) in Act II, and note civil injunctive and treble-damage liability plus FTC Section 5 unfairness remedies apply without needing criminal mens rea.",
+    "viewer_protection_lever": "Benchmark apartment lease renewals against independent small-landlord comps outside institutional REIT software clusters, time lease starts to winter vacancy troughs, and compare airfare, hotel, and insurance quotes across clean, logged-out browser profiles stripped of device cookies.",
+    "binge_seam_to_next": "Closing minute asks who puts up the next $100B in equity and debt once Alphabet and Amazon burn through internal free cash flow to build these frontier models, opening ep_23 (Why $6T Oil Funds Own US AI Compute).",
+    "late_2027_staleness_immunity_proof": "Every 2027 state ban on algorithmic rent-setting, RealPage consent decree or trial ruling, hotel/airline AI pricing lawsuit, or FTC surveillance-pricing action validates this Sherman Act stress test."
+  },
+  {
+    "episode_id": "ep_23",
+    "episode_number": 23,
+    "episode_codename": "Petrodollar Compute",
+    "target_publish_date": "2027-10-24",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+    "domain_layers": {
+      "layer1_ai_lead": "Next-wave 5-gigawatt frontier training clusters outgrow even Big Tech's internal operating cash flows, requiring $100B+ sovereign infrastructure syndicates combining energy, land, and export-licensed GPUs.",
+      "layer2_balance_sheet": "Global SWF ledgers show Gulf Cooperation Council sovereign wealth funds managing ~$6.1T in assets and co-anchoring the $100B AI Infrastructure Partnership ($30B equity + $70B debt with BlackRock, Microsoft, MGX, and Nvidia) right as Big Five AI CapEx hits $824B and Alphabet logs consecutive negative FCF quarters.",
+      "layer3_protection_agency": "Maps how sovereign petrodollar equity in Silicon Valley labs reshapes CFIUS national-security covenants, open-weight model governance, US energy diplomacy, and public-shareholder voting rights."
+    },
+    "strategy_preset_id": "STR-BOYLE-CHAPTERED",
+    "visual_register_id": "milk-page-editorial",
+    "working_title": "Why $6T Oil Funds Own US AI Compute",
+    "core_thesis": "Building $824B a year of AI infrastructure pushed even trillion-dollar US tech firms into negative free cash flow quarters and off-balance-sheet joint ventures, turning Gulf sovereign wealth funds holding $6.1T in oil surpluses into Silicon Valley's marginal capital partner. Through vehicles like the $100B AI Infrastructure Partnership, hydrocarbon states are converting twentieth-century oil rents directly into twenty-first-century compute ownership.",
+    "primary_desk_artifact": "Printed AI Infrastructure Partnership ($30B equity / $70B debt) joint formation filing beside Global SWF $6.1T GCC Sovereign Asset schedule and US BIS data-center export-license security conditions.",
+    "fact_ledger_ids": [
+      "FL-092",
+      "FL-017",
+      "FL-018"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:GULF_SWF_AUM_AND_AIP] (FL-092) Refresh semi-annually within 72h of shoot week from Global SWF AUM tracker (baseline $6.1T Gulf SWF AUM / $100B AIP; THESIS_BREAK_IF GCC AUM < $4.5T or US revokes GCC GPU export licenses).",
+      "[LIVE_STAT_SLOT:HYPERSCALER_ANNUALIZED_CAPEX] (FL-017) Refresh quarterly from Big Five Form 10-Q Cash Flows (baseline $742B-$824B; THESIS_BREAK_IF < $500B).",
+      "[LIVE_STAT_SLOT:ALPHABET_FCF_QUARTERS] (FL-018) Refresh quarterly from Alphabet Form 10-Q Cash Flows (baseline 2 consecutive negative FCF quarters; THESIS_BREAK_IF > +$60B trailing while cutting CapEx)."
+    ],
+    "adversarial_red_team_patch": "SEAT_03_GRID and Geopolitical-Analyst Objection: Washington retains ultimate control through Bureau of Industry and Security (BIS) GPU export licenses and CFIUS governance walls that force Abu Dhabi and Riyadh funds to strip Chinese telecom gear and accept passive LP terms. Structural Patch: Detail BIS security covenants and CFIUS passive-seat rules in Act II, then show capital dependency cuts both ways: US labs and hyperscalers need $70B+ project-finance debt tranches and sub-4-cent Gulf gas/solar power to keep scaling without diluting S&P 500 GAAP credit ratings.",
+    "viewer_protection_lever": "Track sovereign project-finance joint ventures inside hyperscaler Form 10-K Note commitments so your portfolio distinguishes unencumbered parent cash flows from ring-fenced infrastructure equity shared with sovereign LPs.",
+    "binge_seam_to_next": "Closing beat warns that domestic US power and telecom grids running these clusters already host stealth state adversaries pre-positioned for five years, opening ep_24 (5 Years Inside America's Power Grid).",
+    "late_2027_staleness_immunity_proof": "Every 2027 sovereign AI fund commitment, Abu Dhabi/Riyadh gigawatt campus deal, CFIUS review, or hyperscaler infrastructure JV expands sovereign balance-sheet ownership of frontier compute."
+  },
+  {
+    "episode_id": "ep_24",
+    "episode_number": 24,
+    "episode_codename": "Living Off the Land",
+    "target_publish_date": "2027-11-05",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+    "domain_layers": {
+      "layer1_ai_lead": "Autonomous network-mapping and living-off-the-land (LOTL) cyber tooling blends silently inside legitimate Windows and router admin commands across municipal water, electric substation, and carrier switching networks.",
+      "layer2_balance_sheet": "Joint CISA Advisory AA24-038A confirmed Volt Typhoon held 5+ years of undetected persistence inside US critical infrastructure while Salt Typhoon breached carrier lawful-intercept wiretap portals mandated by Congress's 1994 CALEA statute (47 U.S.C. Section 1002), atop a grid facing 100-to-160-week transformer replacement queues and 32-to-43-day KEV patch lags.",
+      "layer3_protection_agency": "Equips households for 72-hour localized substation/water disruptions and shows why CISA urged Americans to abandon unencrypted SMS two-factor codes and switched carrier calls in favor of end-to-end encrypted communications."
+    },
+    "strategy_preset_id": "STR-AOTP-LADDER",
+    "visual_register_id": "silver-gelatin-chronicle",
+    "working_title": "5 Years Inside America's Power Grid",
+    "core_thesis": "State-backed cyber operations have shifted from noisy data theft to silent wartime pre-positioning: CISA Advisory AA24-038A documented Volt Typhoon dwelling for over five years inside US power and water networks, while Salt Typhoon walked straight through the lawful-intercept wiretap doors Congress mandated under CALEA in 1994. Statutory backdoors built for domestic policing inevitably become master keys for foreign intelligence.",
+    "primary_desk_artifact": "Printed Joint CISA/NSA/FBI Cybersecurity Advisory AA24-038A (Volt Typhoon 5+ year persistence) beside 47 U.S.C. Section 1002 (CALEA wiretap mandate) and CISA encrypted-messaging guidance.",
+    "fact_ledger_ids": [
+      "FL-093",
+      "FL-067",
+      "FL-070"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:US_GRID_GAP_TRANSFORMER_QUEUE] (FL-067) Refresh annually within 72h of shoot week from NERC LTRA and WoodMac LPT trackers (baseline 94 GW gap / 100-to-160-week LPT replacement queue; THESIS_BREAK_IF LPT queue < 40 weeks).",
+      "[LIVE_STAT_SLOT:VERIZON_DBIR_KEV_PATCH_DAYS] (FL-070) Refresh annually from Verizon DBIR (baseline 32 to 43 days median edge KEV patching; THESIS_BREAK_IF < 48 hours)."
+    ],
+    "adversarial_red_team_patch": "SEAT_04_SEC Objection: IT enterprise network access does not automatically grant physical destruction of air-gapped Operational Technology (OT) substation relays, and end-to-end encrypted apps like Signal and iMessage fall outside CALEA's statutory carrier mandate. Structural Patch: Separate IT business networks from OT SCADA relays cleanly in Act II (showing Volt Typhoon specifically harvested OT engineering diagrams and credentials over 5 years to bridge that exact gap) and use CALEA's exemption of over-the-top E2EE apps as the exact legal foundation for Act IV's personal security upgrade.",
+    "viewer_protection_lever": "Eliminate SMS text-message 2FA on banking, email, and brokerage logins in favor of FIDO2 hardware keys or passkeys, move sensitive voice/text calls onto end-to-end encrypted apps outside CALEA switched-carrier taps, and maintain 72-hour household backup power, water, and offline cash.",
+    "binge_seam_to_next": "Closing minute pivots from cyber pre-positioning inside municipal water and electric utilities to the 33 billion gallons of cooling water and Moroccan phosphate reserves AI campuses compete for against global agriculture, opening ep_25 (AI Cooling Water vs Global Fertilizer).",
+    "late_2027_staleness_immunity_proof": "Every 2027 telecom breach disclosure, FCC CALEA security rulemaking, municipal water utility intrusion, or legislative encryption-backdoor debate proves the architectural cost of statutory wiretap portals and 128-week grid hardware."
+  },
+  {
+    "episode_id": "ep_25",
+    "episode_number": 25,
+    "episode_codename": "Water and Rock",
+    "target_publish_date": "2027-11-17",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+    "domain_layers": {
+      "layer1_ai_lead": "High-density liquid-cooled GPU racks and multi-gigawatt lithium-iron-phosphate (LFP) grid battery farms scale across arid Sunbelt corridors to keep 945 TWh of global AI compute online 24/7.",
+      "layer2_balance_sheet": "Lawrence Berkeley National Laboratory Report LBNL-2001637 projects direct on-site US data-center evaporative water rising 94.1% from 17B toward 33B gallons/year (>200B gallons indirect power water), while USGS Mineral Commodity Summaries show Morocco controlling 67.6% (~70%) of global phosphate rock reserves needed for both crop fertilizer and LFP grid-storage batteries.",
+      "layer3_protection_agency": "Connects arid municipal water-rate tiers in Arizona, Texas, and Nevada plus phosphate fertilizer-driven grocery inflation directly to household utility budgets and regional real-estate water rights."
+    },
+    "strategy_preset_id": "STR-AIC-SPECULATIVE",
+    "visual_register_id": "geospatial-telemetry",
+    "working_title": "AI Cooling Water vs Global Fertilizer",
+    "core_thesis": "Beyond electricity, physical AI infrastructure collides with two non-substitutable biological inputs: municipal freshwater in drought-stressed basins and high-grade phosphate rock. LBNL projects direct US data-center cooling water nearly doubling toward 33 billion gallons a year while LFP grid-storage batteries bid against global farm fertilizer for phosphate reserves 70% concentrated inside Morocco.",
+    "primary_desk_artifact": "Printed DOE/LBNL-2001637 US Data Center Energy and Water Usage tables (17B to 33B gallons) beside USGS Mineral Commodity Summaries Phosphate Rock reserve table (50,000M of 74,000M metric tons in Morocco).",
+    "fact_ledger_ids": [
+      "FL-094",
+      "FL-095",
+      "FL-039"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:LBNL_DATACENTER_WATER_GALLONS] (FL-094) Refresh within 72h of shoot week upon new DOE/LBNL water assessments (baseline 17B to 33B gallons/yr direct cooling; THESIS_BREAK_IF < 12B gallons).",
+      "[LIVE_STAT_SLOT:IEA_DATACENTER_TWH_2030] (FL-039) Refresh annually from IEA World Energy Outlook (baseline 415 TWh to 945 TWh driving indirect generation water and LFP storage; THESIS_BREAK_IF < 600 TWh)."
+    ],
+    "adversarial_red_team_patch": "SEAT_03_GRID Objection: Closed-loop direct-to-chip liquid cooling systems recycle coolant without daily evaporative water loss, and sodium-ion stationary batteries can substitute for LFP chemistry on the power grid. Structural Patch: Grant closed-loop dry chillers and emerging sodium-ion grid cells in Act II, then show dry chillers carry a 10% to 15% electrical energy penalty (shifting evaporative water consumption onto indirect gas/nuclear power-plant cooling towers exceeding 200B gallons) while purified phosphoric acid (PPA) remains supply-constrained through the early 2030s.",
+    "viewer_protection_lever": "Verify 100-year assured municipal water supply certificates and tiered drought-surcharge schedules before buying long-term Sunbelt real estate, and incorporate agricultural/fertilizer and water-treatment infrastructure into real-asset inflation hedges.",
+    "binge_seam_to_next": "Closing turn shifts from physical resource scarcity to the fastest shrinking input across East Asia, Europe, and North America: human births, opening ep_26 (0.72 Birth Rates vs Untaxed Robots).",
+    "late_2027_staleness_immunity_proof": "Every 2027 municipal data-center water moratorium, Colorado River basin cutback, Chinese phosphate export quota, or LFP megapack deployment tightens the water-and-phosphate ledger."
+  },
+  {
+    "episode_id": "ep_26",
+    "episode_number": 26,
+    "episode_codename": "The Inverted Pyramid",
+    "target_publish_date": "2027-11-29",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Aging industrial nations deploy $16,000-to-$30,000 humanoid robots and autonomous eldercare/logistics fleets to plug acute working-age labor shortages without reforming payroll-funded pension tax codes.",
+      "layer2_balance_sheet": "Statistics Korea tracks a historic 0.72 Total Fertility Rate trough (shrinking each successive generation ~65.7% below the 2.10 replacement threshold) across advanced East Asian and European economies, while payroll statutes like US FICA (26 U.S.C. Sections 3101/3111) tax human wages at 12.4% and automated compute/robots at 0.0%.",
+      "layer3_protection_agency": "Maps retirement-age extensions, healthcare rationing, and municipal property-tax inversions facing young workers in aging nations, showing how 18-to-35-year-olds build portable, state-independent retirement solvency."
+    },
+    "strategy_preset_id": "STR-GEN-EXPLAINER",
+    "visual_register_id": "smoked-navy-glass",
+    "working_title": "0.72 Birth Rates vs Untaxed Robots",
+    "core_thesis": "Politicians pitch humanoid robots as the painless cure for demographic collapse in nations like South Korea, where fertility hit 0.72 births per woman against a 2.10 replacement floor. Physically, robots can assemble cars and lift hospital patients, yet fiscally a robot pays zero payroll tax under wage-based pension statutes, leaving a shrinking cohort of young humans to carry elderly healthcare and sovereign bond coupons.",
+    "primary_desk_artifact": "Printed Statistics Korea (KOSTAT) Vital Statistics Table 1 (0.72 TFR cohort pyramid) beside 26 U.S.C. Sections 3101/3111 (12.4% human wage FICA vs 0.0% capital/compute levy).",
+    "fact_ledger_ids": [
+      "FL-096",
+      "FL-102",
+      "FL-078"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:SOUTH_KOREA_TFR] (FL-096) Refresh annually within 72h of shoot week from Statistics Korea Vital Statistics release (baseline 0.72 trough TFR vs 2.10 replacement; THESIS_BREAK_IF TFR > 1.30).",
+      "[LIVE_STAT_SLOT:HUMANOID_SUPPLY_CHAIN_BOM] (FL-078) Refresh annually from Morgan Stanley Humanoid 100 BOM tracker (baseline $16,000-$30,000 robot BOM; THESIS_BREAK_IF non-Asian share > 55%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO Objection: Post-pandemic marriage catch-up ticked Korean births from 0.72 to ~0.75, and robot-driven corporate profits still generate corporate income and VAT consumption taxes when retirees spend pensions. Structural Patch: Cite the ~0.75 marriage bounce in Act I (proving every sub-0.85 TFR locks in a ~65% generational shrinkage already born for the 2030s workforce), then show VAT falls regressively on retirees while corporate taxes sit at 7.1% of US federal receipts under 100% hardware expensing.",
+    "viewer_protection_lever": "Assume statutory pay-as-you-go retirement ages will rise and benefit replacement rates will compress before 2045: build portable, globally diversified equity and real-asset compounding outside single-country municipal housing markets exposed to population shrinkage.",
+    "binge_seam_to_next": "Closing minute pivots from shrinking national tax bases to the private transoceanic fiber-optic arteries binding rival AI blocs beneath the ocean floor, opening ep_27 (Big Tech Owns 75% of Subsea Cables).",
+    "late_2027_staleness_immunity_proof": "Every 2027 OECD fertility low, Japanese/Korean rural municipality merger, European pension-age protest, or hospital eldercare robot rollout sharpens the fiscal gap between physical output and payroll taxes."
+  },
+  {
+    "episode_id": "ep_27",
+    "episode_number": 27,
+    "episode_codename": "Subsea Sovereignty",
+    "target_publish_date": "2027-12-11",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+    "domain_layers": {
+      "layer1_ai_lead": "Distributed multi-datacenter frontier training runs and sovereign cloud inference zones synchronize petabytes of model checkpoints across private transoceanic optical trunks.",
+      "layer2_balance_sheet": "TeleGeography bandwidth ledgers show 550+ subsea fiber cables carrying >99% of intercontinental data, with four US hyperscalers (Google, Meta, Amazon, Microsoft) now owning or leasing ~75% of used transoceanic capacity (up from <10% in 2012) while bifurcating East-West cable routes bypass contested seas.",
+      "layer3_protection_agency": "Maps Red Sea, Baltic, and Luzon Strait cable-cut vulnerabilities, scarce cable-repair ship backlogs, and sovereign data-localization laws affecting cross-border remote workers, cloud businesses, and financial settlement."
+    },
+    "strategy_preset_id": "STR-FISHER-ARTIFACT",
+    "visual_register_id": "investigation-switchboard",
+    "working_title": "Big Tech Owns 75% of Subsea Cables",
+    "core_thesis": "People picture the cloud in the sky; over 99% of intercontinental traffic travels through garden-hose-sized glass fibers on the seabed, where Google, Meta, Amazon, and Microsoft quietly took control of roughly 75% of used global bandwidth. As Washington and Beijing fund rival subsea cable corridors and specialized repair ships hit multi-year backlogs, the physical internet is splitting into two privately tolled geopolitical supergrids.",
+    "primary_desk_artifact": "Printed TeleGeography Submarine Cable Map and Content Provider International Capacity Share table (~75% Big Tech vs <10% in 2012) beside FCC Team Telecom subsea landing-license dockets.",
+    "fact_ledger_ids": [
+      "FL-097",
+      "FL-039",
+      "FL-068"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:TELEGEOGRAPHY_SUBSEA_CABLE_SHARE] (FL-097) Refresh annually within 72h of shoot week from TeleGeography State of the Network report (baseline 550+ cables / ~75% Big Tech bandwidth share; THESIS_BREAK_IF < 55%).",
+      "[LIVE_STAT_SLOT:IEA_DATACENTER_TWH_2030] (FL-039) Refresh annually from IEA World Energy Outlook (baseline 945 TWh global compute load driving cross-border fiber sync; THESIS_BREAK_IF < 600 TWh)."
+    ],
+    "adversarial_red_team_patch": "SEAT_03_GRID Objection: Low-Earth-Orbit laser-linked satellite constellations (Starlink, Kuiper) bypass seafloor anchor drags and sabotage completely, keeping global internet connectivity online if subsea cables are severed. Structural Patch: Concede LEO satellite resilience for military command and emergency voice/text in Act II, then run the terabit physics: all LEO constellations combined deliver less than 1% of the multi-hundred-terabit optical throughput required for SWIFT interbank clearing, cloud region replication, and distributed AI training.",
+    "viewer_protection_lever": "Maintain multi-region offline/local backups of critical business and personal financial records outside single-cloud geographic zones, and verify cross-border SaaS or freelance client contracts against EU/Gulf/Asian sovereign data-residency penalties.",
+    "binge_seam_to_next": "Closing minute asks what travels across those 550 subsea cables today: 53% of global web traffic is already non-human bots, triggering state Digital ID mandates in ep_28 (53% Bot Traffic and Mandatory Web IDs).",
+    "late_2027_staleness_immunity_proof": "Every 2027 Baltic or Red Sea anchor cable cut, FCC subsea landing ban, sovereign cloud localization mandate, or hyperscaler private transpacific fiber launch confirms the 75% subsea tollbooth."
+  },
+  {
+    "episode_id": "ep_28",
+    "episode_number": 28,
+    "episode_codename": "Proof of Personhood",
+    "target_publish_date": "2027-12-23",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+    "domain_layers": {
+      "layer1_ai_lead": "Autonomous LLM web scrapers, synthetic review farms, and CAPTCHA-solving browser agents push non-human requests past 53% of global internet traffic, breaking ad-supported publishing and email/SMS account verification.",
+      "layer2_balance_sheet": "Imperva Threat Research tracks 53% automated bot share across enterprise web requests (37% bad bots), colliding directly with EU Regulation 2024/1183 (eIDAS 2.0) compelling all 27 EU Member States and Very Large Online Platforms to roll out state-backed European Digital Identity Wallets on its December 2027 statutory schedule.",
+      "layer3_protection_agency": "Protects viewer pseudonymity, civic speech, and wallet sovereignty against linkable biometric or state-ID tracking, contrasting zero-knowledge selective disclosure against Shenzhen-style programmable wallet lockouts."
+    },
+    "strategy_preset_id": "STR-HMW-PRIMER",
+    "visual_register_id": "blueprint-schematic",
+    "working_title": "53% Bot Traffic and Mandatory Web IDs",
+    "core_thesis": "Automated scrapers and synthetic agents now generate 53% of all web requests, rendering passwords, CAPTCHAs, and anonymous sign-ups economically unviable for banks and major platforms. Governments are answering the bot flood with sovereign cryptographic identity wallets led by EU Regulation 2024/1183 (eIDAS 2.0), creating a razor-thin architectural line between stopping AI impersonation and wiring every login to a revocable state ID.",
+    "primary_desk_artifact": "Printed Official Journal of the European Union Regulation (EU) 2024/1183 (eIDAS 2.0 Articles 5a and 5f) beside Thales/Imperva Bad Bot Report 53% non-human web traffic breakdown.",
+    "fact_ledger_ids": [
+      "FL-098",
+      "FL-099",
+      "FL-037"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:IMPERVA_BOT_TRAFFIC_SHARE] (FL-098) Refresh annually within 72h of shoot week from Thales/Imperva Bad Bot Report (baseline 53% automated bot share of web traffic; THESIS_BREAK_IF < 42%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_04_SEC and SEAT_05_LAW Objection: Imperva counts HTTP request volume whereas human video streams on YouTube and Netflix still dominate raw bandwidth gigabytes, and eIDAS 2.0 explicitly codifies voluntary citizen adoption plus unlinkable zero-knowledge pseudonyms. Structural Patch: Grant human video-byte share and eIDAS 2.0's paper voluntary/ZKP clauses in Act II, then trace the economic compulsion: once bot fraud hits login and age-verification liability walls, banks and VLOPs degrade unverified accounts until voluntary state wallets become mandatory de facto keys to daily life.",
+    "viewer_protection_lever": "Separate legal-identity banking/tax domains from pseudonymous reading and civic speech using hardware FIDO2 passkeys, compartmentalized email aliases, and open-source wallets verified to enforce local zero-knowledge selective disclosure without issuer phone-home telemetry.",
+    "binge_seam_to_next": "Closing minute warns that the RSA and elliptic-curve cryptography securing every one of those digital IDs, bank logins, and state secrets faces a December 2030 federal deprecation deadline, opening ep_29 (The 2030 Quantum Decryption Cliff).",
+    "late_2027_staleness_immunity_proof": "Publishing right at the December 2027 eIDAS 2.0 rollout milestone, every 2027-2028 US state mobile driver's license mandate, age-verification law, or bot-driven platform lockdown makes proof-of-personhood architecture more urgent."
+  },
+  {
+    "episode_id": "ep_29",
+    "episode_number": 29,
+    "episode_codename": "Harvest Now",
+    "target_publish_date": "2028-01-04",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+    "domain_layers": {
+      "layer1_ai_lead": "AI-accelerated quantum error-correction decoders paired with state intelligence fiber taps execute Harvest-Now-Decrypt-Later (HNDL) collection on today's encrypted TLS, VPN, medical, and financial traffic ahead of 2030s cryptographically relevant quantum hardware.",
+      "layer2_balance_sheet": "NIST FIPS 203 (ML-KEM), FIPS 204 (ML-DSA), FIPS 205, NIST IR 8547, and White House OMB Memorandum M-26-15 mandate deprecating RSA-2048 and ECC public-key cryptography by December 2030 across federal systems, colliding with multi-billion-dollar legacy banking COBOL/HSM upgrade costs and 32-to-43-day enterprise patching inertia across a $4.04T deposit system.",
+      "layer3_protection_agency": "Protects long-lived household biometric, genomic, legal, and financial archives from retroactive decryption by verifying post-quantum ML-KEM hybrid TLS support across browsers, password vaults, and messaging apps."
+    },
+    "strategy_preset_id": "STR-BOYLE-CHAPTERED",
+    "visual_register_id": "archival-light-table",
+    "working_title": "The 2030 Quantum Decryption Cliff",
+    "core_thesis": "Fault-tolerant quantum computers do not need to arrive before 2030 to compromise secrets sent over public networks: intelligence agencies already record encrypted RSA and elliptic-curve traffic in vast storage farms to unlock once Shor-capable hardware matures. NIST FIPS 203/204/205 and White House directive M-26-15 set a hard December 2030 deprecation cliff, turning enterprise cryptographic migration into the largest quiet IT overhaul since Y2K.",
+    "primary_desk_artifact": "Printed NIST FIPS 203 (ML-KEM) and NIST IR 8547 2030/2035 deprecation schedule beside White House OMB Memorandum M-26-15 federal post-quantum inventory mandate.",
+    "fact_ledger_ids": [
+      "FL-100",
+      "FL-070",
+      "FL-072"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:VERIZON_DBIR_KEV_PATCH_DAYS] (FL-070) Refresh annually within 72h of shoot week from Verizon DBIR (baseline 32 to 43 days routine patching lag illustrating multi-year PKI overhaul friction; THESIS_BREAK_IF < 48 hours).",
+      "[LIVE_STAT_SLOT:FDIC_ZERO_YIELD_DEPOSITS] (FL-072) Refresh quarterly from FDIC Quarterly Banking Profile Table III-A (baseline $4.04T commercial banking deposit rail requiring PQC HSM upgrades; THESIS_BREAK_IF < $2.0T)."
+    ],
+    "adversarial_red_team_patch": "SEAT_04_SEC Objection: Quantum Grover's algorithm only halves symmetric key strength (leaving AES-256 local encryption completely secure), and ephemeral 15-minute banking login codes intercepted today have zero value if decrypted in 2034. Structural Patch: State the Shor (asymmetric RSA/ECDH broken) vs Grover (symmetric AES-256 safe) distinction clearly in Act I, bounding real HNDL household and corporate danger strictly to TLS key-exchange sessions carrying 10-to-30-year secrets (genomic/medical records, SSN/tax archives, trade secrets, and unrotated blockchain keys).",
+    "viewer_protection_lever": "Encrypt local archival backups (tax returns, estate deeds, medical/DNA files) at rest with symmetric AES-256 before cloud upload, enable hybrid ML-KEM (Kyber) post-quantum TLS in desktop/mobile browsers, and use PQC-upgraded messaging protocols (PQXDH/SPQR).",
+    "binge_seam_to_next": "Closing minute steps from the December 2030 cryptographic deadline straight to the Q4 2032 statutory cliff when America's largest trust fund runs out of reserves, setting up the Season 1 finale in ep_30 (The 2032 Social Security Cut Clock).",
+    "late_2027_staleness_immunity_proof": "Publishing in January 2028 leaves under 36 months on the federal December 2030 OMB M-26-15 clock; every 2027 logical-qubit milestone or bank PQC vendor contract accelerates the countdown."
+  },
+  {
+    "episode_id": "ep_30",
+    "episode_number": 30,
+    "episode_codename": "The 2032 Cut Clock",
+    "target_publish_date": "2028-01-16",
+    "release_mode": "evergreen_horizon",
+    "series_playlist": "Series 01: AI Economy, National Debt & Your Money (2027-2036)",
+    "domain_layers": {
+      "layer1_ai_lead": "Ten years of compounding software agents and embodied robotics scale corporate output per hour while shifting national income from W-2 payroll into tax-advantaged compute capital ahead of the 2032-2036 window.",
+      "layer2_balance_sheet": "Social Security Trustees and CBO baselines project Old-Age and Survivors Insurance (OASI) Trust Fund exhaustion around Q4 2032, triggering an automatic 22% to 26% statutory benefit cut under the Antideficiency Act because 26 U.S.C. Sections 3101/3111 levy 12.4% FICA exclusively on human wages and 0.0% on GPU clusters, colliding with $40.5T+ federal debt and $2.14T in 2036 net bond interest.",
+      "layer3_protection_agency": "Culminates the 30-episode Season 1 arc for both retirees facing 2032 benefit math and 18-to-35-year-olds building a complete 2028-2036 household balance sheet across debt duration, productive bottleneck equity, liquidity keys, and statutory literacy."
+    },
+    "strategy_preset_id": "STR-AIC-CLOCKED",
+    "visual_register_id": "restraint-vellum",
+    "working_title": "The 2032 Social Security Cut Clock",
+    "core_thesis": "Episode 01 asked who pays $40.5T in US debt if AI erodes human paychecks; Episode 30 puts the exact statutory date on the desk. Because 26 U.S.C. Sections 3101 and 3111 collect 12.4% Social Security FICA taxes solely from human wages while taxing automated compute at 0.0%, OASI reserves hit zero around Q4 2032 and trigger an automatic 22% to 26% benefit cut unless Congress taxes capital, slashes retirees, or monetizes trillions atop $2.14T in annual bond interest.",
+    "primary_desk_artifact": "Printed Social Security Trustees Report Table II.D1 and CBO OASI Trust Fund Q4 2032 exhaustion schedule beside 26 U.S.C. Sections 3101/3111, Antideficiency Act 31 U.S.C. Section 1341, and Episode 01's annotated MTS Table 9.",
+    "fact_ledger_ids": [
+      "FL-101",
+      "FL-102",
+      "FL-007",
+      "FL-011",
+      "FL-001",
+      "FL-016"
+    ],
+    "live_stat_slots": [
+      "[LIVE_STAT_SLOT:SSA_OASI_DEPLETION_AND_CUT] (FL-101) Refresh annually within 72h of shoot week from Social Security Trustees Report and CBO OASDI baseline (baseline Q4 2032 exhaustion / -22% to -26% statutory cut; THESIS_BREAK_IF Congress enacts 75-year solvency overhaul pushing depletion past 2050).",
+      "[LIVE_STAT_SLOT:US_GROSS_FEDERAL_DEBT] (FL-007) Refresh within 24h of shoot week via Treasury Debt to the Penny API (baseline $40.5T; THESIS_BREAK_IF < $36.0T).",
+      "[LIVE_STAT_SLOT:CBO_10YR_NET_INTEREST_OUTLAY] (FL-011) Refresh semi-annually from CBO Table 1-1 (baseline $2.14T annual net interest; THESIS_BREAK_IF < $1.5T).",
+      "[LIVE_STAT_SLOT:US_PAYCHECK_WITHHELD_TAX_SHARE] (FL-001) Refresh from Final MTS Table 4 and Table 9 (baseline 67.4% paycheck-withheld federal revenue share; THESIS_BREAK_IF < 55.0%).",
+      "[LIVE_STAT_SLOT:BLS_LABOR_SHARE_POST1947] (FL-016) Refresh quarterly from BLS Nonfarm Labor Share series (baseline 53.2%; THESIS_BREAK_IF > 58.0%)."
+    ],
+    "adversarial_red_team_patch": "SEAT_01_MACRO and SEAT_05_LAW Objection: Congress has never allowed scheduled Social Security checks to drop in modern political history and can transfer general revenues, lift the FICA wage cap, or extend the 3.8% IRC Section 1411 Net Investment Income Tax into OASI before Q4 2032. Structural Patch: Grant immediately in Act II that Congress will fight to prevent a nominal 24% election-year benefit cut (noting zero dollars of IRC 1411 currently enter OASI and the Antideficiency Act bars OASI borrowing without legislation), then prove every rescue bill either hikes taxes on surviving upper-middle W-2 earners, taxes corporate equity, or borrows trillions more into a steepened bond market.",
+    "viewer_protection_lever": "Model household retirement cash flows assuming a 75%-payable statutory Social Security baseline after 2032, hold tax-diversified Roth plus taxable productive bottleneck assets (grid, land, cash-flowing equity, short Treasuries), cap fixed 30-year personal debt, and harden financial accounts with hardware keys.",
+    "binge_seam_to_next": "Season 1 finale closes the 30-episode circle by routing new January 2028 viewers back to Playlist Position #1 in ep_01 (If AI Takes Jobs, Who Pays $40.5T Debt?) to trace the full paycheck-to-sovereign-debt ledger from the start.",
+    "late_2027_staleness_immunity_proof": "Publishing in January 2028 places the Q4 2032 OASI insolvency cliff inside the next single US presidential term (under five years away), guaranteeing every 2027-2028 payroll print, AI automation wave, and CBO baseline update heightens urgency."
+  }
+]

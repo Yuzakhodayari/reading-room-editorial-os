@@ -1,0 +1,1213 @@
+{
+  "schema_version": "1.0.0",
+  "deliverable_id": "RR-OS-DIV04-27",
+  "title": "The Reading Room Longitudinal Callback and 30-Episode Universe Continuity Graph",
+  "universe_window": {
+    "publish_start": "2027-02-02",
+    "publish_end": "2028-01-16",
+    "structural_horizon": "2027-2036",
+    "total_episodes": 30,
+    "cadence_days": 12
+  },
+  "host_continuity_anchor": {
+    "persona_id": "HOST_ANALYST_18_TO_28",
+    "age_at_launch": 18,
+    "age_at_2036_horizon": 28,
+    "canonical_line": "I'm eighteen. When 2036 gets here, I'll be twenty-eight, right around the age people are supposed to be building a career and signing a mortgage.",
+    "permanent_desk_anchors": [
+      "Matte dark leather desk blotter (60x90 cm)",
+      "Uncoated 100-120 gsm cream cotton primary filings (#F4EFE6)",
+      "Warm amber chisel felt marker (rgba(255, 213, 79, 0.38) physical twin)",
+      "Brick-red annotation ink (#A3402E)",
+      "Uncapped matte-black ebonite or brushed-brass fountain pen"
+    ]
+  },
+  "governance_rules": {
+    "epistemic_honesty_rule": "Composite balance-sheet vehicles must always be introduced with explicit scenario cues ('Picture...', 'Run Claire's budget...', 'Take a twenty-two-year-old CS graduate...'). Presenting modeled composites as real documentary interviewees or fabricating quotes is strictly prohibited.",
+    "max_primary_appearances_per_vehicle": 6,
+    "min_episode_gap_between_primary_appearances": 3,
+    "max_callbacks_per_episode": 1,
+    "max_callback_word_budget": 25,
+    "historical_precedent_uniqueness": "Strict 1-to-1 ownership across all 30 episodes; once a historical episode serves as an Act II/III stress test, it is permanently retired from primary parable duty.",
+    "foreground_prop_cooldown": "Exponential novelty decay w = exp(-delta_ep / 2.5); zero foreground scale-artifact reuse across all 30 flagship episodes.",
+    "binge_seam_topology": "30-node directed Hamiltonian cycle (ep_01 -> ep_02 -> ... -> ep_30 -> ep_01) paired with Official Series intra-playlist seams; zero 'Part N' cold-open dependencies."
+  },
+  "longitudinal_vehicles": [
+    {
+      "vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "name": "Claire (32-to-43yo Austin Senior Software Engineer Household)",
+      "avatar_segment": "Segment B (Ages 28-36 Mortgage & Household Balance Sheet)",
+      "cinema_entity_id": "ENT_CLAIRE_AUSTIN",
+      "locked_arithmetic": {
+        "city": "Austin, Texas",
+        "baseline_year": 2025,
+        "mortgage_monthly_usd": 3400,
+        "mortgage_maturity_year": 2055,
+        "retirement_401k_usd": 45000,
+        "wage_compression_2030_pct": -70,
+        "marginal_tax_bracket_pct": 24
+      },
+      "approved_framing_cues": [
+        "Picture Austin, Texas in late 2025.",
+        "Run Claire's monthly budget against this tariff.",
+        "Bring this back to a fixed $3,400 thirty-year mortgage."
+      ],
+      "prohibited_framing": [
+        "Claiming Claire is an interviewed Austin resident",
+        "Changing her $3,400 payment or 2055 loan maturity across episodes",
+        "Using Claire in back-to-back uploads"
+      ],
+      "primary_episodes": ["ep_01", "ep_05", "ep_14", "ep_19", "ep_26", "ep_30"],
+      "callback_episodes": ["ep_02", "ep_16", "ep_23"]
+    },
+    {
+      "vehicle_id": "VEH_MARCUS_GRAD",
+      "name": "Marcus (22-to-31yo CS & Quantitative Entrant / Renter)",
+      "avatar_segment": "Segment A (Ages 18-24 Technical Entrant & Student Debt Holder)",
+      "cinema_entity_id": "ENT_MARCUS_LADDER",
+      "locked_arithmetic": {
+        "liquid_savings_usd": 14000,
+        "federal_student_loan_usd": 38000,
+        "shared_rent_share_usd": 1450,
+        "fica_payroll_rate_pct": 7.65
+      },
+      "approved_framing_cues": [
+        "Take a twenty-two-year-old computer science graduate stepping into the market.",
+        "Price a $38,000 student loan balance against frozen junior hiring bands.",
+        "Look at the renewal quote landing on a shared apartment lease."
+      ],
+      "prohibited_framing": [
+        "Youth slang pandering or doom fatalism",
+        "Fabricated university Discord screenshots presented as primary evidence"
+      ],
+      "primary_episodes": ["ep_10", "ep_17", "ep_20", "ep_24"],
+      "callback_episodes": ["ep_01", "ep_12", "ep_30"]
+    },
+    {
+      "vehicle_id": "VEH_DEVON_INFRA",
+      "name": "Devon (31yo Staff Cloud, Grid & Security Infrastructure Operator)",
+      "avatar_segment": "Segment C (Ages 24-38 Builder, Founder & Compute Buyer)",
+      "cinema_entity_id": "ENT_DEVON_CLUSTER",
+      "locked_arithmetic": {
+        "engineer_token_cap_monthly_usd": 1500,
+        "enterprise_seat_count": 5000,
+        "unvested_rsu_grant_usd": 180000,
+        "campus_power_request_gw": 5.0
+      },
+      "approved_framing_cues": [
+        "Sit on the procurement desk of a cloud architect managing five thousand seats.",
+        "Trace the invoice from an API token budget down to the substation transformer.",
+        "Walk through an air-gapped inference build pipeline."
+      ],
+      "prohibited_framing": [
+        "Hollywood hacking tropes or vague cloud buzzwords",
+        "Single-model version hype that expires next quarter"
+      ],
+      "primary_episodes": ["ep_09", "ep_12", "ep_15", "ep_22", "ep_29"],
+      "callback_episodes": ["ep_03", "ep_07", "ep_30"]
+    },
+    {
+      "vehicle_id": "VEH_ELENA_CAPITAL",
+      "name": "Elena (38yo Institutional Credit, Treasury & Fiduciary Analyst)",
+      "avatar_segment": "Segment D (Ages 30-40+ Macro-Literate Professional & 401(k) Allocator)",
+      "cinema_entity_id": "ENT_ELENA_LEDGER",
+      "locked_arithmetic": {
+        "target_date_equity_weight_pct": 85,
+        "top_seven_index_share_pct": 33,
+        "t_bill_reserve_usd": 120000,
+        "server_depreciation_schedule_years": 6
+      },
+      "approved_framing_cues": [
+        "Open the Property and Equipment footnote the way a credit analyst reads it.",
+        "Check what sits inside a passive target-date 401(k) allocation.",
+        "Test real after-tax T-bill yield once inflation clears four percent."
+      ],
+      "prohibited_framing": [
+        "Stock-picking tips or market-timing calls",
+        "Perma-bear dollar-collapse theatrics"
+      ],
+      "primary_episodes": ["ep_03", "ep_06", "ep_13", "ep_16", "ep_23", "ep_27"],
+      "callback_episodes": ["ep_01", "ep_14", "ep_30"]
+    },
+    {
+      "vehicle_id": "VEH_CIVIC_MUNI",
+      "name": "Municipal, Pension & Regional Infrastructure Balance Sheet",
+      "avatar_segment": "Cross-Segment Civic & Property-Tax Transmission Vehicle",
+      "cinema_entity_id": "ENT_MUNI_TAX_BASE",
+      "locked_arithmetic": {
+        "commercial_office_tax_share_pct": 28,
+        "substation_wait_months": 72,
+        "homebuilder_lot_count": 400,
+        "commercial_rig_loan_usd": 165000
+      },
+      "approved_framing_cues": [
+        "Open a big-city audited annual financial report.",
+        "Model a regional builder sitting on four hundred finished lots without a substation hookup.",
+        "Follow a freight-corridor county budget when terminal payroll drops."
+      ],
+      "prohibited_framing": [
+        "Partisan blame aimed at local voters",
+        "Treating municipal bond defaults as federal sovereign defaults"
+      ],
+      "primary_episodes": ["ep_02", "ep_07", "ep_11", "ep_25"],
+      "callback_episodes": ["ep_05", "ep_15", "ep_26"]
+    },
+    {
+      "vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "name": "Operating Mid-Market CFO, Publisher & Family Liability Ledger",
+      "avatar_segment": "Cross-Segment Fraud, Insurance & Healthcare Defense Vehicle",
+      "cinema_entity_id": "ENT_OPERATING_DEFENSE",
+      "locked_arithmetic": {
+        "escrow_closing_wire_usd": 92000,
+        "hospital_ransomware_outage_days": 19,
+        "publisher_search_traffic_drop_pct": -60,
+        "prior_auth_appeal_window_hours": 72
+      },
+      "approved_framing_cues": [
+        "Model a family wiring a $92,000 closing deposit on a Thursday afternoon.",
+        "Read the cyber-insurance exclusion endorsement handed to a regional hospital CFO.",
+        "Track a seventy-two-hour post-acute care appeal clock."
+      ],
+      "prohibited_framing": [
+        "Unlicensed legal or medical advice",
+        "Invented victim names presented as court plaintiffs"
+      ],
+      "primary_episodes": ["ep_04", "ep_08", "ep_18", "ep_21", "ep_28"],
+      "callback_episodes": ["ep_19", "ep_24"]
+    }
+  ],
+  "running_thematic_motifs": [
+    {
+      "motif_id": "MOTIF_ONE_SIGNATURE",
+      "label": "The One-Signature Rule",
+      "canonical_handle": "Putting a big number on your phone screen costs almost nothing; cutting it in half takes one signature.",
+      "origin_episode": "ep_01",
+      "physical_anchor": "Uncapped fountain pen slash across cotton ledger",
+      "active_episodes": ["ep_01", "ep_04", "ep_17", "ep_19", "ep_23", "ep_28"]
+    },
+    {
+      "motif_id": "MOTIF_SOFTWARE_VS_PERMIT_SPEED",
+      "label": "Six-Month Code vs. Eight-Year Copper",
+      "canonical_handle": "Coding agents roll out across an industry in six months; permitting high-voltage power lines and substations takes five to ten years.",
+      "origin_episode": "ep_01",
+      "physical_anchor": "Copper busbar and grain-oriented steel laminations",
+      "active_episodes": ["ep_01", "ep_05", "ep_07", "ep_09", "ep_15", "ep_25", "ep_27"]
+    },
+    {
+      "motif_id": "MOTIF_WHITEBOARD_VS_30YR_LOAN",
+      "label": "Palo Alto Whiteboard vs. Thirty-Year Contract",
+      "canonical_handle": "On a whiteboard in Palo Alto, falling prices look like abundance. Problem is, that whiteboard has never met a thirty-year loan.",
+      "origin_episode": "ep_01",
+      "physical_anchor": "Amortization schedule stamped through 2055",
+      "active_episodes": ["ep_01", "ep_02", "ep_10", "ep_11", "ep_20", "ep_26", "ep_30"]
+    },
+    {
+      "motif_id": "MOTIF_FRIDAY_PAYCHECK_TRUCE",
+      "label": "The 200-Year Friday Paycheck Truce",
+      "canonical_handle": "Once the cranes, codebases, and trucks run without you showing up, bargaining power moves off the payroll line toward physical bottlenecks.",
+      "origin_episode": "ep_01",
+      "physical_anchor": "MTS Table 9 individual withholding row marked in amber",
+      "active_episodes": ["ep_01", "ep_10", "ep_14", "ep_17", "ep_22", "ep_25", "ep_30"]
+    },
+    {
+      "motif_id": "MOTIF_CLOSED_WALL_SCRIP",
+      "label": "Dashboard Credits Pay Zero Rent",
+      "canonical_handle": "A $100,000 cloud credit balance looks huge on a dashboard and pays zero dollars toward rent at an outside bank.",
+      "origin_episode": "ep_01",
+      "physical_anchor": "Brass company-scrip token beside modern hardware security key",
+      "active_episodes": ["ep_01", "ep_03", "ep_06", "ep_12", "ep_13", "ep_19", "ep_21"]
+    }
+  ],
+  "episodes": [
+    {
+      "ep_id": "ep_01",
+      "episode_number": 1,
+      "publish_date": "2027-02-02",
+      "title": "The Allowance: AI Paychecks vs. $40.5T National Debt",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-GEN-EXPLAINER",
+      "primary_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "supporting_callback_vehicle_id": "VEH_MARCUS_GRAD",
+      "vehicle_state_summary": "Claire locks a $3,400/mo 30-year Austin mortgage in late 2025, absorbs a 70% coding pay cut by 2030, and keeps the house in 2036 only through inflation that spikes August cooling bills.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP01_COAL_SCRIP_ALASKA_RATIONING",
+        "year_or_era": "1912 / 1933 / 1941 / 2016",
+        "jurisdiction": "United States & United Kingdom",
+        "title": "Island Creek Coal Scrip (1912/1938 FLSA), Irving Fisher Debt Deflation (1933), UK Points Rationing (1941), and Alaska PFD Veto (Wielechowski v. State, 2016-2017)",
+        "primary_citation": "Fair Labor Standards Act 29 U.S.C. 203(m); Wielechowski v. State, 403 P.3d 1141 (Alaska 2017); UK Ministry of Food Points Order (Dec 1, 1941)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "fiscal_deficit_oxblood (#8C1D18)",
+        "printed_cotton_exhibit": "US Treasury Monthly Treasury Statement Table 9 & CBO Net Interest Baseline",
+        "foreground_scale_prop_id": "prop_ep01_coal_scrip_and_shoe_tag",
+        "foreground_scale_prop_desc": "Stamped brass company-scrip token beside a $120 running-shoe bill-of-materials tag",
+        "cinema_entity_id": "ENT_CLAIRE_AUSTIN"
+      },
+      "active_motifs": ["MOTIF_ONE_SIGNATURE", "MOTIF_SOFTWARE_VS_PERMIT_SPEED", "MOTIF_WHITEBOARD_VS_30YR_LOAN", "MOTIF_FRIDAY_PAYCHECK_TRUCE", "MOTIF_CLOSED_WALL_SCRIP"],
+      "binge_seam": {
+        "next_episode_id": "ep_02",
+        "series_next_episode_id": "ep_02",
+        "unsolved_closing_tension": "Washington owes $2.1 trillion a year in bond interest while W-2 payroll withholding erodes; who actually steps up to buy that Treasury paper?",
+        "cold_open_handoff_hook": "Opens at a Wednesday afternoon Treasury auction table as foreign central-bank takedown shrinks."
+      }
+    },
+    {
+      "ep_id": "ep_02",
+      "episode_number": 2,
+      "publish_date": "2027-02-14",
+      "title": "Who Buys the Debt When Foreign Central Banks Step Back",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-FISHER-ARTIFACT",
+      "primary_vehicle_id": "VEH_CIVIC_MUNI",
+      "supporting_callback_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "vehicle_state_summary": "State municipal pension fund and prospective 10-year rate shopper watch sovereign auction tails widen 30-year mortgage pricing.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP02_LONDON_GOLD_POOL_AND_2019_REPO",
+        "year_or_era": "1968-1971 & September 2019",
+        "jurisdiction": "United States & London",
+        "title": "Bretton Woods London Gold Pool Runoff (1968-1971) and September 17, 2019 US Overnight Repo Spike",
+        "primary_citation": "Federal Reserve Archival FOMC Memoranda (Aug 1971) & OFR Working Paper 20-02 on Sept 2019 Repo Rate Jump",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "US Treasury TIC Major Foreign Holders Schedule & NY Fed Primary Dealer Takedown Sheet",
+        "foreground_scale_prop_id": "prop_ep02_bearer_treasury_coupon_sheet",
+        "foreground_scale_prop_desc": "Archival engraved Treasury bearer-bond coupon sheet with clipped maturity stubs",
+        "cinema_entity_id": "ENT_MUNI_TAX_BASE"
+      },
+      "active_motifs": ["MOTIF_WHITEBOARD_VS_30YR_LOAN"],
+      "binge_seam": {
+        "next_episode_id": "ep_03",
+        "series_next_episode_id": "ep_10",
+        "unsolved_closing_tension": "Bond buyers assume trillion-dollar tech equities generate a limitless cash cushion, yet hyperscaler free cash flow just flipped negative; where did the cash go?",
+        "cold_open_handoff_hook": "Opens inside Big Tech Form 10-K Property and Equipment footnotes to expose server useful-life extensions."
+      }
+    },
+    {
+      "ep_id": "ep_03",
+      "episode_number": 3,
+      "publish_date": "2027-02-26",
+      "title": "The Depreciation Trick Hiding Inside Big Tech Earnings",
+      "series": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+      "strategy_preset": "STR-BOYLE-CHAPTERED",
+      "primary_vehicle_id": "VEH_ELENA_CAPITAL",
+      "supporting_callback_vehicle_id": "VEH_DEVON_INFRA",
+      "vehicle_state_summary": "Elena audits passive S&P 500 target-date 401(k) funds carrying 33% concentration in hyperscalers stretching server depreciation from 3 years to 6 years.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP03_WASTE_MANAGEMENT_USEFUL_LIFE",
+        "year_or_era": "1998-2002",
+        "jurisdiction": "United States (SEC)",
+        "title": "Waste Management Garbage-Truck Useful-Life Extension ($1.7B Restatement) & WorldCom Line-Cost Capitalization",
+        "primary_citation": "SEC Accounting and Auditing Enforcement Release No. 1532 (SEC v. Dean L. Buntrock et al., March 26, 2002)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "solvent_forest (#1B4D3E)",
+        "printed_cotton_exhibit": "Alphabet, Amazon & Microsoft Form 10-K Note 1 Server Useful-Life Schedules",
+        "foreground_scale_prop_id": "prop_ep03_decommissioned_server_heatsink",
+        "foreground_scale_prop_desc": "Heavy anodized copper-fin server rack heatsink retired after thirty-six months of thermal cycling",
+        "cinema_entity_id": "ENT_ELENA_LEDGER"
+      },
+      "active_motifs": ["MOTIF_CLOSED_WALL_SCRIP"],
+      "binge_seam": {
+        "next_episode_id": "ep_04",
+        "series_next_episode_id": "ep_06",
+        "unsolved_closing_tension": "While corporate accountants stretch chip schedules on Wall Street, those exact frontier models now clone human voices for pennies against retail checking rails.",
+        "cold_open_handoff_hook": "Opens on a three-second synthetic family voice call triggering an irreversible $92,000 authorized wire."
+      }
+    },
+    {
+      "ep_id": "ep_04",
+      "episode_number": 4,
+      "publish_date": "2027-03-10",
+      "title": "Authorized Push Fraud: Why Banks Keep Your Money After an AI Clone Call",
+      "series": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+      "strategy_preset": "STR-HMW-PRIMER",
+      "primary_vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Suburban household wiring a $92,000 home-closing deposit discovers Regulation E protects stolen logins while excluding tricked depositor wires.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP04_1978_EFTA_MAGSTRIPE_ERA",
+        "year_or_era": "1978 & October 2024",
+        "jurisdiction": "United States & United Kingdom",
+        "title": "1978 Electronic Fund Transfers Act ATM-Card Liability Split vs. 2024 UK Payment Systems Regulator Mandatory 50/50 APP Reimbursement Rule",
+        "primary_citation": "15 U.S.C. 1693 et seq. (12 CFR Part 1005) & UK PSR Specific Direction 20 (Oct 7, 2024)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "cyber_slate (#234161)",
+        "printed_cotton_exhibit": "12 CFR 1005.2(m) Unauthorized EFT Statutory Definition & FedNow Operating Circular 8",
+        "foreground_scale_prop_id": "prop_ep04_fido2_hardware_key_and_wire_slip",
+        "foreground_scale_prop_desc": "Matte hardware FIDO2 security key resting on a stamped outbound Fedwire instruction slip",
+        "cinema_entity_id": "ENT_OPERATING_DEFENSE"
+      },
+      "active_motifs": ["MOTIF_ONE_SIGNATURE"],
+      "binge_seam": {
+        "next_episode_id": "ep_05",
+        "series_next_episode_id": "ep_08",
+        "unsolved_closing_tension": "Hardening your checking account blocks synthetic callers, yet one monthly draft bypasses bank fraud filters legally: your utility's data-center capacity rider.",
+        "cold_open_handoff_hook": "Opens on PJM's 833% megawatt-day auction jump landing inside residential electric bills."
+      }
+    },
+    {
+      "ep_id": "ep_05",
+      "episode_number": 5,
+      "publish_date": "2027-03-22",
+      "title": "Why Your Electric Bill Subsidizes Five-Gigawatt Server Campuses",
+      "series": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+      "strategy_preset": "STR-GEN-EXPLAINER",
+      "primary_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "supporting_callback_vehicle_id": "VEH_CIVIC_MUNI",
+      "vehicle_state_summary": "Claire's summer cooling bill and Ohio/Virginia residential ratepayers absorb 20-year substation upgrade amortization while hyperscalers sign bilateral nuclear PPAs.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP05_WPPSS_MUNICIPAL_POWER_DEFAULT",
+        "year_or_era": "1979-1983",
+        "jurisdiction": "Pacific Northwest, United States",
+        "title": "Washington Public Power Supply System ('Whoops') $2.25 Billion Nuclear Revenue-Bond Default",
+        "primary_citation": "Chemical Bank v. Washington Public Power Supply System, 666 P.2d 329 (Wash. 1983)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "cyber_slate (#234161)",
+        "printed_cotton_exhibit": "PJM Base Residual Auction Clearing Report & Virginia SCC Data-Center Tariff Docket",
+        "foreground_scale_prop_id": "prop_ep05_kilowatt_meter_dial_plate",
+        "foreground_scale_prop_desc": "Vintage brass mechanical kilowatt-hour induction meter dial assembly",
+        "cinema_entity_id": "ENT_CLAIRE_AUSTIN"
+      },
+      "active_motifs": ["MOTIF_SOFTWARE_VS_PERMIT_SPEED"],
+      "binge_seam": {
+        "next_episode_id": "ep_06",
+        "series_next_episode_id": "ep_07",
+        "unsolved_closing_tension": "If utilities require multi-billion-dollar upfront collateral for 5-GW campuses and tech free cash flow is negative, who is lending the cash off balance sheet?",
+        "cold_open_handoff_hook": "Opens on Delaware special-purpose vehicles pledging H200/Blackwell racks to private-credit and life-insurance annuities."
+      }
+    },
+    {
+      "ep_id": "ep_06",
+      "episode_number": 6,
+      "publish_date": "2027-04-03",
+      "title": "Shadow GPU Debt: Private Credit Special-Purpose Vehicles Backed by Silicon",
+      "series": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+      "strategy_preset": "STR-MAX-ESSAY",
+      "primary_vehicle_id": "VEH_ELENA_CAPITAL",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Elena traces state pension and retail fixed-annuity premiums routed through life-insurer Schedule BA private-credit loans collateralized by depreciating GPUs.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP06_ENRON_LJM_LUCENT_VENDOR_FINANCE",
+        "year_or_era": "1999-2002",
+        "jurisdiction": "United States",
+        "title": "Enron Chewco/LJM Off-Balance-Sheet SPVs & Lucent Technologies $8B Telecom Vendor-Financing Write-Down",
+        "primary_citation": "Report of Investigation by the Special Investigative Committee of Enron Corp. ('Powers Report', Feb 1, 2002) & SEC Form 10-K Lucent FY2001",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "fiscal_deficit_oxblood (#A3402E)",
+        "printed_cotton_exhibit": "NAIC Schedule BA Insurer Private-Credit Filings & GPU Lease Indenture Covenants",
+        "foreground_scale_prop_id": "prop_ep06_lucite_silicon_die_wafer_shard",
+        "foreground_scale_prop_desc": "Cut silicon logic wafer sector sealed inside clear acrylic paperweight",
+        "cinema_entity_id": "ENT_ELENA_LEDGER"
+      },
+      "active_motifs": ["MOTIF_CLOSED_WALL_SCRIP"],
+      "binge_seam": {
+        "next_episode_id": "ep_07",
+        "series_next_episode_id": "ep_12",
+        "unsolved_closing_tension": "Even $50 billion in private-credit SPV financing cannot energize a server hall sitting dark behind an eight-year wait for one piece of 19th-century metallurgy.",
+        "cold_open_handoff_hook": "Opens on a 400-ton large power transformer sitting on a specialized railcar with a 72-month delivery backlog."
+      }
+    },
+    {
+      "ep_id": "ep_07",
+      "episode_number": 7,
+      "publish_date": "2027-04-15",
+      "title": "The Eight-Year Wait for High-Voltage Transformers",
+      "series": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+      "strategy_preset": "STR-AIC-SPECULATIVE",
+      "primary_vehicle_id": "VEH_CIVIC_MUNI",
+      "supporting_callback_vehicle_id": "VEH_DEVON_INFRA",
+      "vehicle_state_summary": "Regional homebuilder holding 400 permitted suburban lots faces multi-year energization freeze because data-center substations absorbed grain-oriented electrical steel queues.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP07_1935_REA_AND_1973_DPA_STEEL",
+        "year_or_era": "1935 & 1973-1974",
+        "jurisdiction": "United States",
+        "title": "Rural Electrification Act Copper Mobilization (1935) & 1973 Defense Production Act Grain-Oriented Silicon Steel Priority Orders",
+        "primary_citation": "7 U.S.C. 901 (Rural Electrification Act of 1936) & USITC Publication 4491 on Grain-Oriented Electrical Steel",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "cyber_slate (#234161)",
+        "printed_cotton_exhibit": "US DOE Grid Deployment Office Large Power Transformer Assessment & USITC Steel Filings",
+        "foreground_scale_prop_id": "prop_ep07_laminated_transformer_core_stack",
+        "foreground_scale_prop_desc": "Heavy stacked grain-oriented silicon steel E-I transformer core laminations wrapped in copper magnet wire",
+        "cinema_entity_id": "ENT_MUNI_TAX_BASE"
+      },
+      "active_motifs": ["MOTIF_SOFTWARE_VS_PERMIT_SPEED"],
+      "binge_seam": {
+        "next_episode_id": "ep_08",
+        "series_next_episode_id": "ep_09",
+        "unsolved_closing_tension": "Physical grid hardware takes eight years to replace, and autonomous exploit agents now scan industrial and hospital networks inside four hours of every CVE release.",
+        "cold_open_handoff_hook": "Opens on CISA's Known Exploited Vulnerabilities clock racing Lloyd's of London cyber-insurance exclusion clauses."
+      }
+    },
+    {
+      "ep_id": "ep_08",
+      "episode_number": 8,
+      "publish_date": "2027-04-27",
+      "title": "Autonomous Zero-Day Agents vs. Corporate Cyber Insurance Exclusions",
+      "series": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+      "strategy_preset": "STR-MAX-ESSAY",
+      "primary_vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Mid-market regional hospital CFO faces a 19-day ransomware billing freeze and learns systemic autonomous-propagation riders voided business-interruption coverage.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP08_NOTPETYA_MERCK_WAR_EXCLUSION",
+        "year_or_era": "2017-2023",
+        "jurisdiction": "New Jersey Appellate Division & London",
+        "title": "2017 NotPetya Contagion & Merck & Co. v. Ace American Insurance Co. ($1.4B War-Exclusion Ruling) Triggering Lloyd's LMA5567 Clauses",
+        "primary_citation": "Merck & Co., Inc. v. Ace American Ins. Co., 475 N.J. Super. 420 (App. Div. 2023) & Lloyd's Market Bulletin Y5381",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "CISA KEV Exploit Velocity Ledger & Lloyd's LMA Systemic Cyber Exclusion Endorsement",
+        "foreground_scale_prop_id": "prop_ep08_wax_sealed_lloyds_slip_folder",
+        "foreground_scale_prop_desc": "Bound red-ribbon London insurance slip binder with exclusion rider tab",
+        "cinema_entity_id": "ENT_OPERATING_DEFENSE"
+      },
+      "active_motifs": [],
+      "binge_seam": {
+        "next_episode_id": "ep_09",
+        "series_next_episode_id": "ep_18",
+        "unsolved_closing_tension": "Insurers draw territorial borders around digital contagion, and sovereign states are now drawing those exact borders across the ocean floor.",
+        "cold_open_handoff_hook": "Opens on FCC submarine cable landing licenses and hyperscaler ownership of transoceanic fiber."
+      }
+    },
+    {
+      "ep_id": "ep_09",
+      "episode_number": 9,
+      "publish_date": "2027-05-09",
+      "title": "Subsea Cables, Sovereign Compute Zones, and the Splinternet Ledger",
+      "series": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+      "strategy_preset": "STR-FISHER-ARTIFACT",
+      "primary_vehicle_id": "VEH_DEVON_INFRA",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Devon's cross-border enterprise architecture team must duplicate inference clusters across three sovereign cloud zones, tripling compliance capex.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP09_1902_ALL_RED_LINE_CS_ALERT",
+        "year_or_era": "1902 & August 5, 1914",
+        "jurisdiction": "British Empire & English Channel",
+        "title": "British Imperial 'All Red Line' Subsea Telegraph Network & CS Alert Severing Germany's Five Transatlantic Cables at Dawn in 1914",
+        "primary_citation": "Committee of Imperial Defence Sub-Committee on Cable Communications Report (1902 & 1914 Admiralty Log)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "FCC Submarine Cable Landing License Docket & EU/Gulf Sovereign Cloud Localization Mandates",
+        "foreground_scale_prop_id": "prop_ep09_armored_subsea_fiber_cross_section",
+        "foreground_scale_prop_desc": "Cross-section puck of galvanized steel-armored deep-sea optical fiber cable showing copper power-feed sleeve",
+        "cinema_entity_id": "ENT_DEVON_CLUSTER"
+      },
+      "active_motifs": ["MOTIF_SOFTWARE_VS_PERMIT_SPEED"],
+      "binge_seam": {
+        "next_episode_id": "ep_10",
+        "series_next_episode_id": "ep_15",
+        "unsolved_closing_tension": "While global cloud budgets fragment across sovereign borders, companies offset that infrastructure bill by cutting the bottom rung of domestic white-collar hiring.",
+        "cold_open_handoff_hook": "Opens on NY Fed recent-graduate underemployment spreads colliding with $38,000 federal student-loan balances."
+      }
+    },
+    {
+      "ep_id": "ep_10",
+      "episode_number": 10,
+      "publish_date": "2027-05-21",
+      "title": "The Entry-Level Ladder Collapse: Junior Wages and Student Loan Math",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-BOYLE-CHAPTERED",
+      "primary_vehicle_id": "VEH_MARCUS_GRAD",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Marcus graduates at 22 with $38,000 in student loans as junior developer and audit-associate cohorts shrink by half while senior staff run agent fleets.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP10_1980S_CAD_CLERKS_AND_2005_BAPCPA",
+        "year_or_era": "1979-1986 & 2005",
+        "jurisdiction": "United States",
+        "title": "1980s VisiCalc/AutoCAD Elimination of Junior Accounting and Drafting Pools Paired with 2005 BAPCPA Student-Loan Non-Dischargeability",
+        "primary_citation": "11 U.S.C. 523(a)(8) as amended by Bankruptcy Abuse Prevention and Consumer Protection Act of 2005 (P.L. 109-8)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "solvent_forest (#1B4D3E)",
+        "printed_cotton_exhibit": "NY Fed Labor Market for Recent College Graduates Table & Federal Student Aid Portfolio Summary",
+        "foreground_scale_prop_id": "prop_ep10_promissory_master_note_and_slide_rule",
+        "foreground_scale_prop_desc": "Stamped Master Promissory Note amortization schedule beside a vintage aluminum engineering scale",
+        "cinema_entity_id": "ENT_MARCUS_LADDER"
+      },
+      "active_motifs": ["MOTIF_WHITEBOARD_VS_30YR_LOAN", "MOTIF_FRIDAY_PAYCHECK_TRUCE"],
+      "binge_seam": {
+        "next_episode_id": "ep_11",
+        "series_next_episode_id": "ep_11",
+        "unsolved_closing_tension": "When junior analysts and associates never get hired into downtown office towers, those half-empty towers detonate city property-tax budgets.",
+        "cold_open_handoff_hook": "Opens on commercial office CMBS delinquency rates colliding with municipal school and transit tax levies."
+      }
+    },
+    {
+      "ep_id": "ep_11",
+      "episode_number": 11,
+      "publish_date": "2027-06-02",
+      "title": "Municipal Bond Trap: What Happens to Downtown Tax Bases When Offices Empty",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-GEN-EXPLAINER",
+      "primary_vehicle_id": "VEH_CIVIC_MUNI",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Big-city audited financial report loses 28% of commercial tower assessed value, shifting property-tax levies onto residential homeowners and school budgets.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP11_1975_NYC_MAC_AND_2013_DETROIT_CH9",
+        "year_or_era": "1975 & July 2013",
+        "jurisdiction": "New York & Michigan, United States",
+        "title": "1975 New York City Municipal Assistance Corporation Sales-Tax Intercept & 2013 City of Detroit Chapter 9 General-Obligation Haircut",
+        "primary_citation": "Flushing National Bank v. Municipal Assistance Corp., 40 N.Y.2d 731 (1976) & In re City of Detroit, 504 B.R. 97 (Bankr. E.D. Mich. 2013)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "fiscal_deficit_oxblood (#8C1D18)",
+        "printed_cotton_exhibit": "Audited Municipal Annual Financial Report (ACFR) Property-Tax Schedule & Trepp Office CMBS Table",
+        "foreground_scale_prop_id": "prop_ep11_brass_elevator_floor_dial",
+        "foreground_scale_prop_desc": "Cast-brass commercial office building elevator indicator dial frozen at half occupancy",
+        "cinema_entity_id": "ENT_MUNI_TAX_BASE"
+      },
+      "active_motifs": ["MOTIF_WHITEBOARD_VS_30YR_LOAN"],
+      "binge_seam": {
+        "next_episode_id": "ep_12",
+        "series_next_episode_id": "ep_14",
+        "unsolved_closing_tension": "Empty office desks do more than starve city halls; they cancel the $150-per-month per-seat software licenses Wall Street valued at ten times revenue.",
+        "cold_open_handoff_hook": "Opens on SEC Form 10-Q SaaS net-dollar-retention drops as seat licenses collide with autonomous usage tokens."
+      }
+    },
+    {
+      "ep_id": "ep_12",
+      "episode_number": 12,
+      "publish_date": "2027-06-14",
+      "title": "Token Deflation vs. Seat Licenses: The SaaS Seat-Compression Audit",
+      "series": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+      "strategy_preset": "STR-HMW-PRIMER",
+      "primary_vehicle_id": "VEH_DEVON_INFRA",
+      "supporting_callback_vehicle_id": "VEH_MARCUS_GRAD",
+      "vehicle_state_summary": "Devon renegotiates a 5,000-seat enterprise CRM contract down to 1,400 human seats plus metered agent API calls, cutting vendor recurring margin.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP12_1865_JEVONS_AND_2000_ATT_VOIP",
+        "year_or_era": "1865 & 1999-2004",
+        "jurisdiction": "United Kingdom & United States",
+        "title": "William Stanley Jevons Coal Efficiency Paradox (1865) & AT&T Per-Minute Long-Distance Revenue Collapse Under Packet-Switched VoIP",
+        "primary_citation": "W.S. Jevons, The Coal Question (1865, Ch. VII) & FCC Trends in Telephone Service Per-Minute Toll Revenue Series (1998-2005)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "solvent_forest (#1B4D3E)",
+        "printed_cotton_exhibit": "Enterprise SaaS Form 10-Q Remaining Performance Obligations (RPO) & Net-Retention Footnotes",
+        "foreground_scale_prop_id": "prop_ep12_punchcard_seat_tally_counter",
+        "foreground_scale_prop_desc": "Chrome mechanical hand tally counter resting on an enterprise per-seat license schedule",
+        "cinema_entity_id": "ENT_DEVON_CLUSTER"
+      },
+      "active_motifs": ["MOTIF_CLOSED_WALL_SCRIP"],
+      "binge_seam": {
+        "next_episode_id": "ep_13",
+        "series_next_episode_id": "ep_13",
+        "unsolved_closing_tension": "If enterprise software customers are cutting seat spend, how are frontier cloud divisions still reporting 35% revenue surges every quarter?",
+        "cold_open_handoff_hook": "Opens on related-party cloud-credit investments booked back as top-line cloud revenue under ASC 606."
+      }
+    },
+    {
+      "ep_id": "ep_13",
+      "episode_number": 13,
+      "publish_date": "2027-06-26",
+      "title": "Circular Revenue: Cloud Credits Counted as AI Startup Growth",
+      "series": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+      "strategy_preset": "STR-AOTP-LADDER",
+      "primary_vehicle_id": "VEH_ELENA_CAPITAL",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Elena dissects a retail crossover fund holding private AI startups whose multi-billion-dollar valuations rest on round-tripped hyperscaler compute credits.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP13_GLOBAL_CROSSING_QWEST_HOLLOW_SWAPS",
+        "year_or_era": "2000-2002",
+        "jurisdiction": "United States (SEC)",
+        "title": "Global Crossing & Qwest Indefeasible Rights of Use ('Hollow Fiber Capacity Swaps') Round-Trip Revenue Enforcement",
+        "primary_citation": "In the Matter of Global Crossing Ltd., SEC Admin. Proc. File No. 3-11888 (April 11, 2005) & SEC v. Qwest Communications (2004)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "fiscal_deficit_oxblood (#A3402E)",
+        "printed_cotton_exhibit": "FTC Section 6(b) Cloud Partnership Report & SEC ASC 606 Noncash Consideration Footnotes",
+        "foreground_scale_prop_id": "prop_ep13_twin_brass_balance_weights",
+        "foreground_scale_prop_desc": "Matched pair of cylindrical brass apothecary weights trading pans at zero net mass gain",
+        "cinema_entity_id": "ENT_ELENA_LEDGER"
+      },
+      "active_motifs": ["MOTIF_CLOSED_WALL_SCRIP"],
+      "binge_seam": {
+        "next_episode_id": "ep_14",
+        "series_next_episode_id": "ep_16",
+        "unsolved_closing_tension": "Even when real cash revenue lands on hyperscaler books, corporate income taxes fell to 7.1% of federal receipts; follow the statutory plumbing that zeroed the bill.",
+        "cold_open_handoff_hook": "Opens on IRS Corporate Schedule M-3 reconciling GAAP profits against 100% chip expensing and Irish IP licenses."
+      }
+    },
+    {
+      "ep_id": "ep_14",
+      "episode_number": 14,
+      "publish_date": "2027-07-08",
+      "title": "Irish IP Routing and Bonus Depreciation: Why AI Booms Starve Corporate Tax",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-FISHER-ARTIFACT",
+      "primary_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "supporting_callback_vehicle_id": "VEH_ELENA_CAPITAL",
+      "vehicle_state_summary": "Claire's household pays automatic Friday W-2 withholding and FICA before cash clears checking, while domestic hardware expensing and Dublin IP structures defer corporate taxes.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP14_1981_ERTA_LEASING_AND_APPLE_IRELAND",
+        "year_or_era": "1981 & 2004-2024",
+        "jurisdiction": "United States & European Court of Justice",
+        "title": "1981 Economic Recovery Tax Act 'Safe Harbor Tax Leasing' Corporate Wipeout & 2024 ECJ Final Judgment on €13B Irish IP State Aid",
+        "primary_citation": "P.L. 97-34 (ERTA 1981 Safe Harbor Leasing Repealed by TEFRA 1982) & Case C-465/20 P Commission v. Ireland and Apple (ECJ Sept 10, 2024)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "IRS SOI Corporate Schedule M-3 Book-Tax Gap Table & OECD Pillar Two Effective Rate Filings",
+        "foreground_scale_prop_id": "prop_ep14_customs_wax_port_seal",
+        "foreground_scale_prop_desc": "Heavy brass maritime customs stamp used on cross-border intangible licensing ledgers",
+        "cinema_entity_id": "ENT_CLAIRE_AUSTIN"
+      },
+      "active_motifs": ["MOTIF_FRIDAY_PAYCHECK_TRUCE"],
+      "binge_seam": {
+        "next_episode_id": "ep_15",
+        "series_next_episode_id": "ep_17",
+        "unsolved_closing_tension": "Every dollar written off under 100% bonus depreciation still depends on sub-3-nanometer silicon fabricated inside one narrow island water and power grid.",
+        "cold_open_handoff_hook": "Opens comparing Hsinchu ultrapure water draw and wafer yields against Arizona domestic fab cost premiums."
+      }
+    },
+    {
+      "ep_id": "ep_15",
+      "episode_number": 15,
+      "publish_date": "2027-07-20",
+      "title": "Taiwan Silicon Shield vs. Domestic Fab Water and Labor Arithmetic",
+      "series": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+      "strategy_preset": "STR-AIC-CLOCKED",
+      "primary_vehicle_id": "VEH_DEVON_INFRA",
+      "supporting_callback_vehicle_id": "VEH_CIVIC_MUNI",
+      "vehicle_state_summary": "Devon prices domestic wafer capacity allocations against municipal Arizona water reclamation budgets and packaging bottlenecks that still loop back through Taiwan.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP15_1986_US_JAPAN_CHIP_PACT_SEMATECH",
+        "year_or_era": "1986-1992",
+        "jurisdiction": "United States & Japan",
+        "title": "1986 US-Japan Semiconductor Trade Agreement & 1987 DARPA/Industry SEMATECH Austin Fab Consortium",
+        "primary_citation": "Arrangement Between the Government of Japan and the Government of the United States Concerning Trade in Semiconductor Products (Sept 2, 1986) & CBO Report on SEMATECH (1990)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "cyber_slate (#234161)",
+        "printed_cotton_exhibit": "US Commerce CHIPS Industrial Base Assessment, TSMC Form 20-F & Phoenix Municipal Water Permits",
+        "foreground_scale_prop_id": "prop_ep15_ultrapure_quartz_crucible_vial",
+        "foreground_scale_prop_desc": "Sealed laboratory quartz ampoule of high-purity polysilicon granules",
+        "cinema_entity_id": "ENT_DEVON_CLUSTER"
+      },
+      "active_motifs": ["MOTIF_SOFTWARE_VS_PERMIT_SPEED"],
+      "binge_seam": {
+        "next_episode_id": "ep_16",
+        "series_next_episode_id": "ep_25",
+        "unsolved_closing_tension": "One geopolitical or yield shock along that single semiconductor chain hits thirty-three cents of every passive S&P 500 retirement dollar in America.",
+        "cold_open_handoff_hook": "Opens on Vanguard and Fidelity target-date 401(k) holdings concentrated in seven hardware-dependent tickers."
+      }
+    },
+    {
+      "ep_id": "ep_16",
+      "episode_number": 16,
+      "publish_date": "2027-08-01",
+      "title": "401(k) Concentration Risk: Seven Tickers Carrying Passive Retirement",
+      "series": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+      "strategy_preset": "STR-BOYLE-CHAPTERED",
+      "primary_vehicle_id": "VEH_ELENA_CAPITAL",
+      "supporting_callback_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "vehicle_state_summary": "Elena evaluates a 54-year-old household eleven years from retirement holding 85% passive equity exposure where seven AI capex spenders drive a third of index weight.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP16_1973_NIFTY_FIFTY_AND_2000_NORTEL",
+        "year_or_era": "1972-1974 & 2000-2002",
+        "jurisdiction": "United States & Canada",
+        "title": "1973-1974 'Nifty Fifty' Institutional Valuation Reset & Nortel Networks Reaching 35% of the Toronto Stock Exchange Before 98% Drawdown",
+        "primary_citation": "Jeremy Siegel Nifty Fifty Valuation Audit (AAII Journal, 1998) & Ontario Securities Commission Nortel Enforcement Record",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "solvent_forest (#1B4D3E)",
+        "printed_cotton_exhibit": "S&P 500 Top-10 Index Concentration Ledger & Form 5500 Corporate 401(k) Plan Filings",
+        "foreground_scale_prop_id": "prop_ep16_inverted_brass_plumb_bob",
+        "foreground_scale_prop_desc": "Machined surveyor brass plumb bob suspended above a narrow seven-column base",
+        "cinema_entity_id": "ENT_ELENA_LEDGER"
+      },
+      "active_motifs": [],
+      "binge_seam": {
+        "next_episode_id": "ep_17",
+        "series_next_episode_id": "ep_22",
+        "unsolved_closing_tension": "Retirees assume Social Security provides the risk-free floor beneath a volatile 401(k), except OASI solvency depends on the exact human payroll cap AI is shrinking.",
+        "cold_open_handoff_hook": "Opens on Table II.D2 of the Social Security Trustees Report as payroll automation pulls forward the OASI trust-fund depletion clock."
+      }
+    },
+    {
+      "ep_id": "ep_17",
+      "episode_number": 17,
+      "publish_date": "2027-08-13",
+      "title": "Social Security Trust Fund Depletion Accelerated by Payroll Automation",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-GEN-EXPLAINER",
+      "primary_vehicle_id": "VEH_MARCUS_GRAD",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Marcus pays 12.4% combined OASDI payroll tax on every dollar earned while automated capital income escapes FICA entirely, pulling trust-fund exhaustion closer.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP17_1983_GREENSPAN_COMMISSION",
+        "year_or_era": "1983",
+        "jurisdiction": "United States",
+        "title": "1983 National Commission on Social Security Reform (P.L. 98-21) Raising Retirement Age and Taxing Benefits on a 60%-Labor-Share Forecast",
+        "primary_citation": "Social Security Amendments of 1983, Pub. L. 98-21, 97 Stat. 65 (April 20, 1983) & 1983 Greenspan Commission Report",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "fiscal_deficit_oxblood (#8C1D18)",
+        "printed_cotton_exhibit": "Social Security Trustees Annual Report Table II.D2 & CBO OASDI Automatic Cut Projections",
+        "foreground_scale_prop_id": "prop_ep17_1936_metal_social_security_plate",
+        "foreground_scale_prop_desc": "Replica stamped aluminum 1930s Social Security account number tag",
+        "cinema_entity_id": "ENT_MARCUS_LADDER"
+      },
+      "active_motifs": ["MOTIF_ONE_SIGNATURE", "MOTIF_FRIDAY_PAYCHECK_TRUCE"],
+      "binge_seam": {
+        "next_episode_id": "ep_18",
+        "series_next_episode_id": "ep_20",
+        "unsolved_closing_tension": "Your nine-digit Social Security number was designed in 1936 to track lifetime wages, and automated synthetic-identity farms now weaponize that exact number against lenders.",
+        "cold_open_handoff_hook": "Opens on Federal Reserve synthetic-identity charge-off tables and randomized post-2011 SSN prefixes."
+      }
+    },
+    {
+      "ep_id": "ep_18",
+      "episode_number": 18,
+      "publish_date": "2027-08-25",
+      "title": "Synthetic Identity Farms and the Death of Knowledge-Based Verification",
+      "series": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+      "strategy_preset": "STR-MAX-ESSAY",
+      "primary_vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Family applying for apartment and auto credit discovers an aged five-year synthetic tradeline attached to their child's randomized Social Security number.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP18_1970_FCRA_AND_2011_SSN_RANDOMIZATION",
+        "year_or_era": "1970 & June 25, 2011",
+        "jurisdiction": "United States",
+        "title": "1970 Fair Credit Reporting Act File-Matching Rules Colliding with the Social Security Administration's June 2011 SSN Randomization Switch",
+        "primary_citation": "15 U.S.C. 1681 (FCRA) & SSA Final Rule on SSN Randomization, 76 Fed. Reg. 22452 (June 25, 2011)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "cyber_slate (#234161)",
+        "printed_cotton_exhibit": "Federal Reserve Synthetic Identity Fraud White Paper & Three-Bureau Security Freeze Docket",
+        "foreground_scale_prop_id": "prop_ep18_rotary_credit_index_rolodex_card",
+        "foreground_scale_prop_desc": "Archival steel Rolodex index spindle holding mismatched composite credit bureau cards",
+        "cinema_entity_id": "ENT_OPERATING_DEFENSE"
+      },
+      "active_motifs": [],
+      "binge_seam": {
+        "next_episode_id": "ep_19",
+        "series_next_episode_id": "ep_19",
+        "unsolved_closing_tension": "Tech platforms pitch biometric closed-loop digital wallets as the cure for identity fraud, yet locking your paycheck inside a programmable wallet revives an older trap.",
+        "cold_open_handoff_hook": "Opens on BIS programmable-money settlement rules and closed-loop platform instant-cashout fees."
+      }
+    },
+    {
+      "ep_id": "ep_19",
+      "episode_number": 19,
+      "publish_date": "2027-09-06",
+      "title": "Programmable Wallets, Expiring Credits, and Modern Company Scrip",
+      "series": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+      "strategy_preset": "STR-AIC-SPECULATIVE",
+      "primary_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "supporting_callback_vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "vehicle_state_summary": "Claire supplements compressed W-2 income through technical agent-supervision contracts paid into a closed-loop platform wallet charging conversion spreads to reach her mortgage bank.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP19_1894_PULLMAN_TOWN_AND_1932_WORGL_STAMP",
+        "year_or_era": "1880-1894 & 1932-1933",
+        "jurisdiction": "Illinois, United States & Tyrol, Austria",
+        "title": "Pullman Palace Car Company Closed Rent-Deduction Payroll (1894 Strike Commission) & 1932 Wörgl Demurrage Stamp-Scrip Experiment",
+        "primary_citation": "US Strike Commission Report on the Chicago Strike of June-July 1894 (Sen. Exec. Doc. No. 7, 53d Cong.) & Austrian National Bank 1933 Wörgl Prohibition",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "BIS Project Agorá / Rosalind Programmable Ledger Specs & Stablecoin Reserve Attestations",
+        "foreground_scale_prop_id": "prop_ep19_stamped_demurrage_scrip_note",
+        "foreground_scale_prop_desc": "Archival twelve-box monthly stamp-scrip voucher inside an acrylic archival sleeve",
+        "cinema_entity_id": "ENT_CLAIRE_AUSTIN"
+      },
+      "active_motifs": ["MOTIF_ONE_SIGNATURE", "MOTIF_CLOSED_WALL_SCRIP"],
+      "binge_seam": {
+        "next_episode_id": "ep_20",
+        "series_next_episode_id": "ep_21",
+        "unsolved_closing_tension": "Even when your pay arrives in unrestricted bank dollars, algorithmic pricing engines on the other side of your lease already know the exact ceiling you can pay.",
+        "cold_open_handoff_hook": "Opens on DOJ Sherman Act Section 1 complaints against shared multi-family rent-pricing algorithms."
+      }
+    },
+    {
+      "ep_id": "ep_20",
+      "episode_number": 20,
+      "publish_date": "2027-09-18",
+      "title": "Algorithmic Rent, Dynamic Pricing, and Antitrust Statutory Limits",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-HMW-PRIMER",
+      "primary_vehicle_id": "VEH_MARCUS_GRAD",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Marcus shops six competing apartment complexes at lease renewal and receives synchronized rent hikes generated by one shared revenue-management model.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP20_1992_DOJ_AIRLINE_TARIFF_PUBLISHING",
+        "year_or_era": "1992-1994",
+        "jurisdiction": "United States District Court (D.D.C.)",
+        "title": "United States v. Airline Tariff Publishing Co. (ATPCO) Shared Computerized Fare-Signaling Antitrust Consent Decree",
+        "primary_citation": "United States v. Airline Tariff Publishing Co., 836 F. Supp. 9 (D.D.C. 1993) & 1994 Final Consent Decree",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "DOJ Antitrust Division Algorithmic Rent Civil Complaint & BLS CPI Shelter Weight Schedule",
+        "foreground_scale_prop_id": "prop_ep20_brass_apartment_master_key_ring",
+        "foreground_scale_prop_desc": "Numbered brass property-management master key ring tagged across six building units",
+        "cinema_entity_id": "ENT_MARCUS_LADDER"
+      },
+      "active_motifs": ["MOTIF_WHITEBOARD_VS_30YR_LOAN"],
+      "binge_seam": {
+        "next_episode_id": "ep_21",
+        "series_next_episode_id": "ep_23",
+        "unsolved_closing_tension": "Shared algorithms concentrate pricing power over physical apartments, while answer-engine scraping is starving the open web that trained those models.",
+        "cold_open_handoff_hook": "Opens on federal fair-use dockets and 60% referral drops inside public publisher Form 10-K filings."
+      }
+    },
+    {
+      "ep_id": "ep_21",
+      "episode_number": 21,
+      "publish_date": "2027-09-30",
+      "title": "Training-Data Copyright Settlements vs. Open-Web Collapse",
+      "series": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+      "strategy_preset": "STR-FISHER-ARTIFACT",
+      "primary_vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Independent technical trade publisher loses 60% of search click-through to zero-click answer summaries while conglomerate rivals sign exclusive licensing MoUs.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP21_1940_ASCAP_RADIO_AND_GOOGLE_BOOKS",
+        "year_or_era": "1939-1941 & 2015",
+        "jurisdiction": "United States (SDNY & 2d Cir.)",
+        "title": "1940 ASCAP Radio Blanket-License Boycott Birthing BMI/Consent Decrees & Authors Guild v. Google (2015 Non-Substitutive Fair Use Boundary)",
+        "primary_citation": "United States v. ASCAP, 1941-1943 Trade Cases (S.D.N.Y. 1941) & Authors Guild v. Google, Inc., 804 F.3d 202 (2d Cir. 2015)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "SDNY/NDCA Copyright Summary-Judgment Briefs & Publisher Form 10-K AI Licensing Disclosures",
+        "foreground_scale_prop_id": "prop_ep21_lead_linotype_slug_block",
+        "foreground_scale_prop_desc": "Cast lead-alloy hot-metal Linotype newspaper column slug block",
+        "cinema_entity_id": "ENT_OPERATING_DEFENSE"
+      },
+      "active_motifs": ["MOTIF_CLOSED_WALL_SCRIP"],
+      "binge_seam": {
+        "next_episode_id": "ep_22",
+        "series_next_episode_id": "ep_24",
+        "unsolved_closing_tension": "Tech giants spend billions licensing publisher archives and buying GPUs, and they fund a growing share of that bill by trimming employee stock grants.",
+        "cold_open_handoff_hook": "Opens on Form 10-K Statements of Stockholders' Equity as RSU pools shift from human engineers to silicon capex."
+      }
+    },
+    {
+      "ep_id": "ep_22",
+      "episode_number": 22,
+      "publish_date": "2027-10-12",
+      "title": "Stock-Based Compensation Dilution When Engineers Get Replaced by Compute",
+      "series": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+      "strategy_preset": "STR-GEN-EXPLAINER",
+      "primary_vehicle_id": "VEH_DEVON_INFRA",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Devon inspects his annual RSU refresh grant alongside non-GAAP reconciliation tables as corporate cash shifts from engineering equity compensation into GPU depreciation.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP22_1993_IRC_162M_AND_FAS_123R",
+        "year_or_era": "1993 & 2004",
+        "jurisdiction": "United States (Congress & FASB)",
+        "title": "1993 Internal Revenue Code Section 162(m) $1M Cash Salary Cap & FASB Statement 123(R) Mandatory Stock-Option Expensing Rule",
+        "primary_citation": "26 U.S.C. 162(m) (Omnibus Budget Reconciliation Act of 1993) & FASB Statement No. 123 (Revised December 2004)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "solvent_forest (#1B4D3E)",
+        "printed_cotton_exhibit": "SEC Form 10-K Non-GAAP SBC Reconciliation & Share-Buyback Cash Flow Schedules",
+        "foreground_scale_prop_id": "prop_ep22_engraved_stock_vesting_certificate",
+        "foreground_scale_prop_desc": "Heavy cotton corporate restricted-stock certificate with four-year cliff perforation",
+        "cinema_entity_id": "ENT_DEVON_CLUSTER"
+      },
+      "active_motifs": ["MOTIF_FRIDAY_PAYCHECK_TRUCE"],
+      "binge_seam": {
+        "next_episode_id": "ep_23",
+        "series_next_episode_id": "ep_28",
+        "unsolved_closing_tension": "Workers watching equity grants shrink often park cash inside 'safe' short-term Treasury bills, walking straight into Washington's favorite post-war debt playbook.",
+        "cold_open_handoff_hook": "Opens on archival 1942 FOMC minutes where the Fed capped T-bill yields at three-eighths of one percent."
+      }
+    },
+    {
+      "ep_id": "ep_23",
+      "episode_number": 23,
+      "publish_date": "2027-10-24",
+      "title": "Financial Repression: How Governments Clear Debt Through Yield Caps",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-BOYLE-CHAPTERED",
+      "primary_vehicle_id": "VEH_ELENA_CAPITAL",
+      "supporting_callback_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "vehicle_state_summary": "Elena models a $120,000 household T-bill and CD reserve earning 3.5% nominal yield taxed at 24% while essential power and insurance inflation runs at 5%.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP23_1942_1951_FED_TREASURY_YIELD_PEG",
+        "year_or_era": "April 1942 - March 1951",
+        "jurisdiction": "United States",
+        "title": "WWII Federal Reserve-Treasury Yield Curve Peg (0.375% Bills / 2.50% Long Bonds) & March 4, 1951 Treasury-Fed Accord",
+        "primary_citation": "Federal Reserve Bulletin (May 1942 & March 1951 Joint Treasury-Federal Reserve Accord Statement); Reinhart & Sbrancia NBER Working Paper 16893",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "fiscal_deficit_oxblood (#8C1D18)",
+        "printed_cotton_exhibit": "1942-1951 Archival FOMC Yield-Cap Directive & Federal Reserve Bank Supplementary Capital Ratio (SLR) Rules",
+        "foreground_scale_prop_id": "prop_ep23_1944_series_e_war_bond_booklet",
+        "foreground_scale_prop_desc": "Original-format folded manila WWII savings bond stamp booklet",
+        "cinema_entity_id": "ENT_ELENA_LEDGER"
+      },
+      "active_motifs": ["MOTIF_ONE_SIGNATURE"],
+      "binge_seam": {
+        "next_episode_id": "ep_24",
+        "series_next_episode_id": "ep_26",
+        "unsolved_closing_tension": "Protecting household capital across a decade takes clear cognitive focus, and recommendation algorithms now price teenage and adult attention by the millisecond.",
+        "cold_open_handoff_hook": "Opens on multi-state Attorneys General discovery exhibits quantifying algorithmic short-video session extension."
+      }
+    },
+    {
+      "ep_id": "ep_24",
+      "episode_number": 24,
+      "publish_date": "2027-11-05",
+      "title": "Attention Capture Engineering and Youth Platform Liability Laws",
+      "series": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+      "strategy_preset": "STR-AOTP-LADDER",
+      "primary_vehicle_id": "VEH_MARCUS_GRAD",
+      "supporting_callback_vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "vehicle_state_summary": "Marcus sets hardware-level DNS and OS attention locks for his seventeen-year-old younger sibling while dissecting product-design liability exceptions around Section 230.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP24_1998_TOBACCO_MASTER_SETTLEMENT",
+        "year_or_era": "1994-1998",
+        "jurisdiction": "46 US States",
+        "title": "1998 State Attorneys General Tobacco Master Settlement Agreement ($206B) Bypassing Individual Smoker Defenses via Public-Cost Tort Claims",
+        "primary_citation": "Master Settlement Agreement Among 46 State Attorneys General and Participating Manufacturers (Nov 23, 1998) & 47 U.S.C. 230",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "MDL No. 3047 Social Media Adolescent Design Defect Docket & Appellate Section 230 Holdings",
+        "foreground_scale_prop_id": "prop_ep24_mechanical_chess_stop_clock",
+        "foreground_scale_prop_desc": "Dual-dial wind-up wooden chess clock measuring reclaimed evening study hours",
+        "cinema_entity_id": "ENT_MARCUS_LADDER"
+      },
+      "active_motifs": [],
+      "binge_seam": {
+        "next_episode_id": "ep_25",
+        "series_next_episode_id": "ep_29",
+        "unsolved_closing_tension": "While software platforms battle state courts over digital feeds, autonomous robotics just stepped off the screen onto container piers and interstate freight lanes.",
+        "cold_open_handoff_hook": "Opens on Bureau of Transportation Statistics freight ledgers and automated terminal crane economics."
+      }
+    },
+    {
+      "ep_id": "ep_25",
+      "episode_number": 25,
+      "publish_date": "2027-11-17",
+      "title": "Autonomous Port, Warehouse, and Trucking Economics vs. Regional Tax Towns",
+      "series": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+      "strategy_preset": "STR-AIC-SPECULATIVE",
+      "primary_vehicle_id": "VEH_CIVIC_MUNI",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Midwest interstate freight town and an independent owner-operator carrying a $165,000 commercial rig loan collide with hub-to-hub autonomous freight corridors.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP25_1960_ILWU_CONTAINERIZATION_PACT",
+        "year_or_era": "1960 & 1980",
+        "jurisdiction": "US West Coast & Interstate Commerce",
+        "title": "1960 ILWU-PMA Mechanization and Modernization Containerization Buyout ($29M Fund for 90% Man-Hour Drop) & 1980 Motor Carrier Act",
+        "primary_citation": "ILWU-Pacific Maritime Association Mechanization and Modernization Agreement (Oct 18, 1960) & Motor Carrier Act of 1980 (P.L. 96-296)",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "cyber_slate (#234161)",
+        "printed_cotton_exhibit": "US BTS Freight Ton-Mile Cost Ledger, FMCSA Autonomous Carrier Docket & Maritime Terminal Filings",
+        "foreground_scale_prop_id": "prop_ep25_intermodal_twistlock_steel_pin",
+        "foreground_scale_prop_desc": "Forged steel shipping-container corner twistlock casting",
+        "cinema_entity_id": "ENT_MUNI_TAX_BASE"
+      },
+      "active_motifs": ["MOTIF_SOFTWARE_VS_PERMIT_SPEED", "MOTIF_FRIDAY_PAYCHECK_TRUCE"],
+      "binge_seam": {
+        "next_episode_id": "ep_26",
+        "series_next_episode_id": "ep_27",
+        "unsolved_closing_tension": "Fixed commercial truck loans break when freight rates reprice, and homeowners with 'fixed' 30-year mortgages face a parallel trap hidden inside monthly escrow.",
+        "cold_open_handoff_hook": "Opens on US Treasury Federal Insurance Office county non-renewal tables adding $620 a month to 'fixed' housing payments."
+      }
+    },
+    {
+      "ep_id": "ep_26",
+      "episode_number": 26,
+      "publish_date": "2027-11-29",
+      "title": "Homeowners Insurance Withdrawal + Fixed 30-Year Mortgages",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-GEN-EXPLAINER",
+      "primary_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "supporting_callback_vehicle_id": "VEH_CIVIC_MUNI",
+      "vehicle_state_summary": "Claire's $3,400 fixed principal-and-interest mortgage gets hit with a $620 monthly escrow jump as reinsurers reprice hail and grid-fire risk every twelve months.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP26_1992_HURRICANE_ANDREW_RESIDUAL_POOLS",
+        "year_or_era": "August 1992 - 2002",
+        "jurisdiction": "Florida & California, United States",
+        "title": "1992 Hurricane Andrew Eleven-Insurer Insolvency Wave & Statutory Creation of State Insurer-of-Last-Resort Residual Pools",
+        "primary_citation": "Florida Statutes Sec. 627.351(6) (Citizens Property Insurance Corp.) & US Treasury FIO Homeowners Insurance Report",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "fiscal_deficit_oxblood (#8C1D18)",
+        "printed_cotton_exhibit": "US Treasury FIO ZIP-Code Non-Renewal Dataset & Fannie Mae Force-Placed Hazard Insurance Rules",
+        "foreground_scale_prop_id": "prop_ep26_cast_iron_fire_mark_plaque",
+        "foreground_scale_prop_desc": "Miniature cast-iron 19th-century mutual fire-insurance house plaque",
+        "cinema_entity_id": "ENT_CLAIRE_AUSTIN"
+      },
+      "active_motifs": ["MOTIF_WHITEBOARD_VS_30YR_LOAN"],
+      "binge_seam": {
+        "next_episode_id": "ep_27",
+        "series_next_episode_id": "ep_30",
+        "unsolved_closing_tension": "While domestic insurers pull capital out of stressed counties, Gulf and Asian sovereign wealth funds are pouring hundreds of billions into US compute campuses.",
+        "cold_open_handoff_hook": "Opens on CFIUS Annual Reports to Congress and sovereign Schedule 13D/13G filings backing domestic AI clusters."
+      }
+    },
+    {
+      "ep_id": "ep_27",
+      "episode_number": 27,
+      "publish_date": "2027-12-11",
+      "title": "Sovereign Wealth Funds as the Lenders of Last Resort for Compute",
+      "series": "Series 03: AI Power Grid Crisis, Chip Wars & Geopolitics",
+      "strategy_preset": "STR-FISHER-ARTIFACT",
+      "primary_vehicle_id": "VEH_ELENA_CAPITAL",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Elena tracks hydrocarbon and trade-surplus sovereign funds rotating out of passive Treasury bills into preferred equity inside US hyperscale data centers.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP27_1974_PETRODOLLAR_AND_2008_FINSA_SWF",
+        "year_or_era": "1974 & 2007-2008",
+        "jurisdiction": "United States, Gulf States & Singapore",
+        "title": "1974 US-Saudi Treasury Add-On Recycling Pact & 2007-2008 Sovereign Wealth Emergency Recapitalizations of Citigroup, Morgan Stanley, and Merrill Lynch",
+        "primary_citation": "Foreign Investment and National Security Act of 2007 (P.L. 110-49, 50 U.S.C. 4565) & State Dept Declassified 1974 Riyadh Cables",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "US Treasury CFIUS Annual Report Tables & Sovereign Wealth SEC Schedule 13D Disclosures",
+        "foreground_scale_prop_id": "prop_ep27_crude_assay_cylinder_and_optical_transceiver",
+        "foreground_scale_prop_desc": "Sealed amber glass crude-oil sample vial paired beside an 800G data-center optical transceiver",
+        "cinema_entity_id": "ENT_ELENA_LEDGER"
+      },
+      "active_motifs": ["MOTIF_SOFTWARE_VS_PERMIT_SPEED"],
+      "binge_seam": {
+        "next_episode_id": "ep_28",
+        "series_next_episode_id": "ep_05",
+        "unsolved_closing_tension": "Compute financed by global sovereign capital looks abstract until an insurer's automated utilization agent denies your family's hospital stay in four seconds.",
+        "cold_open_handoff_hook": "Opens on HHS Inspector General audits of algorithmic Medicare Advantage prior-authorization denials."
+      }
+    },
+    {
+      "ep_id": "ep_28",
+      "episode_number": 28,
+      "publish_date": "2027-12-23",
+      "title": "Healthcare Billing Agents vs. Claim-Denial Arms Races",
+      "series": "Series 02: AI Bubble, Corporate Accounting & Wall Street Math",
+      "strategy_preset": "STR-HMW-PRIMER",
+      "primary_vehicle_id": "VEH_SMB_HOUSEHOLD_OPS",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Family faces a 72-hour post-acute rehabilitation discharge notice generated by an insurer's predictive length-of-stay model where 80% of appealed denials get overturned.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP28_1983_MEDICARE_DRG_AND_ERISA_514",
+        "year_or_era": "1974 & 1983",
+        "jurisdiction": "United States",
+        "title": "1983 Medicare Diagnosis-Related Group (DRG) Fixed-Fee Shift & 1974 ERISA Section 514 Preemption Shielding Employer-Plan Claim Denials from Bad-Faith Damages",
+        "primary_citation": "29 U.S.C. 1144 (ERISA Sec. 514, Pilot Life Ins. Co. v. Dedeaux, 481 U.S. 41 (1987)) & HHS OIG Report OEI-09-18-00260",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "solvent_forest (#1B4D3E)",
+        "printed_cotton_exhibit": "HHS OIG Prior-Authorization Overturn Audit & Insurer Form 10-K Medical-Loss Ratio Tables",
+        "foreground_scale_prop_id": "prop_ep28_stainless_medical_clipboard_and_timer",
+        "foreground_scale_prop_desc": "Brushed stainless-steel hospital chart clipboard clipped to a 72-hour appeal checklist",
+        "cinema_entity_id": "ENT_OPERATING_DEFENSE"
+      },
+      "active_motifs": ["MOTIF_ONE_SIGNATURE"],
+      "binge_seam": {
+        "next_episode_id": "ep_29",
+        "series_next_episode_id": "ep_03",
+        "unsolved_closing_tension": "When frontier model weights govern hospitals, grids, and banks, stealing one 500-gigabyte checkpoint file becomes an act of national industrial espionage.",
+        "cold_open_handoff_hook": "Opens on DOJ National Security Division weight-exfiltration indictments and RAND SL4/SL5 containment locks."
+      }
+    },
+    {
+      "ep_id": "ep_29",
+      "episode_number": 29,
+      "publish_date": "2028-01-04",
+      "title": "Model-Weight Espionage, Insider Exfiltration, and Industrial Sabotage",
+      "series": "Series 04: AI Cybersecurity, Scams, Privacy & Tech Policy",
+      "strategy_preset": "STR-BOYLE-CHAPTERED",
+      "primary_vehicle_id": "VEH_DEVON_INFRA",
+      "supporting_callback_vehicle_id": null,
+      "vehicle_state_summary": "Devon leads an infrastructure hardening sprint locking training checkpoints behind hardware HSMs, two-person egress controls, and air-gapped industrial PLC telemetry.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP29_1982_FAREWELL_DOSSIER_AND_STUXNET",
+        "year_or_era": "1981-1982 & 2010",
+        "jurisdiction": "United States, France & Iran",
+        "title": "1981-1982 'Farewell Dossier' Soviet Line-X Industrial Tech Exfiltration & 2010 Stuxnet Air-Gapped Siemens S7-315 PLC Centrifuge Sabotage",
+        "primary_citation": "CIA Center for the Study of Intelligence Declassified 'Farewell File' Monograph & ICS-CERT Advisory ICSA-10-272-01",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "cyber_slate (#234161)",
+        "printed_cotton_exhibit": "DOJ NSD Trade-Secret Indictments, BIS Export Enforcement Orders & NIST AI 800-1 Guidelines",
+        "foreground_scale_prop_id": "prop_ep29_airgap_fiber_data_diode_module",
+        "foreground_scale_prop_desc": "Industrial DIN-rail unidirectional optical data-diode hardware casing",
+        "cinema_entity_id": "ENT_DEVON_CLUSTER"
+      },
+      "active_motifs": [],
+      "binge_seam": {
+        "next_episode_id": "ep_30",
+        "series_next_episode_id": "ep_04",
+        "unsolved_closing_tension": "Across twenty-nine investigations we have audited taxes, bonds, grids, fraud, and silicon; how does a twenty-eight-year-old household assemble all of that into one balance sheet?",
+        "cold_open_handoff_hook": "Opens in January 2028 with BLS labor share at 53% and builds the 2028-2036 bottleneck-ownership playbook."
+      }
+    },
+    {
+      "ep_id": "ep_30",
+      "episode_number": 30,
+      "publish_date": "2028-01-16",
+      "title": "The 2028-2036 Household Balance-Sheet Playbook: Owning the Bottlenecks",
+      "series": "Series 01: AI Economy, National Debt & Your Money",
+      "strategy_preset": "STR-AIC-CLOCKED",
+      "primary_vehicle_id": "VEH_CLAIRE_AUSTIN",
+      "supporting_callback_vehicle_id": "VEH_MARCUS_GRAD",
+      "vehicle_state_summary": "Converges Claire's debt-duration lesson, Marcus's career-compounding pivot, Devon's hardware security keys, and Elena's real-asset bottleneck weights across 2028-2036.",
+      "historical_precedent": {
+        "precedent_id": "HIST_EP30_1971_1982_STAGFLATION_REAL_ASSET_SPREAD",
+        "year_or_era": "1971-1982",
+        "jurisdiction": "United States",
+        "title": "1971-1982 Post-Bretton Woods Stagflation Decade: Fixed Cash & Wage Purchasing-Power Erosion vs. Energy, Grid, and Productive Equity Returns",
+        "primary_citation": "Federal Reserve Survey of Consumer Finances Historical Series (1970-1983) & BLS Real Hourly Compensation Index",
+        "retired_after_episode": true
+      },
+      "desk_props": {
+        "tie_semantic_role": "statutory_navy (#1C2B3A)",
+        "printed_cotton_exhibit": "Federal Reserve SCF Net-Worth Decile Ledger, BLS Labor Share Series & CBO 2028-2038 Outlook",
+        "foreground_scale_prop_id": "prop_ep30_brass_parallel_navigation_rulers",
+        "foreground_scale_prop_desc": "Heavy marine brass parallel chart-plotting rulers laid across the 2028-2036 household ledger",
+        "cinema_entity_id": "ENT_CLAIRE_AUSTIN"
+      },
+      "active_motifs": ["MOTIF_WHITEBOARD_VS_30YR_LOAN", "MOTIF_FRIDAY_PAYCHECK_TRUCE"],
+      "binge_seam": {
+        "next_episode_id": "ep_01",
+        "series_next_episode_id": "ep_01",
+        "unsolved_closing_tension": "Every rule on this 2036 balance sheet starts from one foundational arithmetic trap: why neither a federal dividend check, Universal Basic Compute, nor central-bank money printing can replace your Friday paycheck.",
+        "cold_open_handoff_hook": "Loops new January 2028 viewers directly back into Episode 01 ('Roughly two-thirds of every tax dollar Washington collects comes straight out of somebody's paycheck')."
+      }
+    }
+  ]
+}

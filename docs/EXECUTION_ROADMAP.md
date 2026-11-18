@@ -63,8 +63,8 @@
 - [x] **10.** Fact-Lock & Primary Citation Ledger (`02_research_and_data/data/fact_ledger.json` + validator)
 - [x] **11.** Live News-to-Structural-Thesis Hijack Radar (`02_research_and_data/tools/news_to_thesis_radar.mjs` + Playbook)
 - [x] **12.** Adversarial Red-Team Critique Protocol & Prompt Pack (`02_research_and_data/12_adversarial_red_team_protocol.md`)
-- [ ] **13.** 30-Episode Master Structural Slate (`02_research_and_data/slate_30_jan2028.json` + `.md`)
-- [ ] **14.** Automated Staleness & Decay Scorer (`02_research_and_data/tools/staleness_audit.py`)
+- [x] **13.** 30-Episode Master Structural Slate (`02_research_and_data/slate_30_jan2028.json` + `.md`)
+- [x] **14.** Automated Staleness & Decay Scorer (`02_research_and_data/tools/staleness_audit.py`)
 
 ### Division 3: Viral Outlier Engineering, Titles & Thumbnails (`03_viral_and_packaging/`)
 - [ ] **15.** Viral Outlier Swipe Database (`03_viral_and_packaging/viral_outliers_db.json`)
@@ -79,9 +79,9 @@
 - [ ] **22.** Episode 02 Complete Word-for-Word Script (`04_scripts_and_dossiers/ep_02_who_buys_the_debt/`)
 - [ ] **23.** Episode 03 Complete Word-for-Word Script (`04_scripts_and_dossiers/ep_03_the_depreciation_trick/`)
 - [ ] **24.** 27 Individual Deep Episode Dossiers (`04_scripts_and_dossiers/dossiers/ep_04.md` .. `ep_30.md`)
-- [ ] **25.** Local Anti-AI & Spoken-Cadence Gate (`04_scripts_and_dossiers/tools/anti_ai_script_gate.mjs`)
-- [ ] **26.** Pacing, Re-Hook & Retention Drop-Off Auditor (`04_scripts_and_dossiers/tools/retention_linter.mjs`)
-- [ ] **27.** Longitudinal Callback & Universe Continuity Bible (`04_scripts_and_dossiers/27_universe_continuity_and_callbacks_bible.md`)
+- [x] **25.** Local Anti-AI & Spoken-Cadence Gate (`04_scripts_and_dossiers/tools/anti_ai_script_gate.mjs`)
+- [x] **26.** Pacing, Re-Hook & Retention Drop-Off Auditor (`04_scripts_and_dossiers/tools/retention_linter.mjs`)
+- [x] **27.** Longitudinal Callback & Universe Continuity Bible (`04_scripts_and_dossiers/27_universe_continuity_and_callbacks_bible.md`)
 
 ### Division 5: Translation, Bilingual Persian-English Mastery Books & Global Reach (`05_mastery_and_translation/`)
 - [ ] **28.** Episode 01 Bilingual Persian-English Mastery Book (`05_mastery_and_translation/books/ep_01_bilingual_mastery_book.md`)
