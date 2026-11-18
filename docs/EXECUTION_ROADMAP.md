@@ -84,9 +84,9 @@
 - [x] **27.** Longitudinal Callback & Universe Continuity Bible (`04_scripts_and_dossiers/27_universe_continuity_and_callbacks_bible.md`)
 
 ### Division 5: Translation, Bilingual Persian-English Mastery Books & Global Reach (`05_mastery_and_translation/`)
-- [ ] **28.** Episode 01 Bilingual Persian-English Mastery Book (`05_mastery_and_translation/books/ep_01_bilingual_mastery_book.md`)
-- [ ] **29.** Episode 02 Bilingual Persian-English Mastery Book (`05_mastery_and_translation/books/ep_02_bilingual_mastery_book.md`)
-- [ ] **30.** Episode 03 Bilingual Persian-English Mastery Book (`05_mastery_and_translation/books/ep_03_bilingual_mastery_book.md`)
+- [x] **28.** Episode 01 Bilingual Persian-English Mastery Book (`05_mastery_and_translation/books/ep_01_bilingual_mastery_book.md`)
+- [x] **29.** Episode 02 Bilingual Persian-English Mastery Book (`05_mastery_and_translation/books/ep_02_bilingual_mastery_book.md`)
+- [x] **30.** Episode 03 Bilingual Persian-English Mastery Book (`05_mastery_and_translation/books/ep_03_bilingual_mastery_book.md`)
 - [ ] **31.** 300-Term English-Persian Technical & Idiomatic Dictionary (`05_mastery_and_translation/glossary_en_fa.json` + `.md`)
 - [ ] **32.** Persian Full Script Translations (`05_mastery_and_translation/study_translations/ep_01..03_fa_study.md`)
 - [ ] **33.** Multi-Language YouTube Subtitle & Global Audio-Track Pipeline (`05_mastery_and_translation/tools/subtitle_translator_prep.mjs` + Guide)

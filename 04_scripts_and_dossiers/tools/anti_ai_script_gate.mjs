@@ -122,6 +122,11 @@ function scanAndNormalizeObfuscation(lexicalText, lineStarts) {
   const zwRe = /[\u200B-\u200D\uFEFF\u2060]/g;
   let zm;
   while ((zm = zwRe.exec(lexicalText)) !== null) {
+    if (zm[0] === '\u200C' && zm.index > 0 && zm.index + 1 < lexicalText.length
+      && /[\u0600-\u06FF]/.test(lexicalText[zm.index - 1])
+      && /[\u0600-\u06FF]/.test(lexicalText[zm.index + 1])) {
+      continue;
+    }
     const pos = offsetToLineCol(lineStarts, zm.index);
     const hex = zm[0].codePointAt(0).toString(16).toUpperCase().padStart(4, '0');
     bypassViolations.push(makeViolation('CHECK_1_BANNED_VOCAB', 'L32_UNICODE_BYPASS', 'P0', pos, `U+${hex}`, `Strip invisible zero-width character U+${hex}.`));
