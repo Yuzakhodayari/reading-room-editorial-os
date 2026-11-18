@@ -1,0 +1,102 @@
+{
+  "dataset_id": "RR_OS_2027_HIJACK_RADAR_CALIBRATION_12",
+  "description": "Twelve realistic 2027 breaking-news test events spanning viral frontier model releases, intraday index flash crashes, sovereign bond interventions, grid moratoriums, voice-clone banking dockets, and trivial benchmark gossip across all four deterministic routing verdicts.",
+  "events": [
+    {
+      "event_id": "EVT_2027_01",
+      "date_label": "March 2027",
+      "domain": "macro",
+      "headline": "Federal Reserve and Treasury Announce Emergency Bank Treasury Capital Ratio Carve-Out After 30-Year Bond Auction Tail Hits 6.4 Basis Points",
+      "summary": "Following a weak $44 billion 30-year US Treasury bond auction where primary dealers absorbed 24.8 percent of supply, the Federal Reserve Board issued an emergency interim final rule on FOMC H.4.1 and 12 CFR capital schedules exempting Treasury holdings from large-bank SLR limits through 2031 while CBO net interest projections cross $1.18 trillion, shifting mortgage-rate volatility and real-yield repression onto household savers.",
+      "source_hint": "US Treasury Monthly Treasury Statement Table 9, Federal Reserve H.4.1, and 12 CFR SLR Docket"
+    },
+    {
+      "event_id": "EVT_2027_02",
+      "date_label": "July 2027",
+      "domain": "geopolitics",
+      "headline": "FERC and PJM Impose Emergency Five-Year Grid Moratorium on Unbacked 500-Megawatt AI Campuses as 13-State Household Utility Tariffs Jump 41 Percent",
+      "summary": "A mandatory FERC reliability order, DOE transformer docket, and PJM Base Residual Auction filing require every AI data center above 300 megawatts to finance dedicated nuclear or gas generation through 2035 after substation queues passed 84 months, locking $48 monthly electric bill surcharges and 20-year utility bond debt onto residential ratepayers, mortgage homeowners, and family checking budgets.",
+      "source_hint": "FERC Reliability Order Docket, DOE Grid Deployment Report, SEC Form 8-K Utility Covenants, and PJM Auction Filing"
+    },
+    {
+      "event_id": "EVT_2027_03",
+      "date_label": "April 2027",
+      "domain": "cyber",
+      "headline": "CFPB Supervisory Docket Shows Autonomous Voice-Clone Wire Scams Drove $4.9 Billion in Unreimbursed Household Checking Losses",
+      "summary": "Newly published CFPB filings and Federal Reserve FedNow loss tables document real-time voice-cloning agents tricking homebuyers and retirees into authorizing wire transfers, leaving depositors absorbing 89 percent of checking account losses under 12 CFR Part 1005 rules.",
+      "source_hint": "CFPB Supervisory Docket and Federal Reserve FedNow Loss Report"
+    },
+    {
+      "event_id": "EVT_2027_04",
+      "date_label": "May 2027",
+      "domain": "finance",
+      "headline": "NAIC Schedule BA Audit Exposes $68 Billion in Off-Balance-Sheet GPU Lease SPVs Inside State Pension Portfolios",
+      "summary": "SEC Form 8-K covenants and NAIC Schedule BA tables reveal private-credit vehicles securitizing neocloud GPU leases inside worker pension balance sheets just as chip depreciation cuts collateral values by 38 percent.",
+      "source_hint": "SEC Form 8-K Covenants and NAIC Schedule BA"
+    },
+    {
+      "event_id": "EVT_2027_05",
+      "date_label": "June 2027",
+      "domain": "ai",
+      "headline": "Viral Autonomous Coding-Agent Release Cuts Enterprise Token Pricing 78 Percent as NY Fed Graduate Payroll Data Shows Junior Tech Hiring Down 34 Percent",
+      "summary": "A major frontier model release slashed autonomous repository-agent token pricing by 78 percent alongside SEC Form 10-Q enterprise headcount freezes and New York Federal Reserve labor data showing recent graduate underemployment and 10-year student loan delinquencies hitting multi-year highs for W-2 entry-level workers.",
+      "source_hint": "NY Fed Recent College Graduate Labor Series, SEC Form 10-Q Headcount Disclosures, and US Ed FSA Portfolio Ledger"
+    },
+    {
+      "event_id": "EVT_2027_06",
+      "date_label": "August 2027",
+      "domain": "macro",
+      "headline": "Monthly Treasury Statement Shows Corporate Tax Share Slipped to 6.8 Percent During Record AI Capex While Payroll Withholding Funds Debt Service",
+      "summary": "August US Treasury MTS Table 9 schedules confirm 100 percent statutory hardware bonus depreciation offset corporate tax growth, leaving W-2 household paychecks carrying $1.1 trillion in annual bond interest.",
+      "source_hint": "US Treasury Monthly Treasury Statement Table 9 and CBO Baseline"
+    },
+    {
+      "event_id": "EVT_2027_07",
+      "date_label": "September 2027",
+      "domain": "finance",
+      "headline": "S&P 500 Suffers 7.4 Percent Intraday Flash Crash After Algorithmic Capex Selloff Hits Top Seven AI Tickers Carrying Passive 401(k) Target-Date Funds",
+      "summary": "SEC market-structure trading halts and Vanguard 401(k) plan concentration disclosures show seven hyperscale issuers driving 36 percent of S&P 500 index weight, transmitting intraday capex multiple compression straight into household retirement savings balances.",
+      "source_hint": "SEC Market Halt Filing and Federal Reserve Survey of Consumer Finances Equity Tables"
+    },
+    {
+      "event_id": "EVT_2027_08",
+      "date_label": "March 2027",
+      "domain": "finance",
+      "headline": "Hyperscaler Form 10-Q Footnote Reverses Server Useful-Life Assumption Back to Four Years, Trimming Operating Margin by 290 Basis Points",
+      "summary": "In a quarterly SEC Form 10-Q filing, a major cloud provider shortened AI server depreciation schedules after thermal wear forced early cluster replacements, creating an immediate GAAP free-cash-flow and earnings hit for passive 401(k) index savers.",
+      "source_hint": "SEC EDGAR Form 10-Q Property and Equipment Footnote"
+    },
+    {
+      "event_id": "EVT_2027_09",
+      "date_label": "October 2027",
+      "domain": "policy",
+      "headline": "DOJ Antitrust Division Expands Sherman Act Civil Suit Against Multi-Family Algorithmic Rent Software Covering 4.2 Million US Apartments",
+      "summary": "Amended federal court filings in DOJ civil docket and BLS CPI shelter tables detail how shared algorithmic lease-renewal pricing models kept urban apartment rents elevated by $190 per month for working renter households.",
+      "source_hint": "DOJ Antitrust Civil Complaint Docket and BLS CPI Shelter Weight Tables"
+    },
+    {
+      "event_id": "EVT_2027_10",
+      "date_label": "April 2027",
+      "domain": "ai",
+      "headline": "Frontier Lab Claims Mid-Cycle Model Checkpoint Beats Rival by 1.8 Points on Chatbot Arena and SWE-Bench Leaderboard",
+      "summary": "A viral keynote demo video and waitlist blog post claim a minor checkpoint tops rival benchmarks by 1.8 percent on coding puzzles, sparking a weekend X feud between rival researchers with zero pricing changes or SEC filings.",
+      "source_hint": "Company marketing blog and Chatbot Arena social screenshot"
+    },
+    {
+      "event_id": "EVT_2027_11",
+      "date_label": "May 2027",
+      "domain": "ai",
+      "headline": "Leaked Group Chat Screenshots Spark Heated Podcast Drama Between Two AI Startup Co-Founders Over Board Seat Rumors",
+      "summary": "Anonymous screenshots circulating on tech forums allege internal personality drama and an unconfirmed rumor from people familiar with the matter regarding an executive logo redesign and merch waitlist.",
+      "source_hint": "Anonymous forum post and podcast clip"
+    },
+    {
+      "event_id": "EVT_2027_12",
+      "date_label": "November 2027",
+      "domain": "finance",
+      "headline": "Crypto Pundit Publishes Five-Year Retrospective Thread Comparing 2022 FTX Collapse to 2023 Silicon Valley Bank Weekend Run",
+      "summary": "A viral retrospective hot mic podcast clip revisits 2022 crypto lending gossip and Sam Bankman courtroom anecdotes without any forward 2028 balance-sheet or AI infrastructure nexus.",
+      "source_hint": "Social media retrospective thread"
+    }
+  ]
+}

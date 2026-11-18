@@ -58,11 +58,11 @@
 - [x] **07.** Channel Homepage, Banner, Bio & Subscriber-Conversion Architecture (`01_identity_and_strategy/07_homepage_banner_and_conversion_funnel.md`)
 
 ### Division 2: Quantitative Data Analysis, Primary Research & Live News Radar (`02_research_and_data/`)
-- [ ] **08.** Primary Institutional Source Directory (`02_research_and_data/08_primary_institutional_source_directory.md`)
-- [ ] **09.** Quantitative Macro, AI & Security Dataset Analyzer (`02_research_and_data/tools/analyze_datasets.py`)
-- [ ] **10.** Fact-Lock & Primary Citation Ledger (`02_research_and_data/data/fact_ledger.json` + validator)
-- [ ] **11.** Live News-to-Structural-Thesis Hijack Radar (`02_research_and_data/tools/news_to_thesis_radar.mjs` + Playbook)
-- [ ] **12.** Adversarial Red-Team Critique Protocol & Prompt Pack (`02_research_and_data/12_adversarial_red_team_protocol.md`)
+- [x] **08.** Primary Institutional Source Directory (`02_research_and_data/08_primary_institutional_source_directory.md`)
+- [x] **09.** Quantitative Macro, AI & Security Dataset Analyzer (`02_research_and_data/tools/analyze_datasets.py`)
+- [x] **10.** Fact-Lock & Primary Citation Ledger (`02_research_and_data/data/fact_ledger.json` + validator)
+- [x] **11.** Live News-to-Structural-Thesis Hijack Radar (`02_research_and_data/tools/news_to_thesis_radar.mjs` + Playbook)
+- [x] **12.** Adversarial Red-Team Critique Protocol & Prompt Pack (`02_research_and_data/12_adversarial_red_team_protocol.md`)
 - [ ] **13.** 30-Episode Master Structural Slate (`02_research_and_data/slate_30_jan2028.json` + `.md`)
 - [ ] **14.** Automated Staleness & Decay Scorer (`02_research_and_data/tools/staleness_audit.py`)
 

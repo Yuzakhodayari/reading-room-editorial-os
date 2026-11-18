@@ -1,0 +1,758 @@
+{
+  "registry_version": "1.0.0",
+  "schema_id": "reading-room-editorial-os.institutional-sources-registry.v1",
+  "channel": "The Reading Room",
+  "target_horizon": "January 2028 (30 Flagship Uploads)",
+  "stage_1_archival_pattern": "{EP_ID}_{SOURCE_ID}_{OBSERVATION_PERIOD}_pulled-{YYYYMMDD}.{ext}",
+  "ingestion_policies": {
+    "sec_edgar_user_agent": "ReadingRoomEditorialOS/1.0 (editorial-audit@readingroom.local)",
+    "sec_edgar_max_rps": 8,
+    "treasury_api_default_page_size": 1000,
+    "live_stat_slot_refresh_window_hours": 72,
+    "prohibited_sole_sources": [
+      "Secondary news summaries",
+      "Viral social media charts without underlying ledger series",
+      "Unverified sell-side pitch decks",
+      "Party complaints cited as judicial findings of fact"
+    ]
+  },
+  "sources": [
+    {
+      "source_id": "UST_MTS_TABLE9",
+      "domain_group": "us_treasury_fiscal",
+      "evidence_tier": "Tier A",
+      "institution": "U.S. Department of the Treasury, Bureau of the Fiscal Service",
+      "dataset_name": "Monthly Treasury Statement (MTS) Summary of Receipts by Source and Outlays by Function",
+      "exact_tables_or_schedules": [
+        "Table 9: Summary of Receipts by Source, and Outlays by Function of the U.S. Government",
+        "Table 5: Outlays by Agency (Treasury Interest Detail)"
+      ],
+      "official_url": "https://fiscaldata.treasury.gov/datasets/monthly-treasury-statement/summary-of-receipts-and-outlays-of-the-u-s-government",
+      "api_or_feed_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_9",
+      "series_or_form_ids": [
+        "Individual Income Taxes",
+        "Social Insurance and Retirement Receipts",
+        "Corporation Income Taxes",
+        "Net Interest (Function 900)",
+        "National Defense (Function 050)",
+        "Social Security (Function 650)"
+      ],
+      "release_schedule": "8th business day of each calendar month at 14:00 ET; September issue in mid-October locks full federal fiscal year",
+      "typical_reporting_lag": "10 to 18 calendar days after month close",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Individual income plus payroll taxes supplied 84.1% of federal cash receipts in FY2024 and exceeded 86% in FY2026",
+        "Corporate income taxes declined from 10.8% of federal receipts in FY2024 to 7.1% in FY2026 following permanent 100% first-year chip, server, and domestic R&D write-offs",
+        "FY2026 Net Interest crossed $1.0 trillion, surpassing National Defense outlays"
+      ],
+      "common_misreading_traps": [
+        "Comparing corporate estimated-tax installment months (April, June, September, December) against non-installment months",
+        "Confusing Gross Interest on Treasury Debt Securities (which includes intragovernmental trust-fund credits) with Function 900 Net Interest",
+        "Mixing federal fiscal years (Oct 1 to Sep 30) with calendar years"
+      ]
+    },
+    {
+      "source_id": "UST_DEBT_TO_PENNY",
+      "domain_group": "us_treasury_fiscal",
+      "evidence_tier": "Tier A",
+      "institution": "U.S. Department of the Treasury, Bureau of the Fiscal Service",
+      "dataset_name": "Debt to the Penny",
+      "exact_tables_or_schedules": [
+        "Daily Public Debt Outstanding: Debt Held by the Public vs Intragovernmental Holdings"
+      ],
+      "official_url": "https://fiscaldata.treasury.gov/datasets/debt-to-the-penny/debt-to-the-penny",
+      "api_or_feed_url": "https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny",
+      "series_or_form_ids": [
+        "tot_pub_debt_out_amt",
+        "debt_held_public_amt",
+        "intragov_hold_amt"
+      ],
+      "release_schedule": "Every federal business day around 15:30 ET",
+      "typical_reporting_lag": "1 business day",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Total Public Debt Outstanding ($40.5 trillion multi-year horizon anchor in Episode 01) equals marketable Debt Held by the Public plus non-marketable Intragovernmental Holdings"
+      ],
+      "common_misreading_traps": [
+        "Treating Intragovernmental Holdings (Government Account Series IOUs inside OASI and Medicare trust funds) as marketable bonds traded on Wall Street",
+        "Missing that trust-fund redemptions convert internal IOUs into fresh marketable Debt Held by the Public even when gross debt stays flat"
+      ]
+    },
+    {
+      "source_id": "UST_TIC_MFH",
+      "domain_group": "us_treasury_fiscal",
+      "evidence_tier": "Tier A",
+      "institution": "U.S. Department of the Treasury, Office of International Affairs",
+      "dataset_name": "Treasury International Capital (TIC) System Major Foreign Holders of Treasury Securities",
+      "exact_tables_or_schedules": [
+        "TIC SLT Table 5: Major Foreign Holders of Treasury Securities (MFH)",
+        "Annual SHLA Report on Foreign Portfolio Holdings of U.S. Securities"
+      ],
+      "official_url": "https://ticdata.treasury.gov/resource-center/data-chart-center/tic/Documents/slt_table5.html",
+      "api_or_feed_url": "https://ticdata.treasury.gov/Publish/mfhhis01.txt",
+      "series_or_form_ids": [
+        "SLT_TABLE5_MFH",
+        "SHLA_ANNUAL_BENCHMARK",
+        "TIC_NET_FOREIGN_PURCHASES"
+      ],
+      "release_schedule": "Monthly around the 16th at 16:00 ET; SHLA custodial benchmark released annually in April and finalized in June",
+      "typical_reporting_lag": "2 months for monthly MFH; 10 months for annual SHLA custodial survey",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Tracks sovereign central bank, sovereign wealth fund, and offshore hedge-fund custody across Japan, United Kingdom, China, Cayman Islands, Belgium, and Luxembourg"
+      ],
+      "common_misreading_traps": [
+        "Custodial bias: Euroclear in Belgium, Clearstream in Luxembourg, London clearing desks, and Cayman Islands levered basis funds mask beneficial ownership until annual SHLA reattribution",
+        "Valuation drift: rising bond yields lower reported market value of foreign holdings even when zero par bonds were sold"
+      ]
+    },
+    {
+      "source_id": "FRED_BLS_LPC",
+      "domain_group": "federal_reserve_bls_fdic",
+      "evidence_tier": "Tier B",
+      "institution": "U.S. Bureau of Labor Statistics (via St. Louis Fed FRED)",
+      "dataset_name": "Major Sector Productivity and Costs (Nonfarm Business Productivity, Compensation, and Labor Share)",
+      "exact_tables_or_schedules": [
+        "BLS LPC Major Sector Productivity and Costs Master Workbook",
+        "FRED Nonfarm Business Productivity and Labor Share Series"
+      ],
+      "official_url": "https://www.bls.gov/lpc/tables.htm",
+      "api_or_feed_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=OPHNFB",
+      "series_or_form_ids": [
+        "OPHNFB",
+        "COMPRNFB",
+        "PRS85006173",
+        "IPDNBS",
+        "CES0500000008"
+      ],
+      "release_schedule": "8 releases per year (Preliminary ~35 days and Revised ~65 days after each quarter at 08:30 ET)",
+      "typical_reporting_lag": "5 to 9 weeks after quarter close",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Nonfarm output per hour (OPHNFB, 2017=100) rose past 20% since 2017 while real hourly pay (COMPRNFB) lagged, pushing nominal labor share down near 53% in 2026, lowest since 1947"
+      ],
+      "common_misreading_traps": [
+        "Deflator mismatch: OPHNFB uses the business output deflator (IPDNBS) while COMPRNFB uses consumer CPI-U-RS; check nominal Labor Share % to eliminate deflator differences",
+        "All-worker averages include executive equity option realizations and imputed self-employed proprietor labor"
+      ]
+    },
+    {
+      "source_id": "FED_Z1_ACCOUNTS",
+      "domain_group": "federal_reserve_bls_fdic",
+      "evidence_tier": "Tier B",
+      "institution": "Board of Governors of the Federal Reserve System",
+      "dataset_name": "Z.1 Financial Accounts of the United States",
+      "exact_tables_or_schedules": [
+        "Table B.101: Balance Sheet of Households and Nonprofit Organizations",
+        "Table B.101.h: Balance Sheet of Households (Supplemental)",
+        "Table B.103: Nonfinancial Corporate Business",
+        "Table L.210: Treasury Securities by Holder"
+      ],
+      "official_url": "https://www.federalreserve.gov/releases/z1/",
+      "api_or_feed_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TABSHNO",
+      "series_or_form_ids": [
+        "TABSHNO",
+        "TLBSHNO",
+        "NCBCEL",
+        "B.101.h",
+        "L.210"
+      ],
+      "release_schedule": "Quarterly in March, June, September, and December at 12:00 ET",
+      "typical_reporting_lag": "10 weeks after quarter close",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Maps aggregate Treasury ownership across domestic banks, pensions, money-market funds, households, the Fed SOMA, and rest-of-world accounts"
+      ],
+      "common_misreading_traps": [
+        "Table B.101 merges family balance sheets with university endowments, hospital foundations, and churches; use B.101.h when isolating households"
+      ]
+    },
+    {
+      "source_id": "FED_DFA_SCF",
+      "domain_group": "federal_reserve_bls_fdic",
+      "evidence_tier": "Tier B",
+      "institution": "Board of Governors of the Federal Reserve System",
+      "dataset_name": "Distributional Financial Accounts (DFA) & Survey of Consumer Finances (SCF)",
+      "exact_tables_or_schedules": [
+        "DFA Net Worth and Asset Components by Wealth Percentile Group",
+        "SCF Triennial Family Finances Microdata"
+      ],
+      "official_url": "https://www.federalreserve.gov/releases/efa/efa-distributional-financial-accounts.htm",
+      "api_or_feed_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=WFRBST01134",
+      "series_or_form_ids": [
+        "WFRBST01134",
+        "WFRBSN09161",
+        "WFRBSB50215"
+      ],
+      "release_schedule": "DFA updated quarterly (~11 to 12 weeks after quarter end); SCF published every 3 years",
+      "typical_reporting_lag": "11 to 12 weeks for quarterly DFA",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Roughly 60% of US families own some stock, while the top 10% (WFRBST01134 + WFRBSN09161) hold ~90% of corporate equity and mutual fund wealth and the bottom 50% (WFRBSB50215) hold ~1%"
+      ],
+      "common_misreading_traps": [
+        "Equating stock ownership participation (~60%) with dollar share of equity market cap",
+        "Treating illiquid pre-tax 401(k) balances subject to ordinary tax plus 10% IRC Section 72(t) early withdrawal penalties as liquid checking reserves"
+      ]
+    },
+    {
+      "source_id": "FED_G19_CREDIT",
+      "domain_group": "federal_reserve_bls_fdic",
+      "evidence_tier": "Tier B",
+      "institution": "Board of Governors of the Federal Reserve System",
+      "dataset_name": "G.19 Consumer Credit Statistical Release",
+      "exact_tables_or_schedules": [
+        "Revolving and Nonrevolving Consumer Credit Outstanding",
+        "Terms of Credit at Commercial Banks (Credit Card & Auto APRs)"
+      ],
+      "official_url": "https://www.federalreserve.gov/releases/g19/",
+      "api_or_feed_url": "https://fred.stlouisfed.org/graph/fredgraph.csv?id=TOTALSL",
+      "series_or_form_ids": [
+        "TOTALSL",
+        "REVOLSL",
+        "NONREVSL",
+        "TERMCBCCALLNS"
+      ],
+      "release_schedule": "Monthly on the 5th business day of the second month following the reference month at 15:00 ET",
+      "typical_reporting_lag": "5 to 6 weeks",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Tracks ~$5.1T non-mortgage consumer debt (auto, student, revolving credit cards) alongside commercial bank APRs assessed on revolving balances"
+      ],
+      "common_misreading_traps": [
+        "Quoting G.19 TOTALSL as total household debt when G.19 omits ~$13T+ in residential mortgages and HELOCs",
+        "Treating monthly convenience transactor statement balances as interest-bearing revolving debt"
+      ]
+    },
+    {
+      "source_id": "NYFED_HHDC",
+      "domain_group": "federal_reserve_bls_fdic",
+      "evidence_tier": "Tier B",
+      "institution": "Federal Reserve Bank of New York (Center for Microeconomic Data)",
+      "dataset_name": "Quarterly Report on Household Debt and Credit (Equifax Consumer Credit Panel)",
+      "exact_tables_or_schedules": [
+        "Total Debt Balance and Its Composition (Mortgage, HELOC, Auto, Credit Card, Student Loan)",
+        "Transition into Serious Delinquency (90+ Days) by Age Group"
+      ],
+      "official_url": "https://www.newyorkfed.org/microeconomics/hhdc",
+      "api_or_feed_url": "https://www.newyorkfed.org/medialibrary/interactives/householdcredit/data/xls/HHD_C_Report_2026Q3.xlsx",
+      "series_or_form_ids": [
+        "HHDC_TOTAL_DEBT",
+        "HHDC_MORTGAGE_BAL",
+        "HHDC_DELINQ_90PLUS_BY_AGE"
+      ],
+      "release_schedule": "Quarterly in February, May, August, and November at 11:00 ET",
+      "typical_reporting_lag": "6 weeks after quarter close",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Total US household debt stands near $19.1 trillion in Episode 01, with roughly 70% locked inside long-term residential mortgages"
+      ],
+      "common_misreading_traps": [
+        "Ignoring pandemic or statutory forbearance windows that temporarily suppress student-loan delinquency transitions"
+      ]
+    },
+    {
+      "source_id": "FDIC_QBP_RATES",
+      "domain_group": "federal_reserve_bls_fdic",
+      "evidence_tier": "Tier B",
+      "institution": "Federal Deposit Insurance Corporation (FDIC)",
+      "dataset_name": "Quarterly Banking Profile (QBP) & Weekly/Monthly National Deposit Rates",
+      "exact_tables_or_schedules": [
+        "QBP Table III-A: Deposit Balances (Insured, Uninsured, and Noninterest-Bearing Transaction Accounts)",
+        "QBP Unrealized Gains/Losses on Investment Securities (AFS & HTM)",
+        "FDIC National Rates and Rate Caps (Interest Checking ~0.07% APY)"
+      ],
+      "official_url": "https://www.fdic.gov/quarterly-banking-profile",
+      "api_or_feed_url": "https://banks.data.fdic.gov/api/financials",
+      "series_or_form_ids": [
+        "FDIC_QBP_TABLE_IIIA",
+        "FDIC_NAT_RATE_CHECKING",
+        "FDIC_HTM_AFS_UNREALIZED"
+      ],
+      "release_schedule": "QBP quarterly (~55 to 65 days after quarter end); National Deposit Rates updated on the 3rd Monday of each month",
+      "typical_reporting_lag": "8 to 9 weeks for QBP; current month for National Deposit Rates",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "National average interest checking rate sits near 0.07% APY alongside trillions in 0.00% noninterest-bearing commercial and retail accounts"
+      ],
+      "common_misreading_traps": [
+        "Overlooking Held-to-Maturity (HTM) bond losses excluded from regulatory Tier 1 capital via the AOCI opt-out at regional banks"
+      ]
+    },
+    {
+      "source_id": "CBO_OUTLOOK",
+      "domain_group": "cbo_and_trustees",
+      "evidence_tier": "Tier A",
+      "institution": "Congressional Budget Office (CBO)",
+      "dataset_name": "The Budget and Economic Outlook (10-Year Baseline) & Long-Term Budget Outlook (30-Year)",
+      "exact_tables_or_schedules": [
+        "Table 1-1: CBO's Baseline Budget Projections",
+        "Supplemental Data: Revenue Projections by Category & Net Interest Outlays",
+        "Alternative Fiscal Scenario Workbook"
+      ],
+      "official_url": "https://www.cbo.gov/data/budget-economic-data",
+      "api_or_feed_url": "https://www.cbo.gov/data/budget-economic-data#3",
+      "series_or_form_ids": [
+        "CBO_10YR_NET_INTEREST",
+        "CBO_CORP_REV_SHARE_GDP",
+        "CBO_DEBT_HELD_PUBLIC_PCT_GDP"
+      ],
+      "release_schedule": "Annual baseline in January/February, mid-year update in May/June, 30-year Long-Term Outlook in March/June",
+      "typical_reporting_lag": "Point-in-time statutory baseline",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Annual federal Net Interest outlays exceed $2.1 trillion per year by 2036 in CBO's 10-year baseline"
+      ],
+      "common_misreading_traps": [
+        "Current-law trap under 2 U.S.C. Section 907: CBO must assume temporary tax cuts sunset on schedule, understating out-year deficits unless paired with CBO's Alternative Fiscal Scenario"
+      ]
+    },
+    {
+      "source_id": "SSA_CMS_TRUSTEES",
+      "domain_group": "cbo_and_trustees",
+      "evidence_tier": "Tier A",
+      "institution": "Boards of Trustees of the Social Security and Medicare Trust Funds (with CBO Social Security Projections)",
+      "dataset_name": "Annual OASDI and HI/SMI Trustees Reports",
+      "exact_tables_or_schedules": [
+        "OASDI Table IV.B3 & Table VI.G2: Trust Fund Ratios and Reserve Depletion Dates",
+        "Medicare HI Table III.B4: Hospital Insurance Depletion Estimates"
+      ],
+      "official_url": "https://www.ssa.gov/oact/TR/",
+      "api_or_feed_url": "https://www.cms.gov/data-research/statistics-trends-and-reports/trustees-report-trust-funds",
+      "series_or_form_ids": [
+        "OASI_DEPLETION_YEAR",
+        "OASI_PAYABLE_BENEFIT_PCT",
+        "MEDICARE_HI_DEPLETION_YEAR"
+      ],
+      "release_schedule": "Annually in March through May (statutory target April 1)",
+      "typical_reporting_lag": "Covers prior calendar year actuals plus 75-year actuarial window",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "OASI trust fund reserve exhaustion projected around Q4 2032 (CBO) to 2033 (Trustees), triggering an automatic ~20% to 23% benefit cut to match incoming FICA cash (~77% to 80% payable)"
+      ],
+      "common_misreading_traps": [
+        "Claiming monthly Social Security checks drop to $0 at reserve exhaustion when continuing payroll taxes fund roughly four-fifths of scheduled benefits",
+        "Merging OASI and DI trust funds without noting Congress must pass a statute to reallocate FICA tax rates between them"
+      ]
+    },
+    {
+      "source_id": "SEC_EDGAR_10K_10Q",
+      "domain_group": "corporate_and_shadow_finance",
+      "evidence_tier": "Tier A",
+      "institution": "U.S. Securities and Exchange Commission (SEC EDGAR)",
+      "dataset_name": "Corporate Form 10-K, Form 10-Q, and Form 8-K Filings",
+      "exact_tables_or_schedules": [
+        "Form 10-K Note 1 / Property and Equipment Server Useful-Life Table",
+        "Form 10-K ASC 606 Remaining Performance Obligations (RPO) & ASC 740 Cash Taxes Paid",
+        "Form 10-Q Condensed Consolidated Statements of Cash Flows (OCF minus CapEx minus Finance Leases)",
+        "Form 8-K Items 1.01 (Material Contracts), 2.03 (Off-Balance-Sheet SPVs), and 1.05 (Material Cyber Incidents)"
+      ],
+      "official_url": "https://www.sec.gov/edgar/searchedgar/companysearch",
+      "api_or_feed_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001652044.json",
+      "series_or_form_ids": [
+        "CIK0001652044 (Alphabet)",
+        "CIK0001018724 (Amazon)",
+        "CIK0000789019 (Microsoft)",
+        "CIK0001326801 (Meta)",
+        "CIK0001045810 (Nvidia)",
+        "CIK0001341439 (Oracle)",
+        "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "us-gaap:RemainingPerformanceObligation"
+      ],
+      "release_schedule": "10-K within 60 days of FY-end; 10-Q within 40 days of Q1/Q2/Q3 close; 8-K within 4 business days",
+      "typical_reporting_lag": "4 to 8 weeks for quarterly/annual statements; 4 business days for 8-K",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Combined hyperscaler CapEx reached $740B to $820B annually in 2026, pushing Alphabet into back-to-back negative quarterly FCF and Amazon past -$42B trailing-twelve-month FCF"
+      ],
+      "common_misreading_traps": [
+        "Treating GAAP operating income boosts from 3-year-to-6-year server depreciation extensions as real cash generation",
+        "Omitting ASC 842 finance-lease principal payments and SPV compute joint ventures from CapEx burn",
+        "Counting cloud-credit equity round-trips inside RPO backlogs as independent enterprise cash demand"
+      ]
+    },
+    {
+      "source_id": "SEC_BDC_SOI",
+      "domain_group": "corporate_and_shadow_finance",
+      "evidence_tier": "Tier A",
+      "institution": "U.S. Securities and Exchange Commission (Public BDC Filings under ASC 946)",
+      "dataset_name": "Business Development Company (BDC) Schedules of Investments",
+      "exact_tables_or_schedules": [
+        "Consolidated Schedule of Investments (Loan-by-Loan PIK Coupons, Amortized Cost, Level 3 Fair Value, Non-Accruals)"
+      ],
+      "official_url": "https://www.sec.gov/edgar/searchedgar/companysearch",
+      "api_or_feed_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001287750.json",
+      "series_or_form_ids": [
+        "CIK0001287750 (Ares Capital ARCC)",
+        "CIK0001655888 (Blue Owl Capital OBDC)",
+        "CIK0001736035 (Blackstone Secured Lending BXSL)",
+        "CIK0001422183 (FS KKR Capital FSK)"
+      ],
+      "release_schedule": "Quarterly (10-Q within 40 days) and Annually (10-K within 60 days)",
+      "typical_reporting_lag": "5 to 8 weeks after quarter close",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Provides transparent loan-level window into $1.7T+ private credit lending to debt-backed middle-market software and healthcare buyouts"
+      ],
+      "common_misreading_traps": [
+        "Accepting low headline cash default rates while ignoring Payment-in-Kind (PIK) toggle amendments where borrowers capitalize unpaid interest onto principal",
+        "Treating internal Level 3 fair-value marks near 99 cents on the dollar as liquid secondary market prices"
+      ]
+    },
+    {
+      "source_id": "ATTEST_RESERVES",
+      "domain_group": "corporate_and_shadow_finance",
+      "evidence_tier": "Tier C",
+      "institution": "Independent Accounting Firms under AICPA AT-C Section 205 / ISAE 3000 (BDO Italia, Deloitte)",
+      "dataset_name": "Stablecoin and Custodial Reserve Attestation Reports",
+      "exact_tables_or_schedules": [
+        "Consolidated Reserves Report (Treasury Bill CUSIP/Maturity Breakdown, Reverse Repo Collateral, Cut-Off Timestamp)"
+      ],
+      "official_url": "https://tether.to/en/transparency/",
+      "api_or_feed_url": "https://www.circle.com/transparency",
+      "series_or_form_ids": [
+        "AICPA_ATC_205",
+        "ISAE_3000_REVISED"
+      ],
+      "release_schedule": "Monthly (USDC) and Quarterly (USDT)",
+      "typical_reporting_lag": "3 to 5 weeks after period end",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Tracks short-dated US Treasury bill holdings ($100B+ non-bank T-bill buyer cohort) backing dollar tokens"
+      ],
+      "common_misreading_traps": [
+        "Calling a point-in-time AT-C 205 snapshot (23:59 UTC on month-end) a full PCAOB financial statement audit covering intra-month asset encumbrances or group-wide liabilities"
+      ]
+    },
+    {
+      "source_id": "BIS_QUARTERLY",
+      "domain_group": "global_macro_energy_chokepoints",
+      "evidence_tier": "Tier C",
+      "institution": "Bank for International Settlements (BIS)",
+      "dataset_name": "BIS Quarterly Review, Global Liquidity Indicators (GLI), and OTC Derivatives / Banking Statistics",
+      "exact_tables_or_schedules": [
+        "Global Liquidity Indicators (Dollar Credit to Non-Bank Borrowers Outside the US)",
+        "OTC Foreign Exchange Derivatives (Off-Balance-Sheet FX Swap Dollar Obligations)"
+      ],
+      "official_url": "https://www.bis.org/publ/qtrpdf/r_qt.htm",
+      "api_or_feed_url": "https://data.bis.org/",
+      "series_or_form_ids": [
+        "BIS_GLI_USD",
+        "BIS_OTC_FX_SWAPS",
+        "BIS_LBS_CROSSBORDER"
+      ],
+      "release_schedule": "Quarterly in March, June, September, and December",
+      "typical_reporting_lag": "1 quarter for banking aggregates",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Documents $65T to $80T+ in off-balance-sheet foreign-exchange swap dollar payment obligations held by non-US banks, pension funds, and insurers"
+      ],
+      "common_misreading_traps": [
+        "Confusing gross short-term dollar rollover funding risk in FX swaps with uncollateralized net credit wipeouts"
+      ]
+    },
+    {
+      "source_id": "IMF_WEO_AIPI",
+      "domain_group": "global_macro_energy_chokepoints",
+      "evidence_tier": "Tier C",
+      "institution": "International Monetary Fund (IMF)",
+      "dataset_name": "World Economic Outlook (WEO), Fiscal Monitor, and AI Preparedness Index (AIPI)",
+      "exact_tables_or_schedules": [
+        "Fiscal Monitor Table A1/A7: General Government Gross Debt and Fiscal Balances",
+        "AI Preparedness Index (174 Economies Scored Across 4 Institutional Pillars)"
+      ],
+      "official_url": "https://www.imf.org/en/Publications/WEO",
+      "api_or_feed_url": "https://www.imf.org/external/datamapper/api/v1/AIPI",
+      "series_or_form_ids": [
+        "GGXWDG_NGDP",
+        "GGXONLB_NGDP",
+        "AIPI_OVERALL"
+      ],
+      "release_schedule": "WEO and Fiscal Monitor twice yearly in April and October (with January/July updates); AIPI periodic",
+      "typical_reporting_lag": "Semi-annual multilateral vintage",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Benchmarks sovereign debt sustainability alongside national readiness for white-collar and service-export automation across 174 countries"
+      ],
+      "common_misreading_traps": [
+        "Comparing IMF General Government debt (federal plus state/local) directly against Treasury Federal-only Debt Held by the Public without adjusting denominators"
+      ]
+    },
+    {
+      "source_id": "IEA_ENERGY_MINERALS",
+      "domain_group": "global_macro_energy_chokepoints",
+      "evidence_tier": "Tier C",
+      "institution": "International Energy Agency (IEA)",
+      "dataset_name": "Energy and AI Special Report & Global Critical Minerals Outlook",
+      "exact_tables_or_schedules": [
+        "Global Data Centre Electricity Consumption by Scenario (2024 to 2030/2035)",
+        "Refined Material Processing Share by Country (Copper, Lithium, Gallium, Rare Earths)"
+      ],
+      "official_url": "https://www.iea.org/reports/energy-and-ai",
+      "api_or_feed_url": "https://www.iea.org/reports/global-critical-minerals-outlook",
+      "series_or_form_ids": [
+        "IEA_DC_LOAD_BASE_TWH",
+        "IEA_MINERAL_REFINING_SHARE"
+      ],
+      "release_schedule": "Annual / Flagship updates in April and May",
+      "typical_reporting_lag": "Annual modeled baseline",
+      "live_stat_slot_supported": false,
+      "canonical_anchors": [
+        "Global data-center electricity consumption rises from ~415 TWh in 2024 to ~945 TWh by 2030 in the IEA base case, exceeding Japan's entire annual electricity use"
+      ],
+      "common_misreading_traps": [
+        "Quoting high-sensitivity upper-bound TWh scenarios without naming the IEA Base Case",
+        "Confusing instantaneous power capacity (GW) with annual cumulative energy (TWh)"
+      ]
+    },
+    {
+      "source_id": "USGS_MINERALS",
+      "domain_group": "global_macro_energy_chokepoints",
+      "evidence_tier": "Tier B",
+      "institution": "U.S. Geological Survey (USGS), National Minerals Information Center",
+      "dataset_name": "Mineral Commodity Summaries (MCS)",
+      "exact_tables_or_schedules": [
+        "U.S. Net Import Reliance Chart (90 Commodities)",
+        "World Mine Production and Reserves Two-Page Commodity Profiles (Copper, Gallium, Germanium, Silicon, Graphite, Rare Earths)"
+      ],
+      "official_url": "https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries",
+      "api_or_feed_url": "https://www.sciencebase.gov/catalog/items?q=Mineral+Commodity+Summaries",
+      "series_or_form_ids": [
+        "USGS_MCS_COPPER",
+        "USGS_MCS_GALLIUM",
+        "USGS_MCS_GERMANIUM",
+        "USGS_MCS_RARE_EARTHS"
+      ],
+      "release_schedule": "Annually every January/February",
+      "typical_reporting_lag": "Preliminary prior calendar year estimates",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Documents 100% US net import reliance in gallium and natural graphite alongside global mine-to-refinery imbalances"
+      ],
+      "common_misreading_traps": [
+        "Assuming geographically diverse mine extraction protects supply chains when chemical refining and wafer processing sit 60% to 98% inside a single jurisdiction",
+        "Confusing total geological Resources with economically recoverable Reserves"
+      ]
+    },
+    {
+      "source_id": "GRID_PJM_ERCOT_EIA",
+      "domain_group": "global_macro_energy_chokepoints",
+      "evidence_tier": "Tier A",
+      "institution": "PJM Interconnection, ERCOT, and U.S. Energy Information Administration (EIA)",
+      "dataset_name": "PJM Base Residual Auction (BRA) Reports, ERCOT GIS / Large Load Queues, and EIA Form 860M",
+      "exact_tables_or_schedules": [
+        "PJM RPM Base Residual Auction Clearing Prices ($/MW-day UCAP)",
+        "ERCOT Generator Interconnection Status (GIS) & Large Flexible Load Queue",
+        "EIA Form 860M Monthly Electric Generator Inventory (Planned, Under Construction, Retirements)"
+      ],
+      "official_url": "https://www.pjm.com/markets-and-operations/rpm",
+      "api_or_feed_url": "https://www.eia.gov/electricity/data/eia860m/",
+      "series_or_form_ids": [
+        "PJM_BRA_UCAP_PRICE",
+        "ERCOT_GIS_QUEUE",
+        "EIA_860M_PLANNED_RETIRED"
+      ],
+      "release_schedule": "PJM BRA per delivery-year auction calendar; ERCOT GIS and EIA Form 860M monthly",
+      "typical_reporting_lag": "Immediate upon auction close for PJM; 6 to 8 weeks for EIA 860M",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "PJM 2025/2026 Base Residual Auction clearing price surged 833% from $28.92 to $269.92 per MW-day across 13 states and Washington, D.C."
+      ],
+      "common_misreading_traps": [
+        "Equating intermittent Nameplate MW with 24/7 Accredited Unforced Capacity (UCAP)",
+        "Treating early-stage interconnection queue applications (~70% to 80% historical withdrawal rate) as guaranteed future megawatts"
+      ]
+    },
+    {
+      "source_id": "CHOKE_CABLE_LLOYDS",
+      "domain_group": "global_macro_energy_chokepoints",
+      "evidence_tier": "Tier C",
+      "institution": "TeleGeography & Lloyd's Market Association Joint War Committee (JWC)",
+      "dataset_name": "Submarine Cable Map Registry & JWC Hull War, Piracy, Terrorism and Related Perils Listed Areas (JWLA)",
+      "exact_tables_or_schedules": [
+        "Submarine Cable Landing Stations and Corridor Redundancy Registry",
+        "JWLA Listed Areas Circulars"
+      ],
+      "official_url": "https://www.submarinecablemap.com/",
+      "api_or_feed_url": "https://www.lmalloyds.com/lma/underwriting/marine/JWC/",
+      "series_or_form_ids": [
+        "TELEGEO_CABLE_CORRIDORS",
+        "LLOYDS_JWLA_CIRCULAR"
+      ],
+      "release_schedule": "TeleGeography updated continuously; JWLA circulars issued on maritime threat escalation",
+      "typical_reporting_lag": "Real-time industry circulars",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Tracks 550+ active and planned subsea fiber cables carrying 99% of intercontinental cloud and financial traffic alongside maritime war-risk insurance zones"
+      ],
+      "common_misreading_traps": [
+        "Confusing theoretical cable design capacity with currently lit wavelength capacity",
+        "Waiting for physical ship sinkings while missing that 7-day war-risk hull insurance surcharges reroute commercial fleets immediately upon JWLA listing"
+      ]
+    },
+    {
+      "source_id": "LAW_COURTLISTENER",
+      "domain_group": "law_antitrust_cybersecurity",
+      "evidence_tier": "Tier A",
+      "institution": "Free Law Project (CourtListener / PACER RECAP) and Federal/State Appellate Courts",
+      "dataset_name": "Federal PACER/RECAP Dockets and State Supreme Court Opinions",
+      "exact_tables_or_schedules": [
+        "Appellate Slip Opinions, Rule 56 Summary Judgment Orders, and Post-Trial Findings of Fact"
+      ],
+      "official_url": "https://www.courtlistener.com/",
+      "api_or_feed_url": "https://www.courtlistener.com/api/rest/v4/",
+      "series_or_form_ids": [
+        "Wielechowski v. State, 403 P.3d 1141 (Alaska 2017)",
+        "U.S. v. Google LLC, 1:20-cv-03010",
+        "12_CFR_PART_1005_REG_E",
+        "29_USC_203M_FLSA_SCRIP"
+      ],
+      "release_schedule": "Continuous PACER/RECAP docket sync and same-day appellate opinions",
+      "typical_reporting_lag": "Same day",
+      "live_stat_slot_supported": false,
+      "canonical_anchors": [
+        "Wielechowski v. State (2017) confirmed unanimously that statutory citizen dividends lacking constitutional dedication can be cut by executive budget veto"
+      ],
+      "common_misreading_traps": [
+        "Citing allegations in a plaintiff's Complaint or Amicus Brief as proven judicial findings of fact",
+        "Treating denial of a Rule 12(b)(6) motion to dismiss as a ruling on the merits"
+      ]
+    },
+    {
+      "source_id": "LAW_FTC_6B",
+      "domain_group": "law_antitrust_cybersecurity",
+      "evidence_tier": "Tier A",
+      "institution": "Federal Trade Commission (FTC)",
+      "dataset_name": "FTC Section 6(b) Compulsory-Process Studies and Administrative Consent Orders",
+      "exact_tables_or_schedules": [
+        "Section 6(b) Staff Reports under 15 U.S.C. Section 46(b) (Cloud-AI Partnerships, Surveillance Pricing, Youth Feeds)",
+        "Final Administrative Consent Orders under 15 U.S.C. Section 45"
+      ],
+      "official_url": "https://www.ftc.gov/reports",
+      "api_or_feed_url": "https://www.ftc.gov/legal-library/browse/cases-proceedings",
+      "series_or_form_ids": [
+        "15_USC_46B_CLOUD_AI_STUDY",
+        "15_USC_45L_CONSENT_PENALTIES"
+      ],
+      "release_schedule": "Event-driven regulatory releases",
+      "typical_reporting_lag": "Published upon Commission vote",
+      "live_stat_slot_supported": false,
+      "canonical_anchors": [
+        "Documents multibillion-dollar hyperscaler investments into AI labs routed back to the investor as cloud-compute revenue credits and hosting commitments"
+      ],
+      "common_misreading_traps": [
+        "Claiming an unlitigated FTC Consent Order proves statutory guilt when respondents settle without admitting liability, although violating a final order triggers civil penalties under 15 U.S.C. Section 45(l)"
+      ]
+    },
+    {
+      "source_id": "CYBER_NIST_PQC",
+      "domain_group": "law_antitrust_cybersecurity",
+      "evidence_tier": "Tier B",
+      "institution": "National Institute of Standards and Technology (NIST), Computer Security Resource Center",
+      "dataset_name": "Post-Quantum Cryptography Standards (FIPS 203, FIPS 204, FIPS 205) and Transition Report IR 8547",
+      "exact_tables_or_schedules": [
+        "FIPS 203 (ML-KEM Key-Encapsulation), FIPS 204 (ML-DSA Signatures), FIPS 205 (SLH-DSA Hash Signatures)",
+        "NIST IR 8547: Transition to Post-Quantum Cryptography Standards (2030 Deprecation, 2035 Disallowance)"
+      ],
+      "official_url": "https://csrc.nist.gov/pubs/fips/203/final",
+      "api_or_feed_url": "https://csrc.nist.gov/pubs/ir/8547/ipd",
+      "series_or_form_ids": [
+        "FIPS_203_ML_KEM",
+        "FIPS_204_ML_DSA",
+        "FIPS_205_SLH_DSA",
+        "NIST_IR_8547"
+      ],
+      "release_schedule": "Finalized FIPS standards with milestone updates through 2035",
+      "typical_reporting_lag": "Current published federal standard",
+      "live_stat_slot_supported": false,
+      "canonical_anchors": [
+        "NIST IR 8547 sets 2030 to deprecate legacy RSA-2048/ECC and 2035 to disallow them outright due to Harvest-Now-Decrypt-Later exposure on long-shelf-life secrets"
+      ],
+      "common_misreading_traps": [
+        "Claiming Shor's algorithm breaks symmetric AES-256 alongside asymmetric RSA/ECDH when Grover's algorithm leaves AES-256 quantum-resistant"
+      ]
+    },
+    {
+      "source_id": "CYBER_CISA_KEV",
+      "domain_group": "law_antitrust_cybersecurity",
+      "evidence_tier": "Tier B",
+      "institution": "Cybersecurity and Infrastructure Security Agency (CISA)",
+      "dataset_name": "Known Exploited Vulnerabilities (KEV) Catalog and Joint Cybersecurity Advisories (CSAs)",
+      "exact_tables_or_schedules": [
+        "BOD 22-01 Live KEV JSON Feed (cveID, dateAdded, dueDate, knownRansomwareCampaignUse)",
+        "Multi-Agency Critical Infrastructure Joint Advisories (Living-off-the-Land / Edge Router Campaigns)"
+      ],
+      "official_url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog",
+      "api_or_feed_url": "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json",
+      "series_or_form_ids": [
+        "CISA_KEV_BOD_22_01",
+        "CISA_JOINT_CSA"
+      ],
+      "release_schedule": "Rolling updates within 24 to 48 hours of confirmed in-the-wild exploitation",
+      "typical_reporting_lag": "Real-time operational feed",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Isolates the ~1,200+ actively weaponized CVEs out of 250,000+ historical NVD entries, enforcing federal agency patch deadlines"
+      ],
+      "common_misreading_traps": [
+        "Treating a raw NIST NVD CVSS 9.8 rating as proof of active wild exploitation when fewer than 5% of critical-score CVEs ever enter CISA KEV"
+      ]
+    },
+    {
+      "source_id": "CYBER_DBIR_MTRENDS",
+      "domain_group": "law_antitrust_cybersecurity",
+      "evidence_tier": "Tier C",
+      "institution": "Verizon Business and Google Cloud Mandiant",
+      "dataset_name": "Verizon Data Breach Investigations Report (DBIR) and Mandiant M-Trends",
+      "exact_tables_or_schedules": [
+        "DBIR Confirmed Breaches by Action Variety (Credentials, Phishing, Vulnerability Exploitation)",
+        "Mandiant M-Trends Global Median Dwell Time (Internal vs External Notification)"
+      ],
+      "official_url": "https://www.verizon.com/business/resources/reports/dbir/",
+      "api_or_feed_url": "https://cloud.google.com/security/resources/m-trends",
+      "series_or_form_ids": [
+        "VERIZON_DBIR_CONFIRMED_BREACHES",
+        "MANDIANT_MEDIAN_DWELL_DAYS"
+      ],
+      "release_schedule": "Annually every April/May",
+      "typical_reporting_lag": "Covers prior 12-month incident-response cohort",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Verifies human-element credential abuse and unpatched N-day edge flaws dominate initial access while tracking global median attacker dwell time in days"
+      ],
+      "common_misreading_traps": [
+        "Mixing Verizon DBIR broad Security Incidents (such as DDoS) with Confirmed Data Breaches",
+        "Interpreting shorter median dwell times driven by noisy ransomware encryption notes as faster silent-espionage detection"
+      ]
+    },
+    {
+      "source_id": "FINCEN_SAR_STATS",
+      "domain_group": "law_antitrust_cybersecurity",
+      "evidence_tier": "Tier B",
+      "institution": "Financial Crimes Enforcement Network (FinCEN), U.S. Department of the Treasury",
+      "dataset_name": "Suspicious Activity Report (SAR) Statistics and Financial Trend Analyses (FTAs)",
+      "exact_tables_or_schedules": [
+        "Monthly SAR Counts by Industry (Depository Institutions, MSBs, Securities) and Suspicious Activity Category",
+        "FinCEN Financial Trend Analyses (Check Fraud, Elder Financial Exploitation, BEC, Identity Theft)"
+      ],
+      "official_url": "https://www.fincen.gov/reports/sar-stats",
+      "api_or_feed_url": "https://www.fincen.gov/news-room/financial-trend-analyses",
+      "series_or_form_ids": [
+        "FINCEN_SAR_DEPOSITORY",
+        "FINCEN_SAR_ELDER_EXPLOITATION",
+        "31_USC_5318_G2_CONFIDENTIALITY"
+      ],
+      "release_schedule": "Monthly SAR dashboard updates; periodic Financial Trend Analyses",
+      "typical_reporting_lag": "4 to 6 weeks",
+      "live_stat_slot_supported": true,
+      "canonical_anchors": [
+        "Tracks million-scale depository SAR filings across check fraud, synthetic identity, wire scams, and elder financial exploitation"
+      ],
+      "common_misreading_traps": [
+        "Summing defensive SAR dollar filings as verified net bank losses",
+        "Ignoring 31 U.S.C. Section 5318(g)(2), which criminalizes tipping off a bank customer that a SAR was filed when accounts are frozen"
+      ]
+    }
+  ]
+}

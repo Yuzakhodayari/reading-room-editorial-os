@@ -1,0 +1,1152 @@
+{
+  "schema_version": "1.0.0",
+  "deliverable_id": "09_verified_stat_cards",
+  "generator": "02_research_and_data/tools/analyze_datasets.py",
+  "cinema_contract_ref": "01_identity_and_strategy/cinema_schema_contract.json",
+  "card_count": 12,
+  "datasets_ingested": [
+    "us_treasury_mts_table9_fy2024_fy2026.csv",
+    "bls_productivity_vs_compensation_2017_2026.csv",
+    "hyperscaler_capex_fcf_depreciation_2023_2026.json",
+    "fed_dfa_equity_wealth_deciles.csv",
+    "pjm_capacity_auctions_and_iea_dc_load.csv"
+  ],
+  "cards": [
+    {
+      "card_id": "STAT-MTS-01",
+      "dataset_file": "02_research_and_data/datasets/us_treasury_mts_table9_fy2024_fy2026.csv",
+      "domain": "sovereign_finance",
+      "episodes_bound": [
+        "ep_01",
+        "ep_02"
+      ],
+      "headline_label": "Individual Income and Payroll Tax Share of Federal Receipts",
+      "exact_figures": {
+        "fy2024_share_pct": 84.08,
+        "fy2024_headline_1dp_pct": 84.1,
+        "fy2026_share_pct": 86.4,
+        "fy2026_amount_usd_b": 4648.32,
+        "fy2026_total_receipts_usd_b": 5380.0,
+        "share_shift_bps": 232.0,
+        "nominal_cagr_pct": 6.017,
+        "real_cagr_pct": 3.379
+      },
+      "units": "% of unified federal receipts (and USD billions)",
+      "period_bounds": {
+        "start": "FY2024",
+        "end": "FY2026",
+        "elapsed_years": 2.0,
+        "frequency": "annual_fiscal"
+      },
+      "primary_source": "U.S. Treasury Final Monthly Treasury Statement, Table 9 (Sept 2024 - Sept 2026)",
+      "formula_audit_trail": "FY2024: ($2,426.07B individual + $1,709.57B payroll) / $4,918.73B = 84.08% (84.1% at 1dp). FY2026: ($2,792.22B + $1,856.10B) / $5,380.00B = 86.40%. Shift = +232.0 bps; nominal CAGR = 6.017%, real CAGR = 3.379%.",
+      "camera_rescale_line": "Out of every dollar Washington collects to keep the lights on and pay bondholders, more than eighty-six cents comes straight out of human paychecks and individual tax filings.",
+      "macroTelemetry": {
+        "registerId": "page_editorial",
+        "visualRegisterId": "milk-page-editorial",
+        "paletteMode": "page",
+        "componentHint": "TreasuryTable9Scene",
+        "glassPreset": "card",
+        "semanticAccents": [
+          "statutory",
+          "liability"
+        ],
+        "xAxis": {
+          "label": "Fiscal Year",
+          "ticks": [
+            "FY2024",
+            "FY2025",
+            "FY2026"
+          ]
+        },
+        "yAxis": {
+          "label": "Share of Total Federal Receipts",
+          "unit": "%",
+          "min": 0,
+          "max": 100
+        },
+        "series": [
+          {
+            "id": "indiv_payroll_share",
+            "label": "Individual + Payroll Taxes",
+            "semanticRole": "statutory",
+            "strokeHex": "#1C3D63",
+            "values": [
+              84.08,
+              85.1,
+              86.4
+            ],
+            "formattedTerminal": "86.4%"
+          },
+          {
+            "id": "corporate_share",
+            "label": "Corporate Income Taxes",
+            "semanticRole": "liability",
+            "strokeHex": "#A3402E",
+            "values": [
+              10.77,
+              8.8,
+              7.1
+            ],
+            "formattedTerminal": "7.1%"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_paycheck_share",
+            "label": "HUMAN TAX SHARE",
+            "value": "86.4%",
+            "delta": "+232 bps vs FY24",
+            "isRisk": false,
+            "sparkline": [
+              84.08,
+              85.1,
+              86.4
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-MTS-02",
+      "dataset_file": "02_research_and_data/datasets/us_treasury_mts_table9_fy2024_fy2026.csv",
+      "domain": "sovereign_finance",
+      "episodes_bound": [
+        "ep_01",
+        "ep_03"
+      ],
+      "headline_label": "Corporate Income Tax Revenue Share Drop Under Immediate Hardware Expensing",
+      "exact_figures": {
+        "fy2024_share_1dp_pct": 10.8,
+        "fy2024_share_exact_pct": 10.77,
+        "fy2024_amount_usd_b": 529.87,
+        "fy2026_share_exact_pct": 7.1,
+        "fy2026_amount_usd_b": 382.0,
+        "share_drop_bps_1dp": -370.0,
+        "share_drop_bps_exact": -367.0,
+        "nominal_cagr_pct": -15.092,
+        "real_cagr_pct": -17.206
+      },
+      "units": "% of unified federal receipts (and USD billions)",
+      "period_bounds": {
+        "start": "FY2024",
+        "end": "FY2026",
+        "elapsed_years": 2.0,
+        "frequency": "annual_fiscal"
+      },
+      "primary_source": "U.S. Treasury Final Monthly Treasury Statement, Table 9; July 2025 OBBBA Expensing Provisions",
+      "formula_audit_trail": "Corporate receipts fell from $529.87B (10.77%, 10.8% at 1dp) in FY2024 to $382.00B (7.10%) in FY2026. Dollar change = -$147.87B (-27.91%); nominal CAGR = -15.092%; CPI-deflated real CAGR = -17.206%.",
+      "camera_rescale_line": "Right in the middle of an eight-hundred-billion-dollar server boom, corporate income taxes fell from ten-point-eight percent of federal revenue down to seven-point-one percent because companies deduct new chips the year they buy them.",
+      "macroTelemetry": {
+        "registerId": "page_editorial",
+        "visualRegisterId": "milk-page-editorial",
+        "paletteMode": "page",
+        "componentHint": "DataPhysicalCard",
+        "glassPreset": "card",
+        "semanticAccents": [
+          "statutory",
+          "liability"
+        ],
+        "xAxis": {
+          "label": "Fiscal Year",
+          "ticks": [
+            "FY2024",
+            "FY2025",
+            "FY2026"
+          ]
+        },
+        "yAxis": {
+          "label": "Corporate Share of Receipts",
+          "unit": "%",
+          "min": 0,
+          "max": 15
+        },
+        "series": [
+          {
+            "id": "corp_tax_share",
+            "label": "Corporate Tax Share",
+            "semanticRole": "liability",
+            "strokeHex": "#A3402E",
+            "values": [
+              10.77,
+              8.8,
+              7.1
+            ],
+            "formattedTerminal": "7.1%"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_corp_share",
+            "label": "CORP TAX SHARE",
+            "value": "7.1%",
+            "delta": "-370 bps vs FY24",
+            "isRisk": true,
+            "sparkline": [
+              10.77,
+              8.8,
+              7.1
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-MTS-03",
+      "dataset_file": "02_research_and_data/datasets/us_treasury_mts_table9_fy2024_fy2026.csv",
+      "domain": "sovereign_finance",
+      "episodes_bound": [
+        "ep_01",
+        "ep_02"
+      ],
+      "headline_label": "Federal Net Interest Surpassing Total National Defense Outlays",
+      "exact_figures": {
+        "fy2026_net_interest_usd_b": 1052.0,
+        "fy2026_defense_usd_b": 965.0,
+        "interest_over_defense_spread_usd_b": 87.0,
+        "interest_over_defense_pct": 9.02,
+        "interest_share_of_receipts_pct": 19.55,
+        "net_interest_nominal_cagr_pct": 9.233
+      },
+      "units": "USD billions",
+      "period_bounds": {
+        "start": "FY2024",
+        "end": "FY2026",
+        "elapsed_years": 2.0,
+        "frequency": "annual_fiscal"
+      },
+      "primary_source": "U.S. Treasury Final Monthly Treasury Statement, Table 9 (Function 900 Net Interest vs Function 050 Defense)",
+      "formula_audit_trail": "FY2026 Net Interest ($1,052.00B) minus National Defense ($965.00B) = +$87.00B (+9.02% above defense), widening from +$8.17B in FY2024. Net interest consumes 19.55% of all FY2026 federal tax receipts.",
+      "camera_rescale_line": "Washington paid one-point-zero-five-two trillion dollars in net bond interest during fiscal 2026, beating the entire nine-hundred-sixty-five-billion-dollar defense budget by eighty-seven billion dollars.",
+      "macroTelemetry": {
+        "registerId": "page_editorial",
+        "visualRegisterId": "smoked-navy-glass",
+        "paletteMode": "over-footage",
+        "componentHint": "GlassTelemetryStrip",
+        "glassPreset": "telemetry-strip",
+        "semanticAccents": [
+          "liability",
+          "statutory"
+        ],
+        "xAxis": {
+          "label": "Fiscal Year",
+          "ticks": [
+            "FY2024",
+            "FY2025",
+            "FY2026"
+          ]
+        },
+        "yAxis": {
+          "label": "Annual Outlays",
+          "unit": "USD B",
+          "min": 800,
+          "max": 1150
+        },
+        "series": [
+          {
+            "id": "net_interest",
+            "label": "Net Interest",
+            "semanticRole": "liability",
+            "strokeHex": "#E27358",
+            "values": [
+              881.68,
+              968.4,
+              1052.0
+            ],
+            "formattedTerminal": "$1,052B"
+          },
+          {
+            "id": "national_defense",
+            "label": "National Defense",
+            "semanticRole": "statutory",
+            "strokeHex": "#BFD6EA",
+            "values": [
+              873.51,
+              918.6,
+              965.0
+            ],
+            "formattedTerminal": "$965B"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_net_interest",
+            "label": "FY26 NET INTEREST",
+            "value": "$1.052T",
+            "delta": "+$87B over Defense",
+            "isRisk": true,
+            "sparkline": [
+              881.68,
+              968.4,
+              1052.0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-BLS-01",
+      "dataset_file": "02_research_and_data/datasets/bls_productivity_vs_compensation_2017_2026.csv",
+      "domain": "ai_economics",
+      "episodes_bound": [
+        "ep_01",
+        "ep_04"
+      ],
+      "headline_label": "U.S. Nonfarm Output per Hour vs Real Hourly Compensation Wedge",
+      "exact_figures": {
+        "base_2017_index": 100.0,
+        "output_per_hour_2026_idx": 120.8,
+        "real_hourly_comp_2026_idx": 109.6,
+        "cumulative_wedge_idx_pts": 11.2,
+        "cumulative_wedge_bps": 1120.0,
+        "productivity_cagr_pct": 2.122,
+        "real_comp_cagr_pct": 1.024,
+        "fisher_deflated_nominal_comp_cagr_pct": 1.024
+      },
+      "units": "Index (2017 = 100.0)",
+      "period_bounds": {
+        "start": "2017",
+        "end": "2026",
+        "elapsed_years": 9.0,
+        "frequency": "annual"
+      },
+      "primary_source": "Bureau of Labor Statistics Major Sector Productivity and Costs (Series OPHNFB & COMPRNFB)",
+      "formula_audit_trail": "Output per hour grew from 100.0 (2017) to 120.80 (2026), a +20.80% gain (2.122% CAGR). Real hourly pay reached 109.60 (+9.60%, 1.024% CAGR; verified via nominal pay 147.41 / CPI 134.50 = 109.60). Wedge = +11.20 pts (+1,120 bps).",
+      "camera_rescale_line": "Since 2017, the output an American worker produces every hour climbed twenty-point-eight percent, while inflation-adjusted hourly pay rose nine-point-six percent, leaving an eleven-point gap on the table.",
+      "macroTelemetry": {
+        "registerId": "page_editorial",
+        "visualRegisterId": "milk-page-editorial",
+        "paletteMode": "page",
+        "componentHint": "ChartInstrumentFrame",
+        "glassPreset": "card",
+        "semanticAccents": [
+          "capital",
+          "statutory"
+        ],
+        "xAxis": {
+          "label": "Calendar Year",
+          "ticks": [
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        "yAxis": {
+          "label": "Index (2017=100)",
+          "unit": "idx",
+          "min": 98,
+          "max": 124
+        },
+        "series": [
+          {
+            "id": "output_per_hour",
+            "label": "Output per Hour",
+            "semanticRole": "capital",
+            "strokeHex": "#6E440B",
+            "values": [
+              100.0,
+              101.5,
+              103.6,
+              109.1,
+              111.3,
+              109.6,
+              111.4,
+              114.5,
+              117.4,
+              120.8
+            ],
+            "formattedTerminal": "120.8"
+          },
+          {
+            "id": "real_hourly_comp",
+            "label": "Real Hourly Pay",
+            "semanticRole": "statutory",
+            "strokeHex": "#1C3D63",
+            "values": [
+              100.0,
+              100.9,
+              102.9,
+              109.9,
+              109.8,
+              105.7,
+              106.2,
+              108.0,
+              108.9,
+              109.6
+            ],
+            "formattedTerminal": "109.6"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_prod_wedge",
+            "label": "PRODUCTIVITY WEDGE",
+            "value": "+11.2 pts",
+            "delta": "+20.8% vs +9.6% pay",
+            "isRisk": true,
+            "sparkline": [
+              0.0,
+              0.6,
+              0.7,
+              -0.8,
+              1.5,
+              3.9,
+              5.2,
+              6.5,
+              8.5,
+              11.2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-BLS-02",
+      "dataset_file": "02_research_and_data/datasets/bls_productivity_vs_compensation_2017_2026.csv",
+      "domain": "ai_economics",
+      "episodes_bound": [
+        "ep_01",
+        "ep_04"
+      ],
+      "headline_label": "Nonfarm Business Labor Share Drop to Post-1947 Record Low",
+      "exact_figures": {
+        "labor_share_2017_pct": 56.9,
+        "labor_share_2026_annual_pct": 52.9,
+        "labor_share_2026_q3_trough_pct": 52.8,
+        "post_1947_historical_mean_pct": 61.8,
+        "drift_2017_2026_bps": -400.0,
+        "spread_vs_postwar_mean_bps": -890.0
+      },
+      "units": "% of nonfarm business sector output",
+      "period_bounds": {
+        "start": "2017",
+        "end": "2026",
+        "elapsed_years": 9.0,
+        "frequency": "annual"
+      },
+      "primary_source": "Bureau of Labor Statistics Series PRS85006173 (Nonfarm Business Labor Share, 1947-2026)",
+      "formula_audit_trail": "Nonfarm labor share moved from 56.90% in 2017 to 52.90% annual average in 2026 (52.80% Q3 trough), a -4.00 percentage-point (-400.0 bps) compression and -890.0 bps below the 61.80% post-1947 historical mean.",
+      "camera_rescale_line": "Workers collected roughly sixty-two cents of every nonfarm business dollar across the postwar decades, and by 2026 that slice dropped below fifty-three cents, the lowest reading since federal tracking started in 1947.",
+      "macroTelemetry": {
+        "registerId": "archival_parchment",
+        "visualRegisterId": "archival-light-table",
+        "paletteMode": "page",
+        "componentHint": "ChartInstrumentFrame",
+        "glassPreset": "card",
+        "semanticAccents": [
+          "liability",
+          "statutory"
+        ],
+        "xAxis": {
+          "label": "Calendar Year",
+          "ticks": [
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022",
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        "yAxis": {
+          "label": "Labor Share of Output",
+          "unit": "%",
+          "min": 50,
+          "max": 64
+        },
+        "series": [
+          {
+            "id": "labor_share_pct",
+            "label": "Nonfarm Labor Share",
+            "semanticRole": "liability",
+            "strokeHex": "#8C1D18",
+            "values": [
+              56.9,
+              56.6,
+              56.8,
+              57.9,
+              56.6,
+              55.4,
+              54.7,
+              54.1,
+              53.4,
+              52.9
+            ],
+            "formattedTerminal": "52.9%"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_labor_share",
+            "label": "US LABOR SHARE",
+            "value": "52.9%",
+            "delta": "Post-1947 low (52.8% Q3)",
+            "isRisk": true,
+            "sparkline": [
+              56.9,
+              56.6,
+              56.8,
+              57.9,
+              56.6,
+              55.4,
+              54.7,
+              54.1,
+              53.4,
+              52.9
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-CAPEX-01",
+      "dataset_file": "02_research_and_data/datasets/hyperscaler_capex_fcf_depreciation_2023_2026.json",
+      "domain": "ai_economics",
+      "episodes_bound": [
+        "ep_01",
+        "ep_03"
+      ],
+      "headline_label": "Big-4 and Big-5 Hyperscaler Annual CapEx Surge ($742B to $824.5B)",
+      "exact_figures": {
+        "big4_capex_2023_usd_b": 140.36,
+        "big4_capex_2026_usd_b": 742.0,
+        "big5_capex_2023_usd_b": 149.05,
+        "big5_capex_2026_usd_b": 824.5,
+        "big5_capex_to_ocf_2026_pct": 126.05,
+        "big5_3yr_nominal_cagr_pct": 76.86
+      },
+      "units": "USD billions",
+      "period_bounds": {
+        "start": "2023",
+        "end": "2026",
+        "elapsed_years": 3.0,
+        "frequency": "annual"
+      },
+      "primary_source": "SEC Form 10-K and Form 10-Q Cash Flow Statements (GOOGL, AMZN, MSFT, META, ORCL)",
+      "formula_audit_trail": "2026 Big-4 CapEx = $182.00B (GOOGL) + $212.00B (AMZN) + $194.00B (MSFT) + $154.00B (META) = $742.00B. Adding ORCL ($82.50B) yields $824.50B against $654.10B combined OCF (126.05% CapEx-to-OCF).",
+      "camera_rescale_line": "Alphabet, Amazon, Microsoft, and Meta are spending seven-hundred-forty-two billion dollars a year on servers and data centers, climbing past eight-hundred-twenty-four billion once you add Oracle.",
+      "macroTelemetry": {
+        "registerId": "drafting_blueprint",
+        "visualRegisterId": "blueprint-schematic",
+        "paletteMode": "page",
+        "componentHint": "IsometricDiorama3D",
+        "glassPreset": "stat-triptych",
+        "semanticAccents": [
+          "capital",
+          "liability"
+        ],
+        "xAxis": {
+          "label": "Year",
+          "ticks": [
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        "yAxis": {
+          "label": "Annual CapEx",
+          "unit": "USD B",
+          "min": 0,
+          "max": 900
+        },
+        "series": [
+          {
+            "id": "big4_capex",
+            "label": "Big-4 Hyperscaler CapEx",
+            "semanticRole": "capital",
+            "strokeHex": "#E5A93C",
+            "values": [
+              140.36,
+              228.45,
+              384.15,
+              742.0
+            ],
+            "formattedTerminal": "$742.0B"
+          },
+          {
+            "id": "big5_capex",
+            "label": "Big-5 CapEx (incl. Oracle)",
+            "semanticRole": "liability",
+            "strokeHex": "#F48C7F",
+            "values": [
+              149.05,
+              239.19,
+              412.75,
+              824.5
+            ],
+            "formattedTerminal": "$824.5B"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_big5_capex",
+            "label": "BIG-5 AI CAPEX",
+            "value": "$824.5B",
+            "delta": "126.1% of OCF",
+            "isRisk": true,
+            "sparkline": [
+              149.05,
+              239.19,
+              412.75,
+              824.5
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-CAPEX-02",
+      "dataset_file": "02_research_and_data/datasets/hyperscaler_capex_fcf_depreciation_2023_2026.json",
+      "domain": "ai_economics",
+      "episodes_bound": [
+        "ep_01",
+        "ep_03"
+      ],
+      "headline_label": "Hyperscaler Free Cash Flow Inversion: Amazon -$42.4B TTM and Alphabet Negative Quarters",
+      "exact_figures": {
+        "amzn_2026_ttm_fcf_usd_b": -42.4,
+        "amzn_2026_capex_to_ocf_pct": 125.0,
+        "googl_2026_q2_fcf_usd_b": -5.6,
+        "googl_2026_q3_fcf_usd_b": -7.9,
+        "googl_2026_annual_fcf_usd_b": -13.6,
+        "big5_2024_fcf_usd_b": 230.99,
+        "big5_2026_fcf_usd_b": -170.4,
+        "two_year_fcf_reversal_usd_b": -401.39
+      },
+      "units": "USD billions",
+      "period_bounds": {
+        "start": "2024",
+        "end": "2026-Q3 TTM",
+        "elapsed_years": 2.0,
+        "frequency": "quarterly_and_ttm"
+      },
+      "primary_source": "Amazon Q3 2026 Form 10-Q TTM Cash Flows; Alphabet Q2 2026 & Q3 2026 Form 10-Q Filings",
+      "formula_audit_trail": "FCF = Operating Cash Flow minus CapEx. Amazon 2026 TTM: $169.60B - $212.00B = -$42.40B (125.00% CapEx-to-OCF). Alphabet Q2 2026: $41.20B - $46.80B = -$5.60B; Q3 2026: $43.50B - $51.40B = -$7.90B. Big-5 combined FCF swung from +$230.99B (2024) to -$170.40B (2026).",
+      "camera_rescale_line": "Alphabet posted back-to-back quarters of negative free cash flow in mid-2026, and Amazon burned forty-two-point-four billion dollars more in capital spending than its operations brought in over twelve months.",
+      "macroTelemetry": {
+        "registerId": "page_editorial",
+        "visualRegisterId": "smoked-navy-glass",
+        "paletteMode": "over-footage",
+        "componentHint": "GlassTelemetryStrip",
+        "glassPreset": "telemetry-strip",
+        "semanticAccents": [
+          "liability",
+          "solvent"
+        ],
+        "xAxis": {
+          "label": "Year",
+          "ticks": [
+            "2023",
+            "2024",
+            "2025",
+            "2026"
+          ]
+        },
+        "yAxis": {
+          "label": "Combined Big-5 Free Cash Flow",
+          "unit": "USD B",
+          "min": -200,
+          "max": 260
+        },
+        "series": [
+          {
+            "id": "big5_fcf",
+            "label": "Big-5 Combined FCF",
+            "semanticRole": "liability",
+            "strokeHex": "#E27358",
+            "values": [
+              213.51,
+              230.99,
+              120.35,
+              -170.4
+            ],
+            "formattedTerminal": "-$170.4B"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_amzn_fcf",
+            "label": "AMZN TTM FCF",
+            "value": "-$42.4B",
+            "delta": "125% CapEx/OCF",
+            "isRisk": true,
+            "sparkline": [
+              32.22,
+              32.88,
+              -0.2,
+              -42.4
+            ]
+          },
+          {
+            "id": "ch_googl_qfcf",
+            "label": "GOOGL Q2/Q3 FCF",
+            "value": "-$5.6B / -$7.9B",
+            "delta": "2 neg quarters",
+            "isRisk": true,
+            "sparkline": [
+              1.6,
+              -5.6,
+              -7.9,
+              -1.7
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-CAPEX-03",
+      "dataset_file": "02_research_and_data/datasets/hyperscaler_capex_fcf_depreciation_2023_2026.json",
+      "domain": "ai_economics",
+      "episodes_bound": [
+        "ep_03"
+      ],
+      "headline_label": "Straight-Line Server Useful-Life Sensitivity: 3-Year Silicon Cadence vs 6-Year Schedule",
+      "exact_figures": {
+        "active_3yr_ai_hardware_ppe_usd_b": 1048.75,
+        "annual_dep_6yr_schedule_usd_b": 174.79,
+        "annual_dep_3yr_schedule_usd_b": 349.58,
+        "pretax_ebit_hit_active_stack_usd_b": -174.79,
+        "after_tax_ni_hit_active_stack_usd_b": -138.09,
+        "ebit_compression_pct": 36.26,
+        "single_2026_vintage_pretax_hit_usd_b": -99.15
+      },
+      "units": "USD billions per year (and % of GAAP operating income)",
+      "period_bounds": {
+        "start": "2024 cohort",
+        "end": "2026 active stack",
+        "elapsed_years": 3.0,
+        "frequency": "annual"
+      },
+      "primary_source": "SEC Form 10-K Accounting Policies Notes (Property and Equipment Useful-Life Schedules, 2023-2026)",
+      "formula_audit_trail": "Active 2024-2026 Big-5 AI hardware gross PP&E = $1,048.75B. 6-year straight-line D6 = K/6 = $174.79B/yr; 3-year D3 = K/3 = $349.58B/yr. Pre-tax operating income hit = -$174.79B/yr (36.26% of $482.00B Big-5 EBIT).",
+      "camera_rescale_line": "Stretching AI chip depreciation out to six years while new Nvidia architectures arrive every twenty-four to thirty-six months shields nearly one-hundred-seventy-five billion dollars a year in pre-tax tech profits.",
+      "macroTelemetry": {
+        "registerId": "archival_parchment",
+        "visualRegisterId": "archival-light-table",
+        "paletteMode": "page",
+        "componentHint": "GlassSplitModal",
+        "glassPreset": "compare-scale",
+        "semanticAccents": [
+          "capital",
+          "liability"
+        ],
+        "xAxis": {
+          "label": "Depreciation Useful-Life Assumption",
+          "ticks": [
+            "6-Year Schedule",
+            "3-Year Silicon Cycle"
+          ]
+        },
+        "yAxis": {
+          "label": "Annual Depreciation Charge",
+          "unit": "USD B",
+          "min": 0,
+          "max": 380
+        },
+        "series": [
+          {
+            "id": "dep_charge_comparison",
+            "label": "Big-5 Active AI Hardware Annual Depreciation",
+            "semanticRole": "liability",
+            "strokeHex": "#8C1D18",
+            "values": [
+              174.79,
+              349.58
+            ],
+            "formattedTerminal": "$349.6B/yr"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_dep_shield",
+            "label": "3YR VS 6YR EBIT HIT",
+            "value": "-$174.8B/yr",
+            "delta": "-36.3% Big-5 EBIT",
+            "isRisk": true,
+            "sparkline": [
+              174.79,
+              349.58
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-DFA-01",
+      "dataset_file": "02_research_and_data/datasets/fed_dfa_equity_wealth_deciles.csv",
+      "domain": "sovereign_finance",
+      "episodes_bound": [
+        "ep_01",
+        "ep_05"
+      ],
+      "headline_label": "U.S. Household Corporate Equity Ownership Concentration (Top 10% vs Bottom 50%)",
+      "exact_figures": {
+        "top_1_share_pct": 50.3,
+        "next_9_share_pct": 39.5,
+        "top_10_share_pct": 89.8,
+        "bottom_50_share_pct": 1.0,
+        "top_10_usd_trillions": 49.4,
+        "bottom_50_usd_trillions": 0.55,
+        "aggregate_ratio_top10_vs_bot50_x": 89.8,
+        "per_household_ratio_top10_vs_bot50_x": 449.0,
+        "grouped_equity_gini": 0.8813
+      },
+      "units": "% of household corporate equities and mutual fund shares (and USD trillions)",
+      "period_bounds": {
+        "start": "2026-Q2",
+        "end": "2026-Q2",
+        "elapsed_years": 0.0,
+        "frequency": "quarterly_cross_section"
+      },
+      "primary_source": "Federal Reserve Distributional Financial Accounts (Release Z.1 DFA, 2026-Q2)",
+      "formula_audit_trail": "Top 10% share = Top 1% (50.30%) + Next 9% (39.50%) = 89.80% ($49.40T of $55.01T) vs Bottom 50% at 1.00% ($0.55T across 67.0M households). Aggregate ratio = 89.80x; per-household ratio = 449.00x; grouped Gini = 0.8813.",
+      "camera_rescale_line": "Sixty percent of American families own at least some stock, yet the richest ten percent hold eighty-nine-point-eight percent of all stock-market wealth while the bottom sixty-seven million households split a single percent.",
+      "macroTelemetry": {
+        "registerId": "page_editorial",
+        "visualRegisterId": "milk-page-editorial",
+        "paletteMode": "page",
+        "componentHint": "DataPhysicalCard",
+        "glassPreset": "card",
+        "semanticAccents": [
+          "capital",
+          "liability"
+        ],
+        "xAxis": {
+          "label": "Wealth Percentile Group",
+          "ticks": [
+            "Bottom 50%",
+            "50th-90th",
+            "90th-99th",
+            "Top 1%"
+          ]
+        },
+        "yAxis": {
+          "label": "Share of US Household Equities",
+          "unit": "%",
+          "min": 0,
+          "max": 55
+        },
+        "series": [
+          {
+            "id": "dfa_2026_q2_shares",
+            "label": "Corporate Equity & Mutual Fund Share",
+            "semanticRole": "capital",
+            "strokeHex": "#1C2B3A",
+            "values": [
+              1.0,
+              9.2,
+              39.5,
+              50.3
+            ],
+            "formattedTerminal": "89.8% Top 10%"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_top10_eq",
+            "label": "TOP 10% EQUITY SHARE",
+            "value": "89.8%",
+            "delta": "449x per-HH vs Bot 50%",
+            "isRisk": true,
+            "sparkline": [
+              1.0,
+              9.2,
+              39.5,
+              50.3
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-DFA-02",
+      "dataset_file": "02_research_and_data/datasets/fed_dfa_equity_wealth_deciles.csv",
+      "domain": "sovereign_finance",
+      "episodes_bound": [
+        "ep_01",
+        "ep_05"
+      ],
+      "headline_label": "Thirty-Seven-Year Equity Concentration Drift and Upper-Middle Squeeze (1989-Q3 to 2026-Q2)",
+      "exact_figures": {
+        "top_10_share_1989_q3_pct": 81.8,
+        "top_10_share_2026_q2_pct": 89.8,
+        "top_10_gain_bps": 800.0,
+        "next_40_share_1989_q3_pct": 17.1,
+        "next_40_share_2026_q2_pct": 9.2,
+        "next_40_loss_bps": -790.0,
+        "scf_participation_1989_pct": 31.9,
+        "scf_participation_2026_pct": 60.1
+      },
+      "units": "Percentage points and basis points of equity ownership share",
+      "period_bounds": {
+        "start": "1989-Q3",
+        "end": "2026-Q2",
+        "elapsed_years": 36.75,
+        "frequency": "multi_decade_panel"
+      },
+      "primary_source": "Federal Reserve Release Z.1 DFA Historical Series (1989-2026) & Survey of Consumer Finances",
+      "formula_audit_trail": "Between 1989-Q3 and 2026-Q2, Top 10% equity share rose from 81.80% (42.40% + 39.40%) to 89.80% (+800.0 bps), while the 50th-90th percentile fell from 17.10% to 9.20% (-790.0 bps) and the Bottom 50% moved from 1.10% to 1.00% (-10.0 bps).",
+      "camera_rescale_line": "Forty years of 401(k) enrollment doubled the share of families holding a brokerage account, while the fifty-to-ninetieth-percentile middle class lost nearly half its slice of total stock ownership to the top ten percent.",
+      "macroTelemetry": {
+        "registerId": "page_editorial",
+        "visualRegisterId": "smoked-navy-glass",
+        "paletteMode": "over-footage",
+        "componentHint": "GlassTelemetryStrip",
+        "glassPreset": "telemetry-strip",
+        "semanticAccents": [
+          "capital",
+          "statutory"
+        ],
+        "xAxis": {
+          "label": "Quarter",
+          "ticks": [
+            "1989-Q3",
+            "2000-Q4",
+            "2010-Q4",
+            "2019-Q4",
+            "2024-Q4",
+            "2026-Q2"
+          ]
+        },
+        "yAxis": {
+          "label": "Top 10% Share of Equities",
+          "unit": "%",
+          "min": 78,
+          "max": 92
+        },
+        "series": [
+          {
+            "id": "top10_hist_share",
+            "label": "Top 10% Equity Share",
+            "semanticRole": "capital",
+            "strokeHex": "#FAECD4",
+            "values": [
+              81.8,
+              84.1,
+              87.3,
+              88.2,
+              89.4,
+              89.8
+            ],
+            "formattedTerminal": "89.8%"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_mid40_squeeze",
+            "label": "50TH-90TH EQUITY SLICE",
+            "value": "9.2%",
+            "delta": "-790 bps since 1989",
+            "isRisk": true,
+            "sparkline": [
+              17.1,
+              14.8,
+              12.1,
+              11.0,
+              9.6,
+              9.2
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-GRID-01",
+      "dataset_file": "02_research_and_data/datasets/pjm_capacity_auctions_and_iea_dc_load.csv",
+      "domain": "physical_grid_and_security",
+      "episodes_bound": [
+        "ep_01",
+        "ep_06"
+      ],
+      "headline_label": "PJM 13-State Wholesale Capacity Clearing Price Surge ($28.92 to $329.17/MW-day)",
+      "exact_figures": {
+        "price_2024_2025_usd_mw_day": 28.92,
+        "price_2025_2026_usd_mw_day": 269.92,
+        "price_2026_2027_usd_mw_day": 329.17,
+        "single_auction_jump_25_26_pct": 833.33,
+        "cumulative_jump_24_27_pct": 1038.21,
+        "cumulative_multiple_x": 11.382,
+        "nominal_2yr_cagr_pct": 237.374,
+        "real_2yr_cagr_pct": 228.977,
+        "total_procurement_2026_2027_usd_b": 16.1
+      },
+      "units": "USD per megawatt-day (and USD billions annual wholesale cost)",
+      "period_bounds": {
+        "start": "2024/2025",
+        "end": "2026/2027",
+        "elapsed_years": 2.0,
+        "frequency": "delivery_year"
+      },
+      "primary_source": "PJM Interconnection Base Residual Auction Reports (2024/2025, 2025/2026, and 2026/2027 Delivery Years)",
+      "formula_audit_trail": "2024/2025 ($28.92/MW-day) to 2025/2026 ($269.92/MW-day) = +833.33% (+$241.00/MW-day). 2026/2027 hit the FERC cap at $329.17/MW-day (+1038.21% cumulative, 11.382x; 2-yr nominal CAGR = 237.374%, CPI-adjusted real CAGR = 228.977%). Wholesale capacity bill rose from $2.20B to $16.10B.",
+      "camera_rescale_line": "Across thirteen states and Washington, D.C., the wholesale price paid just to keep power plants standing by jumped from twenty-eight dollars and ninety-two cents per megawatt-day to two-hundred-sixty-nine, then capped out above three-hundred-twenty-nine.",
+      "macroTelemetry": {
+        "registerId": "midnight_telemetry",
+        "visualRegisterId": "geospatial-telemetry",
+        "paletteMode": "page",
+        "componentHint": "MapExplainer",
+        "glassPreset": "map-callout",
+        "semanticAccents": [
+          "liability",
+          "capital"
+        ],
+        "xAxis": {
+          "label": "PJM Delivery Year",
+          "ticks": [
+            "2022/2023",
+            "2023/2024",
+            "2024/2025",
+            "2025/2026",
+            "2026/2027"
+          ]
+        },
+        "yAxis": {
+          "label": "RTO Clearing Price",
+          "unit": "$/MW-day",
+          "min": 0,
+          "max": 360
+        },
+        "series": [
+          {
+            "id": "pjm_rto_clearing",
+            "label": "PJM RTO Capacity Price",
+            "semanticRole": "liability",
+            "strokeHex": "#F48C7F",
+            "values": [
+              50.0,
+              34.13,
+              28.92,
+              269.92,
+              329.17
+            ],
+            "formattedTerminal": "$329.17/MW-d"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_pjm_bra",
+            "label": "PJM CAPACITY CAP",
+            "value": "$329.17/MW-d",
+            "delta": "+1,038% vs 24/25",
+            "isRisk": true,
+            "sparkline": [
+              50.0,
+              34.13,
+              28.92,
+              269.92,
+              329.17
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "card_id": "STAT-GRID-02",
+      "dataset_file": "02_research_and_data/datasets/pjm_capacity_auctions_and_iea_dc_load.csv",
+      "domain": "physical_grid_and_security",
+      "episodes_bound": [
+        "ep_01",
+        "ep_06"
+      ],
+      "headline_label": "IEA Global and U.S. Data Center Electricity Demand Surge (415 TWh to 945 TWh)",
+      "exact_figures": {
+        "global_2024_twh": 415.0,
+        "global_2030_twh": 945.0,
+        "global_net_addition_twh": 530.0,
+        "global_pct_growth": 127.71,
+        "global_6yr_cagr_pct": 14.7,
+        "us_2024_twh": 183.0,
+        "us_2030_twh": 426.0,
+        "us_pct_growth": 132.79,
+        "japan_annual_consumption_benchmark_twh": 939.0
+      },
+      "units": "Terawatt-hours (TWh) per year",
+      "period_bounds": {
+        "start": "2024",
+        "end": "2030",
+        "elapsed_years": 6.0,
+        "frequency": "annual_projection"
+      },
+      "primary_source": "International Energy Agency (IEA) Energy and AI Special Report (Base Case)",
+      "formula_audit_trail": "Global data center demand rises from 415.0 TWh (2024) to 945.0 TWh (2030): +530.0 TWh (+127.71%, 6-year CAGR = 14.700%), passing Japan (~939 TWh). U.S. demand climbs from 183.0 TWh to 426.0 TWh (+243.0 TWh, +132.79%, CAGR = 15.122%, 45.85% of global net additions).",
+      "camera_rescale_line": "Worldwide server farms drew four-hundred-fifteen terawatt-hours of electricity in 2024, and by 2030 they are on track to pull nine-hundred-forty-five terawatt-hours, more power than the entire nation of Japan uses in a year.",
+      "macroTelemetry": {
+        "registerId": "midnight_telemetry",
+        "visualRegisterId": "geospatial-telemetry",
+        "paletteMode": "page",
+        "componentHint": "ChartInstrumentFrame",
+        "glassPreset": "telemetry-strip",
+        "semanticAccents": [
+          "capital",
+          "solvent"
+        ],
+        "xAxis": {
+          "label": "Calendar Year",
+          "ticks": [
+            "2020",
+            "2022",
+            "2024",
+            "2025",
+            "2026",
+            "2028",
+            "2030"
+          ]
+        },
+        "yAxis": {
+          "label": "Global Data Center Load",
+          "unit": "TWh",
+          "min": 200,
+          "max": 1000
+        },
+        "series": [
+          {
+            "id": "iea_global_dc_twh",
+            "label": "Global Data Center Electricity (TWh)",
+            "semanticRole": "capital",
+            "strokeHex": "#E5A93C",
+            "values": [
+              260.0,
+              320.0,
+              415.0,
+              482.0,
+              565.0,
+              745.0,
+              945.0
+            ],
+            "formattedTerminal": "945 TWh"
+          }
+        ],
+        "telemetryChannels": [
+          {
+            "id": "ch_iea_dc",
+            "label": "2030 GLOBAL DC LOAD",
+            "value": "945 TWh",
+            "delta": "+127.7% (> Japan)",
+            "isRisk": true,
+            "sparkline": [
+              260.0,
+              320.0,
+              415.0,
+              482.0,
+              565.0,
+              745.0,
+              945.0
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
