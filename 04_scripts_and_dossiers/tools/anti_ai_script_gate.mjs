@@ -401,14 +401,15 @@ function runCheck2HostDetector(lexicalText, lineStarts, mode, options = {}) {
     return { id: 'CHECK_2_HOST_DETECTOR', name: 'Optional Host avoid-ai-writing Cross-Check', passed: true, status: 'STANDALONE_SKIP', hostAvailable: false, detectorPath: null, hostScore: 0, classification: 'STANDALONE_INTERNAL_ONLY', violationCount: 0, violations: [] };
   }
   const detectorOpts = mode === 'prose' ? { contextMode: 'technical', sourceMode: 'rendered-markdown' } : { contextMode: 'general', sourceMode: 'plain' };
-  const res = detector.analyzeText(lexicalText, detectorOpts);
+  const hostInput = lexicalText.replace(/(?<=[\u0600-\u06FF])\u200C(?=[\u0600-\u06FF])/g, ' ');
+  const res = detector.analyzeText(hostInput, detectorOpts);
   const hostScore = Number(res.score ?? 0);
   const classification = res.document_classification || 'UNKNOWN';
   const passed = hostScore === 0 && (classification === 'HUMAN_ONLY' || Boolean(res.tooShort));
 
   const violations = [];
   if (!passed) {
-    const lowerRef = lexicalText.toLowerCase();
+    const lowerRef = hostInput.toLowerCase();
     const reported = Array.isArray(res.issues) ? res.issues : [];
     if (reported.length === 0) {
       violations.push(makeViolation('CHECK_2_HOST_DETECTOR', 'L46_HOST_DETECTOR', 'P0', { line: 1, column: 1 }, `score=${hostScore}, classification=${classification}`, 'Rewrite flagged AI stylometric patterns until host avoid-ai-writing score reaches 0 (HUMAN_ONLY).'));
@@ -783,6 +784,11 @@ export function runSelfTests() {
   const rStiff = analyzeDocument(stiffAcademic, { mode: 'script', forceStandaloneHostSkip: true });
   const c6StiffCodes = new Set(rStiff.checks[5].violations.map((v) => v.ruleCode));
   record('T10_check6_stiff_no_contractions_and_fkgl_fail', c6StiffCodes.has('L09_CONTRACTION_DENSITY') && c6StiffCodes.has('L52_FK_GRADE_LEVEL'), `c6Codes=${Array.from(c6StiffCodes).join(',')}`);
+
+  const persianZwnjSample = 'مالیات بر درآمد و پرداخت\u200Cهای مستقیم بخش اصلی درآمد دولت را تشکیل می\u200Cدهند.';
+  const rZwnjPass = analyzeDocument(persianZwnjSample, { mode: 'prose' });
+  const rZwnjFail = analyzeDocument('This report finds piv\u200Cotal shifts across regional bond auctions.', { mode: 'prose' });
+  record('T12_persian_intra_word_zwnj_allowed_latin_caught', rZwnjPass.passed && !rZwnjFail.passed, `faPass=${rZwnjPass.passed}, latinBypassCaught=${!rZwnjFail.passed}`);
 
   const ep01Path = path.resolve(__dirname, '..', 'ep_01_the_allowance', 'source_video_01_script.md');
   if (fs.existsSync(ep01Path)) {
